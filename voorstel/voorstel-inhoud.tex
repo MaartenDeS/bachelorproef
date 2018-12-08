@@ -3,24 +3,83 @@
 \section{Introductie} % The \section*{} command stops section numbering
 \label{sec:introductie}
 
-Hier introduceer je werk. Je hoeft hier nog niet te technisch te gaan.
+Voor de installatie van servers wordt al jaren Ansible gebruikt. Ansible is een universele 'taal' die taken voor servers automatiseert doormiddel van hun playbook. Zo een Ansible playbook is een georganiseerde unie van scripts dat het werk voor de server configuratie definieert.
 
-Je beschrijft zeker:
+Cloud-Init is momenteel een van de industrie standaarden voor het opbouwen van cloud servers, het maakt gebruik van cloud images. Dat zijn besturingssysteem sjablonen en elke instantie begint als een identieke kloon van elke andere instantie. De gebruikersgegevens geven elke cloud instantie haar persoonlijkheid. Doormiddel van cloud-int worden deze gegevens op de instantie toegepast. 
 
+Dit zijn allebei provisioning systemen. Op een verschillende manier doen ze in theorie hetzelfde. Ze brengen de server allebei naar de gewenste toestand van de gebruiker. Doordat deze op verschillende maniere nwerken, wordt er in de praktijk in combinatie met beide gewerkt. In dat geval gebruik je eerste cloud-init om de server naar een gewenste toestand te brengen waar na Ansible het kan overnemen.
+
+Maar is dit de perfecte samenwerking? Het bedrijf Be-mobile is opzoek naar het antwoord. In dit onderzoek bestuderen we waar deze mekaar aanvullen en hoe ze dan op een perfect performante manier werken. Natuurlijk is het goed mogelijk dat deze mekaar niet aanvullen en dan is het onderzoek waar en wanneer je voor wat moet kiezen en waarom dit mekaar overbodig maakt. 
+
+In dit onderzoek zullen we dit trachten te ontdekken. De vragen waar het, de antwoorden op wil vinden zijn:
 \begin{itemize}
-  \item de probleemstelling en context
-  \item de motivatie en relevantie voor het onderzoek
-  \item de doelstelling en onderzoeksvraag/-vragen
+	\item Vullen Ansible en Cloud-Init mekaar aan, of maken ze elkaar overbodig?
+	\item Ook hoe ze mekaar aanvullen en/of hoe ze mekaar overbodig maken?
 \end{itemize}
+
+%Hier introduceer je werk. Je hoeft hier nog niet te technisch te gaan.
+
+%Je beschrijft zeker:
+
+%\begin{itemize}
+%  \item de probleemstelling en context
+%  \item de motivatie en relevantie voor het onderzoek
+%  \item de doelstelling en onderzoeksvraag/-vragen
+%\end{itemize}
 
 %---------- Stand van zaken ---------------------------------------------------
 
-\section{State-of-the-art}
+\section{Literatuurstudie}
 \label{sec:state-of-the-art}
+\subsection{Introduction to server provisioning with CloudInit}
+Het allereerste artikel dat gevonden werd is An introduction to server provisioning with CloudInit. Dit artikel werd gevonden op de site CloudSigma en is geschreven door \textcite{Cloudsigma}. Dit artikel gaat over hoe je een cloud-init server opzet. Hierin in beschrijft hij hoe je een cloud-init server opzet met Ubuntu. 
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein. Dit kan bijvoorbeeld een literatuurstudie zijn. Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek? Wat is de relevantie met jouw onderzoek?
+In dit artikel beschrijft \textcite{Cloudsigma} cloud-init als een provisioning systeem, maar niet zomaar een provisioning systeem. \textcite{Cloudsigma} raadt aan om cloud-init te gebruiken in samenwerking met een ander provisioning systeem. Hierin geeft hij tal van voorbeelden zoals Chef, puppet, Salt. Maar ook Ansible de auteur zelf prefereert zelf om cloud-init samen met ansible te gebruiken.
 
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Doll1954}! Denk zeker goed na welke werken je refereert en waarom.
+Verder staat er in "An introduction to server provisioning with CloudInit" hoe je SSH sleutels, systeem updates en packages installeert op de server. Ook hoe je de host-name moet veranderen en commands moet runnen op de eerste boot, allemaal vrij standaard. 
+
+Over de samenwerking met Ansible staat er dat dit aan te raden is voor de meer “verfijnde” gebruikers. Dit is een zeer complex onderwerp door de vele variabelen die er zijn.
+
+% artikel 2
+
+\subsection{Using Ansible to Bootstrap My Work Environment Part 4}
+Het tweede artiel dat werg gevonden is “Using Ansible to Bootstrap My Work Environment Part 4”.  Het is een geschreven door \textcite{scottharney}. In dit experiment gebruikt de auteur eerste cloud-init voor de eerste basis provisioning en daarna ansible om de meer geavanceerde taken uit te voeren. Hij wilt EC2 installeren op zijn server.
+
+In het artikel gebruikt \textcite{scottharney} cloud-init vooral om de vroege provision onderdelen uit te voeren. Met cloud-init doet hij de eerste basis dingen die er moeten gebeuren op de server. Hij maakt zijn user aan en installeert de nodige packages en installeert ook python2. In vroeger experimenten pushte hij deze naar systemd. Maar werken via cloud-init vindt de auteur handiger. 
+
+Een laatste opmerking die hij over cloud-init heeft is dat er iets te weinig documentatie over te vinden was in zijn opinie. Hierna gebruikte hij Ansible om EC2 te installeren. Dit deed hij door een role met EC2 toe te voegen. Hierna voegde hij de juiste parameters toe.
+
+In dit artikel zien we een eerste keer hoe ansible en cloud-init kunnen samenwerken.
+ 
+%artikel 3
+\subsection{Customizing Cloud Assembly Deployments with Cloud-Init}
+Het derde artikel dat gekozen is “Customizing Cloud Assembly Deployments with Cloud-Init”. Het artikel is geschreven door \textcite{vmware}.
+
+In het artikel zeggen ze dat automatisering van servers (virtuee machines) iets fantastisch is, maar dat er nog verbetering mogelijk is. En daar komt cloud-init in het spel. Door dit te gebruiken kan je op een snelle efficiënte manier vm’s op zetten volgens \textcite{vmware}. 
+
+Ansible komt in dit artikel eerder te pas als een extra provisioning systeem dat je kunt gebruiken voor verdere aanpassingen. 
+
+Verder in het artikel zie je hoe \textcite{vmware} een cloud-init server opzet en hoe je de best beheert.
+
+%artikel 4
+\subsection{Zero Touch Provisioning of Infoblox Grid on OpenStack using Ansible}
+Het vierde artikel dat gevonden werd is “Zero Touch Provisioning of Infoblox Grid on OpenStack using Ansible”. Het is een geschreven door \textcite{infoblox}.
+
+In tegenstelling ook tot vorige artikels toont dit aan hoe ansible cloud-init overbodig maakt. In het artikel spreekt \textcite{infoblox} over hoe een ansible taak namelijk “ Deploying infoblox grid” ervoor zorgt dat bepaalde dingen niet meer nodig zijn. Waaronder heet license and network initialization dat gedaan werd via cloud-init. Door ansible te gebruiken is dit nu overbodig.
+ 
+ %artikel 5
+ \subsection{Automated Ansible AWX Installation}
+ 
+Het vijfde en laatste artikel dat er werd gevonden is \textcite{deven}. Het beschrijft een automatische installatie van AWX op een ubuntu machine via cloud-init.  Het volgt een installatie van AWX met ansible maar de auteur past deze toe met cloud-init. 
+
+Voor die rede is dit artikel zeer interessant. Er zijn al artikels gepasseerd die één beschrijven, die een samenwerking beschrijven of een overbodigheid van één beschrijven. Maar dit beschrijft hoe je met installatie notitites van ansible cloud-init kunt gebruiken. Dit toon toch wel wat gelijkenissen aan in configuratie.
+
+
+
+
+%Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein. Dit kan bijvoorbeeld een literatuurstudie zijn. Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek? Wat is de relevantie met jouw onderzoek?
+
+%Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Doll1954}! Denk zeker goed na welke werken je refereert en waarom.
 
 % Voor literatuurverwijzingen zijn er twee belangrijke commando's:
 % \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
@@ -29,23 +88,37 @@ Verwijs bij elke introductie van een term of bewering over het domein naar de va
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
 
-Je mag gerust gebruik maken van subsecties in dit onderdeel.
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}
 \label{sec:methodologie}
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor experimenten, vragenlijsten, simulaties? Je beschrijft ook al welke tools je denkt hiervoor te gebruiken of te ontwikkelen.
+Dit onderzoek zal gevoerd worden door virtuele server omgevingen op te zetten met Cloud-init en/of Ansible. De programma’s die hierbij zullen worden gebruikt zijn VirtualBox, Vagrant en Atom. 
+
+Virtualbox is een programma om virtuele machines op te draaien. Met Vagrant kan je van in je shell met een simpel commando virtuele machines op starten. Atom is dan weer een teksteditor om de configuratie goed in neer te pennen. Normaal is deze het vermelden niet waar maar door de overzichtelijke manier van werken die het aanbiedt is deze toch veel beter dan een gewone Notepad.
+
+Met Ansible zal er voor verschillende servers een testomgeving worden opgezet. Dit zal dan ook gebeuren met cloud-init. Deze resultaten en omgevingen kunnen dan worden  vergeleken met elkaar. De technische eigenschappen/resultaten worden dan onder de loep genomen: de performantie, de snelheid van het opstarten,… Ook zal er worden gekeken naar de config files van beiden en kan er worden gekeken welke daar per omgeving “beter” is. Met beter wordt bedoeld dat de één misschien overzichtelijker is of dat er minder code moet worden geschreven om iets aan te passen/toe te voegen. Zo kunnen er dan combinaties van de twee worden aangemaakt en dan kunnen we deze vergelijken met de originele servers. 
+
+Ook kan het zijn dat er vragen worden gesteld aan medewerkers van het bedrijf Be-Mobile om te bekijken wat hun mening over beide is.
+
+%Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor experimenten, vragenlijsten, simulaties? Je beschrijft ook al welke tools je denkt hiervoor te gebruiken of te ontwikkelen.
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwachte resultaten}
 \label{sec:verwachte_resultaten}
+De verwachtingen zijn dat een combinatie van cloud-init en Ansible meestal het beste zal zijn. Dat er voor elke server tot een bepaald moment cloud-init of ansible  zal worden gebruikt waarna ansible of cloud-init het zal overnemen. Ook zijn de verwachtingen dat er voor elke omgeving een andere oplossing zal zijn. Er zal veel afhangen van het type besturingssysteem dat draait en van de servers om te kunnen bepalen welke het best wordt gekozen. 
 
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de stukken van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet hoe je je data gaat moeten structureren.
+De verwachtingen zijn ook dat niet bij alles een combinatie zal worden gebruikt. Ook kan het misschien zijn dat het beter is dat je één van beide kiest voor een bepaalde server omgeving.
+
+
+%Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de stukken van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet hoe je je data gaat moeten structureren.
 
 %---------- Verwachte conclusies ----------------------------------------------
 \section{Verwachte conclusies}
 \label{sec:verwachte_conclusies}
+De verwachte conclusie is dat elke server omgeving een andere uitkomst zal hebben. Er veel zal afhangen van welke server je precies wilt draaien op welk systeem. Dan kan er worden gekozen voor een bepaalde combinatie van beide of misschien één van beide. De conclusie zal niet zijn welke van de twee beter is. Maar eerder hoe ze het best gebruikt worden per serveromgeving.
 
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
+
+
+%Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
 
