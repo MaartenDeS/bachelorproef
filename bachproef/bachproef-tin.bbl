@@ -1,0 +1,254 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{infoblox}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=0bfb331611cbcf420b38f73e1936f836}{%
+           family={Aditya},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0bfb331611cbcf420b38f73e1936f836}
+      \strng{fullhash}{0bfb331611cbcf420b38f73e1936f836}
+      \strng{bibnamehash}{0bfb331611cbcf420b38f73e1936f836}
+      \strng{authorbibnamehash}{0bfb331611cbcf420b38f73e1936f836}
+      \strng{authornamehash}{0bfb331611cbcf420b38f73e1936f836}
+      \strng{authorfullhash}{0bfb331611cbcf420b38f73e1936f836}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Info Blox}
+      \field{title}{Zero Touch Provisioning of Infoblox Grid on OpenStack using Ansible}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://community.infoblox.com/t5/Community-Blog/Zero-Touch-Provisioning-of-Infoblox-Grid-on-OpenStack-using/ba-p/14910
+      \endverb
+      \verb{url}
+      \verb https://community.infoblox.com/t5/Community-Blog/Zero-Touch-Provisioning-of-Infoblox-Grid-on-OpenStack-using/ba-p/14910
+      \endverb
+    \endentry
+    \entry{vmware}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=520967881ea4e0d7178f519e71de2929}{%
+           family={Arkland},
+           familyi={A\bibinitperiod},
+           given={Cody\bibnamedelima De},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{520967881ea4e0d7178f519e71de2929}
+      \strng{fullhash}{520967881ea4e0d7178f519e71de2929}
+      \strng{bibnamehash}{520967881ea4e0d7178f519e71de2929}
+      \strng{authorbibnamehash}{520967881ea4e0d7178f519e71de2929}
+      \strng{authornamehash}{520967881ea4e0d7178f519e71de2929}
+      \strng{authorfullhash}{520967881ea4e0d7178f519e71de2929}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Blog VMware}
+      \field{title}{Customizing Cloud Assembly Deployments with Cloud-Init}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://blogs.vmware.com/management/2018/11/customizing-cloud-assembly-deployments-with-cloud-init.html
+      \endverb
+      \verb{url}
+      \verb https://blogs.vmware.com/management/2018/11/customizing-cloud-assembly-deployments-with-cloud-init.html
+      \endverb
+    \endentry
+    \entry{deven}{article}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{devendor tech}
+      \field{title}{Automated Ansible AWX Installation}
+      \verb{urlraw}
+      \verb https://www.devendortech.com/articles/AWX_Tower.html
+      \endverb
+      \verb{url}
+      \verb https://www.devendortech.com/articles/AWX_Tower.html
+      \endverb
+    \endentry
+    \entry{Creeger2009}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=e888aba3556efbb8063540e3e2ae69b4}{%
+           family={Creeger},
+           familyi={C\bibinitperiod},
+           given={Mache},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e888aba3556efbb8063540e3e2ae69b4}
+      \strng{fullhash}{e888aba3556efbb8063540e3e2ae69b4}
+      \strng{bibnamehash}{e888aba3556efbb8063540e3e2ae69b4}
+      \strng{authorbibnamehash}{e888aba3556efbb8063540e3e2ae69b4}
+      \strng{authornamehash}{e888aba3556efbb8063540e3e2ae69b4}
+      \strng{authorfullhash}{e888aba3556efbb8063540e3e2ae69b4}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the ACM}
+      \field{number}{8}
+      \field{title}{{CTO Roundtable: Cloud Computing}}
+      \field{volume}{52}
+      \field{year}{2009}
+      \field{pages}{50\bibrangedash 56}
+      \range{pages}{7}
+    \endentry
+    \entry{scottharney}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=4d21f1938b6f8832973a4b02cd309b67}{%
+           family={Harney},
+           familyi={H\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{fullhash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{bibnamehash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{authorbibnamehash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{authornamehash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{authorfullhash}{4d21f1938b6f8832973a4b02cd309b67}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Blog}
+      \field{title}{Using Ansible to Bootstrap My Work Environment Part 4}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.scottharney.com/using-ansible-to-bootstap-my-work-environment-part-4/
+      \endverb
+      \verb{url}
+      \verb https://www.scottharney.com/using-ansible-to-bootstap-my-work-environment-part-4/
+      \endverb
+    \endentry
+    \entry{Knuth1998}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=ec08e6f01da5f3814f28a70c89c64656}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Redwood City, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {Addison Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{fullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{bibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorbibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authornamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorfullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The art of computer programming, volume 3: (2nd ed.) sorting and searching}
+      \field{year}{1998}
+    \endentry
+    \entry{Cloudsigma}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=8976539926b4546f117c55b683d95ee1}{%
+           family={Petersson},
+           familyi={P\bibinitperiod},
+           given={Viktor},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8976539926b4546f117c55b683d95ee1}
+      \strng{fullhash}{8976539926b4546f117c55b683d95ee1}
+      \strng{bibnamehash}{8976539926b4546f117c55b683d95ee1}
+      \strng{authorbibnamehash}{8976539926b4546f117c55b683d95ee1}
+      \strng{authornamehash}{8976539926b4546f117c55b683d95ee1}
+      \strng{authorfullhash}{8976539926b4546f117c55b683d95ee1}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cloudsigma}
+      \field{title}{An introduction to server provisioning with CloudInit}
+      \verb{urlraw}
+      \verb https://www.cloudsigma.com/an-introduction-to-server-provisioning-with-cloudinit/
+      \endverb
+      \verb{url}
+      \verb https://www.cloudsigma.com/an-introduction-to-server-provisioning-with-cloudinit/
+      \endverb
+    \endentry
+    \entry{Pollefliet2011}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=7ca343ebcc6de1727ac22a1a847c21e5}{%
+           family={Pollefliet},
+           familyi={P\bibinitperiod},
+           given={Leen},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Gent}%
+      }
+      \list{publisher}{1}{%
+        {Academia Press}%
+      }
+      \strng{namehash}{7ca343ebcc6de1727ac22a1a847c21e5}
+      \strng{fullhash}{7ca343ebcc6de1727ac22a1a847c21e5}
+      \strng{bibnamehash}{7ca343ebcc6de1727ac22a1a847c21e5}
+      \strng{authorbibnamehash}{7ca343ebcc6de1727ac22a1a847c21e5}
+      \strng{authornamehash}{7ca343ebcc6de1727ac22a1a847c21e5}
+      \strng{authorfullhash}{7ca343ebcc6de1727ac22a1a847c21e5}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Schrijven van verslag tot eindwerk: do's en don'ts}
+      \field{year}{2011}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

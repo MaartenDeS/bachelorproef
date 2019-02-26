@@ -1,0 +1,14 @@
+bvb bij opzetten omgeving vagrant ik ga 3 omgevingen opzetten moeten dit dan 3 hoofdstukkken zijn of subhoofdstukken in het hoofdstuk.
+
+is aantal hoofdstukken goed? 
+
+moet gevonden informatie voor uitleg in inleiding in bibliografie? de basisinfo over cloud-init,ansible, hetzner cloud
+Of is dit eerder iets voor een verklarende woordenlijst?
+
+Moet gevonden informatie over het bijvoorbeeld opzetten van een testomgeving in bibliografie? 
+dit is een git link met een repository voor het op te zetten. Hoe verwijs ik hiernaar?
+
+
+Moet ik zeggen als ik ergens hulp kreeg van een persoon buitenaf en zoja hoe?
+
+bij inleiding stond sowieso onderzoeksdoelstelling moet dit er bij of is het ok als ik dit schrap uit mijn inleiding?

@@ -3,11 +3,11 @@
 \section{Introductie} % The \section*{} command stops section numbering
 \label{sec:introductie}
 
-Voor de installatie van servers wordt al jaren Ansible gebruikt. Ansible is een universele 'taal' die taken voor servers automatiseert doormiddel van hun playbook. Zo een Ansible playbook is een georganiseerde unie van scripts dat het werk voor de server configuratie definieert.
+Voor de installatie van servers wordt al jaren Ansible gebruikt. Ansible is een universele 'taal' die taken voor servers automatiseert door middel van hun playbook. Zo een Ansible playbook is een georganiseerde unie van scripts dat het werk voor de server configuratie definieert.
 
 Cloud-Init is momenteel een van de industrie standaarden voor het opbouwen van cloud servers, het maakt gebruik van cloud images. Dat zijn besturingssysteem sjablonen en elke instantie begint als een identieke kloon van elke andere instantie. De gebruikersgegevens geven elke cloud instantie haar persoonlijkheid. Doormiddel van cloud-int worden deze gegevens op de instantie toegepast. 
 
-Dit zijn allebei provisioning systemen. Op een verschillende manier doen ze in theorie hetzelfde. Ze brengen de server allebei naar de gewenste toestand van de gebruiker. Doordat deze op verschillende maniere nwerken, wordt er in de praktijk in combinatie met beide gewerkt. In dat geval gebruik je eerste cloud-init om de server naar een gewenste toestand te brengen waar na Ansible het kan overnemen.
+Dit zijn allebei provisioning systemen. Op een verschillende manier doen ze in theorie hetzelfde. Ze brengen de server allebei naar de gewenste toestand van de gebruiker. Doordat deze op verschillende manieren werken, wordt er in de praktijk in combinatie met beide gewerkt. In dat geval gebruik je eerste cloud-init om de server naar een gewenste toestand te brengen waar na Ansible het kan overnemen.
 
 Maar is dit de perfecte samenwerking? Het bedrijf Be-mobile is opzoek naar het antwoord. In dit onderzoek bestuderen we waar deze mekaar aanvullen en hoe ze dan op een perfect performante manier werken. Natuurlijk is het goed mogelijk dat deze mekaar niet aanvullen en dan is het onderzoek waar en wanneer je voor wat moet kiezen en waarom dit mekaar overbodig maakt. 
 
@@ -29,50 +29,26 @@ In dit onderzoek zullen we dit trachten te ontdekken. De vragen waar het, de ant
 
 %---------- Stand van zaken ---------------------------------------------------
 
-\section{Literatuurstudie}
+\section{Stand Van Zaken}
 \label{sec:state-of-the-art}
-\subsection{Introduction to server provisioning with CloudInit}
-Het allereerste artikel dat gevonden werd is An introduction to server provisioning with CloudInit. Dit artikel werd gevonden op de site CloudSigma en is geschreven door \textcite{Cloudsigma}. Dit artikel gaat over hoe je een cloud-init server opzet. Hierin in beschrijft hij hoe je een cloud-init server opzet met Ubuntu. 
 
-In dit artikel beschrijft \textcite{Cloudsigma} cloud-init als een provisioning systeem, maar niet zomaar een provisioning systeem. \textcite{Cloudsigma} raadt aan om cloud-init te gebruiken in samenwerking met een ander provisioning systeem. Hierin geeft hij tal van voorbeelden zoals Chef, puppet, Salt. Maar ook Ansible de auteur zelf prefereert zelf om cloud-init samen met ansible te gebruiken.
+Ansible en Cloud-Init zijn geen onbekende voor mekaar dus er is wel een basis gevonden waarop er verder kan gewerkt worden. Maar zijn niet zo bekend dat de ultieme samenwerking al gevonden is. In het onderzoeken van de 2 systemen zijn er 5 artikels gevonden die een samenwerking beschrijven of afraden. 
 
-Verder staat er in "An introduction to server provisioning with CloudInit" hoe je SSH sleutels, systeem updates en packages installeert op de server. Ook hoe je de host-name moet veranderen en commands moet runnen op de eerste boot, allemaal vrij standaard. 
 
-Over de samenwerking met Ansible staat er dat dit aan te raden is voor de meer “verfijnde” gebruikers. Dit is een zeer complex onderwerp door de vele variabelen die er zijn.
+In de artikels \textbf{"An introduction to server provisioning with CloudInit"\autocite{Cloudsigma}}, \textbf{“Using Ansible to Bootstrap My Work Environment Part 4” \autocite{scottharney}} en \textbf{“Customizing Cloud Assembly Deployments with Cloud-Init” \autocite{vmware}} is er een vaak voorkomend fenomeen gevonden. Meestal gebruiken de gebruikers/auteurs eerst cloud-init om de machine op te starten, daarna ansible voor de verdere specifieke eigenschappen.
 
-% artikel 2
 
-\subsection{Using Ansible to Bootstrap My Work Environment Part 4}
-Het tweede artiel dat werg gevonden is “Using Ansible to Bootstrap My Work Environment Part 4”.  Het is een geschreven door \textcite{scottharney}. In dit experiment gebruikt de auteur eerste cloud-init voor de eerste basis provisioning en daarna ansible om de meer geavanceerde taken uit te voeren. Hij wilt EC2 installeren op zijn server.
+Het artikel geschreven door \textcite{Cloudsigma} is wel interessant doordat hij ook andere systemen buiten cloud-init heeft getest, waaronder puppet en chef. Maar toch verkiest hij om Ansible te gebruiken. Dit betekent dat een samenwerking met ansible optimaler is.
 
-In het artikel gebruikt \textcite{scottharney} cloud-init vooral om de vroege provision onderdelen uit te voeren. Met cloud-init doet hij de eerste basis dingen die er moeten gebeuren op de server. Hij maakt zijn user aan en installeert de nodige packages en installeert ook python2. In vroeger experimenten pushte hij deze naar systemd. Maar werken via cloud-init vindt de auteur handiger. 
 
-Een laatste opmerking die hij over cloud-init heeft is dat er iets te weinig documentatie over te vinden was in zijn opinie. Hierna gebruikte hij Ansible om EC2 te installeren. Dit deed hij door een role met EC2 toe te voegen. Hierna voegde hij de juiste parameters toe.
+De artikels \textbf{“Zero Touch Provisioning of Infoblox Grid on OpenStack using Ansible”\autocite{infoblox}} en \textbf{"Automated Ansible AWX Installation" \autocite{deven}} beschrijven dan weer hoe beide elke als een apart systeem kunnen worden gebruikt zonder de hulp van de ander. Maar toch zijn er een paar gelijkenissen zo gebruikt \textcite{deven} in "Automated Ansible AWX Installation" notities van een Ansible installatie om het met cloud-init te installeren.
 
-In dit artikel zien we een eerste keer hoe ansible en cloud-init kunnen samenwerken.
- 
-%artikel 3
-\subsection{Customizing Cloud Assembly Deployments with Cloud-Init}
-Het derde artikel dat gekozen is “Customizing Cloud Assembly Deployments with Cloud-Init”. Het artikel is geschreven door \textcite{vmware}.
 
-In het artikel zeggen ze dat automatisering van servers (virtuee machines) iets fantastisch is, maar dat er nog verbetering mogelijk is. En daar komt cloud-init in het spel. Door dit te gebruiken kan je op een snelle efficiënte manier vm’s op zetten volgens \textcite{vmware}. 
+Er is duidelijk al bekend dat er samengewerkt kan worden, maar ook soms weer niet. Maar criteria om te bepalen wanneer welke het best is, is nog niet bekend. 
 
-Ansible komt in dit artikel eerder te pas als een extra provisioning systeem dat je kunt gebruiken voor verdere aanpassingen. 
 
-Verder in het artikel zie je hoe \textcite{vmware} een cloud-init server opzet en hoe je de best beheert.
 
-%artikel 4
-\subsection{Zero Touch Provisioning of Infoblox Grid on OpenStack using Ansible}
-Het vierde artikel dat gevonden werd is “Zero Touch Provisioning of Infoblox Grid on OpenStack using Ansible”. Het is een geschreven door \textcite{infoblox}.
 
-In tegenstelling ook tot vorige artikels toont dit aan hoe ansible cloud-init overbodig maakt. In het artikel spreekt \textcite{infoblox} over hoe een ansible taak namelijk “ Deploying infoblox grid” ervoor zorgt dat bepaalde dingen niet meer nodig zijn. Waaronder heet license and network initialization dat gedaan werd via cloud-init. Door ansible te gebruiken is dit nu overbodig.
- 
- %artikel 5
- \subsection{Automated Ansible AWX Installation}
- 
-Het vijfde en laatste artikel dat er werd gevonden is \textcite{deven}. Het beschrijft een automatische installatie van AWX op een ubuntu machine via cloud-init.  Het volgt een installatie van AWX met ansible maar de auteur past deze toe met cloud-init. 
-
-Voor die rede is dit artikel zeer interessant. Er zijn al artikels gepasseerd die één beschrijven, die een samenwerking beschrijven of een overbodigheid van één beschrijven. Maar dit beschrijft hoe je met installatie notitites van ansible cloud-init kunt gebruiken. Dit toon toch wel wat gelijkenissen aan in configuratie.
 
 
 
@@ -97,7 +73,7 @@ Dit onderzoek zal gevoerd worden door virtuele server omgevingen op te zetten me
 
 Virtualbox is een programma om virtuele machines op te draaien. Met Vagrant kan je van in je shell met een simpel commando virtuele machines op starten. Atom is dan weer een teksteditor om de configuratie goed in neer te pennen. Normaal is deze het vermelden niet waar maar door de overzichtelijke manier van werken die het aanbiedt is deze toch veel beter dan een gewone Notepad.
 
-Met Ansible zal er voor verschillende servers een testomgeving worden opgezet. Dit zal dan ook gebeuren met cloud-init. Deze resultaten en omgevingen kunnen dan worden  vergeleken met elkaar. De technische eigenschappen/resultaten worden dan onder de loep genomen: de performantie, de snelheid van het opstarten,… Ook zal er worden gekeken naar de config files van beiden en kan er worden gekeken welke daar per omgeving “beter” is. Met beter wordt bedoeld dat de één misschien overzichtelijker is of dat er minder code moet worden geschreven om iets aan te passen/toe te voegen. Zo kunnen er dan combinaties van de twee worden aangemaakt en dan kunnen we deze vergelijken met de originele servers. 
+Met Ansible zal er voor verschillende servers een testomgeving worden opgezet. Dit zal dan ook gebeuren met cloud-init. Deze resultaten en omgevingen kunnen dan worden  vergeleken met elkaar. De technische eigenschappen/resultaten worden dan onder de loep genomen: de performantie, de snelheid van het opstarten,… Ook zal er worden gekeken naar de config files van beiden en kan er worden gekeken welke daar per omgeving “beter” is. M.a.w. welke er op een kortere overzichtelijkere manier hetgeen kan bekomen. Be-Mobile kan ook nog verdere criteria bepalen waardoor we een keuze gaan maken. Daarna worden ook  combinaties van de twee aangemaakt en dan kunnen we deze vergelijken met de originele servers. 
 
 Ook kan het zijn dat er vragen worden gesteld aan medewerkers van het bedrijf Be-Mobile om te bekijken wat hun mening over beide is.
 
