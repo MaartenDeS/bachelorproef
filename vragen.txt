@@ -8,6 +8,7 @@ Of is dit eerder iets voor een verklarende woordenlijst?
 Moet gevonden informatie over het bijvoorbeeld opzetten van een testomgeving in bibliografie? 
 dit is een git link met een repository voor het op te zetten. Hoe verwijs ik hiernaar?
 
+Als ik een cheat sheet heb met commando's moet ik dit ergens vermelden en moet ik dit cheat sheet ergens zetten?
 
 Moet ik zeggen als ik ergens hulp kreeg van een persoon buitenaf en zoja hoe?
 
