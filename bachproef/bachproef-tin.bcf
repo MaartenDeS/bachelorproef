@@ -2146,16 +2146,13 @@
     <bcf:datasource type="file" datatype="bibtex">../voorstel/voorstel.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Pollefliet2011</bcf:citekey>
-    <bcf:citekey order="2">Knuth1998</bcf:citekey>
-    <bcf:citekey order="3">Creeger2009</bcf:citekey>
+    <bcf:citekey order="1">Cloudsigma</bcf:citekey>
+    <bcf:citekey order="2">scottharney</bcf:citekey>
+    <bcf:citekey order="3">vmware</bcf:citekey>
     <bcf:citekey order="4">Cloudsigma</bcf:citekey>
-    <bcf:citekey order="5">scottharney</bcf:citekey>
-    <bcf:citekey order="6">vmware</bcf:citekey>
-    <bcf:citekey order="7">Cloudsigma</bcf:citekey>
-    <bcf:citekey order="8">infoblox</bcf:citekey>
-    <bcf:citekey order="9">deven</bcf:citekey>
-    <bcf:citekey order="10">deven</bcf:citekey>
+    <bcf:citekey order="5">infoblox</bcf:citekey>
+    <bcf:citekey order="6">deven</bcf:citekey>
+    <bcf:citekey order="7">deven</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
