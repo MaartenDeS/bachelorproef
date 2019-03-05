@@ -1,3 +1,3 @@
-Container - Cluster Installatie
+Container/Cluster Installatie & Configuratie
 
 iets met docker en kubernetes enzooo
