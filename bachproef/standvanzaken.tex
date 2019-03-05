@@ -32,7 +32,7 @@ Ansible voert de automatisatie en deployment uit via playbooks. Dit zijn yaml be
 
 Deze playbooks bevatten verschillende ``plays'' die de automatisatie definiëren over verschillende hosts. Deze hosts staan bekend als de inventory. Elke ``play'' bevat verschillende taken die één, verschillende of alle hosts moeten uitvoeren. Elke taak roept een Ansible module aan, een klein stukje code dat een specifieke taak uitvoert. Deze kan kunnen zeer simpel zijn, een bestand op een machine zetten of een specifieke package installeren. Maar ze kunnen ook complex zijn zoals een gehele CloudFormation opstarten in Amazon EC2.
 \begin{figure}[!htb]
-    \center{\includegraphics[width=0.9\textwidth]{images/playbookex.png}}
+    \center{\includegraphics[width=0.9\textwidth]{img/playbookex.png}}
     \caption{Voorbeeld van een Ansible playbook.}
     \label{fig:playbook}
 \end{figure}
@@ -41,7 +41,7 @@ Ansible is geschreven zodat als ze de playbook uitvoeren ook checken of deze tas
 
 Met Ansible kan je taken ook inkapselen in een role. Dit wordt gebruikt als je een specifieke configuratie meerdere keren moet uitvoeren, bijvoorbeeld het opzetten van een webserver. De Ansible Galaxy site bevat veel roles die kunnen gebruikt en aangepast worden voor het gebruik in een playbook.
 \begin{figure}[!htb]
-    \center{\includegraphics[width=0.9\textwidth]{images/agalaxy.png}}
+    \center{\includegraphics[width=0.9\textwidth]{img/agalaxy.png}}
     \caption{Ansible Galaxy site met lijst van roles.}
     \label{fig:agalaxy}
 \end{figure}
