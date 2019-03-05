@@ -1,4 +1,4 @@
-# Bachelorproef toegepaste informatica
+# Bachelorproef Maarten De Smedt toegepaste informatica
 
 Deze repository bevat LaTeX sjablonen voor gebruik bij het opmaken van je bachelorproef toegepaste informatica:
 
