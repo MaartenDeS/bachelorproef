@@ -1,12 +1,41 @@
 % Encoding: UTF-8
+@ARTICLE{Doll1954,
+	author = {Doll, Richard and Hill, A Bradford},
+	title = {The mortality of doctors in relation to their smoking habits: a preliminary
+	report},
+	journal = {British Medical Journal},
+	year = {1954},
+	volume = {328},
+	pages = {1529-1533},
+	number = {7455},
+	owner = {jbuy519},
+	timestamp = {2014.03.28}
+}
 
-@Article{Cloudsigma,
-  author  = {Viktor Petersson},
-  title   = {An introduction to server provisioning with CloudInit},
-  journal = {Cloudsigma},
-  year    = {2017},
-  url     = {https://www.cloudsigma.com/an-introduction-to-server-provisioning-with-cloudinit/},
-  owner   = {CloudSigma},
+@BOOK{Moore2002,
+	title = {Introduction to the Practice of Statistics},
+	publisher = {W. H. Freeman},
+	year = {2002},
+	author = {Moore, David and McCabe, George},
+	owner = {jbuy519},
+	timestamp = {2014.01.28}
+}
+
+@BOOK{Smits2011,
+	title = {Onderzoek met SPSS en Excel},
+	publisher = {Pearson Education},
+	year = {2011},
+	author = {Smits, Johan and Edens, Ronald},
+	owner = {jbuy519},
+	timestamp = {2014.01.23}
+}
+
+@ARTICLE{Cloudsigma,
+	author = {Viktor Petersson},
+	title = {An introduction to server provisioning with CloudInit},
+	journal = {Cloudsigma},
+	owner = {CloudSigma},
+	url = {https://www.cloudsigma.com/an-introduction-to-server-provisioning-with-cloudinit/}
 }
 
 @ARTICLE{scottharney,
@@ -36,16 +65,14 @@
 	url = {https://community.infoblox.com/t5/Community-Blog/Zero-Touch-Provisioning-of-Infoblox-Grid-on-OpenStack-using/ba-p/14910}
 }
 
-@Article{deven,
-  author  = {DevendorTech},
-  title   = {Automated Ansible AWX Installation},
-  journal = {devendor tech},
-  year    = {2018},
-  url     = {https://www.devendortech.com/articles/AWX_Tower.html},
+@ARTICLE{deven,
+	title = {Automated Ansible AWX Installation},
+	journal = {devendor tech},
+	url = {https://www.devendortech.com/articles/AWX_Tower.html}
 }
 
 @TechReport{ansibleid,
-  author      = {RedHat},
+  author      = {Red Hat},
   title       = {ANSIBLE IN DEPTH},
   institution = {Red Hat Inc.},
   year        = {2017},

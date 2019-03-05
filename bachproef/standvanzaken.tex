@@ -16,11 +16,10 @@
 
 In dit hoofdstuk wordt de stand van zaken besproken van cloud-init en Ansible. Eerst wordt uitgelegd wat Ansible is ,wat de eigenschappen zijn en hoe het precies werkt. Daarna wordt er net hetzelfde met cloud-init gedaan. Ten laatste wordt er ook een literatuurstudie uitgevoerd op gevonden van het bachelorproefvoorstel.
 
-** VERWIJZEN NAAR ARTIKEL**
-https://www.ansible.com/hubfs/pdfs/Ansible-InDepth-WhitePaper.pdf
-
 \section{Ansible}
-Ansible is een open source IT configuration management en deployment tool. Ansible hun grote doel is om besturingssysteem configuratie en de implementatie van software allemaal onder 1 systeem. Ansible staat bekend als een systeem dat makkelijk te leren als IT administrator, ontwikkelaar of manager. Het probeert er voor te zorgen dat het makkelijk te verstaan is en makkelijk om zelf op te bouwen. Zodat nieuwe gebruikers dit makkelijk kunnen oppikken. Ze proberen uniek te zijn door dingen door val aanpassing mogelijk te geven aan gebruikers voor de expert-gebruikers. Maar toch net zo toegankelijk voor de nieuwe gebruiker.
+Ansible is een open source IT configuration management en deployment tool. In deze Ansible hun grote doel is om besturingssysteem configuratie en de implementatie van software allemaal onder 1 systeem. De informatie werd gevonden met behulp van het document \textit{Ansible In Depth} \autocite{ansibleid}.
+
+Ansible staat bekend als een systeem dat makkelijk te leren als IT administrator, ontwikkelaar of manager. Het probeert er voor te zorgen dat het makkelijk te verstaan is en makkelijk om zelf op te bouwen. Zodat nieuwe gebruikers dit makkelijk kunnen oppikken. Ze proberen uniek te zijn door dingen door val aanpassing mogelijk te geven aan gebruikers voor de expert-gebruikers. Maar toch net zo toegankelijk voor de nieuwe gebruiker.
 
 \subsection{Architectuur}
 Eén van de belangrijkste verschillen tussen Ansible en andere configuratie management tools, is zijn architectuur. Ansible gaat uit van het ``push'' model. Ook is er geen additionele software nodig om machines bruikbaar te maken voor Ansible. Het heeft geen extra gebruikers of referenties nodig om te draaien. Het gebruikt gewoon de informatie die de user meegeeft. Daarbij hoort ook dat Ansible geen administrator of sudo toegang nodig heeft. Ansible wordt standaard bestuurt door een remote computer.
@@ -48,6 +47,6 @@ Met Ansible kan je taken ook inkapselen in een role. Dit wordt gebruikt als je e
 
 
 \subsection{Omgevingen}
-Ansible is zeer makkelijk te deployen cloud omgevingen als publieke of private cloud omgeving op cloud providers als Amazon Web Services, Microsoft Azure, Rackspace,... Maar ook op lokale infrastructuren zoals Virtualbox, VMware,... Hier behoren niet alleen  compute provision, maar ook opslag en netwerken.
+Ansible is zeer makkelijk te deployen cloud omgevingen als publieke of private cloud omgeving op cloud providers als Amazon Web Services, Microsoft Azure, Rackspace,... Maar ook op lokale infrastructuren zoals Virtualbox, VMware,... Hier toe behoort niet alleen compute provision, maar ook opslag en netwerken.
 
 

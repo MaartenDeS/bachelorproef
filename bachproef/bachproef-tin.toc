@@ -31,19 +31,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Instellingen aanpassen na het opstarten}{31}{chapter.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Conclusie}{33}{chapter.9}% 
+\contentsline {chapter}{\numberline {9}Container/Cluster Installatie \& Configuratie}{33}{chapter.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{35}{appendix.A}% 
+\contentsline {chapter}{\numberline {10}Conclusie}{35}{chapter.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{35}{section.A.1}% 
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{37}{appendix.A}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Stand Van Zaken}{36}{section.A.2}% 
+\contentsline {section}{\numberline {A.1}Introductie}{37}{section.A.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{36}{section.A.3}% 
+\contentsline {section}{\numberline {A.2}Stand Van Zaken}{38}{section.A.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwachte resultaten}{37}{section.A.4}% 
+\contentsline {section}{\numberline {A.3}Methodologie}{38}{section.A.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Verwachte conclusies}{37}{section.A.5}% 
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{39}{section.A.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{39}{appendix*.6}% 
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{39}{section.A.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{41}{appendix*.6}% 
 \contentsfinish 
