@@ -4,12 +4,12 @@
 
 \chapter{\IfLanguageName{dutch}{Inleiding}{Introduction}}
 \label{ch:inleiding}
-In dit hoofdstuk wordt er en kort inleiding over de bachelorproef. De oorsprong van het idee en de onderzoeksvraag wordt besproken. Ook wordt er al wat basisinfo gegeven over het onderwerp.
+In dit hoofdstuk wordt er een kort inleiding over de bachelorproef. De oorsprong van het idee en de onderzoeksvraag wordt besproken. Ook wordt er al wat basisinfo gegeven over het onderwerp.
 
 
-De installatie en modificatie van software servers moet voor de gebruiker altijd makkelijker en sneller. Eens de gebruiker weet wat voor server hij wilt, wilt hij liefst zo snel mogelijk opzetten met de nodige specificaties. Of als de gebruiker een kleine aanpassing wilt doen aan de server, wilt hij dit zo makkelijk mogelijk aanpassen. 
+De installatie en modificatie van software servers moet voor de gebruiker altijd makkelijker en sneller. Eens de gebruiker weet wat voor server hij wil, wil hij deze liefst zo snel mogelijk opzetten met de nodige specificaties. Of als de gebruiker een kleine aanpassing wil doen aan de server, wil hij dit zo makkelijk mogelijk aanpassen. 
 
-Om dit zo efficiënt mogelijk te doen heb je configuration management tools nodig. Dit zijn tools die gemaakt zijn om software op servers te installeren en te beheren. De meest bekende tools zijn Chef, Puppet, Salt en Ansible. In deze thesis gaat onder andere over Ansible. 
+Om dit zo efficiënt mogelijk te doen heb je configuration management tools nodig. Dit zijn tools die gemaakt zijn om software op servers te installeren en te beheren. De meest bekende tools zijn Chef, Puppet, Salt en Ansible. In deze bachelorproef gaat het onder andere over Ansible. 
 
 %De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te begrijpen en in te zien waarom de onderzoeksvraag de moeite waard is om te onderzoeken. In de inleiding ga je literatuurverwijzingen beperken, zodat de tekst vlot leesbaar blijft. Je kan de inleiding verder onderverdelen in secties als dit de tekst verduidelijkt. Zaken die aan bod kunnen komen in de inleiding~\autocite{Pollefliet2011}:
 
@@ -28,14 +28,8 @@ Om dit zo efficiënt mogelijk te doen heb je configuration management tools nodi
 
 Ansible is op zich al een zeer goede configuration management tool, maar voor het bedrijf Be-Mobile nog niet goed genoeg. 
 
-Be-Mobile is een Big Data verkeersbedrijf. Be-Mobile wil verkeer tot revolutioneren en the mobiliteits oplossingen van morgen en vandaag creëren. Hun hoofdzetel ligt in Melle, bij Gent. 
-\begin{figure}[!htb]
-    \center{\includegraphics[width=0.45\textwidth]{img/bemobile.png}}
-    \caption{Logo van Be-Mobile.}
-    \label{fig:bemobile}
-\end{figure}
+Be-Mobile is een Big Data verkeersbedrijf. Be-Mobile wil verkeer revolutioneren en de mobiliteits oplossingen voor morgen en vandaag creëren. Hun hoofdzetel ligt in Melle, bij Gent. 
 
-\newpage
 Be-Mobile werkt met "Hetzner Cloud". Dit is hun cloud server provider. Met hetzner cloud heb je de optie om te verwijzen naar een cloudconfig file om je server te configureren. Het cloudconfig bestand is het configuratie  bestand van cloud-init. 
 
 Cloud-init is net zoals een Ansible een soort van configuration management tool maar speciaal voor cloud servers. Door middel van paramaters in te vullen in dit bestand kan je jouw server configureren.
@@ -46,7 +40,7 @@ Cloud-init is net zoals een Ansible een soort van configuration management tool 
 \section{\IfLanguageName{dutch}{Probleemstelling - Onderzoeksvraag}{Research question}}
 \label{sec:probleemstellingonderzoeksvraag}
 
-Het probleem is meteen heel duidelijk. Moet er worden overgestapt naar cloud-init in plaats van Ansible. In deze thesis gaat dit worden onderzocht. Waar zijn Ansible en cloud-init verschillend, waar zijn ze hetzelfde en waar vullen ze mekaar aan. De echte onderzoeksvragen waar deze thesis een antwoord op hoopt te vinden is:
+Het probleem is meteen heel duidelijk. Moet er worden overgestapt naar cloud-init in plaats van Ansible. In deze bachelorproef gaat dit worden onderzocht. Waar zijn Ansible en cloud-init verschillend, waar zijn ze hetzelfde en waar vullen ze mekaar aan. De echte onderzoeksvragen waar deze thesis een antwoord op hoopt te vinden is:
 
 \begin{itemize}
     \item Is Ansible overbodig door het gebruikt van Cloud-init?

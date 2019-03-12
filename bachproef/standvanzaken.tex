@@ -14,12 +14,12 @@
 
 %\textcite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\autocite{Creeger2009}.
 
-In dit hoofdstuk wordt de stand van zaken besproken van cloud-init en Ansible. Eerst wordt uitgelegd wat Ansible is ,wat de eigenschappen zijn en hoe het precies werkt. Daarna wordt er net hetzelfde met cloud-init gedaan. Ten laatste wordt er ook een literatuurstudie uitgevoerd op gevonden van het bachelorproefvoorstel.
+In dit hoofdstuk wordt de stand van zaken besproken van cloud-init en Ansible. Eerst wordt uitgelegd wat Ansible is, wat de eigenschappen zijn en hoe het precies werkt. Daarna wordt er net hetzelfde met cloud-init gedaan. Ten laatste wordt er ook een literatuurstudie uitgevoerd op gevonden van het bachelorproefvoorstel.
 
 \section{Ansible}
-Ansible is een open source IT configuration management en deployment tool. In deze Ansible hun grote doel is om besturingssysteem configuratie en de implementatie van software allemaal onder 1 systeem. De informatie werd gevonden met behulp van het document \textit{Ansible In Depth} \autocite{ansibleid}.
+Ansible is een open source IT configuration management en deployment tool. Ansible hun grote doel is om besturingssysteem configuratie en de implementatie van software allemaal onder 1 systeem. De informatie werd gevonden met behulp van het document \textit{Ansible In Depth} \autocite{ansibleid}.
 
-Ansible staat bekend als een systeem dat makkelijk te leren als IT administrator, ontwikkelaar of manager. Het probeert er voor te zorgen dat het makkelijk te verstaan is en makkelijk om zelf op te bouwen. Zodat nieuwe gebruikers dit makkelijk kunnen oppikken. Ze proberen uniek te zijn door dingen door val aanpassing mogelijk te geven aan gebruikers voor de expert-gebruikers. Maar toch net zo toegankelijk voor de nieuwe gebruiker.
+Ansible staat bekend als een systeem dat makkelijk te leren is als IT administrator, ontwikkelaar of manager. Het probeert er voor te zorgen dat het makkelijk te verstaan is en makkelijk om zelf op te bouwen. Zodat nieuwe gebruikers dit makkelijk kunnen oppikken. Ze proberen uniek te zijn door dingen door val aanpassing mogelijk te geven aan gebruikers voor de expert-gebruikers. Maar toch net zo toegankelijk voor de nieuwe gebruiker.
 
 \subsection{Architectuur}
 Eén van de belangrijkste verschillen tussen Ansible en andere configuratie management tools, is zijn architectuur. Ansible gaat uit van het ``push'' model. Ook is er geen additionele software nodig om machines bruikbaar te maken voor Ansible. Het heeft geen extra gebruikers of referenties nodig om te draaien. Het gebruikt gewoon de informatie die de user meegeeft. Daarbij hoort ook dat Ansible geen administrator of sudo toegang nodig heeft. Ansible wordt standaard bestuurt door een remote computer.
@@ -47,6 +47,35 @@ Met Ansible kan je taken ook inkapselen in een role. Dit wordt gebruikt als je e
 
 
 \subsection{Omgevingen}
-Ansible is zeer makkelijk te deployen cloud omgevingen als publieke of private cloud omgeving op cloud providers als Amazon Web Services, Microsoft Azure, Rackspace,... Maar ook op lokale infrastructuren zoals Virtualbox, VMware,... Hier toe behoort niet alleen compute provision, maar ook opslag en netwerken.
+Ansible is even makkelijk te deployen in publieke of private cloud omgevingen, als in een lokale omgeving. Voor publieke of private cloud providers kan er gekozen worden voor: Amazon Web Services, Microsoft Azure, Rackspace,... Maar er kan ook op lokale infrastructuren gewerkt worden door middel van virtuele machines. Tools die hiervoor worden gebruikt zijn: VirtualBox, VMWare,...
+
+\section{Cloud-Init}
+
+TOEVEGEN BRONNEN + CHECKEN CLOUD SPELLING CLOUDINIT  ppt en site docs
+
+Net als Ansible is cloud-init ook een soort van configuration manager en deployment tool. Het is geschreven in python. Cloud-init zorgt  voor de customisaties tijdens het opstarten van de cloud of virtuele instanties. Deze service gebeurt heel vroeg in het boot proces. De instantie zoekt naar de \textit{user data} (het cloud-init script) van de gebruiker en voert deze uit. 
+
+De naam zegt het al zelf, maar cloud-init is een tool die meer wordt gebruikt door cloud instanties. Bijna alle cloud-providers hebben een functie waardoor je een cloud-init script kan meegeven.
+
+\subsection{Modules}
+Cloud-init heeft 6 hoofdpijlers waar het modules voor heeft, namelijk: schijf configuratie, commando's uitvoeren, gebruikers en groepen creeeren, beheren van packages, content bestanden schrijven en bootstrappen van Chef en/of Puppet. Er zijn nog andere modules maar dit zijn de 6 hoofdpijlers van cloud-init en daarbij de meeste gebruikte modules. Er kunnen ook zelf modules toevoegd worden door deze in Python te schrijven. Door middel van  de documentatie van BRONNENNNNNNNN wordt er per pijler uitleg gegeven. 
+
+\subsubsection{Schijf configuratie}
+Er is 1 module die wordt gebruikt voor de schijf configuratie, namelijk \textbf{Disk Setup}. Via deze module kan je simpele paritities en bestandsystemen configureren. Via de \textit{device\_aliases} richtlijnen kunnen er aliassen worden gemaakt voor de de block devices. Zodat er makkelijker naar deze kan worden verwezen. Via de \textit{disk\_setup} richtlijn wordt de partitie configuratie gedaan. De \textit{table\_type} richtlijn wordt gebruikt om de partitie tabel mee te gegeven. Ten laatste is er ook de \textit{fs\_setup} richtlijn deze wordt gebruikt om de systeembestand configuratie te doen.
+
+\subsubsection{Commando's uitvoeren}
+Voor het uitvoeren van commando's zijn er 2 modules: \textbf{Runcmd} en \textbf{Bootcmd}. Beide bevatten maar 1 richtlijn namelijk \textit{runcmd} en \textit{bootcmd}. Bij \textit{runcmd} worden de command's die worden meegegeven elke keer uitgevoerd als het script wordt gedraaid. Bij \textit{bootcmd} enkel alleen als de instantie wordt opgestart. Ook worden de commando's bij \textit{bootcmd} veel vroeger in het bootproces uitgevoerd.
+
+\subsubsection{Gebruikers en groepen}
+Ook voor Gebruikers en groepen is er slechts 1 module: \textbf{Users and Groups}.
+\subsubsection{Packages}
+
+\subsubsection{Content bestanden}
+
+\subsubsection{Chef - Puppet }
+
+
+\subsection{User Data - Cloud config}
+
 
 

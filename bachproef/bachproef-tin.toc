@@ -9,43 +9,61 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.3}Opzet van deze bachelorproef}{14}{section.1.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Stand van zaken}{17}{chapter.2}% 
+\contentsline {chapter}{\numberline {2}Stand van zaken}{15}{chapter.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Ansible}{17}{section.2.1}% 
+\contentsline {section}{\numberline {2.1}Ansible}{15}{section.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Architectuur}{17}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Architectuur}{15}{subsection.2.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Playbook - Roles}{18}{subsection.2.1.2}% 
+\contentsline {subsection}{\numberline {2.1.2}Playbook - Roles}{16}{subsection.2.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.3}Omgevingen}{19}{subsection.2.1.3}% 
+\contentsline {subsection}{\numberline {2.1.3}Omgevingen}{17}{subsection.2.1.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Methodologie}{21}{chapter.3}% 
+\contentsline {section}{\numberline {2.2}Cloud-Init}{17}{section.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Opzetten lokale testomgeving}{23}{chapter.4}% 
+\contentsline {subsection}{\numberline {2.2.1}Modules}{17}{subsection.2.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Opzetten Hetzner Cloud testomgeving}{25}{chapter.5}% 
+\contentsline {subsubsection}{Schijf configuratie}{18}{section*.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Basisconfiguraties op de servers}{27}{chapter.6}% 
+\contentsline {subsubsection}{Commando's uitvoeren}{18}{section*.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Server installatie en configuratie}{29}{chapter.7}% 
+\contentsline {subsubsection}{Gebruikers en groepen}{18}{section*.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Instellingen aanpassen na het opstarten}{31}{chapter.8}% 
+\contentsline {subsubsection}{Packages}{18}{section*.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Container/Cluster Installatie \& Configuratie}{33}{chapter.9}% 
+\contentsline {subsubsection}{Content bestanden}{18}{section*.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Conclusie}{35}{chapter.10}% 
+\contentsline {subsubsection}{Chef - Puppet }{18}{section*.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{37}{appendix.A}% 
+\contentsline {subsection}{\numberline {2.2.2}User Data - Cloud config}{18}{subsection.2.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{37}{section.A.1}% 
+\contentsline {chapter}{\numberline {3}Methodologie}{19}{chapter.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Stand Van Zaken}{38}{section.A.2}% 
+\contentsline {chapter}{\numberline {4}Opzetten lokale testomgeving}{21}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{38}{section.A.3}% 
+\contentsline {chapter}{\numberline {5}Opzetten Hetzner Cloud testomgeving}{23}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwachte resultaten}{39}{section.A.4}% 
+\contentsline {chapter}{\numberline {6}Basisconfiguraties op de servers}{25}{chapter.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Verwachte conclusies}{39}{section.A.5}% 
+\contentsline {chapter}{\numberline {7}Server installatie en configuratie}{27}{chapter.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{41}{appendix*.6}% 
+\contentsline {chapter}{\numberline {8}Instellingen aanpassen na het opstarten}{29}{chapter.8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {9}Container/Cluster Installatie \& Configuratie}{31}{chapter.9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {10}Conclusie}{33}{chapter.10}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{35}{appendix.A}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Introductie}{35}{section.A.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Stand Van Zaken}{36}{section.A.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Methodologie}{36}{section.A.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{37}{section.A.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{37}{section.A.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{39}{appendix*.12}% 
 \contentsfinish 
