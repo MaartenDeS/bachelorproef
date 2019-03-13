@@ -38,7 +38,7 @@ Deze playbooks bevatten verschillende ``plays'' die de automatisatie definiëren
 
 Ansible is geschreven zodat als ze de playbook uitvoeren ook checken of deze task nog moet gedaan worden. Bijvoorbeeld als een Ansible taak is om een webserver op te starten, zal Ansible deze alleen uitvoeren als de webserver nog niet is opgestart. Dit staat bekend als idempotente. Het zorgt ervoor dat de configuratie altijd snel en efficiënt wordt uitgevoerd.
 
-Met Ansible kan je taken ook inkapselen in een role. Dit wordt gebruikt als je een specifieke configuratie meerdere keren moet uitvoeren, bijvoorbeeld het opzetten van een webserver. De Ansible Galaxy site bevat veel roles die kunnen gebruikt en aangepast worden voor het gebruik in een playbook.
+Met Ansible kunnen taken ook ingekapseld worden in een role. Dit wordt gebruikt als er een specifieke configuratie meerdere keren wordt uitgevoerd, bijvoorbeeld het opzetten van een webserver. De Ansible Galaxy site bevat veel roles die kunnen gebruikt en aangepast worden voor het gebruik in een playbook.
 \begin{figure}[!htb]
     \center{\includegraphics[width=0.9\textwidth]{img/agalaxy.png}}
     \caption{Ansible Galaxy site met lijst van roles.}
@@ -50,32 +50,48 @@ Met Ansible kan je taken ook inkapselen in een role. Dit wordt gebruikt als je e
 Ansible is even makkelijk te deployen in publieke of private cloud omgevingen, als in een lokale omgeving. Voor publieke of private cloud providers kan er gekozen worden voor: Amazon Web Services, Microsoft Azure, Rackspace,... Maar er kan ook op lokale infrastructuren gewerkt worden door middel van virtuele machines. Tools die hiervoor worden gebruikt zijn: VirtualBox, VMWare,...
 
 \section{Cloud-Init}
+Net als Ansible is cloud-init ook een soort van configuration manager en deployment tool. Het is geschreven in python. Cloud-init zorgt  voor de customisaties tijdens het opstarten van de cloud of virtuele instanties. Deze service gebeurt heel vroeg in het boot proces. De instantie zoekt naar de \textit{user data} (het cloud-init script) van de gebruiker en voert deze uit. De naam zegt het al zelf, maar cloud-init is een tool die meer wordt gebruikt door cloud instanties. Bijna alle cloud-providers hebben een functie waardoor er een cloud-init script kan meegeven worden. 
 
-TOEVEGEN BRONNEN + CHECKEN CLOUD SPELLING CLOUDINIT  ppt en site docs
-
-Net als Ansible is cloud-init ook een soort van configuration manager en deployment tool. Het is geschreven in python. Cloud-init zorgt  voor de customisaties tijdens het opstarten van de cloud of virtuele instanties. Deze service gebeurt heel vroeg in het boot proces. De instantie zoekt naar de \textit{user data} (het cloud-init script) van de gebruiker en voert deze uit. 
-
-De naam zegt het al zelf, maar cloud-init is een tool die meer wordt gebruikt door cloud instanties. Bijna alle cloud-providers hebben een functie waardoor je een cloud-init script kan meegeven.
+Veel van de punten die hier verder worden besproken zijn gevonden in de presentatie van \autocite{cloudred}.
 
 \subsection{Modules}
-Cloud-init heeft 6 hoofdpijlers waar het modules voor heeft, namelijk: schijf configuratie, commando's uitvoeren, gebruikers en groepen creeeren, beheren van packages, content bestanden schrijven en bootstrappen van Chef en/of Puppet. Er zijn nog andere modules maar dit zijn de 6 hoofdpijlers van cloud-init en daarbij de meeste gebruikte modules. Er kunnen ook zelf modules toevoegd worden door deze in Python te schrijven. Door middel van  de documentatie van BRONNENNNNNNNN wordt er per pijler uitleg gegeven. 
+Cloud-init heeft 6 hoofdpijlers waar het modules voor heeft, namelijk: schijf configuratie, commando's uitvoeren, gebruikers en groepen creeeren, beheren van packages, content bestanden schrijven en bootstrappen van Chef en/of Puppet. Er zijn nog andere modules maar dit zijn de 6 hoofdpijlers van cloud-init en daarbij de meeste gebruikte modules. Er kunnen ook zelf modules toevoegd worden door deze in Python te schrijven. Met behulp van de documentatie van \textcite{clouddocs} wordt er per pijler uitleg gegeven. 
 
 \subsubsection{Schijf configuratie}
-Er is 1 module die wordt gebruikt voor de schijf configuratie, namelijk \textbf{Disk Setup}. Via deze module kan je simpele paritities en bestandsystemen configureren. Via de \textit{device\_aliases} richtlijnen kunnen er aliassen worden gemaakt voor de de block devices. Zodat er makkelijker naar deze kan worden verwezen. Via de \textit{disk\_setup} richtlijn wordt de partitie configuratie gedaan. De \textit{table\_type} richtlijn wordt gebruikt om de partitie tabel mee te gegeven. Ten laatste is er ook de \textit{fs\_setup} richtlijn deze wordt gebruikt om de systeembestand configuratie te doen.
+Er is 1 module die wordt gebruikt voor de schijf configuratie, namelijk \textbf{Disk Setup}. Via deze module kunnen er simpele paritities en bestandsystemen worden geconfigureerd. Via de \textit{device\_aliases} richtlijnen kunnen er aliassen worden gemaakt voor de de block devices. Zodat er makkelijker naar deze kan worden verwezen. Via de \textit{disk\_setup} richtlijn wordt de partitie configuratie gedaan. De \textit{table\_type} richtlijn wordt gebruikt om de partitie tabel mee te gegeven. Ten laatste is er ook de \textit{fs\_setup} richtlijn deze wordt gebruikt om de systeembestand configuratie te doen.
 
 \subsubsection{Commando's uitvoeren}
 Voor het uitvoeren van commando's zijn er 2 modules: \textbf{Runcmd} en \textbf{Bootcmd}. Beide bevatten maar 1 richtlijn namelijk \textit{runcmd} en \textit{bootcmd}. Bij \textit{runcmd} worden de command's die worden meegegeven elke keer uitgevoerd als het script wordt gedraaid. Bij \textit{bootcmd} enkel alleen als de instantie wordt opgestart. Ook worden de commando's bij \textit{bootcmd} veel vroeger in het bootproces uitgevoerd.
 
 \subsubsection{Gebruikers en groepen}
-Ook voor Gebruikers en groepen is er slechts 1 module: \textbf{Users and Groups}.
+Ook voor Gebruikers en groepen is er slechts 1 module: \textbf{Users and Groups}. Groepen kunnen worden toegevoegd door deze aan de richtlijn \textit{groups} toe te voegen samen eventuele configuratie per groep. Gebruikers kunnen dan weer toegevoegd worden door deze aan de richtlijn \textit{users} toe te voegen. Ook bij de gebruikers kan er nog extra configuratie gedaan worden per gebruiker.
+
 \subsubsection{Packages}
+Voor het beheren en configueren van packages zijn er verschillende modules: \textbf{Apt Configure}, \textbf{Apt Pipelining}, \textbf{Package Update Upgrade Install}, \textbf{Snap}, \textbf{Snappy} en \textbf{Yum Add Repo}. Er kunnen packages geïnstalleerd en geconfigureerd worden via Yum en Apt. Meestal ondersteund een besturingsysteem Yum of Apt. Voor installatie van een package moeten deze plaatsen bij de richtlijn \textit{packages}. Cloud-init weet zelf of het met yum of apt wordt gedaan. De configuratie en het toevoegen van package repo's gebeurt via Apt Configure, Apt Pipelinig en Yum Add Repo. Ook ondersteunt cloud-init de installatie van snap packages. Dit zijn gecontaineriseerde packages. Via Snappy kan deze geconfigureerd worden.
 
 \subsubsection{Content bestanden}
+Voor het aanmaken van bestanden is er de module \textbf{Write Files}. In de richtlijn \textit{write\_files} word de gecodeerde inhoud van het bestand gezet met het pad.
 
-\subsubsection{Chef - Puppet }
-
+\subsubsection{Chef - Puppet}
+Ook zijn er 2 modules die Chef en Puppet installeren, configureren en starten. Deze modules zijn logischer wijs \textbf{Chef} en \textbf{Puppet}. Voor Puppet wordt de richtlijn \textit{puppet} meegegeven. Daaronder worden alle configuraties geplaatst. Chef werkt op dezelfde manier.
 
 \subsection{User Data - Cloud config}
+Zoals Ansible zijn playbook heeft, heeft cloud-init zijn user data. Ook heeft cloud-init de meta-data, maar deze wordt meegegeven door het cloud platform zelf. Dit zijn bijvoorbeeld de server naam en het server id. De 2 bekendste methodes om user data mee te geven zijn User-Data Script en Cloud Config Data. 
+\subsubsection{User-Data Script}
+Het User-Data script een linux script dat de server overloopt voor dat hij opstart. Het moet alijd beginnen met \textit{!\#} of \textit{Content-Type: text/x-shellscript}. Als er echt wordt gebruikt gemaakt van cloud-init wordt deze methode niet gebruikt. De modules kun je via zo een script bijvoorbeeld niet aanroepen. Dit is eerder voor gebruikers die al een script hebben. In plaats van dit om te zetten naar Cloud Config Data, kunnen ze dat dan script gebruiken.
+\begin{figure}[!htb]
+	\center{\includegraphics[width=0.9\textwidth]{img/userdatascript.png}}
+	\caption{Voorbeeld user-data script.}
+	\label{fig:udatascript}
+\end{figure}
 
+\subsubsection{Cloud Config Data}
+De meest gebruikte methode is Cloud Config Data. Dit is een yaml bestand met de configuratie van de server in. Een Cloud Config bestand begint altijd met \textit{\#cloud-config}. In het bestand worden de modules opgelijst die worden gebruikt en daaronder dan hun configuraties. Dit bestand is veel overzichtelijker dan een script om later aan te passen of om te beheren. Ook heeft het wat gelijkenissen met het playbook van Ansible, doordat dit beide yaml bestanden zijn.
+\begin{figure}[!htb]
+	\center{\includegraphics[width=0.9\textwidth]{img/cloudconfig.png}}
+	\caption{Voorbeeld Cloud Config Data.}
+	\label{fig:udatascript}
+\end{figure}
 
+\section{Studie 1}
 

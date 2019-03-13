@@ -80,6 +80,38 @@
       \verb https://blogs.vmware.com/management/2018/11/customizing-cloud-assembly-deployments-with-cloud-init.html
       \endverb
     \endentry
+    \entry{clouddocs}{report}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=cd56b7dd9a2d6ba24f7dca7eb856d6a9}{%
+           family={cloud-init},
+           familyi={c\bibinithyphendelim i\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {cloud-init}%
+      }
+      \strng{namehash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
+      \strng{fullhash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
+      \strng{bibnamehash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
+      \strng{authorbibnamehash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
+      \strng{authornamehash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
+      \strng{authorfullhash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
+      \field{sortinit}{c}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{cloud-init-docs-modules}
+      \field{type}{documentation}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://cloudinit.readthedocs.io/en/latest/topics/modules.html
+      \endverb
+      \verb{url}
+      \verb https://cloudinit.readthedocs.io/en/latest/topics/modules.html
+      \endverb
+    \endentry
     \entry{deven}{article}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=aa323112f31d458bd26ddb2bc0fe7f28}{%
@@ -203,6 +235,47 @@
       \endverb
       \verb{url}
       \verb https://www.ansible.com/hubfs/pdfs/Ansible-InDepth-WhitePaper.pdf
+      \endverb
+    \endentry
+    \entry{cloudred}{report}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=d8f4a35d739162636b1c67f70b266bc2}{%
+           family={Skinner},
+           familyi={S\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5d24242765f5f86495bbcf8f7f5c773d}{%
+           family={Heldebrant},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {RedHat}%
+      }
+      \strng{namehash}{1b70b5bb4d8e5a2b06bec7889ec4f9dd}
+      \strng{fullhash}{1b70b5bb4d8e5a2b06bec7889ec4f9dd}
+      \strng{bibnamehash}{1b70b5bb4d8e5a2b06bec7889ec4f9dd}
+      \strng{authorbibnamehash}{1b70b5bb4d8e5a2b06bec7889ec4f9dd}
+      \strng{authornamehash}{1b70b5bb4d8e5a2b06bec7889ec4f9dd}
+      \strng{authorfullhash}{1b70b5bb4d8e5a2b06bec7889ec4f9dd}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cloud-Init}
+      \field{type}{presentation}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://people.redhat.com/mskinner/rhug/q3.2014/cloud-init.pdf
+      \endverb
+      \verb{url}
+      \verb https://people.redhat.com/mskinner/rhug/q3.2014/cloud-init.pdf
       \endverb
     \endentry
   \enddatalist
