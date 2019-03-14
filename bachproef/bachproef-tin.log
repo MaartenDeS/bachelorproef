@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.5)  14 MAR 2019 15:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.5)  14 MAR 2019 16:27
 entering extended mode
 **./bachproef-tin.tex
 (bachproef-tin.tex
@@ -1860,86 +1860,90 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
 ) (standvanzaken.tex [14]
 Hoofdstuk 2.
-[15
-
-]
-<img/playbookex.png, id=200, 733.99219pt x 321.45094pt>
-File: img/playbookex.png Graphic file (type png)
-<use img/playbookex.png>
-Package pdftex.def Info: img/playbookex.png  used on input line 34.
-(pdftex.def)             Requested size: 384.1096pt x 168.22472pt.
-<img/agalaxy.png, id=201, 1096.84781pt x 508.14844pt>
-File: img/agalaxy.png Graphic file (type png)
-<use img/agalaxy.png>
-Package pdftex.def Info: img/agalaxy.png  used on input line 43.
-(pdftex.def)             Requested size: 384.1096pt x 177.94765pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 19.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16 <./img/playbookex.png>] [17 <./img/agalaxy.png>]
+ [15
+
+]
+<img/playbookex.png, id=201, 733.99219pt x 321.45094pt>
+File: img/playbookex.png Graphic file (type png)
+<use img/playbookex.png>
+Package pdftex.def Info: img/playbookex.png  used on input line 36.
+(pdftex.def)             Requested size: 384.1096pt x 168.22472pt.
+<img/agalaxy.png, id=202, 1096.84781pt x 508.14844pt>
+File: img/agalaxy.png Graphic file (type png)
+<use img/agalaxy.png>
+Package pdftex.def Info: img/agalaxy.png  used on input line 45.
+(pdftex.def)             Requested size: 384.1096pt x 177.94765pt.
+
+[16 <./img/playbookex.png>]
+Underfull \vbox (badness 2707) has occurred while \output is active []
+
+ [17 <./img/agalaxy.png>]
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 62.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 64.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 62.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 63.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 64.
  [18]
-<img/userdatascript.png, id=229, 393.72093pt x 170.13562pt>
+<img/userdatascript.png, id=228, 393.72093pt x 170.13562pt>
 File: img/userdatascript.png Graphic file (type png)
 <use img/userdatascript.png>
-Package pdftex.def Info: img/userdatascript.png  used on input line 85.
+Package pdftex.def Info: img/userdatascript.png  used on input line 87.
 (pdftex.def)             Requested size: 384.1096pt x 165.98149pt.
-<img/cloudconfig.png, id=230, 452.4403pt x 217.5628pt>
+<img/cloudconfig.png, id=229, 452.4403pt x 217.5628pt>
 File: img/cloudconfig.png Graphic file (type png)
 <use img/cloudconfig.png>
-Package pdftex.def Info: img/cloudconfig.png  used on input line 93.
+Package pdftex.def Info: img/cloudconfig.png  used on input line 95.
 (pdftex.def)             Requested size: 384.1096pt x 184.7035pt.
  [19 <./img/userdatascript.png>]) (methodologie.tex [20 <./img/cloudconfig.png>
+] [21] [22
+
 ]
 Hoofdstuk 3.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21
-
-])
-(testlokaal.tex [22]
+ [23])
+(testlokaal.tex [24]
 Hoofdstuk 4.
-) (testhetzner.tex [23
+) (testhetzner.tex [25
 
-] [24
+] [26
 
 ]
 Hoofdstuk 5.
-) (basisconf.tex [25] [26
+) (basisconf.tex [27] [28
 
 ]
 Hoofdstuk 6.
-) (serverconf.tex [27] [28
+) (serverconf.tex [29] [30
 
 ]
 Hoofdstuk 7.
-) (naopstarten.tex [29] [30
+) (naopstarten.tex [31] [32
 
 ]
 Hoofdstuk 8.
-) (container.tex [31] [32
+) (container.tex [33] [34
 
 ]
 Hoofdstuk 9.
-) (conclusie.tex [33] [34
+) (conclusie.tex [35] [36
 
 ]
 Hoofdstuk 10.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35])
-[36]
+ [37])
+[38]
 B"ylage A.
-(../voorstel/voorstel-inhoud.tex [37
+(../voorstel/voorstel-inhoud.tex [39
 
-] [38]) [39] [40
+] [40]) [41] [42
 
 ]
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 13
@@ -1995,7 +1999,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 133.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 133.
- [41]
+ [43]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
  (bachproef-tin.aux)
@@ -2010,8 +2014,8 @@ Package logreq Info: Writing requests to 'bachproef-tin.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40036 strings out of 492946
- 752883 string characters out of 3125379
+ 40038 strings out of 492946
+ 752897 string characters out of 3125379
  1352182 words of memory out of 3000000
  43017 multiletter control sequences out of 15000+200000
  590974 words of font info for 198 fonts, out of 3000000 for 9000
@@ -2025,9 +2029,9 @@ fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Maarten/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Maarten/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Maarten/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachproef-tin.pdf (43 pages, 468286 bytes).
+Output written on bachproef-tin.pdf (45 pages, 470153 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
- 98 named destinations out of 1000 (max. 500000)
+ 506 PDF objects out of 1000 (max. 8388607)
+ 100 named destinations out of 1000 (max. 500000)
  33046 words of extra memory for PDF output out of 35830 (max. 10000000)
 
