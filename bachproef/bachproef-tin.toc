@@ -41,6 +41,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Cloud Config Data}{19}{section*.13}% 
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}Omgevingen}{20}{subsection.2.2.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.4}Systemen}{20}{subsection.2.2.4}% 
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Studie 1}{20}{section.2.3}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Methodologie}{21}{chapter.3}% 
