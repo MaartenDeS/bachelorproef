@@ -82,19 +82,19 @@
     \endentry
     \entry{clouddocs}{report}{}
       \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=cd56b7dd9a2d6ba24f7dca7eb856d6a9}{%
-           family={cloud-init},
+        {{uniquename=0,uniquepart=base,hash=6bba450c256d490f70904e56c56dd0d7}{%
+           family={cloud-init.io},
            familyi={c\bibinithyphendelim i\bibinitperiod}}}%
       }
       \list{institution}{1}{%
         {cloud-init}%
       }
-      \strng{namehash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
-      \strng{fullhash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
-      \strng{bibnamehash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
-      \strng{authorbibnamehash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
-      \strng{authornamehash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
-      \strng{authorfullhash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
+      \strng{namehash}{6bba450c256d490f70904e56c56dd0d7}
+      \strng{fullhash}{6bba450c256d490f70904e56c56dd0d7}
+      \strng{bibnamehash}{6bba450c256d490f70904e56c56dd0d7}
+      \strng{authorbibnamehash}{6bba450c256d490f70904e56c56dd0d7}
+      \strng{authornamehash}{6bba450c256d490f70904e56c56dd0d7}
+      \strng{authorfullhash}{6bba450c256d490f70904e56c56dd0d7}
       \field{sortinit}{c}
       \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{extradatescope}{labelyear}
@@ -171,6 +171,47 @@
       \endverb
       \verb{url}
       \verb https://www.scottharney.com/using-ansible-to-bootstap-my-work-environment-part-4/
+      \endverb
+    \endentry
+    \entry{cloudsite}{misc}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=85829a4c4aaf594c11d08b96eb4d36d8}{%
+           family={Moser},
+           familyi={M\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=c73583939d918456dfb92875e83a3422}{%
+           family={Harlow},
+           familyi={H\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {cloud-init}%
+      }
+      \strng{namehash}{3f47bccf7e679fd8570617a24b0d78eb}
+      \strng{fullhash}{3f47bccf7e679fd8570617a24b0d78eb}
+      \strng{bibnamehash}{3f47bccf7e679fd8570617a24b0d78eb}
+      \strng{authorbibnamehash}{3f47bccf7e679fd8570617a24b0d78eb}
+      \strng{authornamehash}{3f47bccf7e679fd8570617a24b0d78eb}
+      \strng{authorfullhash}{3f47bccf7e679fd8570617a24b0d78eb}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{cloud-init.io}
+      \field{type}{website}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://cloud-init.io/
+      \endverb
+      \verb{url}
+      \verb https://cloud-init.io/
       \endverb
     \endentry
     \entry{Cloudsigma}{article}{}
@@ -279,6 +320,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{cloudsit}
 \endrefsection
 \endinput
 

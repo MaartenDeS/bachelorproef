@@ -1,15 +1,25 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [1] Config.pm:307> INFO - Logfile is 'bachproef-tin.blg'
-[39] biber-MSWIN64:315> INFO - === 
-[75] Biber.pm:371> INFO - Reading 'bachproef-tin.bcf'
-[186] Biber.pm:889> INFO - Found 8 citekeys in bib section 0
-[203] Biber.pm:4093> INFO - Processing section 0
-[221] Biber.pm:4254> INFO - Looking for bibtex format file 'bachproef-tin.bib' for section 0
-[225] bibtex.pm:1523> INFO - LaTeX decoding ...
-[237] bibtex.pm:1340> INFO - Found BibTeX data source 'bachproef-tin.bib'
-[289] UCollate.pm:68> INFO - Overriding locale 'nl-NL' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[289] UCollate.pm:68> INFO - Overriding locale 'nl-NL' defaults 'variable = shifted' with 'variable = non-ignorable'
-[289] Biber.pm:3921> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'nl-NL'
-[289] Biber.pm:3927> INFO - No sort tailoring available for locale 'nl-NL'
-[306] bbl.pm:636> INFO - Writing 'bachproef-tin.bbl' with encoding 'UTF-8'
-[311] bbl.pm:739> INFO - Output to bachproef-tin.bbl
+[44] biber-MSWIN64:315> INFO - === 
+[78] Biber.pm:371> INFO - Reading 'bachproef-tin.bcf'
+[178] Biber.pm:889> INFO - Found 10 citekeys in bib section 0
+[194] Biber.pm:4093> INFO - Processing section 0
+[212] Biber.pm:4254> INFO - Looking for bibtex format file 'bachproef-tin.bib' for section 0
+[215] bibtex.pm:1523> INFO - LaTeX decoding ...
+[228] bibtex.pm:1340> INFO - Found BibTeX data source 'bachproef-tin.bib'
+[262] Biber.pm:4254> INFO - Looking for bibtex format file '../voorstel/voorstel.bib' for section 0
+[266] bibtex.pm:1523> INFO - LaTeX decoding ...
+[276] bibtex.pm:1340> INFO - Found BibTeX data source '../voorstel/voorstel.bib'
+[277] Utils.pm:193> WARN - Duplicate entry key: 'Cloudsigma' in file '../voorstel/voorstel.bib', skipping ...
+[277] Utils.pm:193> WARN - Duplicate entry key: 'scottharney' in file '../voorstel/voorstel.bib', skipping ...
+[277] Utils.pm:193> WARN - Duplicate entry key: 'vmware' in file '../voorstel/voorstel.bib', skipping ...
+[278] Utils.pm:193> WARN - Duplicate entry key: 'infoblox' in file '../voorstel/voorstel.bib', skipping ...
+[278] Utils.pm:193> WARN - Duplicate entry key: 'deven' in file '../voorstel/voorstel.bib', skipping ...
+[281] Utils.pm:193> WARN - I didn't find a database entry for 'cloudsit' (section 0)
+[301] UCollate.pm:68> INFO - Overriding locale 'nl-NL' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[301] UCollate.pm:68> INFO - Overriding locale 'nl-NL' defaults 'variable = shifted' with 'variable = non-ignorable'
+[302] Biber.pm:3921> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'nl-NL'
+[302] Biber.pm:3927> INFO - No sort tailoring available for locale 'nl-NL'
+[320] bbl.pm:636> INFO - Writing 'bachproef-tin.bbl' with encoding 'UTF-8'
+[327] bbl.pm:739> INFO - Output to bachproef-tin.bbl
+[327] Biber.pm:110> INFO - WARNINGS: 6

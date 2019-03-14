@@ -1,83 +1,39 @@
 % Encoding: UTF-8
-@ARTICLE{Doll1954,
-	author = {Doll, Richard and Hill, A Bradford},
-	title = {The mortality of doctors in relation to their smoking habits: a preliminary
-	report},
-	journal = {British Medical Journal},
-	year = {1954},
-	volume = {328},
-	pages = {1529-1533},
-	number = {7455},
-	owner = {jbuy519},
-	timestamp = {2014.03.28}
-}
-
-@BOOK{Moore2002,
-	title = {Introduction to the Practice of Statistics},
-	publisher = {W. H. Freeman},
-	year = {2002},
-	author = {Moore, David and McCabe, George},
-	owner = {jbuy519},
-	timestamp = {2014.01.28}
-}
-
-@BOOK{Smits2011,
-	title = {Onderzoek met SPSS en Excel},
-	publisher = {Pearson Education},
-	year = {2011},
-	author = {Smits, Johan and Edens, Ronald},
-	owner = {jbuy519},
-	timestamp = {2014.01.23}
-}
-
-@ARTICLE{Cloudsigma,
-	author = {Viktor Petersson},
-	title = {An introduction to server provisioning with CloudInit},
-	journal = {Cloudsigma},
-	owner = {CloudSigma},
-	url = {https://www.cloudsigma.com/an-introduction-to-server-provisioning-with-cloudinit/}
-}
-
-@ARTICLE{scottharney,
-	author = {Scott Harney},
-	title = {Using Ansible to Bootstrap My Work Environment Part 4},
-	journal = {Blog},
-	year = {2016},
-	timestamp = {2016.07.06},
-	url = {https://www.scottharney.com/using-ansible-to-bootstap-my-work-environment-part-4/}
-}
-
-@ARTICLE{vmware,
-	author = {Cody De Arkland},
-	title = {Customizing Cloud Assembly Deployments with Cloud-Init},
-	journal = {Blog VMware},
-	year = {2018},
-	timestamp = {2018.11.21},
-	url = {https://blogs.vmware.com/management/2018/11/customizing-cloud-assembly-deployments-with-cloud-init.html}
-}
-
-@ARTICLE{infoblox,
-	author = {Aditya},
-	title = {Zero Touch Provisioning of Infoblox Grid on OpenStack using Ansible},
-	journal = {Info Blox},
-	year = {2018},
-	timestamp = {2018.11.10},
-	url = {https://community.infoblox.com/t5/Community-Blog/Zero-Touch-Provisioning-of-Infoblox-Grid-on-OpenStack-using/ba-p/14910}
-}
-
-@ARTICLE{deven,
-	title = {Automated Ansible AWX Installation},
-	journal = {devendor tech},
-	url = {https://www.devendortech.com/articles/AWX_Tower.html}
-}
-
 @TechReport{ansibleid,
-  author      = {Red Hat},
+  author      = {RedHat},
   title       = {ANSIBLE IN DEPTH},
   institution = {Red Hat Inc.},
   year        = {2017},
   type        = {whitepaper},
   url         = {https://www.ansible.com/hubfs/pdfs/Ansible-InDepth-WhitePaper.pdf},
+}
+
+@TechReport{clouddocs,
+	author      = {cloud-init.io},
+	title       = {cloud-init-docs-modules},
+	institution = {cloud-init},
+	year        = {2019},
+	type        = {documentation},
+	url         = {https://cloudinit.readthedocs.io/en/latest/topics/modules.html},
+}
+
+@TechReport{cloudred,
+	author      = {Marc Skinner and Michael Heldebrant},
+	title       = {Cloud-Init},
+	institution = {RedHat},
+	year        = {2017},
+	type        = {presentation},
+	url         = {https://people.redhat.com/mskinner/rhug/q3.2014/cloud-init.pdf},
+}
+
+@WWW{cloudsite,
+  author      = {Scott Moser and Joshua Harlow},
+  editor      = {cloud-init},
+  title       = {cloud-init.io},
+  year        = {2019},
+  url         = {https://cloud-init.io/},
+  institution = {cloud-init},
+  type        = {website},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
