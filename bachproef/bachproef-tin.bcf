@@ -2151,13 +2151,20 @@
     <bcf:citekey order="3">cloudred</bcf:citekey>
     <bcf:citekey order="4">clouddocs</bcf:citekey>
     <bcf:citekey order="5">cloudsite</bcf:citekey>
-    <bcf:citekey order="6">Cloudsigma</bcf:citekey>
-    <bcf:citekey order="7">scottharney</bcf:citekey>
-    <bcf:citekey order="8">vmware</bcf:citekey>
-    <bcf:citekey order="9">Cloudsigma</bcf:citekey>
-    <bcf:citekey order="10">infoblox</bcf:citekey>
-    <bcf:citekey order="11">deven</bcf:citekey>
-    <bcf:citekey order="12">deven</bcf:citekey>
+    <bcf:citekey order="6">viktorpet</bcf:citekey>
+    <bcf:citekey order="7">viktorpet</bcf:citekey>
+    <bcf:citekey order="8">viktorpet</bcf:citekey>
+    <bcf:citekey order="9">viktorpet</bcf:citekey>
+    <bcf:citekey order="10">viktorpet</bcf:citekey>
+    <bcf:citekey order="11">viktorpet</bcf:citekey>
+    <bcf:citekey order="12">viktorpet</bcf:citekey>
+    <bcf:citekey order="13">Cloudsigma</bcf:citekey>
+    <bcf:citekey order="14">scottharney</bcf:citekey>
+    <bcf:citekey order="15">vmware</bcf:citekey>
+    <bcf:citekey order="16">Cloudsigma</bcf:citekey>
+    <bcf:citekey order="17">infoblox</bcf:citekey>
+    <bcf:citekey order="18">deven</bcf:citekey>
+    <bcf:citekey order="19">deven</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

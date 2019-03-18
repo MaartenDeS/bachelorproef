@@ -1,4 +1,4 @@
-\chapter{\IfLanguageName{dutch}{Stand van zaken}{State of the art}}
+\chapter{\IfLanguageName{dutch}{Literatuurstudie}{State of the art}}
 \label{ch:stand-van-zaken}
 
 % Tip: Begin elk hoofdstuk met een paragraaf inleiding die beschrijft hoe
@@ -14,97 +14,17 @@
 
 %\textcite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\autocite{Creeger2009}.
 
-In dit hoofdstuk wordt de stand van zaken besproken van cloud-init en Ansible. Eerst wordt Ansible besproken. Er wordt eerst wat algmene uitleg gegeven, daarna wordt iets dieper op ingegaan op de architectuur, playook, roles en de omgeving. Voor cloud-init wordt hetzelfde gegaan. Eerst wordt er wat algemene uitleg gegeven. Daarna wordt er dieper ingegaan op de modules, Cloud config, omgevingen en systemen.
+In dit hoofdstuk wordt er een literatuur studie gedaan. Er zijn 3 artikels gevonden die worden besproken: \textit{An introduction to server provisioning with CloudInit}, \textit{Automated Ansible AWX Installation} en \textit{Using Ansible to Bootstrap My Work Environment Part 4}. De 3 artikels waren alle 3 ook een onderdeel van het bachelorproef voorstel.
 
-Ten laatste wordt er een literatuurstudie gedaan over 3 artikels: \textbf{ARTIKELS NAAM} Dit zijn de 3 beste artikels uit bachelorproefvoorstel. De 2 worden niet besproken omdat ze te gelijkaardig waren aan de andere en niet zo gedetailleerd.
+\section{An introduction to server provisioning with CloudInit}
+Het eerste artikel dat gevonden is heet: \textit{An introduction to server provisioning with CloudInit}. Het is geschreven door Viktor Petersson. \autocite{viktorpet} beschrijft in zijn artikel de basis van cloud-init en hoe een er mee kan worden gewerkt op CloudSigma. 
 
-\section{Ansible}
-Ansible is een open source IT configuration management en deployment tool. Ansible hun grote doel is om besturingssysteem configuratie en de implementatie van software allemaal onder 1 systeem. De informatie werd gevonden met behulp van het document \textit{Ansible In Depth} \autocite{ansibleid}.
+In deze literatuurstudie wordt er besproken wat de link met Ansible is volgens \autocite{viktorpet}. Een ander groot onderdeel van het artikel is hoe het Cloud config bestand wordt opgemaakt. Dat wordt hier ook besproken. Het deel waar er wordt getoond hoe je een CloudSigma server opstelt gaat niet worden besproken. Dit is een klein deel van het artikel en niet van nut voor deze bachelorproef.
 
-Ansible staat bekend als een systeem dat makkelijk te leren is als IT administrator, ontwikkelaar of manager. Het probeert er voor te zorgen dat het makkelijk te verstaan is en makkelijk om zelf op te bouwen. Zodat nieuwe gebruikers dit makkelijk kunnen oppikken. Ze proberen uniek te zijn door dingen door val aanpassing mogelijk te geven aan gebruikers voor de expert-gebruikers. Maar toch net zo toegankelijk voor de nieuwe gebruiker.
+\subsection{Verschil en samenwerking met Ansible volgens Viktor Petersson}
+\autocite{viktorpet} wilt allereerst de lezer doen inzien dat cloud-init een specifieke plaats heeft in de server provisioning wereld. In \autocite{viktorpet} wordt er vermeld dat Cloud-init namelijk 1 eigenschap heeft, dat vele provisioning systemen zoals een Ansible, Puppet of Chef niet hebben. 
 
-\subsection{Architectuur}
-Eén van de belangrijkste verschillen tussen Ansible en andere configuratie management tools, is zijn architectuur. Ansible gaat uit van het ``push'' model. Ook is er geen additionele software nodig om machines bruikbaar te maken voor Ansible. Het heeft geen extra gebruikers of referenties nodig om te draaien. Het gebruikt gewoon de informatie die de user meegeeft. Daarbij hoort ook dat Ansible geen administrator of sudo toegang nodig heeft. Ansible wordt standaard bestuurt door een remote computer.
+Terwijl cloud-init perfect kan gebruikt worden als een stand-alone provisioning systeem. Is het 1 van de weinig systemen die het gebruik met andere provisioning systeem ondersteunt, en zelf aanraadt volgens \autocite{viktorpet}. \autocite{viktorpet} vermeld ook dat hij prefereerdt cloud-init te gebruiken met Ansible.
 
-Dit zorgt ervoor dat Ansible veiliger wordt. Door alleen de informatie die de gebruiker meegeeft te gebruiken. Iemand die wel toegang heeft tot de server kan maar niet tot te remote computer kan geen aanpassingen pushen.
-
-\subsection{Playbook - Roles}
-Ansible voert de automatisatie en deployment uit via playbooks. Dit zijn yaml bestanden die beschrijven hoe de automatisatie moet verlopen. 
-
-Deze playbooks bevatten verschillende ``plays'' die de automatisatie definiëren over verschillende hosts. Deze hosts staan bekend als de inventory. Elke ``play'' bevat verschillende taken die één, verschillende of alle hosts moeten uitvoeren. Elke taak roept een Ansible module aan, een klein stukje code dat een specifieke taak uitvoert. Deze kan kunnen zeer simpel zijn, een bestand op een machine zetten of een specifieke package installeren. Maar ze kunnen ook complex zijn zoals een gehele CloudFormation opstarten in Amazon EC2.
-\begin{figure}[!htb]
-    \center{\includegraphics[width=0.9\textwidth]{img/playbookex.png}}
-    \caption{Voorbeeld van een Ansible playbook.}
-    \label{fig:playbook}
-\end{figure}
-
-Ansible is geschreven zodat als ze de playbook uitvoeren ook checken of deze task nog moet gedaan worden. Bijvoorbeeld als een Ansible taak is om een webserver op te starten, zal Ansible deze alleen uitvoeren als de webserver nog niet is opgestart. Dit staat bekend als idempotente. Het zorgt ervoor dat de configuratie altijd snel en efficiënt wordt uitgevoerd.
-
-Met Ansible kunnen taken ook ingekapseld worden in een role. Dit wordt gebruikt als er een specifieke configuratie meerdere keren wordt uitgevoerd, bijvoorbeeld het opzetten van een webserver. De Ansible Galaxy site bevat veel roles die kunnen gebruikt en aangepast worden voor het gebruik in een playbook.
-\begin{figure}[!htb]
-    \center{\includegraphics[width=0.9\textwidth]{img/agalaxy.png}}
-    \caption{Ansible Galaxy site met lijst van roles.}
-    \label{fig:agalaxy}
-\end{figure}
-
-
-\subsection{Omgevingen}
-Ansible is even makkelijk te deployen in publieke of private cloud omgevingen, als in een lokale omgeving. Voor publieke of private cloud providers kan er gekozen worden voor: Amazon Web Services, Microsoft Azure, Rackspace,... Maar er kan ook op lokale infrastructuren gewerkt worden door middel van virtuele machines. Tools die hiervoor worden gebruikt zijn: VirtualBox, VMWare,...
-
-\section{Cloud-Init}
-Net als Ansible is cloud-init ook een soort van configuration manager en deployment tool. Op de site van cloud-init \autocite{cloudsite} staat het ontstaan. Het is ontwikkeld en uitgebracht als gratis software met de open source licentie en ook de Apache Version 2.0 licentie. De makers, Scott Moser en Joshua Harlow, hebben het in python geschreven.
-
-Cloud-init zorgt  voor de customisaties tijdens het opstarten van de cloud of virtuele instanties. Deze service gebeurt heel vroeg in het boot proces. De instantie zoekt naar de \textit{user data} (het cloud-init script) van de gebruiker en voert deze uit. 
-
-Veel van de punten die hier verder worden besproken zijn gevonden in de presentatie van \autocite{cloudred}.
-
-\subsection{Modules}
-Cloud-init heeft 6 hoofdpijlers waar het modules voor heeft, namelijk: schijf configuratie, commando's uitvoeren, gebruikers en groepen creëren, beheren van packages, content bestanden schrijven en bootstrappen van Chef en/of Puppet. Er zijn nog andere modules maar dit zijn de 6 hoofdpijlers van cloud-init en daarbij de meeste gebruikte modules. Er kunnen ook zelf modules toevoegt worden door deze in Python te schrijven. Met behulp van de documentatie van \autocite{clouddocs} wordt er per pijler uitleg gegeven.
-
-\subsubsection{Schijf configuratie}
-Er is 1 module die wordt gebruikt voor de schijf configuratie, namelijk \textbf{Disk Setup}. Via deze module kunnen er simpele partities en bestandsystemen worden geconfigureerd. Via de \textit{device\_aliases} richtlijnen kunnen er aliassen worden gemaakt voor de block devices. Zodat er makkelijker naar deze kan worden verwezen. Via de \textit{disk\_setup} richtlijn wordt de partitie configuratie gedaan. De \textit{table\_type} richtlijn wordt gebruikt om de partitie tabel mee te gegeven. Ten laatste is er ook de \textit{fs\_setup} richtlijn deze wordt gebruikt om de systeembestand configuratie te doen.
-
-\subsubsection{Commando's uitvoeren}
-Voor het uitvoeren van commando's zijn er 2 modules: \textbf{Runcmd} en \textbf{Bootcmd}. Beide bevatten maar 1 richtlijn namelijk \textit{runcmd} en \textit{bootcmd}. Bij \textit{runcmd} worden de commando's die worden meegegeven elke keer uitgevoerd als het script wordt gedraaid. Bij \textit{bootcmd} enkel alleen als de instantie wordt opgestart. Ook worden de commando's bij \textit{bootcmd} veel vroeger in het bootproces uitgevoerd.
-
-\subsubsection{Gebruikers en groepen}
-Ook voor Gebruikers en groepen is er slechts 1 module: \textbf{Users and Groups}. Groepen kunnen worden toegevoegd door deze aan de richtlijn \textit{groups} toe te voegen samen eventuele configuratie per groep. Gebruikers kunnen dan weer toegevoegd worden door deze aan de richtlijn \textit{users} toe te voegen. Ook bij de gebruikers kan er nog extra configuratie gedaan worden per gebruiker.
-
-\subsubsection{Packages}
-Voor het beheren en configureren van packages zijn er verschillende modules: \textbf{Apt Configure}, \textbf{Apt Pipelining}, \textbf{Package Update Upgrade Install}, \textbf{Snap}, \textbf{Snappy} en \textbf{Yum Add Repo}. Er kunnen packages geïnstalleerd en geconfigureerd worden via Yum en Apt. Meestal ondersteund een besturingssysteem Yum of Apt. Voor installatie van een package moeten deze plaatsen bij de richtlijn \textit{packages}. Cloud-init weet zelf of het met yum of apt wordt gedaan. De configuratie en het toevoegen van package repo's gebeurt via Apt Configure, Apt Pipelinig en Yum Add Repo. Ook ondersteunt cloud-init de installatie van snap packages. Dit zijn gecontaineriseerde packages. Via Snappy kan deze geconfigureerd worden.
-
-\subsubsection{Content bestanden}
-Voor het aanmaken van bestanden is er de module \textbf{Write Files}. In de richtlijn \textit{write\_files} word de gecodeerde inhoud van het bestand gezet met het pad.
-
-\subsubsection{Chef - Puppet}
-Ook zijn er 2 modules die Chef en Puppet installeren, configureren en starten. Deze modules zijn logischer wijs \textbf{Chef} en \textbf{Puppet}. Voor Puppet wordt de richtlijn \textit{puppet} meegegeven. Daaronder worden alle configuraties geplaatst. Chef werkt op dezelfde manier.
-
-\subsection{User Data - Cloud config}
-Zoals Ansible zijn playbook heeft, heeft cloud-init zijn user data. Ook heeft cloud-init de meta-data, maar deze wordt meegegeven door het cloud platform zelf. Dit zijn bijvoorbeeld de server naam en het server id. De 2 bekendste methodes om user data mee te geven zijn User-Data Script en Cloud Config Data. 
-\subsubsection{User-Data Script}
-Het User-Data script een linux script dat de server overloopt voor dat hij opstart. Het moet altijd beginnen met \textit{!\#} of \textit{Content-Type: text/x-shellscript}. Als er echt wordt gebruikt gemaakt van cloud-init wordt deze methode niet gebruikt. De modules kun je via zo een script bijvoorbeeld niet aanroepen. Dit is eerder voor gebruikers die al een script hebben. In plaats van dit om te zetten naar Cloud Config Data, kunnen ze dat dan script gebruiken.
-\begin{figure}[!htb]
-	\center{\includegraphics[width=0.9\textwidth]{img/userdatascript.png}}
-	\caption{Voorbeeld User-Data Script.}
-	\label{fig:udatascript}
-\end{figure}
-
-\subsubsection{Cloud Config Data}
-De meest gebruikte methode is Cloud Config Data. Dit is een yaml bestand met de configuratie van de server in. Een Cloud Config bestand begint altijd met \textit{\#cloud-config}. In het bestand worden de modules opgelijst die worden gebruikt en daaronder dan hun configuraties. Dit bestand is veel overzichtelijker dan een script om later aan te passen of om te beheren. Ook heeft het wat gelijkenissen met het playbook van Ansible, doordat dit beide yaml bestanden zijn.
-\begin{figure}[!htb]
-	\center{\includegraphics[width=0.9\textwidth]{img/cloudconfig.png}}
-	\caption{Voorbeeld Cloud Config Data.}
-	\label{fig:udatascript}
-\end{figure}
-
-\subsection{Omgevingen}
-De naam van het programma zegt het al duidelijk. Cloud-init is een service gemaakt voor cloud instanties en cloud platformen. Bij cloud platformen heb je de optie om user data toe te voegen aan de server(s) die je opstart. Meestal is dat een tekst vak waar je data kan invoeren. Dit kan een User-Data script zijn of een Cloud Config bestand. Voorbeelden van cloud platformen zijn: RackSpace, Amazon Web Services, Hetzner en IBM. 
-
-Het is mogelijk om er lokaal mee te werken. Op de server in kwestie moet de package cloud-init worden geïnstalleerd en dan via die package de user data uitvoeren. Je kan deze package installeren en uitvoeren op je host systeem, maar ook in een virtuele omgeving. Programma's om hiervoor te gebruiken zijn: Hyper-V, VMWare en VirtualBox.
-
-\subsection{Systemen}
-Oorspronkelijk staat er op de site van cloud-init \autocite{cloudsite} dat het gemaakt was voor en in Ubuntu. Maar nu is het beschikbaar voor elk groot Linux besturingssysteem: Fedora, Redhat, CentOS,..
-
-
-\section{Studie 1}
-
+\subsection{Setup cloudconfig bestand}
+Het volgende onderdeel van \autocite{viktorpet} dat we bespreken is het opstellen van zijn cloud config bestand. In VERWIJZEN NAAR HOOFSTUK OPZOEKEN

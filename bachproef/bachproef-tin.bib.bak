@@ -36,4 +36,31 @@
   type        = {website},
 }
 
+@Electronic{viktorpet,
+  author  = {Viktor Petersson},
+  editor  = {CloudSigma},
+  title   = {An introduction to server provisioning with CloudInit},
+  year    = {2017},
+  url     = {https://www.cloudsigma.com/an-introduction-to-server-provisioning-with-cloudinit/},
+  journal = {Cloudsigma},
+  owner   = {CloudSigma},
+}
+
+@Electronic{scottharney,
+  author    = {Scott Harney},
+  title     = {Using Ansible to Bootstrap My Work Environment Part 4},
+  year      = {2016},
+  url       = {https://www.scottharney.com/using-ansible-to-bootstap-my-work-environment-part-4/},
+  journal   = {Blog},
+  timestamp = {2016.07.06},
+}
+
+@Electronic{devendor,
+  editor  = {DevendorTech},
+  title   = {Automated Ansible AWX Installation},
+  year    = {2018},
+  url     = {https://www.devendortech.com/articles/AWX_Tower.html},
+  journal = {devendor tech},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}

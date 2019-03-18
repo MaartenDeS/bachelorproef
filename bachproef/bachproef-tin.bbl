@@ -80,6 +80,20 @@
       \verb https://blogs.vmware.com/management/2018/11/customizing-cloud-assembly-deployments-with-cloud-init.html
       \endverb
     \endentry
+    \entry{deven}{article}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{devendor tech}
+      \field{title}{Automated Ansible AWX Installation}
+      \verb{urlraw}
+      \verb https://www.devendortech.com/articles/AWX_Tower.html
+      \endverb
+      \verb{url}
+      \verb https://www.devendortech.com/articles/AWX_Tower.html
+      \endverb
+    \endentry
     \entry{clouddocs}{report}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=6bba450c256d490f70904e56c56dd0d7}{%
@@ -110,35 +124,6 @@
       \endverb
       \verb{url}
       \verb https://cloudinit.readthedocs.io/en/latest/topics/modules.html
-      \endverb
-    \endentry
-    \entry{deven}{article}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=aa323112f31d458bd26ddb2bc0fe7f28}{%
-           family={DevendorTech},
-           familyi={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{aa323112f31d458bd26ddb2bc0fe7f28}
-      \strng{fullhash}{aa323112f31d458bd26ddb2bc0fe7f28}
-      \strng{bibnamehash}{aa323112f31d458bd26ddb2bc0fe7f28}
-      \strng{authorbibnamehash}{aa323112f31d458bd26ddb2bc0fe7f28}
-      \strng{authornamehash}{aa323112f31d458bd26ddb2bc0fe7f28}
-      \strng{authorfullhash}{aa323112f31d458bd26ddb2bc0fe7f28}
-      \field{sortinit}{D}
-      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{devendor tech}
-      \field{title}{Automated Ansible AWX Installation}
-      \field{year}{2018}
-      \verb{urlraw}
-      \verb https://www.devendortech.com/articles/AWX_Tower.html
-      \endverb
-      \verb{url}
-      \verb https://www.devendortech.com/articles/AWX_Tower.html
       \endverb
     \endentry
     \entry{scottharney}{article}{}
@@ -173,7 +158,7 @@
       \verb https://www.scottharney.com/using-ansible-to-bootstap-my-work-environment-part-4/
       \endverb
     \endentry
-    \entry{cloudsite}{misc}{}
+    \entry{cloudsite}{online}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=85829a4c4aaf594c11d08b96eb4d36d8}{%
            family={Moser},
@@ -188,6 +173,11 @@
            giveni={J\bibinitperiod},
            givenun=0}}%
       }
+      \name{editor}{1}{}{%
+        {{hash=cd56b7dd9a2d6ba24f7dca7eb856d6a9}{%
+           family={cloud-init},
+           familyi={c\bibinithyphendelim i\bibinitperiod}}}%
+      }
       \list{institution}{1}{%
         {cloud-init}%
       }
@@ -197,6 +187,9 @@
       \strng{authorbibnamehash}{3f47bccf7e679fd8570617a24b0d78eb}
       \strng{authornamehash}{3f47bccf7e679fd8570617a24b0d78eb}
       \strng{authorfullhash}{3f47bccf7e679fd8570617a24b0d78eb}
+      \strng{editorbibnamehash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
+      \strng{editornamehash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
+      \strng{editorfullhash}{cd56b7dd9a2d6ba24f7dca7eb856d6a9}
       \field{sortinit}{M}
       \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{extradatescope}{labelyear}
@@ -229,11 +222,41 @@
       \strng{authorbibnamehash}{8976539926b4546f117c55b683d95ee1}
       \strng{authornamehash}{8976539926b4546f117c55b683d95ee1}
       \strng{authorfullhash}{8976539926b4546f117c55b683d95ee1}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cloudsigma}
+      \field{title}{An introduction to server provisioning with CloudInit}
+      \verb{urlraw}
+      \verb https://www.cloudsigma.com/an-introduction-to-server-provisioning-with-cloudinit/
+      \endverb
+      \verb{url}
+      \verb https://www.cloudsigma.com/an-introduction-to-server-provisioning-with-cloudinit/
+      \endverb
+    \endentry
+    \entry{viktorpet}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=8976539926b4546f117c55b683d95ee1}{%
+           family={Petersson},
+           familyi={P\bibinitperiod},
+           given={Viktor},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8976539926b4546f117c55b683d95ee1}
+      \strng{fullhash}{8976539926b4546f117c55b683d95ee1}
+      \strng{bibnamehash}{8976539926b4546f117c55b683d95ee1}
+      \strng{authorbibnamehash}{8976539926b4546f117c55b683d95ee1}
+      \strng{authornamehash}{8976539926b4546f117c55b683d95ee1}
+      \strng{authorfullhash}{8976539926b4546f117c55b683d95ee1}
+      \field{extraname}{2}
       \field{sortinit}{P}
       \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Cloudsigma}
@@ -320,7 +343,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{cloudsit}
 \endrefsection
 \endinput
 
