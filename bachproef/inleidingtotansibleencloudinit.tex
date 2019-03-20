@@ -70,7 +70,7 @@ Ook zijn er 2 modules die Chef en Puppet installeren, configureren en starten. D
 \subsection{User Data - Cloud config}
 Zoals Ansible zijn playbook heeft, heeft cloud-init zijn user data. Ook heeft cloud-init de meta-data, maar deze wordt meegegeven door het cloud platform zelf. Dit zijn bijvoorbeeld de server naam en het server id. De 2 bekendste methodes om user data mee te geven zijn User-Data Script en Cloud Config Data. 
 \subsubsection{User-Data Script}
-Het User-Data script een linux script dat de server overloopt voor dat hij opstart. Het moet altijd beginnen met \textit{!\#} of \textit{Content-Type: text/x-shellscript}. Als er echt wordt gebruikt gemaakt van cloud-init wordt deze methode niet gebruikt. De modules kun je via zo een script bijvoorbeeld niet aanroepen. Dit is eerder voor gebruikers die al een script hebben. In plaats van dit om te zetten naar Cloud Config Data, kunnen ze dat dan script gebruiken.
+Het User-Data script een Linux script dat de server overloopt voor dat hij opstart. Het moet altijd beginnen met \textit{!\#} of \textit{Content-Type: text/x-shellscript}. Als er echt wordt gebruikt gemaakt van cloud-init wordt deze methode niet gebruikt. De modules kun je via zo een script bijvoorbeeld niet aanroepen. Dit is eerder voor gebruikers die al een script hebben. In plaats van dit om te zetten naar Cloud Config Data, kunnen ze dat dan script gebruiken.
 \begin{figure}[!htb]
 	\center{\includegraphics[width=0.9\textwidth]{img/userdatascript.png}}
 	\caption{Voorbeeld User-Data Script.}
@@ -91,6 +91,6 @@ De naam van het programma zegt het al duidelijk. Cloud-init is een service gemaa
 Het is mogelijk om er lokaal mee te werken. Op de server in kwestie moet de package cloud-init worden geïnstalleerd en dan via die package de user data uitvoeren. Je kan deze package installeren en uitvoeren op je host systeem, maar ook in een virtuele omgeving. Programma's om hiervoor te gebruiken zijn: Hyper-V, VMWare en VirtualBox.
 
 \subsection{Systemen}
-Volgens de site van cloud-init \autocite{cloudsite} is het oorspronkelijk gemaakt voor Ubuntu systemen. Maar door het succes van de software is het nu beschikbaar op bijna elk linux systeem: Fedora, Redhat, CentOS,..
+Volgens de site van cloud-init \autocite{cloudsite} is het oorspronkelijk gemaakt voor Ubuntu systemen. Maar door het succes van de software is het nu beschikbaar op bijna elk Linux systeem: Fedora, Redhat, CentOS,..
 
 

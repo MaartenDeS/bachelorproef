@@ -20,12 +20,12 @@ In dit hoofdstuk wordt er een literatuur studie gedaan. Er zijn 2 artikels gevon
 \section{An introduction to server provisioning with CloudInit}
 Het eerste artikel dat gevonden is heet: \textbf{An introduction to server provisioning with CloudInit}. Het is geschreven door Viktor Petersson. \autocite{viktorpet} beschrijft in zijn artikel de basis van cloud-init en hoe een er mee kan worden gewerkt op CloudSigma. 
 
-In deze literatuurstudie wordt er besproken wat de link met Ansible is volgens \autocite{viktorpet}. Een ander groot onderdeel van het artikel is hoe het Cloud config bestand wordt opgemaakt. En wat dit bestand heeft/geeft qua voordelen. Ook is er een deel waar er wordt getoond hoe er een CloudSigma server wordt opgesteld.Dit wordt worden besproken. Dit is een klein deel van het artikel en niet van nut voor deze bachelorproef/onderzoek.
+In deze literatuurstudie wordt er besproken wat de link met Ansible is volgens \autocite{viktorpet}. Een ander groot onderdeel van het artikel is hoe het Cloud config bestand wordt opgemaakt. En wat dit bestand heeft/geeft qua voordelen. Ook is er een deel waar er wordt getoond hoe er een CloudSigma server wordt opgesteld .Dit wordt worden besproken. Dit is een klein deel van het artikel en niet van nut voor deze bachelorproef/onderzoek.
 
 \subsection{Verschil en samenwerking met Ansible volgens Viktor Petersson}
 \autocite{viktorpet} wilt allereerst de lezer doen inzien dat cloud-init een specifieke plaats heeft in de server provisioning wereld. In \autocite{viktorpet} wordt er vermeld dat Cloud-init namelijk 1 eigenschap heeft, dat vele provisioning systemen zoals een Ansible, Puppet of Chef niet hebben. 
 
-Terwijl cloud-init perfect kan gebruikt worden als een stand-alone provisioning systeem. Is het 1 van de weinig systemen die het gebruik met andere provisioning systeem ondersteunt, en zelf aanraadt volgens \autocite{viktorpet}. \autocite{viktorpet} vermeld ook dat hij prefereerdt cloud-init te gebruiken met Ansible.
+Terwijl cloud-init perfect kan gebruikt worden als een stand-alone provisioning systeem. Is het 1 van de weinig systemen die het gebruik met andere provisioning systeem ondersteunt, en zelf aanraadt volgens \autocite{viktorpet}. \autocite{viktorpet} vermeld ook dat hij prefereert cloud-init te gebruiken met Ansible.
 
 \subsection{Setup cloud config bestand}
 Het volgende onderdeel van \autocite{viktorpet} dat we bespreken is het opstellen van zijn cloud config bestand. Dat is het bestand waar de server configuraties wordt ingevoerd. \autocite{viktorpet} legt aan de hand van verschillende functies van het cloud config bestand uit wat de voordelen van cloud-init zijn. In Hoofdstuk \ref*{ch:cloud-init} is hier wel al meer over uitgelegd. Sommige delen gaan minder uitgebreid zijn omdat het al in Hoofdstuk \ref*{ch:cloudmodules} te vinden is.
@@ -82,11 +82,11 @@ runcmd:
  - ls -l /root
 \end{lstlisting} 
 \subsubsection{Server coniguration manager}
-Een laatste voordeel volgens \autocite{viktorpet} is dat als meer geavanceerde gebruiker er ook de mogelijkheid is om een exta Server Configuaration Manager te gebruiken. 
+Een laatste voordeel volgens \autocite{viktorpet} is dat als meer geavanceerde gebruiker er ook de mogelijkheid is om een extra Server Configuaration Manager te gebruiken. 
 
 Cloud-init ondersteunt samenwerking met onder andere Chef, Puppet en Salt.
 \subsubsection{Alles samenbinden}
-Ten laatste toon \autocite{viktorpet} hoe dit allemaal kan worden samengegooid in bestand. Dit allemaal wordt samengevoegd in een YAMl bestand en bovenaan wordt er \textit{\#cloud-config} gezet. Dit werd ook vermeld in Hoofdstuk \ref*{ch:cloud-init}
+Ten laatste toon \autocite{viktorpet} hoe dit allemaal kan worden samen gegooid in bestand. Dit allemaal wordt samengevoegd in een YAMl bestand en bovenaan wordt er \textit{\#cloud-config} gezet. Dit werd ook vermeld in Hoofdstuk \ref*{ch:cloud-init}
 \begin{lstlisting}
 #cloud-config
 ssh_authorized_keys:
