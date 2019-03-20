@@ -1,6 +1,7 @@
 \chapter{\IfLanguageName{dutch}{Literatuurstudie}{State of the art}}
 \label{ch:stand-van-zaken}
 
+
 % Tip: Begin elk hoofdstuk met een paragraaf inleiding die beschrijft hoe
 % dit hoofdstuk past binnen het geheel van de bachelorproef. Geef in het
 % bijzonder aan wat de link is met het vorige en volgende hoofdstuk.
@@ -14,17 +15,108 @@
 
 %\textcite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\autocite{Creeger2009}.
 
-In dit hoofdstuk wordt er een literatuur studie gedaan. Er zijn 3 artikels gevonden die worden besproken: \textit{An introduction to server provisioning with CloudInit}, \textit{Automated Ansible AWX Installation} en \textit{Using Ansible to Bootstrap My Work Environment Part 4}. De 3 artikels waren alle 3 ook een onderdeel van het bachelorproef voorstel.
+In dit hoofdstuk wordt er een literatuur studie gedaan. Er zijn 2 artikels gevonden die worden besproken: \textbf{An introduction to server provisioning with CloudInit} en \textbf{Using Ansible to Bootstrap My Work Environment Part 4}. De 2 artikels waren alle 2 ook een onderdeel van het bachelorproef voorstel.
 
 \section{An introduction to server provisioning with CloudInit}
-Het eerste artikel dat gevonden is heet: \textit{An introduction to server provisioning with CloudInit}. Het is geschreven door Viktor Petersson. \autocite{viktorpet} beschrijft in zijn artikel de basis van cloud-init en hoe een er mee kan worden gewerkt op CloudSigma. 
+Het eerste artikel dat gevonden is heet: \textbf{An introduction to server provisioning with CloudInit}. Het is geschreven door Viktor Petersson. \autocite{viktorpet} beschrijft in zijn artikel de basis van cloud-init en hoe een er mee kan worden gewerkt op CloudSigma. 
 
-In deze literatuurstudie wordt er besproken wat de link met Ansible is volgens \autocite{viktorpet}. Een ander groot onderdeel van het artikel is hoe het Cloud config bestand wordt opgemaakt. Dat wordt hier ook besproken. Het deel waar er wordt getoond hoe je een CloudSigma server opstelt gaat niet worden besproken. Dit is een klein deel van het artikel en niet van nut voor deze bachelorproef.
+In deze literatuurstudie wordt er besproken wat de link met Ansible is volgens \autocite{viktorpet}. Een ander groot onderdeel van het artikel is hoe het Cloud config bestand wordt opgemaakt. En wat dit bestand heeft/geeft qua voordelen. Ook is er een deel waar er wordt getoond hoe er een CloudSigma server wordt opgesteld.Dit wordt worden besproken. Dit is een klein deel van het artikel en niet van nut voor deze bachelorproef/onderzoek.
 
 \subsection{Verschil en samenwerking met Ansible volgens Viktor Petersson}
 \autocite{viktorpet} wilt allereerst de lezer doen inzien dat cloud-init een specifieke plaats heeft in de server provisioning wereld. In \autocite{viktorpet} wordt er vermeld dat Cloud-init namelijk 1 eigenschap heeft, dat vele provisioning systemen zoals een Ansible, Puppet of Chef niet hebben. 
 
 Terwijl cloud-init perfect kan gebruikt worden als een stand-alone provisioning systeem. Is het 1 van de weinig systemen die het gebruik met andere provisioning systeem ondersteunt, en zelf aanraadt volgens \autocite{viktorpet}. \autocite{viktorpet} vermeld ook dat hij prefereerdt cloud-init te gebruiken met Ansible.
 
-\subsection{Setup cloudconfig bestand}
-Het volgende onderdeel van \autocite{viktorpet} dat we bespreken is het opstellen van zijn cloud config bestand. In VERWIJZEN NAAR HOOFSTUK OPZOEKEN
+\subsection{Setup cloud config bestand}
+Het volgende onderdeel van \autocite{viktorpet} dat we bespreken is het opstellen van zijn cloud config bestand. Dat is het bestand waar de server configuraties wordt ingevoerd. \autocite{viktorpet} legt aan de hand van verschillende functies van het cloud config bestand uit wat de voordelen van cloud-init zijn. In Hoofdstuk \ref*{ch:cloud-init} is hier wel al meer over uitgelegd. Sommige delen gaan minder uitgebreid zijn omdat het al in Hoofdstuk \ref*{ch:cloudmodules} te vinden is.
+
+\subsubsection{SSH}
+Het eerste onderdeel van het cloud config bestand van \autocite{viktorpet} zijn de SSH keys. Cloud-init is volgens \autocite{viktorpet} handig om ssh keys toe te voegen aan de server. Zo kan er verbinding gemaakt worden met de server. 
+
+\autocite{viktorpet} gebruikt 2 fictieve gebruikers en SSH Keys in zijn voorbeeld. Deze publieke SSH sleutels worden geïnstalleerd op de server voor de gekozen gebruiker. In het fictieve voorbeeld dus een een publieke sleutel voor user1 en user2 op de server host. Op Ubuntu Cloud Images als de gebruikers niet aanwezig zijn zullen deze worden geïnstalleerd op de standaard gebruiker ubuntu. 
+
+\autocite{viktorpet} maakt verbinding met de server via het commando \textit{ssh ubuntu@IPADRESS}. Via de toegevoegde public keys gaat dit zonder problemen.
+\begin{lstlisting}
+#cloud-config
+ssh_authorized_keys:
+ - ssh-rsa AAA...user1@host
+ - ssh-rsa AAA...user2@host
+\end{lstlisting} 
+
+\subsubsection{Systeem updates}
+Het volgende voordeel van cloud-init volgens \autocite{viktorpet} is het uitvoeren van systeem updates tijdens de eerste boot. Dit is 1 van de functies die al werden besproken in Hoofdstuk \ref*{ch:cloudmodules}.
+
+In zijn voorbeeld gebruikt \autocite{viktorpet} \textit{apt\_updgrade}. Terwijl er in Hoofstuk \ref*{ch:cloudmodules} werd gezien dat updates worden gedaan met \textit{package\_upgrade}. \textit{apt\_upgrade} is gewoon een alias voor \textit{package\_upgrade}.
+
+Ook is \textit{apt\_update} zijn standaard waarde true als er packages worden geïnstalleerd op de server. 
+\begin{lstlisting}
+#cloud-config
+apt_update: true
+apt_upgrade: true
+\end{lstlisting} 
+
+\subsubsection{Installeren packages}
+Het volgende dat wordt bespreken is het installeren van packages. Ook dit werd al besproken in Hoofdstuk \ref*{ch:cloudmodules}. Extra informatie die nog niet gekend was geeft \autocite{viktorpet} niet. Zijn voorbeeld staat wel ook hieronder
+\begin{lstlisting}
+#cloud-config
+packages:
+ - python-pip
+ - fail2ban
+ - vim
+\end{lstlisting} 
+
+\subsubsection{Hostname}
+Wat \autocite{viktorpet} ook handig vindt aan cloud-init is het aanpassen van de hostname. Deze kan ook makkelijk worden aangepast.
+\begin{lstlisting}
+#cloud-config
+hostname: mynode
+fqdn: mynode.example.com
+manage_etc_hosts: true
+\end{lstlisting} 
+
+\subsubsection{Commando's}
+Als er sprake is van een meer geavanceerde gebruiker moeten er ook commando's worden uitgevoerd. Er zijn 2 opties voor commando's uit te voeren \textit{runcmd} en \textit{bootcmd}. Hierover kan er ook meer informatie worden gevonden in Hoofdstuk \ref*{ch:cloudmodules}.
+\begin{lstlisting}
+#cloud-config
+runcmd:
+ - ls -l /root
+\end{lstlisting} 
+\subsubsection{Server coniguration manager}
+Een laatste voordeel volgens \autocite{viktorpet} is dat als meer geavanceerde gebruiker er ook de mogelijkheid is om een exta Server Configuaration Manager te gebruiken. 
+
+Cloud-init ondersteunt samenwerking met onder andere Chef, Puppet en Salt.
+\subsubsection{Alles samenbinden}
+Ten laatste toon \autocite{viktorpet} hoe dit allemaal kan worden samengegooid in bestand. Dit allemaal wordt samengevoegd in een YAMl bestand en bovenaan wordt er \textit{\#cloud-config} gezet. Dit werd ook vermeld in Hoofdstuk \ref*{ch:cloud-init}
+\begin{lstlisting}
+#cloud-config
+ssh_authorized_keys:
+- ssh-rsa AAA...user1@host
+- ssh-rsa AAA...user2@host
+
+hostname: mynode
+fqdn: mynode.example.com
+manage_etc_hosts: true
+
+apt_update: true
+apt_upgrade: true
+
+packages:
+- python-pip
+- fail2ban
+- vim
+
+runcmd:
+- ls -l /root
+\end{lstlisting} 
+
+\section{Using Ansible to Bootstrap My Work Environment Part 4}
+Het tweede artikel is: \textbf{Using Ansible to Bootstrap My Work Environment Part 4}. Het is een Blogpost geschreven Scott Harney. \autocite{scottharney} beschrijft in zijn blogpost hoe hij zijn werk omgeving opstart via Ansible met behulp van cloud-init. 
+
+Het is het beste artikel dat werd gevonden waar Ansible en cloud-init beide expliciet werden gebruikt. En waar voor het eerste een omgeving wordt weergegeven die werd opgezet door een samenwerking van beide.
+
+EXTRA UITLEG ARTIKEL + INFO OVER WAT LITERATUUR ONDERZOEK GAAT GAAN.
+\subsection{Cloud-init}
+
+\subsection{Ansible roles}
+
+%\section{Automated Ansible AWX Installation}
