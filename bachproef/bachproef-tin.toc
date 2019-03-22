@@ -69,37 +69,47 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Using Ansible to Bootstrap My Work Environment Part 4}{28}{section.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Cloud-init}{28}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.1}Ansible initial playbook}{29}{subsection.3.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Ansible roles}{28}{subsection.3.2.2}% 
+\contentsline {subsection}{\numberline {3.2.2}Cloud-init}{29}{subsection.3.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Methodologie}{29}{chapter.4}% 
+\contentsline {subsubsection}{Begin}{29}{section*.21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Opzetten lokale testomgeving}{31}{chapter.5}% 
+\contentsline {subsubsection}{Server en host update}{29}{section*.22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Opzetten Hetzner Cloud testomgeving}{33}{chapter.6}% 
+\contentsline {subsubsection}{Packages}{30}{section*.23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Basisconfiguraties op de servers}{35}{chapter.7}% 
+\contentsline {subsubsection}{DNS zone bestand}{30}{section*.24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Server installatie en configuratie}{37}{chapter.8}% 
+\contentsline {subsection}{\numberline {3.2.3}Ansible follow up playbook}{31}{subsection.3.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Instellingen aanpassen na het opstarten}{39}{chapter.9}% 
+\contentsline {chapter}{\numberline {4}Methodologie}{33}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Container/Cluster Installatie \& Configuratie}{41}{chapter.10}% 
+\contentsline {chapter}{\numberline {5}Opzetten lokale testomgeving}{35}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Conclusie}{43}{chapter.11}% 
+\contentsline {chapter}{\numberline {6}Opzetten Hetzner Cloud testomgeving}{37}{chapter.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{45}{appendix.A}% 
+\contentsline {chapter}{\numberline {7}Basisconfiguraties op de servers}{39}{chapter.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{45}{section.A.1}% 
+\contentsline {chapter}{\numberline {8}Server installatie en configuratie}{41}{chapter.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Stand Van Zaken}{46}{section.A.2}% 
+\contentsline {chapter}{\numberline {9}Instellingen aanpassen na het opstarten}{43}{chapter.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{46}{section.A.3}% 
+\contentsline {chapter}{\numberline {10}Container/Cluster Installatie \& Configuratie}{45}{chapter.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwachte resultaten}{47}{section.A.4}% 
+\contentsline {chapter}{\numberline {11}Conclusie}{47}{chapter.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Verwachte conclusies}{47}{section.A.5}% 
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{49}{appendix.A}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{49}{appendix*.21}% 
+\contentsline {section}{\numberline {A.1}Introductie}{49}{section.A.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Stand Van Zaken}{50}{section.A.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Methodologie}{50}{section.A.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{51}{section.A.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{51}{section.A.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{53}{appendix*.25}% 
 \contentsfinish 

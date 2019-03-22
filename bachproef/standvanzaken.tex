@@ -112,11 +112,90 @@ runcmd:
 \section{Using Ansible to Bootstrap My Work Environment Part 4}
 Het tweede artikel is: \textbf{Using Ansible to Bootstrap My Work Environment Part 4}. Het is een Blogpost geschreven Scott Harney. \autocite{scottharney} beschrijft in zijn blogpost hoe hij zijn werk omgeving opstart via Ansible met behulp van cloud-init. 
 
-Het is het beste artikel dat werd gevonden waar Ansible en cloud-init beide expliciet werden gebruikt. En waar voor het eerste een omgeving wordt weergegeven die werd opgezet door een samenwerking van beide.
+% tot hier was spellcheck en woorden bekeken.
 
-EXTRA UITLEG ARTIKEL + INFO OVER WAT LITERATUUR ONDERZOEK GAAT GAAN.
+Het is het beste artikel dat werd gevonden waar Ansible en cloud-init beide expliciet werden gebruikt. Er werd voor het eerste een omgeving weergegeven die opgezet werd door een samenwerking van beide. In \autocite{scottharney} wordt beschreven hoe Scott Harney een EC2 instance op zet op AWS. AWS is 1 van de cloud providers die cloud-init ondersteunt. Het artikel is opgedeeld in 4 onderdelen. 
+
+\textit{'Initial provisioning'}, in dit deel wordt de EC2 instance opgestart. Dit gebeurt met een eerste Ansible playbook dat ondere ook verwijst naar het cloud-init script dat nodig is. \textit{'Cloud-init'}, in het 2de gedeelte wordt het cloud-init script opgemaakt en uitgelegd wat alles doet en betekent. \textit{'Ansible folow up playbook'}, in dit gedeelte wordt de EC2 instance geconfigureerd met Ansible. \textit{'Launch and configure'} hier wordt de omgeving opgestart en worden sommige variablen nog ingevuld.
+
+Het literatuur onderzoek gaat over de eerste 3 onderdelen gaan: initial provisioning, cloud-init en Ansible follow up playbook. Hierin worden Ansible en cloud-init besproken en geconfigureerd.
+
+\subsection{Ansible initial playbook}
+Er werd gekozen om de initiële provisioning en post-provisioning in 2 verschillende playbooks te doen. \autocite{scottharney} vond dit het handigste en vind het onnodig om deze tot 1 playbook te maken. 
+
+Dit playbook zorgt voor het aanmaken en opstarten van de instance. Dit wordt gedaan via de Ansible role \textit{ec2}. Via deze role en dit playbook wordt ook het cloud config bestand meegegeven. \autocite{scottharney} gaf dit mee door middel van de optie \textit{user\_data}. 
+
 \subsection{Cloud-init}
+\autocite{scottharney} beschreef hier hoe hij de het cloud config bestand, waar hij in het eerste playbook naar verwees, heeft geconfigureerd. Een eerste opmerking van \autocite{scottharney} was dat cloud-init niet veel goede documentatie had. \autocite{scottharney} vond dit opmerkelijk omdat het een populaire tool is. Vervolgens beschreef \autocite{scottharney} hoe zijn cloud config bestand is opgedeeld.
 
-\subsection{Ansible roles}
+\subsubsection{Begin}
+Allereerst werd de normale gebruiker van \autocite{scottharney} aangemaakt met de nodige configuraties.
 
-%\section{Automated Ansible AWX Installation}
+\begin{lstlisting}
+#cloud-config
+users:
+- name: {{ ansible_user }}
+ssh-authorized-keys:
+- ssh-rsa  umm. nope
+groups: [ 'admin', 'adm', 'dialout', 'sudo', 'lxd', 
+		'plugdev', 'netdev' ]
+shell: /bin/bash
+sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+\end{lstlisting} 
+
+\subsubsection{Server en host update}
+In het 2de deel van het bestand nam \autocite{scottharney} zijn Hostname en fqdn en werden de packages upgedate. Ook update hij de instance zijn \textit{/etc/host} en update hij de tijdzone.
+
+\begin{lstlisting}
+hostname: "{{ item.hostname }}"
+fqdn: "{{ item.fqdn }}"
+manage_etc_hosts: true
+timezone: US/Central
+package_update: true
+package_upgrade: true
+\end{lstlisting} 
+
+\subsubsection{Packages}
+Om het laatste van zijn script uit te voeren had \autocite{scottharney} 2 packages nodig, namelijk: \textit{python} en \textit{awscli}. 
+
+\begin{lstlisting}
+packages:
+- awscli
+- python
+\end{lstlisting}
+
+\subsubsection{DNS zone bestand}
+Het laatste deel was het belangrijkste deel van het cloud config bestand. \autocite{scottharney} moest zijn DNS zone bestand updaten. Zodat zijn EC2 instance correct werkte. Dit deed hij door met de optie \textit{write\_files} een script aan te maken om deze te updaten. Hij prefereerde deze methode dan het the pushen via \textit{systemd}.
+\begin{lstlisting}
+write_files:
+- content: |
+#!/bin/sh
+FQDN=`hostname -f`
+ZONE_ID="{{ zone_id }}"
+TTL=300
+SELF_META_URL="http://169.254.169.254/latest/meta-data"
+PUBLIC_DNS=$(curl ${SELF_META_URL}/public-hostname 2>/dev/null)
+
+cat << EOT > /tmp/aws_r53_batch.json
+{
+"Comment": "Assign AWS Public DNS as a CNAME of hostname",
+"Changes": [
+{
+"Action": "UPSERT",
+"ResourceRecordSet": {
+"Name": "${FQDN}.",
+"Type": "CNAME",
+"TTL": ${TTL},
+"ResourceRecords": [
+{
+"Value": "${PUBLIC_DNS}"
+}]}}]}
+EOT
+
+aws route53 change-resource-record-sets --hosted-zone-id ${ZONE_ID} 
+		--change-batch file:///tmp/aws_r53_batch.json
+rm -f /tmp/aws_r53_batch.json
+path: /var/lib/cloud/scripts/per-boot/set_route53_dns.sh
+permissions: 0755e
+\end{lstlisting}
+\subsection{Ansible follow up playbook}
