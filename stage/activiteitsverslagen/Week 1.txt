@@ -1,0 +1,16 @@
+Maandag:- Rondleiding door het bedrijf
+	- Presentatie Over het bedrijf + kennismaking 2 stagementors
+	- Inleiding tot eerste opdracht: Cloud-init&Ansible
+	- research wat is cloud-init
+	- opzetten testomgeving cloud-init
+
+Dinsdag:- Verdergaan met testomgeving
+	- Cloud-init omgeving opgezet in vagrant
+
+Woensdag:- Afronding van de testomgeving
+	 - docker server opgezet met cloud-init lokaal
+	 - docker server opgezet met cloud-init en ansible lokaal
+
+Donderdag: 
+	- Cloud-init server opzetten in Hetzner Cloud met behulp van Ansible
+	- Cloud-init server opzetten in H Cloud met ansibble doormiddel van Github playbooks

@@ -1,0 +1,15 @@
+Maandag: - Cloud-init server in hcloud met ansible doormiddel van github playbooks(veel gepruts me ssh keys) afwerken
+	 - beginen met Setup Kubernetes 1.12 cluster using kubeadm: research
+
+Dinsdag: - bachelorproef dag
+
+Woensdag: - Setup Kubernetes 1.12 cluster using kubeadm. Proberen op 1 machine een cluster te zetten
+
+Donderdag: - verderzetting kubernetes 
+	   - proberen op 2 machines nodes te zetten van 1 cluster. 
+	   - Probleem met load balancers om nodes op 1 cluster te krijgen
+
+Vrijdag: - verderzetting kubernetes op meerdere machines nodes van 1 cluster. 
+	 - Met hulp van stagementor load balancer probleem proberen oplossen.
+
+

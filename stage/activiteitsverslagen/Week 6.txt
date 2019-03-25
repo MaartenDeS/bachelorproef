@@ -1,0 +1,4 @@
+Maandag: Meeting over verder zetten opdracht. Ansible roles die nodig zijn in programma zetten via ansible galaxy
+		- research ansible galaxy:
+			- anisble-galaxy met requirement file
+			- niet ansible-galaxy maar mazer
