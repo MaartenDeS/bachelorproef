@@ -126,7 +126,7 @@
       \verb https://cloudinit.readthedocs.io/en/latest/topics/modules.html
       \endverb
     \endentry
-    \entry{scottharney}{article}{}
+    \entry{justinellin}{online}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=4d21f1938b6f8832973a4b02cd309b67}{%
            family={Harney},
@@ -141,11 +141,77 @@
       \strng{authorbibnamehash}{4d21f1938b6f8832973a4b02cd309b67}
       \strng{authornamehash}{4d21f1938b6f8832973a4b02cd309b67}
       \strng{authorfullhash}{4d21f1938b6f8832973a4b02cd309b67}
+      \field{extraname}{1}
       \field{sortinit}{H}
       \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Blog}
+      \field{title}{How To Use Git to Manage your User Configuration Files on a Linux VPS}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://www.digitalocean.com/community/tutorials/how-to-use-git-to-manage-your-user-configuration-files-on-a-linux-vps
+      \endverb
+      \verb{url}
+      \verb https://www.digitalocean.com/community/tutorials/how-to-use-git-to-manage-your-user-configuration-files-on-a-linux-vps
+      \endverb
+    \endentry
+    \entry{commonscottharney}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=4d21f1938b6f8832973a4b02cd309b67}{%
+           family={Harney},
+           familyi={H\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{fullhash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{bibnamehash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{authorbibnamehash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{authornamehash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{authorfullhash}{4d21f1938b6f8832973a4b02cd309b67}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Blog}
+      \field{title}{Using Ansible to Bootstrap My Work Environment Part 3}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.scottharney.com/using-ansible-to-bootstap-my-work-environment-part-3/
+      \endverb
+      \verb{url}
+      \verb https://www.scottharney.com/using-ansible-to-bootstap-my-work-environment-part-3/
+      \endverb
+    \endentry
+    \entry{scottharney}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=4d21f1938b6f8832973a4b02cd309b67}{%
+           family={Harney},
+           familyi={H\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{fullhash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{bibnamehash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{authorbibnamehash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{authornamehash}{4d21f1938b6f8832973a4b02cd309b67}
+      \strng{authorfullhash}{4d21f1938b6f8832973a4b02cd309b67}
+      \field{extraname}{3}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Blog}
@@ -237,7 +303,7 @@
       \verb https://www.cloudsigma.com/an-introduction-to-server-provisioning-with-cloudinit/
       \endverb
     \endentry
-    \entry{viktorpet}{article}{}
+    \entry{viktorpet}{online}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=8976539926b4546f117c55b683d95ee1}{%
            family={Petersson},
@@ -246,12 +312,20 @@
            giveni={V\bibinitperiod},
            givenun=0}}%
       }
+      \name{editor}{1}{}{%
+        {{hash=3cb5cb0d35631f91e70a059a180bfbe3}{%
+           family={CloudSigma},
+           familyi={C\bibinitperiod}}}%
+      }
       \strng{namehash}{8976539926b4546f117c55b683d95ee1}
       \strng{fullhash}{8976539926b4546f117c55b683d95ee1}
       \strng{bibnamehash}{8976539926b4546f117c55b683d95ee1}
       \strng{authorbibnamehash}{8976539926b4546f117c55b683d95ee1}
       \strng{authornamehash}{8976539926b4546f117c55b683d95ee1}
       \strng{authorfullhash}{8976539926b4546f117c55b683d95ee1}
+      \strng{editorbibnamehash}{3cb5cb0d35631f91e70a059a180bfbe3}
+      \strng{editornamehash}{3cb5cb0d35631f91e70a059a180bfbe3}
+      \strng{editorfullhash}{3cb5cb0d35631f91e70a059a180bfbe3}
       \field{extraname}{2}
       \field{sortinit}{P}
       \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}

@@ -55,12 +55,13 @@
   timestamp = {2016.07.06},
 }
 
-@Electronic{devendor,
-  editor  = {DevendorTech},
-  title   = {Automated Ansible AWX Installation},
-  year    = {2018},
-  url     = {https://www.devendortech.com/articles/AWX_Tower.html},
-  journal = {devendor tech},
+@Electronic{commonscottharney,
+  author    = {Scott Harney},
+  title     = {Using Ansible to Bootstrap My Work Environment Part 3},
+  year      = {2016},
+  url       = {https://www.scottharney.com/using-ansible-to-bootstap-my-work-environment-part-3/},
+  journal   = {Blog},
+  timestamp = {2016.07.05},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}

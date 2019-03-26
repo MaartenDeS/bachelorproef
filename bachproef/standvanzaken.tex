@@ -199,3 +199,309 @@ path: /var/lib/cloud/scripts/per-boot/set_route53_dns.sh
 permissions: 0755e
 \end{lstlisting}
 \subsection{Ansible follow up playbook}
+
+Nadat de instance is opgestart en de eerste configuraties zijn uitgevoerd. Is het tijd voor het tweede playbook. Het eerste deel van het playbook ziet er zo uit.
+
+\begin{lstlisting}
+- hosts: tag_Name_candyapplegrey
+  gather_facts: True
+  roles:
+    - role: ec2
+    - role: common
+    - role: ansible_mystuff
+    - role: openvpn_server
+
+  tasks:
+  - name: Reboot system if required
+    tags: reboot
+    become: yes
+    command: /sbin/reboot  removes=/var/run/reboot-required 
+    async: 1
+    poll: 0
+    ignore_errors: true
+
+- name: waiting for {{ inventory_hostname }} to reboot
+  local_action: wait_for host={{ inventory_hostname }} state=started delay=30 timeout=300 
+  become: no
+\end{lstlisting}
+
+\subsubsection{EC2 rol}
+Dit deel van het playbook voegde de nieuwe publieke sleutel van de opgestarte host toe aan het \textit{known hosts} bestand. Maar Ansible zal ook vragen de sleutel te accepteren bij de eerste ssh. Als deze nog niet in het \textit{known hosts} bestand zit. Dit is het enige dat de EC2 role deed. Het wordt ook alleen aangeroepen als het IP adress gedefinieerd is.
+
+\begin{lstlisting}
+name: Add the instance to known hosts
+local_action: command sh -c 'ssh-keyscan -t rsa {{ ec2_ip_address }} >> $HOME/.ssh/known_hosts'
+when: ec2_$ip_address is defined
+\end{lstlisting}
+
+\subsubsection{Common rol}
+Voor de common rol werden we verwezen naar een andere artikel namelijk: \autocite{commonscottharney}. Deze rol was zeer uitgebreid, dus heeft het zijn eigen artikel.
+
+\textbf{Sectie 1 common rol}
+
+Git is zeer belangrijk in deze rol dus koos de auteur om dit als allereerst te installeren met de rol. De ssh sleutels worden ook gekopieerd van uit een private git repository. Erna wordt \textit{with\_items} gebruikt. Het is een looping optie in Ansible die hier gekozen git bestanden kopieerde. Het laatste deel zorgde ervoor dat de auteur zijn private bitbucket repo's beschikbaar zijn ,met zijn vorige sleutels, vanop de instance.
+\begin{lstlisting}
+- name: install git
+become: yes
+apt:
+    name: git
+    state: present
+
+- name: send ssh id
+copy:
+    src: /home/sharney/.ssh/id_rsa
+    dest: /home/sharney/.ssh/id_rsa
+    mode: 0600
+
+- name: git configfiles
+become: no
+copy: src={{ item.src }} dest={{ item.dest }}
+with_items:
+    - { src: 'dot_gitignore', dest: '/home/sharney/.gitignore' }
+    - { src: 'dot_gitignore', dest: '/home/sharney/.gitignore' }
+    - { src: 'dot_git', dest: '/home/sharney/.git' }
+
+- name: bitbucket  key to known_hosts
+known_hosts:
+    key: "{{ lookup('pipe', 'ssh-keyscan -t rsa bitbucket.org')}}"
+    name: bitbucket.org
+    state: present
+\end{lstlisting}
+
+\textbf{Sectie 2 common rol}
+
+Dit deel toon \autocite{commonscottharney} zijn script, dat hij maakte om zijn private configuraties te doen. Dit werd ergens online gevonden, meerbepaald dankzij: \autocite{justinellin}.
+\begin{lstlisting}
+- name: do configfiles repo
+become: no
+script: /home/sharney/source/ansible-mystuff/configfiles_setup.sh  creates=/home/sharney/configfiles/.configfiles_done
+
+- name: ssh id permissions fix 
+become: no
+file: path=/home/sharney/.ssh/id_rsa mode=0600
+\end{lstlisting}
+
+\begin{lstlisting}
+#!/bin/sh
+
+# do the bits to setup configflies repo
+if [ ! -d $HOME/configfiles ]; then
+mkdir $HOME/configfiles 
+cd $HOME
+git clone --no-checkout git@bitbucket.org:scott_harney/configfiles.git
+git reset --hard origin/master
+fi
+
+
+if [ ! -e $HOME/Dropbox/.tmux.conf ]; then 
+ln -s $HOME/Dropbox/.tmux.conf
+fi
+if [ ! -e $HOME/Dropbox/.dir_colors ]; then
+ln -s $HOME/Dropbox/.dir_colors
+fi
+
+touch $HOME/configfiles/.configfiles_done
+\end{lstlisting}
+
+\textbf{Sectie 3 common rol}
+
+Het volgende deel van de rol voegde een ssh github sleutel toe. Voor het clonen van publieke repos later in het in de rol. Ook werden de andere nodige packages geïnstalleerd. Wel zijn sommige packages onnodig als er geen GUI aanwezig is op de instance.
+\begin{lstlisting}
+- name: github key to known_hosts
+known_hosts:
+    key: "{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}"
+    name: github.com
+    state: present
+
+- name: install packages for emacs and more
+action: apt pkg={{ item }} state=installed install_recommends=yes
+become: yes
+with_items:
+    - emacs24
+    - emacs24-el
+    - pandoc
+    - tmux
+    - zsh
+    - ispell
+    - vpnc
+    - fonts-hack-ttf
+    - ruby
+    - ruby-aws-sdk
+    - python-pip
+    - python-pip-whl
+    - virtualenv
+    - curl
+    - openjdk-8-jre
+    - fonts-crosextra-caladea
+    - fonts-crosextra-carlito # substituion fonts for ms office. probably need a GUI role
+\end{lstlisting}
+
+\textbf{Sectie 4 common rol}
+
+Dit waren gewoon python pip en ruby onderdelen die hielpen bij het beheren van AWS.
+\begin{lstlisting}
+- name: python pip install items
+become: yes
+pip: name={{ item }} state=present
+with_items:
+    - powerline-status
+    - awscli
+    - saws
+
+- name: aws sdk v1 for ruby for awscli
+become: yes
+gem: name=aws-sdk-v1 state=present
+\end{lstlisting}
+
+\textbf{Sectie 5 common rol}
+
+Dit deel zorgde voor de installatie van \textit{spacemacs}. \textit{spacemacs} is een linux tekst editor met de power en uitbreidbaarheid van \textit{Emacs} en de werking van \textit{vi/vim}.
+\begin{lstlisting}
+ name: check for spacemacs already imported
+stat: path=/home/sharney/.emacs.d/spacemacs.mk
+register: spacemacs_import
+
+- name: mv .emacs.d out of the way for spacemacs if spacemacs not yet deployed
+command: mv /home/sharney/.emacs.d /tmp
+when: spacemacs_import.stat.exists == False
+
+- name: spacemacs
+git: repo=https://github.com/syl20bnr/spacemacs dest=/home/sharney/.emacs.d 
+when: spacemacs_import.stat.exists == False
+
+- name: for spacemacs org-protocol-capture-html
+git: repo=https://github.com/alphapapa/org-protocol-capture-html.git dest=/home/sharney/source/org-protocol-capture-html
+
+- name: fix .emacs.d/private via source copy
+copy: src=/home/sharney/.emacs.d/private/private dest=/home/sharney/.emacs.d/private
+when: spacemacs_import.stat.exists == False
+# note: relying on the fact that the host running ansible has checked out private git repo
+\end{lstlisting}
+
+\textbf{Sectie 6 common rol}
+
+Hier zette \autocite{commonscottharney} zijn tijdzone. Ook worden hier bestanden gesynchroniseerd die in zijn Dropbox stonden.
+\begin{lstlisting}
+- name: gen en_US.UTF-8 locale
+become: yes
+locale_gen: name=en_US.UTF-8 state=present
+
+- name: set default locale to en_US.UTF-8
+become: yes
+command: /usr/sbin/update-locale LANG=en_US.UTF-8
+
+- name: symlink for dir_colors
+file: src=/home/sharney/Dropbox/.dir_colors path=/home/sharney/.dir_colors state=link
+
+- name: symlink for .tmux.conf
+file: src=/home/sharney/Dropbox/.tmux.conf path=/home/sharney/.tmux.conf state=link
+\end{lstlisting}
+
+\textbf{Sectie 7 common rol}
+
+Het laaste deel conifureerde de vpn. Ook worden de files van zijn website gepulled. Ten laatste is de customisatie van \textit{zsh}.
+\begin{lstlisting}
+- name: copy vpnc config
+become: yes
+copy:
+    src: vpnc
+    dest: /etc
+    owner: root
+    group: yes
+    mode: 0700 
+
+- name: git clone scottharney.com
+git: repo=git@bitbucket.org:scott_harney/scottharney.com.git dest=/home/sharney/scottharney.com
+
+- name: install ohmyzsh via git
+git: repo=https://github.com/robbyrussell/oh-my-zsh.git  dest=/home/sharney/.oh-my-zsh depth=1 
+
+- name: fix .zshrc
+copy: src=/home/sharney/.zshrc dest=/home/sharney/.zshrc
+\end{lstlisting}
+
+\subsubsection{Ansible bestanden rol}
+Deze rol pulled alle playbooks van \autocite{scottharney} zijn git repo \textit{ansible\_mystuff} en zet het op de server. Zo kan hij vanop deze instance aan zijn playbooks werken.
+\begin{lstlisting}
+- name: install ansible 
+become: yes
+apt:
+    name: ansible
+    state: present
+
+- name: ansible-mystuff repo for deployment of util hosts
+git: repo=git@bitbucket.org:scott_harney/ansible-mystuff.git  dest=~/source/ansible-mystuff    
+\end{lstlisting}
+
+\subsubsection{OpenVPN rol}
+
+Via deze kan \autocite{scottharney} zijn instance gebruiken op plaatsen die geen veilige verbinding zijn (bijvoorbeeld een café). Ook hij aan bestanden geraken van EC2 instances die geen internet gateway hebben. Deze instance wordt door deze rol een ssh host en een gateway naar \autocite{scottharney} zijn VPC. Omdat het een aparte rol is kunnen deze functie later hergebruikt worden.
+
+\textbf{Sectie 1 OpenVPN rol}
+
+Dit installeerde de openvpn package en kopieerde de al aanwezige configuraties naar de instance.
+\begin{lstlisting}
+- name: install openvpn
+become: yes
+apt:
+    name: openvpn
+    state: present
+
+- name: copy openvpn configuration data
+become: yes
+copy: src=openvpn dest=/etc
+\end{lstlisting}
+
+\textbf{Sectie 2 OpenVPN rol}
+
+Hier wordt ip forwarding aangezet en een \textit{iptables} is nu aanwezig voor het VPN verkeer.
+\begin{lstlisting}
+- name: set up ip forwarding
+become: yes
+sysctl: name="net.ipv4.ip_forward" value=1 sysctl_set=yes state=present reload=yes
+
+- name: update /etc/rc.local
+become: yes
+copy: src=rc.local dest=/etc/rc.local mode=0755
+
+- name: do iptables
+become: yes
+iptables: state=present table=nat chain=POSTROUTING source=192.168.3.0/24 out_interface=eth0 jump=MASQUERADE
+\end{lstlisting}
+
+\textbf{Sectie 3 OpenVPN rol}
+
+Dit was volgens \autocite{scottharney} het moeilijste deel van zijn playbook. Voor dit deel heeft een lange tijd moeten troubleshooten. Het probleem dat hij ondervond was dat er een bug was die openvpn reports niet goed bij hield in Xenial. Zo heeft \autocite{scottharney} zijn bug kunnen oplossen.
+\begin{lstlisting}
+- name: fix debian bug in openvpn service https://bugs.launchpad.net/ubuntu/+source/openvpn/+bug/1580356?
+become: yes
+copy: src=openvpn@.service dest=/lib/systemd/system/
+\end{lstlisting}
+
+\textbf{Sectie 4 OpenVPN rol}
+
+Er is ee een \textit{systemd} module in Ansible 2.2 maar \autocite{scottharney} koos er voor om dit toch via de command line te doen. Dit is iets dat hij later zou kunnen aanpassen naar de module van Ansible. Maar momenteel werkt dit goed genoeg
+\begin{lstlisting}
+- name: restart systemd daemon after updating unit config
+become: yes
+command: systemctl daemon-reload
+
+- name: enable openvpn services
+become: yes
+command: systemctl enable openvpn.service
+
+- name: restart openvpn services
+become: yes
+command: systemctl restart openvpn.service/
+\end{lstlisting}
+
+
+
+
+
+
+
+
+
+
+

@@ -83,33 +83,41 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.3}Ansible follow up playbook}{31}{subsection.3.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Methodologie}{33}{chapter.4}% 
+\contentsline {subsubsection}{EC2 rol}{31}{section*.25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Opzetten lokale testomgeving}{35}{chapter.5}% 
+\contentsline {subsubsection}{Common rol}{32}{section*.26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Opzetten Hetzner Cloud testomgeving}{37}{chapter.6}% 
+\contentsline {subsubsection}{Ansible bestanden rol}{36}{section*.27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Basisconfiguraties op de servers}{39}{chapter.7}% 
+\contentsline {subsubsection}{OpenVPN rol}{36}{section*.28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Server installatie en configuratie}{41}{chapter.8}% 
+\contentsline {chapter}{\numberline {4}Methodologie}{39}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Instellingen aanpassen na het opstarten}{43}{chapter.9}% 
+\contentsline {chapter}{\numberline {5}Opzetten lokale testomgeving}{41}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Container/Cluster Installatie \& Configuratie}{45}{chapter.10}% 
+\contentsline {chapter}{\numberline {6}Opzetten Hetzner Cloud testomgeving}{43}{chapter.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Conclusie}{47}{chapter.11}% 
+\contentsline {chapter}{\numberline {7}Basisconfiguraties op de servers}{45}{chapter.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{49}{appendix.A}% 
+\contentsline {chapter}{\numberline {8}Server installatie en configuratie}{47}{chapter.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{49}{section.A.1}% 
+\contentsline {chapter}{\numberline {9}Instellingen aanpassen na het opstarten}{49}{chapter.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Stand Van Zaken}{50}{section.A.2}% 
+\contentsline {chapter}{\numberline {10}Container/Cluster Installatie \& Configuratie}{51}{chapter.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{50}{section.A.3}% 
+\contentsline {chapter}{\numberline {11}Conclusie}{53}{chapter.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwachte resultaten}{51}{section.A.4}% 
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{55}{appendix.A}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Verwachte conclusies}{51}{section.A.5}% 
+\contentsline {section}{\numberline {A.1}Introductie}{55}{section.A.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{53}{appendix*.25}% 
+\contentsline {section}{\numberline {A.2}Stand Van Zaken}{56}{section.A.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Methodologie}{56}{section.A.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{57}{section.A.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{57}{section.A.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{59}{appendix*.29}% 
 \contentsfinish 
