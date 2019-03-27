@@ -85,9 +85,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{EC2 rol}{31}{section*.25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Common rol}{32}{section*.26}% 
+\contentsline {subsubsection}{Common rol}{31}{section*.26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Ansible bestanden rol}{36}{section*.27}% 
+\contentsline {subsubsection}{Ansible bestanden rol}{35}{section*.27}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{OpenVPN rol}{36}{section*.28}% 
 \defcounter {refsection}{0}\relax 
@@ -103,7 +103,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {9}Instellingen aanpassen na het opstarten}{49}{chapter.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Container/Cluster Installatie \& Configuratie}{51}{chapter.10}% 
+\contentsline {chapter}{\numberline {10}Container \& Cluster Configuratie}{51}{chapter.10}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {11}Conclusie}{53}{chapter.11}% 
 \defcounter {refsection}{0}\relax 

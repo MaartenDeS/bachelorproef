@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.26)  26 MAR 2019 16:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.5)  27 MAR 2019 16:32
 entering extended mode
 **./bachproef-tin.tex
 (bachproef-tin.tex
@@ -164,16 +164,16 @@ s.sty"
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc
 .sty"
-File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 \c@lstnumber=\count106
 \lst@skipnumbers=\count107
 \lst@framebox=\box30
 )
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listing
 s.cfg"
-File: listings.cfg 2018/09/02 1.7 listings configuration
+File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
-Package: listings 2018/09/02 1.7 (Carsten Heinz)
+Package: listings 2019/02/27 1.8b (Carsten Heinz)
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlaye
 r\tikz.sty"
@@ -633,27 +633,27 @@ LaTeX Info: Redefining \hbar on input line 50.
 )
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
 ype.sty"
-Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
+Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
 \MT@toks=\toks39
 \MT@count=\count140
-LaTeX Info: Redefining \textls on input line 793.
+LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen188
-LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
+LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
 \MT@listname@count=\count141
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
 ype-pdftex.def"
-File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
+File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
 
-LaTeX Info: Redefining \lsstyle on input line 913.
-LaTeX Info: Redefining \lslig on input line 913.
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
 \MT@outer@space=\skip51
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
 ype.cfg"
-File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
+File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
 ))
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.st
 y"
@@ -1859,12 +1859,12 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 ]
 Hoofdstuk 2.
 [19]
-<img/playbookex.png, id=240, 733.99219pt x 321.45094pt>
+<img/playbookex.png, id=243, 733.99219pt x 321.45094pt>
 File: img/playbookex.png Graphic file (type png)
 <use img/playbookex.png>
 Package pdftex.def Info: img/playbookex.png  used on input line 22.
 (pdftex.def)             Requested size: 384.1096pt x 168.22472pt.
-<img/agalaxy.png, id=241, 1096.84781pt x 508.14844pt>
+<img/agalaxy.png, id=244, 1096.84781pt x 508.14844pt>
 File: img/agalaxy.png Graphic file (type png)
 <use img/agalaxy.png>
 Package pdftex.def Info: img/agalaxy.png  used on input line 31.
@@ -1880,12 +1880,12 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
  [22]
-<img/userdatascript.png, id=268, 393.72093pt x 170.13562pt>
+<img/userdatascript.png, id=271, 393.72093pt x 170.13562pt>
 File: img/userdatascript.png Graphic file (type png)
 <use img/userdatascript.png>
 Package pdftex.def Info: img/userdatascript.png  used on input line 75.
 (pdftex.def)             Requested size: 384.1096pt x 165.98149pt.
-<img/cloudconfig.png, id=269, 452.4403pt x 217.5628pt>
+<img/cloudconfig.png, id=272, 452.4403pt x 217.5628pt>
 File: img/cloudconfig.png Graphic file (type png)
 <use img/cloudconfig.png>
 Package pdftex.def Info: img/cloudconfig.png  used on input line 83.
@@ -2018,12 +2018,12 @@ Overfull \hbox (41.21341pt too wide) in paragraph at lines 317--318
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[33]
+
 Overfull \hbox (214.01517pt too wide) in paragraph at lines 336--337
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
+[33]
 Overfull \hbox (134.81436pt too wide) in paragraph at lines 364--365
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2039,7 +2039,7 @@ Overfull \hbox (437.21744pt too wide) in paragraph at lines 373--375
 ][] 
  []
 
-[34]
+
 Overfull \hbox (178.0148pt too wide) in paragraph at lines 376--377
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2049,7 +2049,7 @@ Overfull \hbox (221.21524pt too wide) in paragraph at lines 378--379
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
+[34]
 Overfull \hbox (185.21487pt too wide) in paragraph at lines 394--396
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2080,12 +2080,12 @@ Overfull \hbox (163.61465pt too wide) in paragraph at lines 461--463
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[36]
+
 Overfull \hbox (350.81656pt too wide) in paragraph at lines 469--470
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
+[36]
 Overfull \hbox (329.21634pt too wide) in paragraph at lines 476--477
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2137,39 +2137,46 @@ B"ylage A.
 ] [56]) [57] [58
 
 ] [59] [60]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 139.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 139.
 
 (bachproef-tin.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 137.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 139.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 139.
 
 
 LaTeX Warning: There were multiply-defined labels.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
 
 Package logreq Info: Writing requests to 'bachproef-tin.run.xml'.
 \openout1 = `bachproef-tin.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40751 strings out of 492946
- 761611 string characters out of 3125378
- 1373252 words of memory out of 3000000
- 43345 multiletter control sequences out of 15000+200000
+ 40757 strings out of 492946
+ 761643 string characters out of 3125379
+ 1373470 words of memory out of 3000000
+ 43350 multiletter control sequences out of 15000+200000
  593174 words of font info for 216 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,67p,836b,3844s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.e
-nc}<C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/urw/avantgar/uagd8a.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Maarten/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Maarten/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Maarten/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachproef-tin.pdf (62 pages, 571673 bytes).
+pdfTeX warning (dest): name{chapter.12} has been referenced but does not exis
+t, replaced by a fixed one
+
+{C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
+}<C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/urw/avantgar/uagd8a.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Maarten/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Maarten/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bachproef-tin.pdf (62 pages, 572002 bytes).
 PDF statistics:
- 1071 PDF objects out of 1200 (max. 8388607)
- 456 named destinations out of 1000 (max. 500000)
+ 1075 PDF objects out of 1200 (max. 8388607)
+ 457 named destinations out of 1000 (max. 500000)
  33102 words of extra memory for PDF output out of 35830 (max. 10000000)
 
