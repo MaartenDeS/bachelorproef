@@ -2,3 +2,17 @@ Maandag: Meeting over verder zetten opdracht. Ansible roles die nodig zijn in pr
 		- research ansible galaxy:
 			- anisble-galaxy met requirement file
 			- niet ansible-galaxy maar mazer
+
+Dinsdag: Bachelorproefdag
+
+Woensdag: Verder gaan ansible-galaxy en mazer. Feedback gevraagd aan stagementor
+	daarna setups opgezet met ansible galaxy en mazer (problemen voor beide: automatische update van role in machine.)
+
+Donderdag: Kijken voor probleem update op te lossen: via ansible galaxy --force
+			-- probleem daarbij: gebruikt oude role nog bij uitvoering playbook
+			-- opgelost door includeroles te gebruiken ipv roles.
+
+Vrijdag: Meeting om probleem update roles (nog geen optimale oplossing gevonden vorige dagen)
+	rol updates gebeuren met git pull van alle roles ( maar dn moet git repo van bemobile veranderen)
+	inventory eigen git repo --> ansible vault om dit te helpen configureren
+	Vooral research naar ansible vault, en hoe dit secuur te implementeren
