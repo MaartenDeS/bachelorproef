@@ -1,0 +1,8 @@
+Maandag: opzetten vault server en check type ssh secret engines om contact met te maken: OTP, dynamic ssh, ssh certificates
+	+ werken stageverslag
+
+Dinsdag: Bachelorproefdag
+
+Woensdag: Gekozen voor One time passwords(want andere waren te simpel naar mijn mening) dit proberen opzetten.--> fout: vault ssh helper certificaat niet juist ingesteld
+	  + werken stageverslag
+
