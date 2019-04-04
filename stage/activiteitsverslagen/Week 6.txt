@@ -16,3 +16,5 @@ Vrijdag: Meeting om probleem update roles (nog geen optimale oplossing gevonden 
 	rol updates gebeuren met git pull van alle roles ( maar dn moet git repo van bemobile veranderen)
 	inventory eigen git repo --> ansible vault om dit te helpen configureren
 	Vooral research naar ansible vault, en hoe dit secuur te implementeren
+
+Volgende week: Ansible vault opzoeken en proberen implementeren

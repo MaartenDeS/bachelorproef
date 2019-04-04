@@ -6,3 +6,8 @@ Dinsdag: Bachelorproefdag
 Woensdag: Gekozen voor One time passwords(want andere waren te simpel naar mijn mening) dit proberen opzetten.--> fout: vault ssh helper certificaat niet juist ingesteld
 	  + werken stageverslag
 
+Donderag: Vault server opzetten en toegang via OTP. 
+		Dit gaf alleen geen toegang tot de vault maar gaf de vault toegang tot andere servers
+	Andere manier opgezocht
+		Bastion lijkt meest voor de hand liggend
+	
