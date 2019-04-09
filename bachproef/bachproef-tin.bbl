@@ -128,24 +128,24 @@
     \endentry
     \entry{justinellin}{online}{}
       \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=4d21f1938b6f8832973a4b02cd309b67}{%
-           family={Harney},
-           familyi={H\bibinitperiod},
-           given={Scott},
-           giveni={S\bibinitperiod},
+        {{uniquename=0,uniquepart=base,hash=9f3f1976a08544bc78d8fcf83046e5db}{%
+           family={Ellingwood},
+           familyi={E\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{4d21f1938b6f8832973a4b02cd309b67}
-      \strng{fullhash}{4d21f1938b6f8832973a4b02cd309b67}
-      \strng{bibnamehash}{4d21f1938b6f8832973a4b02cd309b67}
-      \strng{authorbibnamehash}{4d21f1938b6f8832973a4b02cd309b67}
-      \strng{authornamehash}{4d21f1938b6f8832973a4b02cd309b67}
-      \strng{authorfullhash}{4d21f1938b6f8832973a4b02cd309b67}
-      \field{extraname}{1}
-      \field{sortinit}{H}
-      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \strng{namehash}{9f3f1976a08544bc78d8fcf83046e5db}
+      \strng{fullhash}{9f3f1976a08544bc78d8fcf83046e5db}
+      \strng{bibnamehash}{9f3f1976a08544bc78d8fcf83046e5db}
+      \strng{authorbibnamehash}{9f3f1976a08544bc78d8fcf83046e5db}
+      \strng{authornamehash}{9f3f1976a08544bc78d8fcf83046e5db}
+      \strng{authorfullhash}{9f3f1976a08544bc78d8fcf83046e5db}
+      \field{sortinit}{E}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Blog}
@@ -156,6 +156,35 @@
       \endverb
       \verb{url}
       \verb https://www.digitalocean.com/community/tutorials/how-to-use-git-to-manage-your-user-configuration-files-on-a-linux-vps
+      \endverb
+    \endentry
+    \entry{asuslaptop}{report}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=81541e5080aa1fd14a68d5f138bf87bf}{%
+           family={Hardware.info},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{81541e5080aa1fd14a68d5f138bf87bf}
+      \strng{fullhash}{81541e5080aa1fd14a68d5f138bf87bf}
+      \strng{bibnamehash}{81541e5080aa1fd14a68d5f138bf87bf}
+      \strng{authorbibnamehash}{81541e5080aa1fd14a68d5f138bf87bf}
+      \strng{authornamehash}{81541e5080aa1fd14a68d5f138bf87bf}
+      \strng{authorfullhash}{81541e5080aa1fd14a68d5f138bf87bf}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Specificaties Asus X750L}
+      \field{type}{techreport}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://be.hardware.info/product/204862/asus-x750l/specificaties
+      \endverb
+      \verb{url}
+      \verb https://be.hardware.info/product/204862/asus-x750l/specificaties
       \endverb
     \endentry
     \entry{commonscottharney}{online}{}
@@ -173,7 +202,7 @@
       \strng{authorbibnamehash}{4d21f1938b6f8832973a4b02cd309b67}
       \strng{authornamehash}{4d21f1938b6f8832973a4b02cd309b67}
       \strng{authorfullhash}{4d21f1938b6f8832973a4b02cd309b67}
-      \field{extraname}{2}
+      \field{extraname}{1}
       \field{sortinit}{H}
       \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{extradate}{1}
@@ -206,7 +235,7 @@
       \strng{authorbibnamehash}{4d21f1938b6f8832973a4b02cd309b67}
       \strng{authornamehash}{4d21f1938b6f8832973a4b02cd309b67}
       \strng{authorfullhash}{4d21f1938b6f8832973a4b02cd309b67}
-      \field{extraname}{3}
+      \field{extraname}{2}
       \field{sortinit}{H}
       \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{extradate}{2}
@@ -222,6 +251,33 @@
       \endverb
       \verb{url}
       \verb https://www.scottharney.com/using-ansible-to-bootstap-my-work-environment-part-4/
+      \endverb
+    \endentry
+    \entry{hetzner}{report}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=77f63742ead3b9c76908ede3f185e67b}{%
+           family={Hetzner},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{77f63742ead3b9c76908ede3f185e67b}
+      \strng{fullhash}{77f63742ead3b9c76908ede3f185e67b}
+      \strng{bibnamehash}{77f63742ead3b9c76908ede3f185e67b}
+      \strng{authorbibnamehash}{77f63742ead3b9c76908ede3f185e67b}
+      \strng{authornamehash}{77f63742ead3b9c76908ede3f185e67b}
+      \strng{authorfullhash}{77f63742ead3b9c76908ede3f185e67b}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Site Hetzner}
+      \field{type}{techreport}
+      \verb{urlraw}
+      \verb https://www.hetzner.com/
+      \endverb
+      \verb{url}
+      \verb https://www.hetzner.com/
       \endverb
     \endentry
     \entry{cloudsite}{online}{}

@@ -24,6 +24,7 @@ Het eerste artikel dat gevonden werd is: \textbf{An introduction to server provi
 
 In deze literatuurstudie wordt er besproken wat de link met Ansible is volgens \autocite{viktorpet}. Een ander groot onderdeel van het artikel is hoe het Cloud config bestand wordt opgemaakt. En wat dit bestand heeft/geeft qua voordelen. Ook is er een deel waar er wordt getoond hoe er een CloudSigma server wordt opgesteld. Dit wordt niet besproken. Dit is een klein deel van het artikel en niet van nut voor deze bachelorproef/onderzoek.
 
+\newpage
 \subsection{Verschil en samenwerking met Ansible volgens Viktor Petersson}
 \autocite{viktorpet} wil allereerst de lezer doen inzien dat cloud-init een specifieke plaats heeft in de server provisioning wereld. In \autocite{viktorpet} wordt er vermeld dat Cloud-init namelijk een bepaalde eigenschap heeft, die vele provisioning systemen zoals een Ansible, Puppet of Chef niet hebben. 
 
@@ -45,6 +46,7 @@ ssh_authorized_keys:
  - ssh-rsa AAA...user2@host
 \end{lstlisting} 
 
+\newpage
 \subsubsection{Systeem updates}
 Het volgende voordeel van cloud-init volgens \autocite{viktorpet} is het uitvoeren van systeem updates tijdens de eerste boot. Dit is een van de functies die al werd besproken in Hoofdstuk \ref*{ch:cloudmodules}.
 
@@ -111,6 +113,8 @@ runcmd:
 - ls -l /root
 \end{lstlisting} 
 
+\newpage
+
 \section{Using Ansible to Bootstrap My Work Environment Part 4}
 Het tweede artikel is: \textbf{Using Ansible to Bootstrap My Work Environment Part 4}. Het is een Blogpost geschreven door Scott Harney. \autocite{scottharney} beschrijft in zijn blogpost hoe hij zijn werk omgeving opstart via Ansible met behulp van cloud-init. 
 
@@ -130,9 +134,9 @@ Dit playbook zorgt voor het aanmaken en opstarten van de instance. Dit wordt ged
 \subsection{Cloud-init}
 \autocite{scottharney} beschreef hier hoe hij de het cloud config bestand, waar hij in het eerste playbook naar verwees, heeft geconfigureerd. Een eerste opmerking van \autocite{scottharney} was dat cloud-init niet veel goede documentatie had. \autocite{scottharney} vond dit opmerkelijk omdat het een populaire tool is. Vervolgens beschreef \autocite{scottharney} hoe zijn cloud config bestand is opgedeeld.
 
+\newpage
 \subsubsection{Begin}
 Allereerst werd de normale gebruiker van \autocite{scottharney} aangemaakt met de nodige configuraties.
-
 \begin{lstlisting}
 #cloud-config
 users:
@@ -147,7 +151,6 @@ sudo: ["ALL=(ALL) NOPASSWD:ALL"]
 
 \subsubsection{Server en host update}
 In het 2de deel van het bestand nam \autocite{scottharney} zijn Hostname en fqdn en werden de packages upgedate. Ook update hij de instance zijn \textit{/etc/host} en update hij de tijdzone.
-
 \begin{lstlisting}
 hostname: "{{ item.hostname }}"
 fqdn: "{{ item.fqdn }}"
@@ -159,13 +162,13 @@ package_upgrade: true
 
 \subsubsection{Packages}
 Om het laatste van zijn script uit te voeren had \autocite{scottharney} 2 packages nodig, namelijk: \textit{python} en \textit{awscli}. 
-
 \begin{lstlisting}
 packages:
 - awscli
 - python
 \end{lstlisting}
 
+\newpage
 \subsubsection{DNS zone bestand}
 Het laatste deel was het belangrijkste deel van het cloud config bestand. \autocite{scottharney} moest zijn DNS zone bestand updaten. Zodat zijn EC2 instance correct werkte. Dit deed hij door met de optie \textit{write\_files} een script aan te maken om deze te updaten. Hij prefereerde deze methode dan het the pushen via \textit{systemd}.
 \begin{lstlisting}
@@ -200,10 +203,9 @@ rm -f /tmp/aws_r53_batch.json
 path: /var/lib/cloud/scripts/per-boot/set_route53_dns.sh
 permissions: 0755e
 \end{lstlisting}
+\newpage
 \subsection{Ansible follow up playbook}
-
 Nadat de instance is opgestart en de eerste configuraties zijn uitgevoerd. Is het tijd voor het tweede playbook. Het eerste deel van het playbook ziet er zo uit.
-
 \begin{lstlisting}
 - hosts: tag_Name_candyapplegrey
   gather_facts: True
@@ -223,21 +225,24 @@ Nadat de instance is opgestart en de eerste configuraties zijn uitgevoerd. Is he
     ignore_errors: true
 
 - name: waiting for {{ inventory_hostname }} to reboot
-  local_action: wait_for host={{ inventory_hostname }} state=started delay=30 timeout=300 
+  local_action: wait_for host={{ inventory_hostname }} state=
+                                started delay=30 timeout=300 
   become: no
 \end{lstlisting}
 
 \subsubsection{EC2 rol}
 Dit deel van het playbook voegde de nieuwe publieke sleutel van de opgestarte host toe aan het \textit{known hosts} bestand. Maar Ansible zal ook vragen de sleutel te accepteren bij de eerste ssh. Als deze nog niet in het \textit{known hosts} bestand zit. Dit is het enige dat de EC2 role deed. Het wordt ook alleen aangeroepen als het IP adress gedefinieerd is.
-
 \begin{lstlisting}
 name: Add the instance to known hosts
-local_action: command sh -c 'ssh-keyscan -t rsa {{ ec2_ip_address }} >> $HOME/.ssh/known_hosts'
+local_action: command sh -c 'ssh-keyscan -t rsa {{ ec2_ip_address }}
+                                             >> $HOME/.ssh/known_hosts'
 when: ec2_$ip_address is defined
 \end{lstlisting}
 
+\newpage
 \subsubsection{Common rol}
 Voor de common rol werden we verwezen naar een andere artikel namelijk: \autocite{commonscottharney}. Deze rol was zeer uitgebreid, dus heeft het zijn eigen artikel.
+
 
 \textbf{Sectie 1 common rol}
 
@@ -269,7 +274,7 @@ known_hosts:
     name: bitbucket.org
     state: present
 \end{lstlisting}
-
+\newpage
 \textbf{Sectie 2 common rol}
 
 Dit deel toon \autocite{commonscottharney} zijn script, dat hij maakte om zijn private configuraties te doen. Dit werd ergens online gevonden, meerbepaald dankzij: \autocite{justinellin}.
@@ -305,6 +310,7 @@ fi
 touch $HOME/configfiles/.configfiles_done
 \end{lstlisting}
 
+\newpage
 \textbf{Sectie 3 common rol}
 
 Het volgende deel van de rol voegde een ssh github sleutel toe. Voor het clonen van publieke repos later in het in de rol. Ook werden de andere nodige packages geïnstalleerd. Wel zijn sommige packages onnodig als er geen GUI aanwezig is op de instance.
@@ -335,7 +341,7 @@ with_items:
     - curl
     - openjdk-8-jre
     - fonts-crosextra-caladea
-    - fonts-crosextra-carlito # substituion fonts for ms office. probably need a GUI role
+    - fonts-crosextra-carlito 
 \end{lstlisting}
 
 \textbf{Sectie 4 common rol}
@@ -349,7 +355,6 @@ with_items:
     - powerline-status
     - awscli
     - saws
-
 - name: aws sdk v1 for ruby for awscli
 become: yes
 gem: name=aws-sdk-v1 state=present
@@ -399,6 +404,7 @@ file: src=/home/sharney/Dropbox/.dir_colors path=/home/sharney/.dir_colors state
 file: src=/home/sharney/Dropbox/.tmux.conf path=/home/sharney/.tmux.conf state=link
 \end{lstlisting}
 
+\newpage
 \textbf{Sectie 7 common rol}
 
 Het laaste deel conifureerde de vpn. Ook worden de files van zijn website gepulled. Ten laatste is de customisatie van \textit{zsh}.
@@ -435,6 +441,7 @@ apt:
 git: repo=git@bitbucket.org:scott_harney/ansible-mystuff.git  dest=~/source/ansible-mystuff    
 \end{lstlisting}
 
+\newpage
 \subsubsection{OpenVPN rol}
 
 Via deze kan \autocite{scottharney} zijn instance gebruiken op plaatsen die geen veilige verbinding zijn (bijvoorbeeld een café). Ook hij aan bestanden geraken van EC2 instances die geen internet gateway hebben. Deze instance wordt door deze rol een ssh host en een gateway naar \autocite{scottharney} zijn VPC. Omdat het een aparte rol is kunnen deze functie later hergebruikt worden.

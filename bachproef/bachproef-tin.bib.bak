@@ -64,4 +64,17 @@
   timestamp = {2016.07.05},
 }
 
+@Electronic{justinellin,
+    author    = {Justin Ellingwood},
+    title     = {How To Use Git to Manage your User Configuration Files on a Linux VPS},
+    year      = {2014},
+    url       = {https://www.digitalocean.com/community/tutorials/how-to-use-git-to-manage-your-user-configuration-files-on-a-linux-vps},
+    journal   = {Blog},
+    timestamp = {2016.02.21},
+}
+
+@TechReport{asuslaptop,
+    url       = {https://be.hardware.info/product/204862/asus-x750l/specificaties},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}

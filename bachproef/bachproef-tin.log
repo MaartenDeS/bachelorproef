@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.5)  27 MAR 2019 16:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.26)  9 APR 2019 18:23
 entering extended mode
 **./bachproef-tin.tex
 (bachproef-tin.tex
@@ -164,16 +164,16 @@ s.sty"
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc
 .sty"
-File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
 \c@lstnumber=\count106
 \lst@skipnumbers=\count107
 \lst@framebox=\box30
 )
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listing
 s.cfg"
-File: listings.cfg 2019/02/27 1.8b listings configuration
+File: listings.cfg 2018/09/02 1.7 listings configuration
 ))
-Package: listings 2019/02/27 1.8b (Carsten Heinz)
+Package: listings 2018/09/02 1.7 (Carsten Heinz)
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlaye
 r\tikz.sty"
@@ -633,27 +633,27 @@ LaTeX Info: Redefining \hbar on input line 50.
 )
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
 ype.sty"
-Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
+Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
 \MT@toks=\toks39
 \MT@count=\count140
-LaTeX Info: Redefining \textls on input line 790.
+LaTeX Info: Redefining \textls on input line 793.
 \MT@outer@kern=\dimen188
-LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
+LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
 \MT@listname@count=\count141
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
 ype-pdftex.def"
-File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
+File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
 
-LaTeX Info: Redefining \lsstyle on input line 914.
-LaTeX Info: Redefining \lslig on input line 914.
+LaTeX Info: Redefining \lsstyle on input line 913.
+LaTeX Info: Redefining \lslig on input line 913.
 \MT@outer@space=\skip51
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
 ype.cfg"
-File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
+File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
 ))
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.st
 y"
@@ -1796,11 +1796,9 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <24.88> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 5.
 ) (samenvatting.tex [3] [4
 
-])
-Underfull \vbox (badness 10000) has occurred while \output is active []
+]) [5] [6
 
- [5]
-[6] (bachproef-tin.toc
+] (bachproef-tin.toc
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <14.4> not available
@@ -1816,9 +1814,7 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7
-
-]
+ [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8])
@@ -1859,19 +1855,16 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 ]
 Hoofdstuk 2.
 [19]
-<img/playbookex.png, id=243, 733.99219pt x 321.45094pt>
+<img/playbookex.png, id=261, 733.99219pt x 321.45094pt>
 File: img/playbookex.png Graphic file (type png)
 <use img/playbookex.png>
 Package pdftex.def Info: img/playbookex.png  used on input line 22.
 (pdftex.def)             Requested size: 384.1096pt x 168.22472pt.
-<img/agalaxy.png, id=244, 1096.84781pt x 508.14844pt>
+<img/agalaxy.png, id=262, 1096.84781pt x 508.14844pt>
 File: img/agalaxy.png Graphic file (type png)
 <use img/agalaxy.png>
 Package pdftex.def Info: img/agalaxy.png  used on input line 31.
 (pdftex.def)             Requested size: 384.1096pt x 177.94765pt.
-
-Underfull \vbox (badness 3209) has occurred while \output is active []
-
  [20 <./img/playbookex.png>] [21 <./img/agalaxy.png>]
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 52.
@@ -1880,29 +1873,32 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
  [22]
-<img/userdatascript.png, id=271, 393.72093pt x 170.13562pt>
+<img/userdatascript.png, id=288, 393.72093pt x 170.13562pt>
 File: img/userdatascript.png Graphic file (type png)
 <use img/userdatascript.png>
-Package pdftex.def Info: img/userdatascript.png  used on input line 75.
+Package pdftex.def Info: img/userdatascript.png  used on input line 84.
 (pdftex.def)             Requested size: 384.1096pt x 165.98149pt.
-<img/cloudconfig.png, id=272, 452.4403pt x 217.5628pt>
+<img/cloudconfig.png, id=289, 452.4403pt x 217.5628pt>
 File: img/cloudconfig.png Graphic file (type png)
 <use img/cloudconfig.png>
-Package pdftex.def Info: img/cloudconfig.png  used on input line 83.
+Package pdftex.def Info: img/cloudconfig.png  used on input line 92.
 (pdftex.def)             Requested size: 384.1096pt x 184.7035pt.
+
+Underfull \vbox (badness 5637) has occurred while \output is active []
+
  [23 <./img/userdatascript.png>]) (standvanzaken.tex [24 <./img/cloudconfig.png
 >]
 Hoofdstuk 3.
 [25
 
 ]
-Overfull \hbox (6.15985pt too wide) in paragraph at lines 38--39
+Overfull \hbox (6.15985pt too wide) in paragraph at lines 41--42
 []\T1/ptm/m/n/12 (-20) ([][]Petersson, []2017[]) maakt ver-bin-ding met de ser-
 ver via het com-mando \T1/ptm/m/it/12 (-20) ssh ubuntu@IPADRESS\T1/ptm/m/n/12 (
 -20) .
  []
 
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 40
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 43
 .
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1ztmcm.
@@ -1913,21 +1909,21 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ztmcm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 40
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 43
 .
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\omlztmcm.
 fd"
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 40
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 43
 .
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\omsztmcm.
 fd"
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 40
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 43
 .
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\omxztmcm.
@@ -1942,201 +1938,210 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 .cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 40.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 43.
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1ptm.fd
 "
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
- [26] [27]
-Underfull \vbox (badness 1286) has occurred while \output is active []
-
- [28]
-[29]
-Overfull \hbox (26.81326pt too wide) in paragraph at lines 177--179
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+ [26] [27] [28] [29] [30]
+Overfull \hbox (26.81326pt too wide) in paragraph at lines 182--184
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (55.61356pt too wide) in paragraph at lines 195--196
+Overfull \hbox (55.61356pt too wide) in paragraph at lines 200--201
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (12.41312pt too wide) in paragraph at lines 196--197
+Overfull \hbox (12.41312pt too wide) in paragraph at lines 201--202
 [][][][][][][][][][][][][][][][] 
  []
 
-[30]
-Overfull \hbox (214.01517pt too wide) in paragraph at lines 224--225
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (257.2156pt too wide) in paragraph at lines 233--234
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
 [31]
-Overfull \hbox (34.01334pt too wide) in paragraph at lines 260--261
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (12.41312pt too wide) in paragraph at lines 228--229
+[][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (34.01334pt too wide) in paragraph at lines 261--262
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (5.21304pt too wide) in paragraph at lines 229--230
+[][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (48.41348pt too wide) in paragraph at lines 266--267
+Overfull \hbox (62.81363pt too wide) in paragraph at lines 237--238
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (55.61356pt too wide) in paragraph at lines 277--279
-[][][][][][][][][][][][][][][][][][][][][][]
+Overfull \hbox (84.41385pt too wide) in paragraph at lines 238--239
+[][][][][][][][][][][][] 
  []
 
 [32]
-Overfull \hbox (77.21378pt too wide) in paragraph at lines 291--292
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (34.01334pt too wide) in paragraph at lines 312--313
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (41.21341pt too wide) in paragraph at lines 317--318
-[][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (214.01517pt too wide) in paragraph at lines 336--337
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[33]
-Overfull \hbox (134.81436pt too wide) in paragraph at lines 364--365
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (113.21414pt too wide) in paragraph at lines 369--370
+Overfull \hbox (34.01334pt too wide) in paragraph at lines 267--268
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (437.21744pt too wide) in paragraph at lines 373--375
+Overfull \hbox (34.01334pt too wide) in paragraph at lines 268--269
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (48.41348pt too wide) in paragraph at lines 273--274
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[33]
+Overfull \hbox (55.61356pt too wide) in paragraph at lines 284--286
+[][][][][][][][][][][][][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (77.21378pt too wide) in paragraph at lines 298--299
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[34]
+Overfull \hbox (34.01334pt too wide) in paragraph at lines 320--321
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (41.21341pt too wide) in paragraph at lines 325--326
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[35]
+Overfull \hbox (134.81436pt too wide) in paragraph at lines 371--372
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (113.21414pt too wide) in paragraph at lines 376--377
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (437.21744pt too wide) in paragraph at lines 380--382
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][] 
  []
 
 
-Overfull \hbox (178.0148pt too wide) in paragraph at lines 376--377
+Overfull \hbox (178.0148pt too wide) in paragraph at lines 383--384
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (221.21524pt too wide) in paragraph at lines 378--379
+Overfull \hbox (221.21524pt too wide) in paragraph at lines 385--386
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[34]
-Overfull \hbox (185.21487pt too wide) in paragraph at lines 394--396
+
+Overfull \hbox (185.21487pt too wide) in paragraph at lines 401--403
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (170.81473pt too wide) in paragraph at lines 397--398
+Overfull \hbox (170.81473pt too wide) in paragraph at lines 404--405
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (257.2156pt too wide) in paragraph at lines 414--416
+[36]
+Overfull \hbox (257.2156pt too wide) in paragraph at lines 422--424
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (250.01553pt too wide) in paragraph at lines 417--419
+Overfull \hbox (250.01553pt too wide) in paragraph at lines 425--427
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ] 
  []
 
-[35]
-Overfull \hbox (19.61319pt too wide) in paragraph at lines 433--434
+
+Overfull \hbox (19.61319pt too wide) in paragraph at lines 441--442
 [][][][][][][][][][][][][][][][][][][][][]
  []
 
-
-Overfull \hbox (163.61465pt too wide) in paragraph at lines 461--463
+[37]
+Overfull \hbox (163.61465pt too wide) in paragraph at lines 470--472
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (350.81656pt too wide) in paragraph at lines 469--470
+Overfull \hbox (350.81656pt too wide) in paragraph at lines 478--479
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[36]
-Overfull \hbox (329.21634pt too wide) in paragraph at lines 476--477
+
+Overfull \hbox (329.21634pt too wide) in paragraph at lines 485--486
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (methodologie.tex [37] [38
+[38]) (methodologie.tex [39] [40
 
 ]
 Hoofdstuk 4.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39])
-(testlokaal.tex [40]
+[41]
+<img/vagrantexamp.png, id=751, 648.4225pt x 466.74374pt>
+File: img/vagrantexamp.png Graphic file (type png)
+<use img/vagrantexamp.png>
+Package pdftex.def Info: img/vagrantexamp.png  used on input line 32.
+(pdftex.def)             Requested size: 384.1096pt x 276.48744pt.
+ [42 <./img/vagrantexamp.png>]
+<img/testpcasus.jpg, id=758, 168.63pt x 134.904pt>
+File: img/testpcasus.jpg Graphic file (type jpg)
+<use img/testpcasus.jpg>
+Package pdftex.def Info: img/testpcasus.jpg  used on input line 65.
+(pdftex.def)             Requested size: 170.71393pt x 136.57307pt.
+ [43 <./img/testpcasus.jpg>]) (testlokaal.tex [44]
 Hoofdstuk 5.
-) (testhetzner.tex [41
+) (testhetzner.tex [45
 
-] [42
+] [46
 
 ]
 Hoofdstuk 6.
-) (basisconf.tex [43] [44
+) (basisconf.tex [47] [48
 
 ]
 Hoofdstuk 7.
-) (serverconf.tex [45] [46
+) (serverconf.tex [49] [50
 
 ]
 Hoofdstuk 8.
-) (naopstarten.tex [47] [48
+) (naopstarten.tex [51] [52
 
 ]
 Hoofdstuk 9.
-) (container.tex [49] [50
+) (container.tex [53] [54
 
 ]
 Hoofdstuk 10.
-) (conclusie.tex [51] [52
+) (conclusie.tex [55] [56
 
 ]
 Hoofdstuk 11.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53])
-[54]
+ [57])
+[58]
 B"ylage A.
-(../voorstel/voorstel-inhoud.tex [55
+(../voorstel/voorstel-inhoud.tex [59
 
-] [56]) [57] [58
+] [60]) [61] [62
 
-] [59] [60]
+] [63] [64]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 139.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 139.
 
@@ -2147,36 +2152,29 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 139.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
 Package logreq Info: Writing requests to 'bachproef-tin.run.xml'.
 \openout1 = `bachproef-tin.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40757 strings out of 492946
- 761643 string characters out of 3125379
- 1373470 words of memory out of 3000000
- 43350 multiletter control sequences out of 15000+200000
- 593174 words of font info for 216 fonts, out of 3000000 for 9000
+ 40797 strings out of 492946
+ 762353 string characters out of 3125378
+ 1374531 words of memory out of 3000000
+ 43370 multiletter control sequences out of 15000+200000
+ 593399 words of font info for 218 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,67p,836b,3844s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{chapter.12} has been referenced but does not exis
-t, replaced by a fixed one
-
-{C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
-}<C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/urw/avantgar/uagd8a.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Maarten/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Maarten/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachproef-tin.pdf (62 pages, 572002 bytes).
+ 62i,12n,67p,847b,3844s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.e
+nc}<C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/urw/avantgar/uagd8a.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Maarten/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Maarten/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Maarten/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bachproef-tin.pdf (66 pages, 672162 bytes).
 PDF statistics:
- 1075 PDF objects out of 1200 (max. 8388607)
- 457 named destinations out of 1000 (max. 500000)
- 33102 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1136 PDF objects out of 1200 (max. 8388607)
+ 471 named destinations out of 1000 (max. 500000)
+ 33144 words of extra memory for PDF output out of 35830 (max. 10000000)
 
