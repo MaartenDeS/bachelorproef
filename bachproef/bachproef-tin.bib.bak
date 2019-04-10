@@ -74,7 +74,25 @@
 }
 
 @TechReport{asuslaptop,
-    url       = {https://be.hardware.info/product/204862/asus-x750l/specificaties},
+  author = {Hardware.info},
+  title  = {Specificaties Asus X750L},
+  year   = {2013},
+  url    = {https://be.hardware.info/product/204862/asus-x750l/specificaties},
+}
+
+@TechReport{hetzner,
+    author = {Hetzner},
+    title  = {Site Hetzner},
+    url    = {https://www.hetzner.com/},
+}
+
+@TechReport{cloudVagrant,
+	author = {Alex Tomkins},
+	title  = {Testing cloud-init with Vagrant},
+	year   = {2016},
+    timestamp  = {2016.09.18},
+    journal = {Blog},
+	url    = {https://www.alextomkins.com/2016/09/testing-cloud-init-with-vagrant/},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}

@@ -472,6 +472,38 @@
       \verb https://people.redhat.com/mskinner/rhug/q3.2014/cloud-init.pdf
       \endverb
     \endentry
+    \entry{cloudVagrant}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=18ef51234f450e99010f74150777234d}{%
+           family={Tomkins},
+           familyi={T\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{18ef51234f450e99010f74150777234d}
+      \strng{fullhash}{18ef51234f450e99010f74150777234d}
+      \strng{bibnamehash}{18ef51234f450e99010f74150777234d}
+      \strng{authorbibnamehash}{18ef51234f450e99010f74150777234d}
+      \strng{authornamehash}{18ef51234f450e99010f74150777234d}
+      \strng{authorfullhash}{18ef51234f450e99010f74150777234d}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Blog}
+      \field{title}{Testing cloud-init with Vagrant}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.alextomkins.com/2016/09/testing-cloud-init-with-vagrant/
+      \endverb
+      \verb{url}
+      \verb https://www.alextomkins.com/2016/09/testing-cloud-init-with-vagrant/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
