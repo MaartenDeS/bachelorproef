@@ -5,21 +5,21 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Voorbeeld van een Ansible playbook.}}{20}{figure.2.1}% 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Voorbeeld van een Ansible playbook.}}{18}{figure.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Ansible Galaxy site met lijst van roles.}}{21}{figure.2.2}% 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ansible Galaxy site met lijst van roles.}}{19}{figure.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Voorbeeld User-Data Script.}}{23}{figure.2.3}% 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Voorbeeld User-Data Script.}}{21}{figure.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Voorbeeld Cloud Config Data.}}{24}{figure.2.4}% 
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Voorbeeld Cloud Config Data.}}{22}{figure.2.4}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Voorbeeld van een vagrantfile.}}{42}{figure.4.1}% 
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Foto van de laptop.}}{43}{figure.4.2}% 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Voorbeeld van een vagrantfile.}}{40}{figure.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Foto van de laptop.}}{41}{figure.4.2}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
