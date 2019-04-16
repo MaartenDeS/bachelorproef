@@ -115,29 +115,33 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}Cloud-init \& Ansible }{46}{section.5.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Opzetten Hetzner Cloud testomgeving}{47}{chapter.6}% 
+\contentsline {subsection}{\numberline {5.3.1}Ansible playbook koppelen aan cloud-init}{46}{subsection.5.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Basisconfiguraties op de servers}{49}{chapter.7}% 
+\contentsline {subsection}{\numberline {5.3.2}Uitvoeren playbook}{47}{subsection.5.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Server installatie en configuratie}{51}{chapter.8}% 
+\contentsline {chapter}{\numberline {6}Opzetten Hetzner Cloud testomgeving}{49}{chapter.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Instellingen aanpassen na het opstarten}{53}{chapter.9}% 
+\contentsline {chapter}{\numberline {7}Basisconfiguraties op de servers}{51}{chapter.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Container \& Cluster Configuratie}{55}{chapter.10}% 
+\contentsline {chapter}{\numberline {8}Server installatie en configuratie}{53}{chapter.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Conclusie}{57}{chapter.11}% 
+\contentsline {chapter}{\numberline {9}Instellingen aanpassen na het opstarten}{55}{chapter.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{59}{appendix.A}% 
+\contentsline {chapter}{\numberline {10}Container \& Cluster Configuratie}{57}{chapter.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{59}{section.A.1}% 
+\contentsline {chapter}{\numberline {11}Conclusie}{59}{chapter.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Stand Van Zaken}{60}{section.A.2}% 
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{61}{appendix.A}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{60}{section.A.3}% 
+\contentsline {section}{\numberline {A.1}Introductie}{61}{section.A.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwachte resultaten}{61}{section.A.4}% 
+\contentsline {section}{\numberline {A.2}Stand Van Zaken}{62}{section.A.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Verwachte conclusies}{61}{section.A.5}% 
+\contentsline {section}{\numberline {A.3}Methodologie}{62}{section.A.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{63}{appendix*.30}% 
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{63}{section.A.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{63}{section.A.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{65}{appendix*.30}% 
 \contentsfinish 

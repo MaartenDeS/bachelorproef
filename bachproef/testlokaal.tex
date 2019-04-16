@@ -60,7 +60,7 @@ Als hierna \textit{vagrant up} wordt gedaan, wordt de server aangemaakt met de c
 \section{Ansible}
 De tweede lokale testomgeving die wordt opgezet is die met Ansible. Deze is niet zo complex om op te zetten als degene met cloud-init. In die zin dat er maar 1 machine nodig is. Deze wordt opgezet met behulp van \autocite{ansibleVagrant}. Ook deze omgeving gebruikt Vagrant en VirtualBox. Als box wordt ook weer dezelfde gebruikt als de vorige keren. 
 
-Het opzetten van op de testomgeving gebeurt in GETAL stappen. Allereerst wordt er een vagrantfile aangemaakt. In dit vagrantfile wordt er verwezen naar het playbook, de inventory en de map waar deze zich bevinden. Via dit vagrantfile is het ook mogelijk om ansible uit te voeren met vagrant via een Windows systeem. Het vagrantfile ziet er zo uit:
+Het opzetten van op de testomgeving gebeurt in 4 stappen. Allereerst wordt er een vagrantfile aangemaakt. In dit vagrantfile wordt er verwezen naar het playbook, de inventory en de map waar deze zich bevinden. Via dit vagrantfile is het ook mogelijk om ansible uit te voeren met vagrant via een Windows systeem. Het vagrantfile ziet er zo uit:
 \begin{lstlisting}
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
@@ -107,4 +107,21 @@ Het laatste dat wordt gedaan is het installeren van de vagrant-plugin \textit{vb
 Als er nu \textit{vagrant up} wordt gedaan, wordt de server opgestart met de configuraties van Ansible.
 
 \section{Cloud-init \& Ansible }
-De derde omgeving die wordt opgezet is één met Ansible en cloud-init.
+De derde omgeving die wordt opgezet is één met Ansible en cloud-init. Zoals er werd gezien zijn er voor Puppet en Chef aparte modules om configuraties uit te voeren. Voor Ansible is dit echter niet het geval. Dus moet er naar een creatieve oplossing gezocht worden. Voor de combinatie van Ansible en cloud-init gaat er worden gewerkt met de \textit{write\_files} module in cloud-init. 
+
+\subsection{Ansible playbook koppelen aan cloud-init}
+Er wordt een server lokaal aangemaakt met de manier van cloud-init. Er wordt alleen een bestand toegevoegd met module \textit{write\_files}. Dit bestand is het playbook van de server. De content van het bestand moet wel worden geencodeerd via de Base64 standaard. Dit wordt gedaan via de tool: https://codebeautify.org/base64-encode . In het tekst wordt de te encoderen tekst gezet. Daarna wordt in het andere tekstvak de geencodeerde versie gegeven. Met deze tool wordt het playbook geencodeerd.
+\begin{figure}[!htb]
+    \center{\includegraphics[width=0.9\textwidth]{img/base64.png}}
+    \caption{Tool voor encoding.}
+    \label{fig:base64}
+\end{figure}
+
+\newpage
+\subsection{Uitvoeren playbook}
+Als het playbook in de \textit{write\_files} module staat, moeten er nog 2 dingen gebeuren. Allereest moet de package \textit{ansible} worden geïnstalleerd via cloud-init. Dit werd gedaan door \textit{ansible} toe te voegen aan de module \textit{packages}. Ook moet het playbook worden aangeroepen om te draaien. Dit gebeurt door bij de module \textit{runcmd} het commando \textit{ansible-playbook -i, <aangemaakt playbook>} te zetten.
+
+Via deze omgeving kunnen er cloud-init en ansible configuraties worden gedaan.
+
+
+
