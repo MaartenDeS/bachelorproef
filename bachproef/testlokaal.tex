@@ -14,7 +14,7 @@ Vagrant.configure(''2'') do |config|
 end
 \end{lstlisting}
 
-Via het commando \textit{vagrant ssh} hebben we de toegang tot de server. Eens die er is tot de machine, wordt de package \textit{genisoimage} geïnstalleerd. Dit wordt via het commando \textit{sudo apt-get install genisoimage}. 
+Via het commando \textit{vagrant ssh} is er toegang tot de server. Eens die er is tot de machine, wordt de package \textit{genisoimage} geïnstalleerd. Dit wordt via het commando \textit{sudo apt-get install genisoimage}. 
 
 Nadat die package geïnstalleerd is wordt er een user-data bestand aangemaakt. In dit bestand komt de cloudconfig data. Hierna wordt een tweede bestand aangemaakt, namelijk het meta-data bestand. In dit bestand komt er nog extra minimale configuratie. De local-hostname en instance-id moeten hierin worden gezet.
 
@@ -58,19 +58,53 @@ end
 Als hierna \textit{vagrant up} wordt gedaan, wordt de server aangemaakt met de configuraties van cloud-init.
  
 \section{Ansible}
-De tweede lokale testomgeving die wordt opgezet is die met Ansible. Deze is niet zo complex om op te zetten als degene met cloud-init. Deze wordt opgezet met behulp van \autocite{ansibleVagrant}. Ook deze omgeving gebruikt Vagrant en VirtualBox. Als box wordt ook weer dezelfde gebruikt als de vorige keren. 
+De tweede lokale testomgeving die wordt opgezet is die met Ansible. Deze is niet zo complex om op te zetten als degene met cloud-init. In die zin dat er maar 1 machine nodig is. Deze wordt opgezet met behulp van \autocite{ansibleVagrant}. Ook deze omgeving gebruikt Vagrant en VirtualBox. Als box wordt ook weer dezelfde gebruikt als de vorige keren. 
 
-Er zijn eigenlijk maar 2 stappen die moeten worden gedaan. Allereest moet er een playbook bestand worden aangemaakt. Deze moet ook aanwezig in de locatie van de omgeving. De tweede stap is verwijzen naar dit playbook via de vagrantfile. Dit wordt op deze manier gedaan.
+Het opzetten van op de testomgeving gebeurt in GETAL stappen. Allereerst wordt er een vagrantfile aangemaakt. In dit vagrantfile wordt er verwezen naar het playbook, de inventory en de map waar deze zich bevinden. Via dit vagrantfile is het ook mogelijk om ansible uit te voeren met vagrant via een Windows systeem. Het vagrantfile ziet er zo uit:
 \begin{lstlisting}
-Vagrant.configure(2) do |config|
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
     config.vm.box = "ubuntu/xenial64"
     
-    config.vm.provision "ansible" do |ansible|
-      ansible.verbose = "v"
-      ansible.playbook = "playbook.yml"
-   end
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"
+    end
+    
+    config.vbguest.auto_update = false
+    config.vbguest.no_install = false
+    config.vbguest.no_remote = true
+    
+    config.vm.hostname = "ansible-teslocal"
+    
+    config.vm.provision "ansible_local" do |ansible|
+     ansible.provisioning_path = "/vagrant/provisioning"
+     ansible.inventory_path = "inventory"
+     ansible.playbook = "playbook.yml"
+     ansible.limit = "all"
+    end
+
 end
 \end{lstlisting}
 
+Hierna wordt de map \textit{provisioning} aangemaakt in de de map van de omgeving. In die map worden er 3 bestanden aangemaakt. Allereerst een \textit{ansible.cfg} bestand. Hierin worden er configuraties gezet zodat Vagrant en Ansible niet ''panikeren'' over ssh sleutels.
+\begin{lstlisting}
+[defaults]
+host_key_checking = no
+[ssh_connection]
+ssh_args = -o ControlMaster=auto -o ControlPersist=60s -o UserKnownHostsFile=/dev/null -o IdentitiesOnly=yes
+\end{lstlisting}
+Het tweede bestand is een inventory bestand. Hierin wordt gezet welke host er aanwezig is en welke connectie deze heeft.
+\begin{lstlisting}
+ansible-test-local ansible_connection=local
+\end{lstlisting}
+
+Het derde bestand dat wordt aangemaakt is het effectieve playbook.
+
+Het laatste dat wordt gedaan is het installeren van de vagrant-plugin \textit{vbguest}. Dit werd gedaan met het commando \textit{vagrant plugin install vagrant-vbguest}.
+
+Als er nu \textit{vagrant up} wordt gedaan, wordt de server opgestart met de configuraties van Ansible.
+
 \section{Cloud-init \& Ansible }
-to do
+De derde omgeving die wordt opgezet is één met Ansible en cloud-init.

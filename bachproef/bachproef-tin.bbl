@@ -504,6 +504,38 @@
       \verb https://www.alextomkins.com/2016/09/testing-cloud-init-with-vagrant/
       \endverb
     \endentry
+    \entry{ansibleVagrant}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=93cd67cfedb210749a6817e4446a5c17}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{93cd67cfedb210749a6817e4446a5c17}
+      \strng{fullhash}{93cd67cfedb210749a6817e4446a5c17}
+      \strng{bibnamehash}{93cd67cfedb210749a6817e4446a5c17}
+      \strng{authorbibnamehash}{93cd67cfedb210749a6817e4446a5c17}
+      \strng{authornamehash}{93cd67cfedb210749a6817e4446a5c17}
+      \strng{authorfullhash}{93cd67cfedb210749a6817e4446a5c17}
+      \field{sortinit}{Y}
+      \field{sortinithash}{b8d711a035f7be9840c721c82920477e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Blog}
+      \field{title}{Ansible with Vagrant on Windows}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://blog.zencoffee.org/2016/08/ansible-vagrant-windows/
+      \endverb
+      \verb{url}
+      \verb https://blog.zencoffee.org/2016/08/ansible-vagrant-windows/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
