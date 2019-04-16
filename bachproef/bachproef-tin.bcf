@@ -2194,13 +2194,14 @@
     <bcf:citekey order="46">asuslaptop</bcf:citekey>
     <bcf:citekey order="47">hetzner</bcf:citekey>
     <bcf:citekey order="48">cloudVagrant</bcf:citekey>
-    <bcf:citekey order="49">Cloudsigma</bcf:citekey>
-    <bcf:citekey order="50">scottharney</bcf:citekey>
-    <bcf:citekey order="51">vmware</bcf:citekey>
-    <bcf:citekey order="52">Cloudsigma</bcf:citekey>
-    <bcf:citekey order="53">infoblox</bcf:citekey>
-    <bcf:citekey order="54">deven</bcf:citekey>
+    <bcf:citekey order="49">cloudVagrant</bcf:citekey>
+    <bcf:citekey order="50">Cloudsigma</bcf:citekey>
+    <bcf:citekey order="51">scottharney</bcf:citekey>
+    <bcf:citekey order="52">vmware</bcf:citekey>
+    <bcf:citekey order="53">Cloudsigma</bcf:citekey>
+    <bcf:citekey order="54">infoblox</bcf:citekey>
     <bcf:citekey order="55">deven</bcf:citekey>
+    <bcf:citekey order="56">deven</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

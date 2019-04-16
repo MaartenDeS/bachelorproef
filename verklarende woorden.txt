@@ -23,3 +23,8 @@ block devices
 Ubuntu
 CloudSigma
 SSH Keys
+
+ISO
+vagrantfile
+Makefile
+box
