@@ -37,17 +37,13 @@ In het vorige gedeelte is het iso bestand aangemaakt met de cloud-init configura
 IMAGE_PATH = File.join(File.dirname(__FILE__), "no-cloud.iso")
 
 Vagrant.configure(2) do |config|
-	config.vm.box = "ubuntu/bionic64"
 	
-	# Disable SSH password - we will use Vagrant key
-	config.ssh.password = nil
+    config.vm.box = "ubuntu/xenial64"
 	
-	# Disable shared folders
-	config.vm.synced_folder ".", "/vagrant", disabled: true
+    config.ssh.password = nil	
+    config.vm.synced_folder ".", "/vagrant", disabled: true
 	
-	# Tweak virtualbox
-	config.vm.provider :virtualbox do |vb|
-	  # Attach no-cloud.iso to the VM
+    config.vm.provider :virtualbox do |vb|
 	  vb.customize [
 	    "storageattach", :id,
 	    "--storagectl", "SCSI",
@@ -55,7 +51,6 @@ Vagrant.configure(2) do |config|
 	    "--type", "dvddrive",
 	    "--medium", IMAGE_PATH
 	]
-	
 	vb.linked_clone = true
    end
 end
@@ -63,7 +58,19 @@ end
 Als hierna \textit{vagrant up} wordt gedaan, wordt de server aangemaakt met de configuraties van cloud-init.
  
 \section{Ansible}
-to do
+De tweede lokale testomgeving die wordt opgezet is die met Ansible. Deze is niet zo complex om op te zetten als degene met cloud-init. Deze wordt opgezet met behulp van \autocite{ansibleVagrant}. Ook deze omgeving gebruikt Vagrant en VirtualBox. Als box wordt ook weer dezelfde gebruikt als de vorige keren. 
+
+Er zijn eigenlijk maar 2 stappen die moeten worden gedaan. Allereest moet er een playbook bestand worden aangemaakt. Deze moet ook aanwezig in de locatie van de omgeving. De tweede stap is verwijzen naar dit playbook via de vagrantfile. Dit wordt op deze manier gedaan.
+\begin{lstlisting}
+Vagrant.configure(2) do |config|
+    config.vm.box = "ubuntu/xenial64"
+    
+    config.vm.provision "ansible" do |ansible|
+      ansible.verbose = "v"
+      ansible.playbook = "playbook.yml"
+   end
+end
+\end{lstlisting}
 
 \section{Cloud-init \& Ansible }
 to do
