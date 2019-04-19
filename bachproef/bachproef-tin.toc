@@ -121,6 +121,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Opzetten Hetzner Cloud testomgeving}{51}{chapter.6}% 
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Cloud-init}{51}{section.6.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Ansible}{51}{section.6.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Ansible \& cloud-init}{51}{section.6.3}% 
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Basisconfiguraties op de servers}{53}{chapter.7}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Server installatie en configuratie}{55}{chapter.8}% 
