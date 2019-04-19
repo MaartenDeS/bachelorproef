@@ -6,7 +6,7 @@ In dit hoofdstuk wordt besproken hoe de lokale testomgevingen zijn opgezet. Er z
 \section{Cloud-init}
 De eerste testomgeving die wordt besproken is die met cloud-init. Hij werd opgezet met behulp van: \autocite{cloudVagrant}. Er wordt hiervoor in 2 stappen gewerkt. Eerst wordt er een ISO met de cloud-init configuraties aangemaakt met behulp van de setup van \autocite{cloudVagrant}. Erna wordt deze ISO toegevoegd aan de testomgeving.
 
-\subsection{Maken van ISO}
+\subsection{Maken van ISO met cloud-init configuraties}
 Voor het aanmaken van de ISO is er een Linux omgeving nodig. Allereest wordt er een omgeving opgezet om de ISO's in te maken. Deze wordt ook opgezet met Vagrant en VirtualBox. De box \textit{ubuntu/xenial64} wordt gebruikt (dit is dezelfde als degene die later in de testomgeving wordt gebruikt). Met het commando \textit{vagrant up} wordt de server aangemaakt. De vagrantfile ziet er zo uit:
 \begin{lstlisting}
 Vagrant.configure(''2'') do |config|
