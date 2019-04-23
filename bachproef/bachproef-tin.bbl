@@ -265,10 +265,11 @@
       \strng{authorbibnamehash}{77f63742ead3b9c76908ede3f185e67b}
       \strng{authornamehash}{77f63742ead3b9c76908ede3f185e67b}
       \strng{authorfullhash}{77f63742ead3b9c76908ede3f185e67b}
+      \field{extraname}{1}
       \field{sortinit}{H}
       \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{extradate}{1}
       \field{labeldatesource}{nodate}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Site Hetzner}
@@ -278,6 +279,34 @@
       \endverb
       \verb{url}
       \verb https://www.hetzner.com/
+      \endverb
+    \endentry
+    \entry{hetznerWiki}{report}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=77f63742ead3b9c76908ede3f185e67b}{%
+           family={Hetzner},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{77f63742ead3b9c76908ede3f185e67b}
+      \strng{fullhash}{77f63742ead3b9c76908ede3f185e67b}
+      \strng{bibnamehash}{77f63742ead3b9c76908ede3f185e67b}
+      \strng{authorbibnamehash}{77f63742ead3b9c76908ede3f185e67b}
+      \strng{authornamehash}{77f63742ead3b9c76908ede3f185e67b}
+      \strng{authorfullhash}{77f63742ead3b9c76908ede3f185e67b}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Wiki Hetzner - Can I use Cloud-Init when creating servers?}
+      \field{type}{techreport}
+      \verb{urlraw}
+      \verb https://wiki.hetzner.de/index.php/CloudServer/en#Can_I_use_Cloud-Init_when_creating_servers.3F
+      \endverb
+      \verb{url}
+      \verb https://wiki.hetzner.de/index.php/CloudServer/en#Can_I_use_Cloud-Init_when_creating_servers.3F
       \endverb
     \endentry
     \entry{cloudsite}{online}{}

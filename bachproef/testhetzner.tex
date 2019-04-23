@@ -2,8 +2,57 @@
 \label{ch:testhetzner}
 In dit hoofdstuk wordt besproken hoe de testomgevingen op Hetzner zijn opgezet. Het zijn weer de 3 zelfde omgevingen als in het vorige hoofdstuk: namelijk één met cloud-init, één met Ansible en één met cloud-init en Ansible.
 
+\section{Aanmaken server met Hetzner}
+Het aanmaken van servers kan op verschillende manieren. Hier wordt er gekozen om dit te doen via de command line. Via de site van Hetzner kan je hun command tool downloaden. Via het commando \textbf{hcloud} kunnen er nu server worden aangemaakt en beheert. Voor toegang te krijgen tot Hetzner Cloud moet je een bepaald bedrag betalen. Hierna kan je netwerken opzetten en via een Hetzner Token kan je op dit netwerk servers toevoegen. Via het bedrijf Be-Mobile is er Hetzner Token vekregen.
+
+Voor het aanmaken van de server zijn er 2 variabelen die worden toegevoegd. \textbf{Name}, zo kan de naam van de server worden meegegeven. Zo kunnen de servers uit elkaar houden. \textbf{Ssh-key}, via Hetzner kan je een ssh sleutel toevoegen om toegang te verkrijgen op de server. Via het bedrijf Be-Mobile is er een ssh sleutel verkegen. Het commando  voor het aanmaken van een server is dan:
+\begin{lstlisting}
+hcloud server create --name <naam van de server> 
+    --ssh-key <naam van de sleutel in hetzner>
+\end{lstlisting}
+
+Er zijn nog twee andere belangerijke commando's die worden gebruikt. Via het commando hieronder is er een lijst met alle servers die beschikbaar zijn.
+\begin{lstlisting}
+hcloud server list
+\end{lstlisting}
+Het commando hieronder verwijdert een server.
+\begin{lstlisting}
+hcloud server delete <naam of id van de server>
+\end{lstlisting}
+
+
 \section{Cloud-init}
+Het opzetten van een omgeving met cloud-init in Hetzner Cloud is eigenlijk zeer simpel. Op \autocite{hetznerWiki} staat er dat bij het maken van de server er \textit{user data} kan worden toegevoegd. Zoals werd gezien in hoofdstuk ~\ref{ch:cloud-init} is dit de data die cloud-init gebruikt voor zijn configuraties.
+
+De user data is een vairbale die moet worden toegevoegd zoals de naam een ssh sleutel. Via \textbf{user-data-from-file} kan er een bestand worden toegevoegd tijdens het aanmaken van de server met de user data. Het commando dat wordt gebruikt om een server aan te maken ziet er dan zo uit:
+\begin{lstlisting}
+hcloud server create --name <naam van de server> 
+    --ssh-key <naam van de sleutel in hetzner>
+    --user-data-from-file <pad naar bestand>
+\end{lstlisting}
 
 \section{Ansible}
+Het opzetten van een omgeving in Hetzner Cloud met Ansible is niet zo makkelijk. Er is geen variabale \textit{playbook} beschikbaar waar er een Ansible playbook kan aan worden toegevoegd.
 
+Er zal gewerkt worden met behulp van GitHub. Het playbook dat wordt uitgevoerd, zal worden verkregen met een \textit{git clone} of \textit{git pull}. Daarna zal het worden uitgevoerd aan de hand van het commando:
+\begin{lstlisting}
+ansible-playbook -i, <playbook bestand>
+\end{lstlisting}
+Via dit commando wordt het playbook op de localhost uitgevoerd. 
+
+Als het op meerdere hosts moet worden uitgevoerd zal er een inventory bestand worden toegevoegd. Het commando ziet er dan zo uit:
+\begin{lstlisting}
+ansible-playbook -i <inventory bestand> <playbook bestand>
+\end{lstlisting}
+
+\newpage
 \section{Ansible \& cloud-init}
+Het opzetten van een omgeving met Ansible en cloud-init wordt gedaan door een combinatie van de vorige 2 manieren. De server wordt opgezet met het commando:
+\begin{lstlisting}
+hcloud server create --name <naam van de server> 
+--ssh-key <naam van de sleutel in hetzner>
+--user-data-from-file <pad naar bestand>
+\end{lstlisting}
+De commando's die worden uitgevoerd om een Ansible playbook uit te voeren, worden in cloud-init verwerkt. In de module \textit{runcmd} wordt eerst het commando \textit{git clone} gezet, met verwijzing naar de repo met het playbook. Erna wordt het commando \textit{ansible-playbook} er gezet, deze voert het playbook uit.
+
+Het enige extra dat wordt toegevoegd is een private ssh sleutel. Dit is de ssh-sleutel die toelaat dat je de git repo mag binnenhalen. Deze voegen we toe doormiddel van de module \textit{ssh\_keys} en daar de submodule \textit{rsa\_private}. Er worden ook nog 2 commando's boven de andere 2 geplaatst zodat dit werkt. Allereerst het commando \textit{ssh-keyscan github.com > TO DO}. Hiermee kent het systeem github en gaat dit geen error geven. Het tweede commando is \textit{echo << TODO}. Met dit zal github de ssh sleutel gebruiken die is toegevoegd.
