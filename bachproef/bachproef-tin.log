@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.26)  23 APR 2019 17:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.5)  24 APR 2019 08:51
 entering extended mode
 **./bachproef-tin.tex
 (bachproef-tin.tex
@@ -164,16 +164,16 @@ s.sty"
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc
 .sty"
-File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 \c@lstnumber=\count106
 \lst@skipnumbers=\count107
 \lst@framebox=\box30
 )
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listing
 s.cfg"
-File: listings.cfg 2018/09/02 1.7 listings configuration
+File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
-Package: listings 2018/09/02 1.7 (Carsten Heinz)
+Package: listings 2019/02/27 1.8b (Carsten Heinz)
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlaye
 r\tikz.sty"
@@ -633,27 +633,27 @@ LaTeX Info: Redefining \hbar on input line 50.
 )
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
 ype.sty"
-Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
+Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
 \MT@toks=\toks39
 \MT@count=\count140
-LaTeX Info: Redefining \textls on input line 793.
+LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen188
-LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
+LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
 \MT@listname@count=\count141
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
 ype-pdftex.def"
-File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
+File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
 
-LaTeX Info: Redefining \lsstyle on input line 913.
-LaTeX Info: Redefining \lslig on input line 913.
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
 \MT@outer@space=\skip51
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
 ype.cfg"
-File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
+File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
 ))
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.st
 y"
@@ -2163,21 +2163,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
  (bachproef-tin.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 141.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
 Package logreq Info: Writing requests to 'bachproef-tin.run.xml'.
 \openout1 = `bachproef-tin.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40956 strings out of 492946
- 764787 string characters out of 3125378
- 1374906 words of memory out of 3000000
- 43409 multiletter control sequences out of 15000+200000
- 594299 words of font info for 226 fonts, out of 3000000 for 9000
+ 40961 strings out of 492946
+ 764765 string characters out of 3125379
+ 1374967 words of memory out of 3000000
+ 43411 multiletter control sequences out of 15000+200000
+ 594524 words of font info for 228 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,67p,847b,3844s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.e
@@ -2188,7 +2183,7 @@ fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Maarten/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Maarten/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Maarten/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachproef-tin.pdf (72 pages, 732020 bytes).
+Output written on bachproef-tin.pdf (72 pages, 732876 bytes).
 PDF statistics:
  1357 PDF objects out of 1440 (max. 8388607)
  575 named destinations out of 1000 (max. 500000)
