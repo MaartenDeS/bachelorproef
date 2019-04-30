@@ -10,14 +10,18 @@
 %% op deze manier te werk gegaan bent. Je moet kunnen aantonen dat je de best
 %% mogelijke manier toegepast hebt om een antwoord te vinden op de
 %% onderzoeksvraag.
-In dit hoofdstuk wordt besproken welke methodes er gehanteerd zijn om de resultaten te bekomen. Dit hoofdstuk is onderverdeeld in 2 delen. Ten eerste wordt er info gegeven over de 2 testomgevingen. Ten tweede wordt er besproken welke testcriteria er gekozen zijn en waarom. In deze bachelorproef wordt er vooral focus gelegd op het de praktijk, het is een praktische onderzoek.
+In dit hoofdstuk wordt besproken welke methodes er gehanteerd zijn om de resultaten te bekomen. Dit hoofdstuk is onderverdeeld in 2 delen. 
+
+Ten eerste wordt er info gegeven over de 2 testomgevingen. 
+
+Ten tweede wordt er besproken welke testcriteria er gekozen zijn en waarom. In deze bachelorproef wordt er vooral focus gelegd op de praktijk, vermits het een praktische onderzoek is.
 
 \section{Testomgevingen}
-Voor het onderzoek moeten er verschillende testomgevingen worden opgesteld, om alles in te testen. Er is een lokale virtueel  omgeving en een omgeving op cloud servers. Er is gekozen voor deze twee omgevingen omdat dit de 2 meest voorkomende omgevingen zijn in de praktijk bij server management tools. 
+Voor het onderzoek moeten er verschillende testomgevingen worden opgesteld, om alles te kunnen testen. Er is een lokale virtuele  omgeving en een omgeving op cloud servers. Er is gekozen voor deze twee omgevingen omdat dit in de praktijk de twee meest voorkomende omgevingen zijn bij server management tools. 
 
-Ansible is al een tool die gebruikt wordt voor virtuele omgevingen door gebruikers thuis, maar ook in grote cloud omgevingen voor bedrijven. Het zou dus niet correct zijn om het alleen lokaal te testen of alleen op de cloud. 
+Ansible is een tool die gebruikt wordt voor virtuele omgevingen door gebruikers thuis, maar ook in grote cloud omgevingen door bedrijven. Het zou dus niet correct zijn om het alleen lokaal te testen of alleen op de cloud. 
 
-Voor het onderzoek is dit ook interessant want er is veel meer kans op verschillende resultaten. Die kunnen dan met elkaar worden vergeleken en dan kan er worden bekeken wat de oorzaak hiervan is. Dit geeft ook een mogelijkheid om het onderzoek in de toekomst verder te onderzoeken. Waarom bijvoorbeeld Ansible beter is lokaal zonder cloud-init dan met (dit is een hypothetische stelling).
+Voor het onderzoek is het eveneens interessant omdat er veel meer kans is op verschillende resultaten. Die kunnen dan met elkaar worden vergeleken en kan er worden bekeken wat de oorzaak ervan is. Dit geeft ook de mogelijkheid om het onderzoek in de toekomst verder uit te breiden. Waarom bijvoorbeeld Ansible beter is lokaal zonder cloud-init dan met (dit is een hypothetische stelling).
 
 \newpage
 Per omgeving is er hieronder wat meer informatie te vinden. Over het opzetten van de omgevingen zijn voor beide aparte hoofdstukken aan toegewijd, namelijk: Hoofdstuk \ref*{ch:testlokaal} en Hoofdstuk \ref*{ch:testhetzner}.
@@ -70,24 +74,23 @@ Deze testomgeving wordt opgezet op de laptop: \textbf{Asus X750L}. Asus bracht d
 \end{figure}
 
 \subsection{Cloud}
-Voor de cloud omgeving wordt er Hetzner Cloud gebruikt. In de inleiding is het bedrijf Be-Mobile al vernoemd en werd ook al gezegd dat zijn één van de redenen van het onderzoek zijn. Via hun is er toegang verkregen op een Hetzner Cloud omgeving om in te testen. 
+Voor de cloud omgeving wordt er Hetzner Cloud gebruikt. In de inleiding werd het bedrijf Be-Mobile al vernoemd en werd ook al vermeld dat zij één van de drijfveren van het onderzoek zijn. Via hen is toegang verkregen op een Hetzner Cloud omgeving om in te testen. 
 
 Hetzner is een Duits bedrijf dat gespecialiseerd is in het hosten van servers. Hun datacenters liggen in Nuremberg (Duitsland), Falksenstein (Duitsland) en Helsinki (Finland). 
 
-Via de commandline tool werden de server aangemaakt. Ook wordt er een SSH sleutel voorzien zodat er toegang is tot de aangemaakte servers. Info van hetzner werd gevonden dankzij de site van \autocite{hetzner}.
+Via de commandline tool werd de server aangemaakt. Ook wordt er een SSH sleutel voorzien zodat er toegang is tot de aangemaakte servers. Info van hetzner werd gevonden dankzij de site van \autocite{hetzner}.
 
 
 \section{Testcriteria}
-Het volgende dat wordt besproken is de keuze van de testcriteria die werd gekozen in hoofdstukken~\ref{ch:basisconf},~\ref{ch:serverconf},~\ref{ch:naopstarten} en~\ref{ch:container}. 
+Het volgende dat wordt besproken is de keuze van de testcriteria die worden gekozen in hoofdstukken~\ref{ch:basisconf},~\ref{ch:serverconf},~\ref{ch:naopstarten} en~\ref{ch:container}. 
 
-In Hoofdstuk \ref*{ch:basisconf} worden basis configuraties op de server uit gevoerd. Dit om te bekijken wat de beste optie is om te kiezen als er gewoon wat kleine basis configuraties worden veranderd. Dit kan gebruikers aanmaken zijn, maar ook: commando's uitvoeren, mappen aanmaken. 
+In Hoofdstuk \ref*{ch:basisconf} worden basis configuraties op de servers uitgevoerd. Dit om na te gaan wat de beste optie is als er gewoon wat kleine basis configuraties worden veranderd. Dit kan bijvoorbeeld gebruikers aanmaken zijn, maar ook: commando's uitvoeren, mappen aanmaken. 
 
-In Hoofdstuk \ref*{ch:serverconf} worden verschillende servers geïnstalleerd. Zo wordt er bekeken of het installeren en configureren van servers een ander resultaat heeft dan basis configuraties. Ook om te bekijken of er verschillen zijn per server.
+In Hoofdstuk \ref*{ch:serverconf} worden verschillende servers geïnstalleerd. Zo wordt bestudeerd of het installeren en configureren van servers een ander resultaat heeft dan basis configuraties. Ook om na te gaan of er verschillen zijn per server.
 
-In Hoofdstuk \ref*{ch:naopstarten} gaat er worden gekeken met welke optie je de server best aanpast na het opstarten. Als de server al opgestart is maar er wordt een klein dingetje verandert in het script. Welke optie is dan het best om snel deze verandering door te voeren.
+In Hoofdstuk \ref*{ch:naopstarten} wordt gekeken met welke optie je de server best aanpast na het opstarten. Eens de server is opgestart maar er wordt een kleinigheid gewijzigd in het script. Welke optie is dan het best om snel deze verandering door te voeren.
 
-Ten laatste wordt er in Hoofdstuk \ref*{ch:container} gekeken naar de configuratie van containers en clusters. Bijna elk bedrijf gebruikt containers en clusters voor hun netwerk. Het is dus logisch om te bekijken wat hier de resultaten zijn. Misschien zijn deze wel helemaal anders dan de resultaten van hiervoor.
+Ten laatste wordt in Hoofdstuk \ref*{ch:container} de configuratie van containers en clusters onderzocht. Bijna elk bedrijf gebruikt containers en clusters voor hun netwerk. Het is dus logisch om te bekijken wat hier voor de resultaten zijn. Misschien zijn deze wel helemaal anders dan de resultaten van hiervoor?
 
-\glossary{test}
 %% Basis Configuratie, sever inst en conf, instellingen aanpassen na opstarten en container/cluster.
 

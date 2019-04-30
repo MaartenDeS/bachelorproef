@@ -31,7 +31,7 @@ In deze literatuurstudie wordt er besproken wat de link met Ansible is volgens \
 Hoewel cloud-init perfect kan gebruikt worden als een stand-alone provisioning systeem. Is het één van de weinige systemen die het gebruik met andere provisioning systeem ondersteunt, en zelf aanraadt volgens \autocite{viktorpet}. \autocite{viktorpet} vermeldt ook dat hij prefereert cloud-init te gebruiken boven Ansible.
 
 \subsection{Setup cloud config bestand}
-Het volgende onderdeel van \autocite{viktorpet} dat we bespreken is het opstellen van zijn cloud config bestand. Dat is het bestand waar de server configuraties wordt ingevoerd. \autocite{viktorpet} legt aan de hand van verschillende functies van het cloud config bestand uit wat de voordelen van cloud-init zijn. In Hoofdstuk \ref*{ch:cloud-init} is dit al meer besproken. Sommige delen gaan minder uitgebreid zijn omdat het al in Hoofdstuk \ref*{ch:cloudmodules} wordt uitgelegd.
+Het volgende onderdeel van \autocite{viktorpet} dat besproken word is het opstellen van zijn cloud config bestand. Dat is het bestand waar de server configuraties wordt ingevoerd. \autocite{viktorpet} legt aan de hand van verschillende functies van het cloud config bestand uit wat de voordelen van cloud-init zijn. In Hoofdstuk \ref*{ch:cloud-init} is dit al meer besproken. Sommige delen gaan minder uitgebreid zijn omdat het al in Hoofdstuk \ref*{ch:cloudmodules} wordt uitgelegd.
 
 \subsubsection{SSH}
 Het eerste onderdeel van het cloud config bestand van \autocite{viktorpet} zijn de SSH keys. Cloud-init is volgens \autocite{viktorpet} handig om ssh keys toe te voegen aan de server. Zo kan er verbinding gemaakt worden met de server. 
@@ -120,19 +120,25 @@ Het tweede artikel is: \textbf{Using Ansible to Bootstrap My Work Environment Pa
 
 % tot hier was spellcheck en woorden bekeken.
 
-Het is het beste artikel dat werd gevonden waar Ansible en cloud-init beide expliciet werden gebruikt. Er werd voor het eerste een omgeving weergegeven die opgezet werd door een samenwerking van beide. In \autocite{scottharney} wordt beschreven hoe Scott Harney een EC2 instance op zet op AWS. AWS is 1 van de cloud providers die cloud-init ondersteunt. Het artikel is opgedeeld in 4 onderdelen. 
+Het is het beste artikel dat werd gevonden waar Ansible en cloud-init beide expliciet werden gebruikt. Voor het eerst werd een omgeving weergegeven die opgezet is door een samenwerking van beide. In \autocite{scottharney} wordt beschreven hoe Scott Harney een EC2 instance op zet op AWS. AWS is één van de cloud providers die cloud-init ondersteunt. Het artikel is opgedeeld in 4 onderdelen. 
 
-\textit{'Initial provisioning'}, in dit deel wordt de EC2 instance opgestart. Dit gebeurt met een eerste Ansible playbook dat ondere ook verwijst naar het cloud-init script dat nodig is. \textit{'Cloud-init'}, in het 2de gedeelte wordt het cloud-init script opgemaakt en uitgelegd wat alles doet en betekent. \textit{'Ansible folow up playbook'}, in dit gedeelte wordt de EC2 instance geconfigureerd met Ansible. \textit{'Launch and configure'} hier wordt de omgeving opgestart en worden sommige variablen nog ingevuld.
+\textit{'Initial provisioning'}, in dit deel wordt de EC2 instance opgestart. Dit gebeurt met een eerste Ansible playbook dat onder andere ook verwijst naar het cloud-init script dat nodig is. 
 
-Het literatuur onderzoek gaat over de eerste 3 onderdelen gaan: initial provisioning, cloud-init en Ansible follow up playbook. Hierin worden Ansible en cloud-init besproken en geconfigureerd.
+\textit{'Cloud-init'}: in het 2de gedeelte wordt het cloud-init script opgemaakt en uitgelegd wat alles doet en betekent. 
+
+\textit{'Ansible folow up playbook'}: in dit gedeelte wordt de EC2 instance geconfigureerd met Ansible. 
+
+\textit{'Launch and configure'}: hier wordt de omgeving opgestart en worden sommige variablen verder ingevuld.
+
+Het literatuur onderzoek zal over de eerste 3 onderdelen gaan: initial provisioning, cloud-init en Ansible follow up playbook. Hierin worden Ansible en cloud-init besproken en geconfigureerd.
 
 \subsection{Ansible initial playbook}
-Er werd gekozen om de initiële provisioning en post-provisioning in 2 verschillende playbooks te doen. \autocite{scottharney} vond dit het handigste en vind het onnodig om deze tot 1 playbook te maken. 
+Er werd gekozen om de initiële provisioning en post-provisioning in 2 verschillende playbooks te doen. \autocite{scottharney} vond dit het handigste en vindt het onnodig om deze tot 1 playbook te maken. 
 
 Dit playbook zorgt voor het aanmaken en opstarten van de instance. Dit wordt gedaan via de Ansible role \textit{ec2}. Via deze role en dit playbook wordt ook het cloud config bestand meegegeven. \autocite{scottharney} gaf dit mee door middel van de optie \textit{user\_data}. 
 
 \subsection{Cloud-init}
-\autocite{scottharney} beschreef hier hoe hij de het cloud config bestand, waar hij in het eerste playbook naar verwees, heeft geconfigureerd. Een eerste opmerking van \autocite{scottharney} was dat cloud-init niet veel goede documentatie had. \autocite{scottharney} vond dit opmerkelijk omdat het een populaire tool is. Vervolgens beschreef \autocite{scottharney} hoe zijn cloud config bestand is opgedeeld.
+\autocite{scottharney} beschreef hier hoe hij het cloud config bestand, waar hij in het eerste playbook naar verwees, heeft geconfigureerd. Een eerste opmerking van \autocite{scottharney} was dat cloud-init niet veel goede documentatie had. \autocite{scottharney} vond dit opmerkelijk omdat het een populaire tool is. Vervolgens beschreef \autocite{scottharney} hoe zijn cloud config bestand is opgedeeld.
 
 \newpage
 \subsubsection{Begin}
@@ -150,7 +156,7 @@ sudo: ["ALL=(ALL) NOPASSWD:ALL"]
 \end{lstlisting} 
 
 \subsubsection{Server en host update}
-In het 2de deel van het bestand nam \autocite{scottharney} zijn Hostname en fqdn en werden de packages upgedate. Ook update hij de instance zijn \textit{/etc/host} en update hij de tijdzone.
+In het 2de deel van het bestand nam \autocite{scottharney} zijn Hostname en fqdn en werden de packages geüpdatet. Ook update hij de instances \textit{/etc/host} en tijdzone.
 \begin{lstlisting}
 hostname: "{{ item.hostname }}"
 fqdn: "{{ item.fqdn }}"
@@ -170,7 +176,7 @@ packages:
 
 \newpage
 \subsubsection{DNS zone bestand}
-Het laatste deel was het belangrijkste deel van het cloud config bestand. \autocite{scottharney} moest zijn DNS zone bestand updaten. Zodat zijn EC2 instance correct werkte. Dit deed hij door met de optie \textit{write\_files} een script aan te maken om deze te updaten. Hij prefereerde deze methode dan het the pushen via \textit{systemd}.
+Het laatste deel was het belangrijkste deel van het cloud config bestand. \autocite{scottharney} moest zijn DNS zone bestand updaten, zodat zijn EC2 instance correct werkte. Dit deed hij door met de optie \textit{write\_files} een script aan te maken om deze te updaten. Hij prefereerde deze methode boven het pushen via \textit{systemd}.
 \begin{lstlisting}
 write_files:
 - content: |
@@ -205,7 +211,9 @@ permissions: 0755e
 \end{lstlisting}
 \newpage
 \subsection{Ansible follow up playbook}
-Nadat de instance is opgestart en de eerste configuraties zijn uitgevoerd. Is het tijd voor het tweede playbook. Het eerste deel van het playbook ziet er zo uit.
+Nadat de instance is opgestart en de eerste configuraties zijn uitgevoerd, iss het tijd voor het tweede playbook. 
+
+Het eerste deel van het playbook ziet er zo uit.
 \begin{lstlisting}
 - hosts: tag_Name_candyapplegrey
   gather_facts: True
@@ -231,7 +239,7 @@ Nadat de instance is opgestart en de eerste configuraties zijn uitgevoerd. Is he
 \end{lstlisting}
 
 \subsubsection{EC2 rol}
-Dit deel van het playbook voegde de nieuwe publieke sleutel van de opgestarte host toe aan het \textit{known hosts} bestand. Maar Ansible zal ook vragen de sleutel te accepteren bij de eerste ssh. Als deze nog niet in het \textit{known hosts} bestand zit. Dit is het enige dat de EC2 role deed. Het wordt ook alleen aangeroepen als het IP adress gedefinieerd is.
+Dit deel van het playbook voegt de nieuwe publieke sleutel van de opgestarte host toe aan het \textit{known hosts} bestand. Maar Ansible zal ook vragen de sleutel te accepteren bij de eerste ssh. Als deze nog niet in het \textit{known hosts} bestand zit. Dit is het enige dat de EC2 role doet. Het wordt ook alleen aangeroepen als het IP adress gedefinieerd is.
 \begin{lstlisting}
 name: Add the instance to known hosts
 local_action: command sh -c 'ssh-keyscan -t rsa {{ ec2_ip_address }}
@@ -241,12 +249,12 @@ when: ec2_$ip_address is defined
 
 \newpage
 \subsubsection{Common rol}
-Voor de common rol werden we verwezen naar een andere artikel namelijk: \autocite{commonscottharney}. Deze rol was zeer uitgebreid, dus heeft het zijn eigen artikel.
+Voor de common rol wordt verwezen naar een andere artikel namelijk: \autocite{commonscottharney}. Deze rol was zeer uitgebreid, dus heeft het zijn eigen artikel.
 
 
 \textbf{Sectie 1 common rol}
 
-Git is zeer belangrijk in deze rol dus koos de auteur om dit als allereerst te installeren met de rol. De ssh sleutels worden ook gekopieerd van uit een private git repository. Erna wordt \textit{with\_items} gebruikt. Het is een looping optie in Ansible die hier gekozen git bestanden kopieerde. Het laatste deel zorgde ervoor dat de auteur zijn private bitbucket repo's beschikbaar zijn ,met zijn vorige sleutels, vanop de instance.
+Git is zeer belangrijk in deze rol dus koos de auteur om dit als allereerste te installeren met de rol. De ssh sleutels worden ook gekopieerd vanuit een private git repository. Erna wordt \textit{with\_items} gebruikt. Het is een looping optie in Ansible die de hier gekozen git bestanden kopieerde. Het laatste deel zorgt ervoor dat de auteur zijn private bitbucket repo's beschikbaar zijn ,met zijn vorige sleutels, vanop de instance.
 \begin{lstlisting}
 - name: install git
 become: yes
@@ -277,7 +285,7 @@ known_hosts:
 \newpage
 \textbf{Sectie 2 common rol}
 
-Dit deel toon \autocite{commonscottharney} zijn script, dat hij maakte om zijn private configuraties te doen. Dit werd ergens online gevonden, meerbepaald dankzij: \autocite{justinellin}.
+Dit deel van \autocite{commonscottharney} zijn script, maakte hij om zijn private configuraties te doen. Dit werd ergens online gevonden, meerbepaald dankzij: \autocite{justinellin}.
 \begin{lstlisting}
 - name: do configfiles repo
 become: no
@@ -313,7 +321,7 @@ touch $HOME/configfiles/.configfiles_done
 \newpage
 \textbf{Sectie 3 common rol}
 
-Het volgende deel van de rol voegde een ssh github sleutel toe. Voor het clonen van publieke repos later in het in de rol. Ook werden de andere nodige packages geïnstalleerd. Wel zijn sommige packages onnodig als er geen GUI aanwezig is op de instance.
+Het volgende deel van de rol voegt een ssh github sleutel toe. Voor het clonen van publieke repos later in het in de rol. Ook worden de andere noodzakelijke packages geïnstalleerd. Sommige packages zijn evenwel niet nodig als er geen GUI aanwezig is op de instance.
 \begin{lstlisting}
 - name: github key to known_hosts
 known_hosts:
@@ -346,7 +354,7 @@ with_items:
 
 \textbf{Sectie 4 common rol}
 
-Dit waren gewoon python pip en ruby onderdelen die hielpen bij het beheren van AWS.
+Dit waren gewoon python, pip en ruby onderdelen die helpen bij het beheren van AWS.
 \begin{lstlisting}
 - name: python pip install items
 become: yes
@@ -362,32 +370,34 @@ gem: name=aws-sdk-v1 state=present
 
 \textbf{Sectie 5 common rol}
 
-Dit deel zorgde voor de installatie van \textit{spacemacs}. \textit{spacemacs} is een linux tekst editor met de power en uitbreidbaarheid van \textit{Emacs} en de werking van \textit{vi/vim}.
+Dit deel zorgt voor de installatie van \textit{spacemacs}. \textit{spacemacs} is een linux tekst editor met de power en uitbreidbaarheid van \textit{Emacs} en de werking van \textit{vi/vim}.
 \begin{lstlisting}
  name: check for spacemacs already imported
 stat: path=/home/sharney/.emacs.d/spacemacs.mk
 register: spacemacs_import
 
-- name: mv .emacs.d out of the way for spacemacs if spacemacs not yet deployed
+- name: mv .emacs.d out of the way for spacemacs
 command: mv /home/sharney/.emacs.d /tmp
 when: spacemacs_import.stat.exists == False
 
 - name: spacemacs
-git: repo=https://github.com/syl20bnr/spacemacs dest=/home/sharney/.emacs.d 
+git: repo=https://github.com/syl20bnr/spacemacs 
+					dest=/home/sharney/.emacs.d 
 when: spacemacs_import.stat.exists == False
 
 - name: for spacemacs org-protocol-capture-html
 git: repo=https://github.com/alphapapa/org-protocol-capture-html.git dest=/home/sharney/source/org-protocol-capture-html
 
 - name: fix .emacs.d/private via source copy
-copy: src=/home/sharney/.emacs.d/private/private dest=/home/sharney/.emacs.d/private
+copy: src=/home/sharney/.emacs.d/private/private 
+dest=/home/sharney/.emacs.d/private
 when: spacemacs_import.stat.exists == False
 # note: relying on the fact that the host running ansible has checked out private git repo
 \end{lstlisting}
 
 \textbf{Sectie 6 common rol}
 
-Hier zette \autocite{commonscottharney} zijn tijdzone. Ook worden hier bestanden gesynchroniseerd die in zijn Dropbox stonden.
+Hier installeert \autocite{commonscottharney} zijn tijdzone. Ook worden hier bestanden gesynchroniseerd die in zijn Dropbox staan.
 \begin{lstlisting}
 - name: gen en_US.UTF-8 locale
 become: yes
@@ -398,16 +408,18 @@ become: yes
 command: /usr/sbin/update-locale LANG=en_US.UTF-8
 
 - name: symlink for dir_colors
-file: src=/home/sharney/Dropbox/.dir_colors path=/home/sharney/.dir_colors state=link
+file: src=/home/sharney/Dropbox/.dir_colors 
+path=/home/sharney/.dir_colors state=link
 
 - name: symlink for .tmux.conf
-file: src=/home/sharney/Dropbox/.tmux.conf path=/home/sharney/.tmux.conf state=link
+file: src=/home/sharney/Dropbox/.tmux.conf path=/home/sharney/.tmux.conf 
+	  state=link
 \end{lstlisting}
 
 \newpage
 \textbf{Sectie 7 common rol}
 
-Het laaste deel conifureerde de vpn. Ook worden de files van zijn website gepulled. Ten laatste is de customisatie van \textit{zsh}.
+Het laaste deel conifureert de vpn. Ook worden de files van zijn website gepulled. Ten laatste is de customisatie van \textit{zsh}.
 \begin{lstlisting}
 - name: copy vpnc config
 become: yes
@@ -419,10 +431,12 @@ copy:
     mode: 0700 
 
 - name: git clone scottharney.com
-git: repo=git@bitbucket.org:scott_harney/scottharney.com.git dest=/home/sharney/scottharney.com
+git: repo=git@bitbucket.org:scott_harney/scottharney.com.git
+dest=/home/sharney/scottharney.com
 
 - name: install ohmyzsh via git
-git: repo=https://github.com/robbyrussell/oh-my-zsh.git  dest=/home/sharney/.oh-my-zsh depth=1 
+git: repo=https://github.com/robbyrussell/oh-my-zsh.git  
+dest=/home/sharney/.oh-my-zsh depth=1 
 
 - name: fix .zshrc
 copy: src=/home/sharney/.zshrc dest=/home/sharney/.zshrc
@@ -444,7 +458,7 @@ git: repo=git@bitbucket.org:scott_harney/ansible-mystuff.git  dest=~/source/ansi
 \newpage
 \subsubsection{OpenVPN rol}
 
-Via deze kan \autocite{scottharney} zijn instance gebruiken op plaatsen die geen veilige verbinding zijn (bijvoorbeeld een café). Ook hij aan bestanden geraken van EC2 instances die geen internet gateway hebben. Deze instance wordt door deze rol een ssh host en een gateway naar \autocite{scottharney} zijn VPC. Omdat het een aparte rol is kunnen deze functie later hergebruikt worden.
+Via de OpenVPN rol kan \autocite{scottharney} zijn instance gebruiken op plaatsen die geen veilige verbinding hebben (bijvoorbeeld een café). Ook heeft hij toegang hij tot bestanden van EC2 instances die geen internet gateway hebben. Deze instance wordt door deze rol een ssh host en een gateway naar \autocite{scottharney} zijn VPC. Omdat het een aparte rol is kunnen deze functies later hergebruikt worden.
 
 \textbf{Sectie 1 OpenVPN rol}
 
@@ -467,7 +481,8 @@ Hier wordt ip forwarding aangezet en een \textit{iptables} is nu aanwezig voor h
 \begin{lstlisting}
 - name: set up ip forwarding
 become: yes
-sysctl: name="net.ipv4.ip_forward" value=1 sysctl_set=yes state=present reload=yes
+sysctl: name="net.ipv4.ip_forward" value=1 sysctl_set=yes state=present 
+		reload=yes
 
 - name: update /etc/rc.local
 become: yes
@@ -475,21 +490,23 @@ copy: src=rc.local dest=/etc/rc.local mode=0755
 
 - name: do iptables
 become: yes
-iptables: state=present table=nat chain=POSTROUTING source=192.168.3.0/24 out_interface=eth0 jump=MASQUERADE
+iptables: state=present table=nat chain=POSTROUTING 
+	  	  source=192.168.3.0/24 out_interface=eth0 jump=MASQUERADE
 \end{lstlisting}
 
 \textbf{Sectie 3 OpenVPN rol}
 
-Dit was volgens \autocite{scottharney} het moeilijste deel van zijn playbook. Voor dit deel heeft een lange tijd moeten troubleshooten. Het probleem dat hij ondervond was dat er een bug was die openvpn reports niet goed bij hield in Xenial. Zo heeft \autocite{scottharney} zijn bug kunnen oplossen.
+Volgens \autocite{scottharney} was dit het moeilijste deel van zijn playbook. Voor dit deel heeft hij lang moeten troubleshooten. Het grootste probleem was een bug die openvpn reports niet goed bij hield in Xenial. \autocite{scottharney} heeft zo zijn bug opgelost.
 \begin{lstlisting}
-- name: fix debian bug in openvpn service https://bugs.launchpad.net/ubuntu/+source/openvpn/+bug/1580356?
+- name: fix debian bug in openvpn service
+https://bugs.launchpad.net/ubuntu/+source/openvpn/+bug/1580356?
 become: yes
 copy: src=openvpn@.service dest=/lib/systemd/system/
 \end{lstlisting}
 
 \textbf{Sectie 4 OpenVPN rol}
 
-Er is ee een \textit{systemd} module in Ansible 2.2 maar \autocite{scottharney} koos er voor om dit toch via de command line te doen. Dit is iets dat hij later zou kunnen aanpassen naar de module van Ansible. Maar momenteel werkt dit goed genoeg
+Er is een \textit{systemd} module in Ansible 2.2 maar \autocite{scottharney} koos er voor om dit toch via de command line te doen. Dit is iets dat hij later zou kunnen aanpassen naar de module van Ansible. Maar momenteel werkt dit al.
 \begin{lstlisting}
 - name: restart systemd daemon after updating unit config
 become: yes
