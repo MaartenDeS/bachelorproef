@@ -153,5 +153,5 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {B}Verklarende woordenlijst}{67}{appendix.B}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{69}{appendix*.30}% 
+\contentsline {chapter}{Bibliografie}{71}{appendix*.30}% 
 \contentsfinish 
