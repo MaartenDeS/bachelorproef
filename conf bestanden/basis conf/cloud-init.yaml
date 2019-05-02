@@ -16,7 +16,7 @@ groups:
 users:
   - default
   - name: bachelor
-  - passwd: 985b56433efe9898290b88d4dab853a2f09d7eb7a7b1b8d2cdd431e2920c3586abb7f15af7ef5382fc07d47f37b9dd4d68535b9328a07a2fccd828385c70ddc2
+  - passwd: $6$UIuXFLAgQGOGjR/v$qLr2pjKgNln3hLdyzx5VAsiR40Lr6EV5UDPKB36SL0TN10lZ/tUp/vptbROPWk.8zAPvQ1RK6/5X1J9oF2Rk10
   - sudo: true
   - groups: test
 
