@@ -3,6 +3,7 @@
 packages:
   - pwgen
   - git
+  - tree
 
 package_upgrade: true
 
