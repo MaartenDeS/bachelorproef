@@ -1,0 +1,23 @@
+#cloud-config
+
+packages:
+  - pwgen
+  - git
+
+package_upgrade: true
+
+
+runcmd:
+  - touch /home/testfile
+
+groups:
+  - test
+
+users:
+  - default
+  - name: bachelor
+  - passwd: 985b56433efe9898290b88d4dab853a2f09d7eb7a7b1b8d2cdd431e2920c3586abb7f15af7ef5382fc07d47f37b9dd4d68535b9328a07a2fccd828385c70ddc2
+  - sudo: true
+  - groups: test
+
+final_message: "The system is finally up, after $UPTIME seconds"

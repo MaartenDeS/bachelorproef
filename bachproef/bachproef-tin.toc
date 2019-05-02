@@ -131,6 +131,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Basisconfiguraties op de servers}{53}{chapter.7}% 
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Aanmaken configuratie bestanden}{53}{section.7.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.1}Opstellen cloud-init config bestand}{54}{subsection.7.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.2}Opstellen Ansible playbook}{54}{subsection.7.1.2}% 
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Server installatie en configuratie}{55}{chapter.8}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {9}Instellingen aanpassen na het opstarten}{57}{chapter.9}% 
