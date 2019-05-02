@@ -99,7 +99,7 @@ ssh_args = -o ControlMaster=auto -o ControlPersist=60s -o UserKnownHostsFile=/de
 \end{lstlisting}
 Het tweede bestand is een inventory bestand. Hierin wordt gezet welke host aanwezig is en welke connectie deze heeft.
 \begin{lstlisting}
-ansible-test-local ansible_connection=local
+local-test ansible_connection=local
 \end{lstlisting}
 
 Het derde bestand dat wordt aangemaakt is het effectieve playbook.

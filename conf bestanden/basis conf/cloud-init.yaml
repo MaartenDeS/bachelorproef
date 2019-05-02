@@ -9,7 +9,11 @@ package_upgrade: true
 
 
 runcmd:
-  - touch /home/testfile
+  - mkdir /home/bachelorproef/onderzoek/fotos
+  - mkdir /home/bachelorproef/onderzoek/teksten
+  - mkdir /home/bachelorproef/presentatiebestanden
+  - mkdir /home/stage/presentatiebestanden
+  - mkdir /home/stage/veslagbestanden
 
 groups:
   - test
@@ -17,8 +21,9 @@ groups:
 users:
   - default
   - name: bachelor
-  - passwd: $6$UIuXFLAgQGOGjR/v$qLr2pjKgNln3hLdyzx5VAsiR40Lr6EV5UDPKB36SL0TN10lZ/tUp/vptbROPWk.8zAPvQ1RK6/5X1J9oF2Rk10
+  - passwd: 985b56433efe9898290b88d4dab853a2f09d7eb7a7b1b8d2cdd431e2920c3586abb7f15af7ef5382fc07d47f37b9dd4d68535b9328a07a2fccd828385c70ddc2
   - sudo: true
   - groups: test
+  - shell: /bin/bash
 
 final_message: "The system is finally up, after $UPTIME seconds"

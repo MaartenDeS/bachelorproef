@@ -2,24 +2,177 @@
 \label{ch:basisconf}
 In dit hoofdstuk wordt voor het eerst een onderzoek uitgevoerd. 
 
-Er wordt voor elke server een configuratie bestand gemaakt dat 4 basisconfiguraties zal uitvoeren: gebruikers en groepen toevoegen, packages installeren en updates, mappen structuur aanmaken, commando's uitvoeren en ssh configuratie. 
+Er wordt voor elke server een configuratie bestand gemaakt dat 4 basisconfiguraties zal uitvoeren: gebruikers en groepen toevoegen, packages installeren en updates, mappen structuur aanmaken en ssh configuratie. 
 
-Dit zal gebeuren op 1 en meerdere servers voor elke set-up. 
 
 \section{Aanmaken configuratie bestanden}
 In dit hoofdstuk zal uitglegd worden hoe de playbooks en cloudconfig bestanden worden aangmemaakt en opgesteld. 
 
 Eerst wordt uitgelegd hoe de cloud-init configuraties worden gedaan, erna het Ansible playbook. Ten laatste zullen de set-ups worden gemaakt waar een combinatie wordt gebruikt.
 
-De gebruiker die zal worden aangemaakt is \textit{bachelor} met wachtwoord \textit{proef}. De gebruiker zal admin zijn en behoren tot de groep \textit{test} die ook zal worden aangemaakt. De packages die zullen worden geïnstalleerd zijn: \textit{pwgen}, \textit{tree} en \textit{git}. De mappenstructuur die zal worden aangemaakt ziet er uit zoals die foto hieronder. Het volgende commando zal worden uitgevoerd: \textit{touch /home/testfile}. En ten laatste zal er op de server een publieke ssh sleutel worden toegevoegd zodat er toegang is vanaf een test server.
+De gebruiker die zal worden aangemaakt is \textit{bachelor} met wachtwoord \textit{proef}. De gebruiker zal admin zijn en behoren tot de groep \textit{test} die ook zal worden aangemaakt. De packages die zullen worden geïnstalleerd zijn: \textit{pwgen}, \textit{tree} en \textit{git}. De mappenstructuur die zal worden aangemaakt ziet er uit zoals die foto hieronder. En ten laatste zal er op de server een publieke ssh sleutel worden toegevoegd zodat er toegang is vanaf een test server.
 
-insert picture mappen structuur
+\begin{figure}[!htb]
+    \center{\includegraphics[width=0.45\textwidth]{img/mappenstructuur.png}}
+    \caption{Mappen structuur basis configuraties.}
+    \label{fig:mappen}
+\end{figure}
 \subsection{Opstellen cloud-init config bestand}
+Als eerste zal het cloudconfig bestanden worden opgesteld. Dit bestand werd opgesteld met behulp van \autocite{clouddocs}.
 
+Eerst werd er bekeken welke modules er nodig zullen zijn voor het opstellen van dit bestand. De modules \textit{packages} en \textit{package\_upgrade} zullen worden gebruikt voor de packages. De modules \textit{users} en \textit{groups} zullen worden gebruikt voor het toevoegen van gebruikers en groepen.
+
+Voor het aanmaken van bestanden bestaat er de module \textit{write\_files}, spijtig genoeg is er geen module voor het aanmaken van mappen. Voor het aanmaken van de mapppenstructuur werd dus de module \textit{runcmd} gebruikt.
+
+\subsubsection{Packages}
+Hierna werd het effectieve bestand gevormd. Onder de \textit{packages} werden de 3 packages opgelijst: \textit{git}, \textit{pwgen} en \textit{tree}. Bij \textit{package\_upgrade} werd \textit{true} gezet. 
+\begin{lstlisting}
+packages:
+    - pwgen
+    - git
+    - tree
+
+package_upgrade: true
+\end{lstlisting}
+
+\subsubsection{Users \& Groups}
+Bij \textit{groups} moest niet veel gedaan worden. Er werd gewoon de groepnaam van de groep gezet.
+
+Bij \textit{users} werden veschillende dingen ingevuld. Eerst en vooral de name, \textit{bachelor}. Sudo werd op \textit{true} gezet zodat de gebruiker sudo rechten heeft. Bij groups de naam van de aangemaakte groep. Het wachtwoord onder passwd, proef, werd geëncypteerd met de tool: https://www.mkpasswd.net/index.php. Als shell werd ook voor \textit{/bin/bash} gekozen.
+\begin{lstlisting}
+groups:
+    - test
+
+users:
+    - default
+    - name: bachelor
+    - passwd: 985b56433efe9898290b88d4dab853a2f09d7eb7a7b1b8d2cdd431
+    - sudo: true
+    - groups: test
+    - shell: /bin/bash
+\end{lstlisting}
+
+
+\subsubsection{Runcdm}
+Bij de module \textit{runcmd} werden alle commando's gezet voor het aanmaken van de mappen structuur. Dit zijn gewoon 5 \textit{mdkir} commando's. Dit is het commando voor het aanmaken van mappen.
+\begin{lstlisting}
+runcmd:
+    - mkdir /home/bachelorproef/onderzoek/fotos
+    - mkdir /home/bachelorproef/onderzoek/teksten
+    - mkdir /home/bachelorproef/presentatiebestanden
+    - mkdir /home/stage/presentatiebestanden
+    - mkdir /home/stage/veslagbestanden
+\end{lstlisting}
+
+Nog toevoegen van ssh. foto/ uiteindelijk bestand?
+
+Helemaal onderaan werd ook iets gezet onder de module \textit{final\_message}, namelijk: \textit{"The system is finally up, after \$UPTIME seconds"}. Door de waarde \textit{\$UPTIME} kan er gekeken worden hoelang de server nodig had om alles uit te voeren.
 
 \subsection{Opstellen Ansible playbook}
+Als tweede werd het Ansible playbook opgesteld. Als host wordt gekozen voor local-test en localhost, afhangend of het de lokale of cloud setup is. Aan het \textit{ansible.cfg} bestand werd ook nog de regel \textit{callback\_whitelist = profile\_tasks}. Zo kan er bekeken worden hoelang het draaien van het playbook duurde.
+
+\subsubsection{Packages}
+Alle configuraties die worden gedaan werden in verschillende \textit{tasks} gezet. Voor het upgraden van de packages en installeren van de nodige packages werd de task \textit{apt} gebruikt.
+\begin{lstlisting}
+- name: Upgrade all packages to the latest version
+  apt:
+    name: "*"
+    state: latest
+- name: Install git
+  apt:
+    name: git
+    state: present
+- name: Install tree
+  apt:
+    name: tree
+    state: present
+- name: Install pwgen
+  apt:
+    name: pwgen
+    state: present
+\end{lstlisting}
+\subsubsection{Mappen structuur}
+Voor het aanmaken van de mappen structuur werd de task \textit{file} gebruikt. De state werd dan op directory gezet.
+\begin{lstlisting}
+- name: Creates direcory fotos
+  file:
+    path: /home/bachelorproef/onderzoek/fotos
+    state: directory
+- name: Creates direcory teksten
+  file:
+    path: /home/bachelorproef/onderzoek/teksten
+    state: directory
+- name: Creates direcory bachelor presentatie
+  file:
+    path: /home/bachelorproef/presentatiebestanden
+    state: directory
+- name: Creates direcory stage presentatie
+  file:
+    path: /home/stage/presentatiebestanden
+    state: directory
+- name: Creates direcory stage verslag
+  file:
+    path: /home/stage/verslagbestanden
+    state: directory
+\end{lstlisting}
+\subsubsection{Users \& groups}
+Bij het aanmaken van de gebruikers en groepen werden de tasks \textit{group} en \textit{user} gebruikt. Bij de \textit{user} werden het shell en password meegeven. Ook de groups werden meegegeven waaronder de adin group zodat de user sudo rechten heeft.
+\begin{lstlisting}
+- name:  add group test
+  group:
+    name: test
+    state: present
+- name:  add user bachelor
+  user:
+    name: bachelor
+    groups: test,admin
+    shell: /bin/bash
+    password: 985b56433efe9898290b88d4dab853a2f09d7eb7a7b1b8d2cdd431e2920c35
+\end{lstlisting}
+
+\subsection{Ansible \& cloud-init omgevingen}
+Aanmaken files makkelijker ansible
+packages cloud-init
+groups cloud-init
+users ansible
+ssh cloud-init
+
+Lokaal en cloud
+
+git clone aanpassen vorige hoofdstuk
+
+\section{Uitvoering \& resultaten}
+
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{| l | l | l |}
+        \hline
+         & \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
+        cloud-init & 0 sec & 0 \\ \hline
+        Anisble & 0 sec & 0 \\ \hline
+        cloud-init \& Ansible & 0 sec & 0 \\
+        \hline
+    \end{tabular}
+	\caption{Resulaten tabel van Basisconfiguraties op de lokale servers.}
+    \label{tab:tabel lokale resultaten basis}
+\end{table}
+
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{| l | l | l |}
+        \hline
+        & \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
+        cloud-init & 0 sec & 0 \\ \hline
+        Anisble & 0 sec & 0 \\ \hline
+        cloud-init \& Ansible & 0 sec & 0 \\
+        \hline
+    \end{tabular}
+    \caption{Resulaten tabel van Basisconfiguraties op de cloud servers.}
+    \label{tab:tabel cloud resultaten basis}
+\end{table}
 
 
+2 tools mkpasswd en encoding van vorige mss in biblio zetten en verwijzen
 
 1 Server - meerdere servers
 
