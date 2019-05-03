@@ -1,0 +1,16 @@
+#cloud-config
+# http://technosophos.com/2013/04/25/instant-lamp-server-using-cloud-init-pre-configure-cloud-compute-instances.html
+
+package_upgrade: true
+package_reboot_if_required: true
+
+
+packages:
+  - apache2
+  - mysql-server
+  - libapache2-mod-php5
+  - php5-mysql
+
+runcmd:
+  - echo '<?php phpinfo();' > /var/www/index.php
+  - rm /var/www/index.html
