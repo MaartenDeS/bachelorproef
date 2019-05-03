@@ -16,6 +16,11 @@
       apt:
         name: pwgen
         state: present
+    - name: Set authorized key taken from file
+      authorized_key:
+        user: charlie
+        state: present
+        key: "{{ lookup('file', '/vagrant/key') }}"
     - name: Creates direcory fotos
       file:
         path: /home/bachelorproef/onderzoek/fotos

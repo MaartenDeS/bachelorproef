@@ -1,0 +1,24 @@
+#cloud-config
+packages:
+  - pwgen
+  - git
+  - tree
+package_upgrade: true
+write_files:
+  - path: "/home/ansible/playbook.yaml"
+    encoding: "b64"
+    content: Ci0gaG9zdHM6IGxvY2FsaG9zdAogIHRhc2tzOgogICAgLSBuYW1lOiBDcmVhdGVzIGRpcmVjb3J5IGZvdG9zCiAgICAgIGZpbGU6CiAgICAgICAgcGF0aDogL2hvbWUvYmFjaGVsb3Jwcm9lZi9vbmRlcnpvZWsvZm90b3MKICAgICAgICBzdGF0ZTogZGlyZWN0b3J5CiAgICAtIG5hbWU6IENyZWF0ZXMgZGlyZWNvcnkgdGVrc3RlbgogICAgICBmaWxlOgogICAgICAgIHBhdGg6IC9ob21lL2JhY2hlbG9ycHJvZWYvb25kZXJ6b2VrL3Rla3N0ZW4KICAgICAgICBzdGF0ZTogZGlyZWN0b3J5CiAgICAtIG5hbWU6IENyZWF0ZXMgZGlyZWNvcnkgc3RhZ2UgcHJlc2VudGF0aWUKICAgICAgZmlsZToKICAgICAgICBwYXRoOiAvaG9tZS9iYWNoZWxvcnByb2VmL3ByZXNlbnRhdGllYmVzdGFuZGVuCiAgICAgICAgc3RhdGU6IGRpcmVjdG9yeQogICAgLSBuYW1lOiBDcmVhdGVzIGRpcmVjb3J5IGJhY2hlbG9yIHByZXNlbnRhdGllCiAgICAgIGZpbGU6CiAgICAgICAgcGF0aDogL2hvbWUvc3RhZ2UvcHJlc2VudGF0aWViZXN0YW5kZW4KICAgICAgICBzdGF0ZTogZGlyZWN0b3J5CiAgICAtIG5hbWU6IENyZWF0ZXMgZGlyZWNvcnkgc3RhZ2UgdmVyc2xhZwogICAgICBmaWxlOgogICAgICAgIHBhdGg6IC9ob21lL2JhY2hlbG9ycHJvZWYvc3RhZ2UvdmVyc2xhZ2Jlc3RhbmRlbgogICAgICAgIHN0YXRlOiBkaXJlY3Rvcnk=
+runcmd:
+  - ansible-playbook -i, /home/ansible/playbook.yaml
+groups:
+  - test
+users:
+  - default
+  - name: bachelor
+  - passwd: 985b56433efe9898290b88d4dab853a2f09d7eb7a7b1b8d2cdd431e2920c3586abb7f15af7ef5382fc07d47f37b9dd4d68535b9328a07a2fccd828385c70ddc2
+  - sudo: true
+  - groups: test
+  - shell: /bin/bash
+ssh_authorized_keys:
+  - ssh-rsa <INSERT KEY VALUE>
+final_message: "The system is finally up, after $UPTIME seconds"

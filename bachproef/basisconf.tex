@@ -20,7 +20,9 @@ De gebruiker die zal worden aangemaakt is \textit{bachelor} met wachtwoord \text
 \subsection{Opstellen cloud-init config bestand}
 Als eerste zal het cloudconfig bestanden worden opgesteld. Dit bestand werd opgesteld met behulp van \autocite{clouddocs}.
 
-Eerst werd er bekeken welke modules er nodig zullen zijn voor het opstellen van dit bestand. De modules \textit{packages} en \textit{package\_upgrade} zullen worden gebruikt voor de packages. De modules \textit{users} en \textit{groups} zullen worden gebruikt voor het toevoegen van gebruikers en groepen.
+Eerst werd er bekeken welke modules er nodig zullen zijn voor het opstellen van dit bestand. De modules \textit{packages} en \textit{package\_upgrade} zullen worden gebruikt voor de packages. De modules \textit{users} en \textit{groups} zullen worden gebruikt voor het toevoegen van gebruikers en groepen. 
+
+Voor het toevoegen van de ssh sleutel, wordt de module \textit{ssh\_authorized\_keys} gebruikt. Hier worden de publieke sleutels die zijn toegelaten toegevoegd.
 
 Voor het aanmaken van bestanden bestaat er de module \textit{write\_files}, spijtig genoeg is er geen module voor het aanmaken van mappen. Voor het aanmaken van de mapppenstructuur werd dus de module \textit{runcmd} gebruikt.
 
@@ -38,7 +40,7 @@ package_upgrade: true
 \subsubsection{Users \& Groups}
 Bij \textit{groups} moest niet veel gedaan worden. Er werd gewoon de groepnaam van de groep gezet.
 
-Bij \textit{users} werden veschillende dingen ingevuld. Eerst en vooral de name, \textit{bachelor}. Sudo werd op \textit{true} gezet zodat de gebruiker sudo rechten heeft. Bij groups de naam van de aangemaakte groep. Het wachtwoord onder passwd, proef, werd geëncypteerd met de tool: https://www.mkpasswd.net/index.php. Als shell werd ook voor \textit{/bin/bash} gekozen.
+Bij \textit{users} werden veschillende dingen ingevuld. Eerst en vooral de name, \textit{bachelor}. Sudo werd op \textit{true} gezet zodat de gebruiker sudo rechten heeft. Bij groups de naam van de aangemaakte groep. Het wachtwoord onder passwd, proef, werd geëncypteerd met de tool: \autocite{toolmkpass}. Als shell werd ook voor \textit{/bin/bash} gekozen.
 \begin{lstlisting}
 groups:
     - test
@@ -64,15 +66,20 @@ runcmd:
     - mkdir /home/stage/veslagbestanden
 \end{lstlisting}
 
-Nog toevoegen van ssh. foto/ uiteindelijk bestand?
+\subsubsection{Ssh}
+Als laatste wordt de ssh sleutel toegevoegd aan de server. Bij de waarde \textit{<insert key value>} wordt de publieke sleutel van de host die gaat connecteren gezet.
+\begin{lstlisting}
+ssh_authorized_keys:
+	- ssh-rsa <INSERT KEY VALUE>
+\end{lstlisting}
 
 Helemaal onderaan werd ook iets gezet onder de module \textit{final\_message}, namelijk: \textit{"The system is finally up, after \$UPTIME seconds"}. Door de waarde \textit{\$UPTIME} kan er gekeken worden hoelang de server nodig had om alles uit te voeren.
 
 \subsection{Opstellen Ansible playbook}
-Als tweede werd het Ansible playbook opgesteld. Als host wordt gekozen voor local-test en localhost, afhangend of het de lokale of cloud setup is. Aan het \textit{ansible.cfg} bestand werd ook nog de regel \textit{callback\_whitelist = profile\_tasks}. Zo kan er bekeken worden hoelang het draaien van het playbook duurde.
+Als tweede werd het Ansible playbook opgesteld. Als host wordt gekozen voor local-test en localhost, afhangend of het de lokale of cloud setup is. Aan het \textit{ansible.cfg} bestand werd ook nog de regel \textit{callback\_whitelist = profile\_tasks}. Zo kan er bekeken worden hoelang het draaien van het playbook duurde. Alle configuraties die worden gedaan werden in verschillende \textit{tasks} gezet. 
 
 \subsubsection{Packages}
-Alle configuraties die worden gedaan werden in verschillende \textit{tasks} gezet. Voor het upgraden van de packages en installeren van de nodige packages werd de task \textit{apt} gebruikt.
+Voor het upgraden van de packages en installeren van de nodige packages werd de task \textit{apt} gebruikt.
 \begin{lstlisting}
 - name: Upgrade all packages to the latest version
   apt:
@@ -130,26 +137,87 @@ Bij het aanmaken van de gebruikers en groepen werden de tasks \textit{group} en 
     password: 985b56433efe9898290b88d4dab853a2f09d7eb7a7b1b8d2cdd431e2920c35
 \end{lstlisting}
 
+\subsubsection{Ssh}
+Voor het toevoegen van de ssh sleutel aan de server, zodat er een extra connectie kan worden gelegd, wordt de task \textit{authorized\_key} gebruikt. Voor de lokale setup wordt dit via een bestand gedaan in de gedeelde map vagrant. Voor de cloud setup wordt dit opgehaald via git.
+\begin{lstlisting}
+- name: Set authorized key taken from file
+  authorized_key:
+	user: charlie
+	state: present
+	key: "{{ lookup('file', '/vagrant/key') }}"
+	
+- name: Set authorized key taken from file
+  authorized_key:
+	user: charlie
+	state: present
+	key: http://www.github.com/path-to-key
+\end{lstlisting}
+
 \subsection{Ansible \& cloud-init omgevingen}
-Aanmaken files makkelijker ansible
-packages cloud-init
-groups cloud-init
-users ansible
-ssh cloud-init
+Beide bestanden die apart gemaakt zijn, zijn vrij complexloos. Beide bestanden zijn vrij duidelijk. Wat als nadeel is voor het gebruik van een combinatie van Ansible en cloud-init. De enige uitvoering die complex is de bestanden is het aanmaken van de mappen via cloud-init. Dit is een beetje 'dirty' gedaan. Voor het werken met een combinatie gaat eerst alles via cloud-init worden gedaan. Het aanmaken van de mappen dan via Ansible.
 
-Lokaal en cloud
+\subsubsection{Verwijzig Anisble lokaal}
+De verwijzing naar Ansible in de lokale setup zal gebeuren via de module \textit{write\_files}. Met de tool \autocite{toolbas64} werd de het playbook geëncodeerd. Hieronder is het playbook dat wordt geëncodeerd.
+\begin{lstlisting}
+- hosts: localhost
+  tasks:
+	- name: Creates direcory fotos
+	  file:
+		path: /home/bachelorproef/onderzoek/fotos
+		state: directory
+	- name: Creates direcory teksten
+	  file:
+		path: /home/bachelorproef/onderzoek/teksten
+		state: directory
+	- name: Creates direcory stage presentatie
+	  file:
+		path: /home/bachelorproef/presentatiebestanden
+		state: directory
+	- name: Creates direcory bachelor presentatie
+	  file:
+		path: /home/stage/presentatiebestanden
+		state: directory
+	- name: Creates direcory stage verslag
+	 file:
+		path: /home/bachelorproef/stage/verslagbestanden
+		state: directory
+\end{lstlisting}
 
-git clone aanpassen vorige hoofdstuk
+In cloud-init wordt in de module \textit{write\_files} het bestand aangemaakt. In de module \textit{runcmd} wordt dan het playbook aangeroepen met een commando.
+\begin{lstlisting}
+write_files:
+	- path: "/home/ansible/playbook.yaml"
+	encoding: "b64"
+	content: Ci0gaG9zdHM6IGxvY2FsaG9zdAogIHRhc2tzOgogICAgLSBuYW1lOiBDcmVhdGVzIGR
+runcmd:
+	- ansible-playbook -i, /home/ansible/playbook.yaml
+\end{lstlisting}
+
+\subsubsection{Verwijzing Ansible cloud}
+Voor de cloud setup wordt de verwijzing via github gedaan. Er wordt een git repository aangemaakt met het playbook in. Die wordt dan gecloned in cloud-init en uitgevoerd.
+
+In cloud-init wordt drie modules toegevoegd: \textit{runcmd}, \textit{no\_ssh\_fingerprints} en \textit{ssh\_keys}. In de module \textit{ssh\_keys} wordt de private sleutel toegevoegd connectie legt met de git repo. In de module \textit{runcmd} worden 2 commando's gezet: de git clone en het uitvoeren van het playbook. \textit{no\_ssh\_fingerprints} wordt op true gezet. Zo geeft het geen error dat de server de host niet kent.
+\begin{lstlisting}
+ssh_keys:
+	rsa_private: | <key>
+no_ssh_fingerprints: true
+runcmd:
+	- ssh-agent bash -c 'ssh-add /etc/ssh/ssh\_host\_rsa\_key; 
+	  git clone <repo>'
+	- ansible-playbook -i, /home/ansible/playbook.yaml
+\end{lstlisting}
 
 \section{Uitvoering \& resultaten}
+
+\subsection{Lokaal}
 
 \begin{table}[!htb]
     \centering
     \begin{tabular}{| l | l | l |}
         \hline
          & \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
-        cloud-init & 0 sec & 0 \\ \hline
-        Anisble & 0 sec & 0 \\ \hline
+        cloud-init & 0 sec & 24 \\ \hline
+        Anisble & 0 sec & 53 \\ \hline
         cloud-init \& Ansible & 0 sec & 0 \\
         \hline
     \end{tabular}
@@ -157,13 +225,17 @@ git clone aanpassen vorige hoofdstuk
     \label{tab:tabel lokale resultaten basis}
 \end{table}
 
+
+
+\subsection{Cloud}
+
 \begin{table}[!htb]
     \centering
     \begin{tabular}{| l | l | l |}
         \hline
         & \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
         cloud-init & 0 sec & 0 \\ \hline
-        Anisble & 0 sec & 0 \\ \hline
+        Anisble & 0 sec & 53 \\ \hline
         cloud-init \& Ansible & 0 sec & 0 \\
         \hline
     \end{tabular}
@@ -171,23 +243,4 @@ git clone aanpassen vorige hoofdstuk
     \label{tab:tabel cloud resultaten basis}
 \end{table}
 
-
-2 tools mkpasswd en encoding van vorige mss in biblio zetten en verwijzen
-
-1 Server - meerdere servers
-
-Adding User en Groups
-
-Installeren Packages
-
-Running commands
-
-SSH configuratie
-
-MSS OOK SCHIJF CONFIGURATIE + MSS INLEIDING WAT AANPASSEN BIJ HOOFSTUKKEN
-
-OOK OP MEERDERE HOSTS BEKIJKEN
-
-VORIG COMMANDO'S EN BENAMING CHEKCEN
-
-TEST criteria op einde mss aanpassen
+Meerdere server bekijen bij cloud

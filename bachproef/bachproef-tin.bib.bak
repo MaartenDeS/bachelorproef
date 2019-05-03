@@ -17,6 +17,16 @@
 	url         = {https://cloudinit.readthedocs.io/en/latest/topics/modules.html},
 }
 
+@TechReport{ansibledocs,
+    author      = {Red Hat},
+    title       = {Ansible Documentation},
+    institution = {ansible},
+    year        = {2019},
+    type        = {documentation},
+    url         = {https://docs.ansible.com/ansible/latest/},
+}
+
+
 @TechReport{cloudred,
 	author      = {Marc Skinner and Michael Heldebrant},
 	title       = {Cloud-Init},
@@ -86,13 +96,41 @@
     url    = {https://www.hetzner.com/},
 }
 
-@TechReport{cloudVagrant,
-	author = {Alex Tomkins},
-	title  = {Testing cloud-init with Vagrant},
-	year   = {2016},
-    timestamp  = {2016.09.18},
-    journal = {Blog},
-	url    = {https://www.alextomkins.com/2016/09/testing-cloud-init-with-vagrant/},
+@Electronic{cloudVagrant,
+  author    = {Alex Tomkins},
+  title     = {Testing cloud-init with Vagrant},
+  year      = {2016},
+  url       = {https://www.alextomkins.com/2016/09/testing-cloud-init-with-vagrant/},
+  journal   = {Blog},
+  timestamp = {2016.09.18},
 }
+
+@Electronic{ansibleVagrant,
+    author    = {James Young},
+    title     = {Ansible with Vagrant on Windows},
+    year      = {2019},
+    url       = {https://blog.zencoffee.org/2016/08/ansible-vagrant-windows/},
+    journal   = {Blog},    
+    timestamp = {2016.08.26},
+}
+
+@TechReport{hetznerWiki,
+    author = {Wiki Hetzner},
+    title  = {Wiki Hetzner - Can I use Cloud-Init when creating servers?},
+    url    = {https://wiki.hetzner.de/index.php/CloudServer/en#Can_I_use_Cloud-Init_when_creating_servers.3F},
+}
+
+@Misc{toolbas64
+	title  = {Tool Base 64 encoding},
+	url    = {https://codebeautify.org/base64-encode},
+}
+
+@Misc{toolmkpass
+	title  = {Tool makepasswd},
+	url    = {https://www.mkpasswd.net/index.php},
+}
+
+
+https://www.mkpasswd.net/index.php
 
 @Comment{jabref-meta: databaseType:biblatex;}

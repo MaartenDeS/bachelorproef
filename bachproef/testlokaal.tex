@@ -112,7 +112,7 @@ Als nu \textit{vagrant up} wordt gedaan, wordt de server opgestart met de config
 De derde omgeving die wordt opgezet is één met Ansible en cloud-init. Zoals wordt beschreven zijn er voor Puppet en Chef aparte modules om configuraties uit te voeren. Voor Ansible is dit echter niet het geval. Dus moet een creatieve oplossing gezocht worden. Voor de combinatie van Ansible en cloud-init wordt met de \textit{write\_files} module in cloud-init gewerkt. 
 
 \subsection{Ansible playbook koppelen aan cloud-init}
-Een server wordt lokaal aangemaakt met de manier van cloud-init. Er wordt wel een bestand toegevoegd met module \textit{write\_files}. Dit bestand is het playbook van de server. De content van het bestand moet wel worden geëncodeerd via de Base64 standaard. Dit wordt gedaan via de tool: https://codebeautify.org/base64-encode. In de tekst wordt de te encoderen tekst gezet. Daarna wordt in het andere tekstvak de geëncodeerde versie gegeven. Met deze tool wordt het playbook geëncodeerd.
+Een server wordt lokaal aangemaakt met de manier van cloud-init. Er wordt wel een bestand toegevoegd met module \textit{write\_files}. Dit bestand is het playbook van de server. De content van het bestand moet wel worden geëncodeerd via de Base64 standaard. Dit wordt gedaan via de tool: \autocite{toolbas64}. In de tekst wordt de te encoderen tekst gezet. Daarna wordt in het andere tekstvak de geëncodeerde versie gegeven. Met deze tool wordt het playbook geëncodeerd.
 \begin{figure}[!htb]
 	\center{\includegraphics[width=0.9\textwidth]{img/base64.png}}
 	\caption{Tool voor encoding.}

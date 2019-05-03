@@ -1,23 +1,17 @@
 #cloud-config
-
 packages:
   - pwgen
   - git
   - tree
-
 package_upgrade: true
-
-
 runcmd:
   - mkdir /home/bachelorproef/onderzoek/fotos
   - mkdir /home/bachelorproef/onderzoek/teksten
   - mkdir /home/bachelorproef/presentatiebestanden
   - mkdir /home/stage/presentatiebestanden
   - mkdir /home/stage/veslagbestanden
-
 groups:
   - test
-
 users:
   - default
   - name: bachelor
@@ -25,5 +19,6 @@ users:
   - sudo: true
   - groups: test
   - shell: /bin/bash
-
+ssh_authorized_keys:
+  - ssh-rsa <INSERT KEY VALUE>
 final_message: "The system is finally up, after $UPTIME seconds"

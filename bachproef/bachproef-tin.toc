@@ -3,11 +3,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Inleiding}{15}{chapter.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Context}{15}{section.1.1}% 
+\contentsline {section}{\numberline {1.1}Achtergrond}{15}{section.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Probleemstelling - Onderzoeksvraag}{16}{section.1.2}% 
+\contentsline {section}{\numberline {1.2}Context}{15}{section.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Opzet van deze bachelorproef}{16}{section.1.3}% 
+\contentsline {section}{\numberline {1.3}Probleemstelling - Onderzoeksvraag}{16}{section.1.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Opzet van deze bachelorproef}{16}{section.1.4}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Inleiding tot Ansible en cloud-init}{17}{chapter.2}% 
 \defcounter {refsection}{0}\relax 
@@ -141,39 +143,81 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Runcdm}{55}{section*.32}% 
 \defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ssh}{55}{section*.33}% 
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.1.2}Opstellen Ansible playbook}{55}{subsection.7.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Packages}{55}{section*.33}% 
+\contentsline {subsubsection}{Packages}{56}{section*.34}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Mappen structuur}{56}{section*.34}% 
+\contentsline {subsubsection}{Mappen structuur}{56}{section*.35}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Users \& groups}{56}{section*.35}% 
+\contentsline {subsubsection}{Users \& groups}{57}{section*.36}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ssh}{57}{section*.37}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.1.3}Ansible \& cloud-init omgevingen}{57}{subsection.7.1.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Uitvoering \& resultaten}{57}{section.7.2}% 
+\contentsline {subsubsection}{Verwijzig Anisble lokaal}{58}{section*.38}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Server installatie en configuratie}{59}{chapter.8}% 
+\contentsline {subsubsection}{Verwijzing Ansible cloud}{58}{section*.39}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Instellingen aanpassen na het opstarten}{61}{chapter.9}% 
+\contentsline {section}{\numberline {7.2}Uitvoering \& resultaten}{59}{section.7.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Container \& Cluster Configuratie}{63}{chapter.10}% 
+\contentsline {subsection}{\numberline {7.2.1}Lokaal}{59}{subsection.7.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Conclusie}{65}{chapter.11}% 
+\contentsline {subsection}{\numberline {7.2.2}Cloud}{59}{subsection.7.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{67}{appendix.A}% 
+\contentsline {chapter}{\numberline {8}Server installatie en configuratie}{61}{chapter.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{67}{section.A.1}% 
+\contentsline {section}{\numberline {8.1}Webserver}{62}{section.8.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Stand Van Zaken}{68}{section.A.2}% 
+\contentsline {subsection}{\numberline {8.1.1}Cloud-init}{62}{subsection.8.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{68}{section.A.3}% 
+\contentsline {subsection}{\numberline {8.1.2}Ansible}{62}{subsection.8.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwachte resultaten}{69}{section.A.4}% 
+\contentsline {subsection}{\numberline {8.1.3}Cloud-init \& Ansible}{62}{subsection.8.1.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Verwachte conclusies}{69}{section.A.5}% 
+\contentsline {section}{\numberline {8.2}Fileserver}{62}{section.8.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Verklarende woordenlijst}{71}{appendix.B}% 
+\contentsline {subsection}{\numberline {8.2.1}Cloud-init}{62}{subsection.8.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{75}{appendix*.36}% 
+\contentsline {subsection}{\numberline {8.2.2}Ansible}{62}{subsection.8.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.3}Cloud-init \& Ansible}{62}{subsection.8.2.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.3}Mailserver}{62}{section.8.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3.1}Cloud-init}{62}{subsection.8.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3.2}Ansible}{62}{subsection.8.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3.3}Cloud-init \& Ansible}{62}{subsection.8.3.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.4}Resultaten}{62}{section.8.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4.1}Lokaal}{62}{subsection.8.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4.2}Cloud}{62}{subsection.8.4.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {9}Instellingen aanpassen na het opstarten}{63}{chapter.9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {10}Container \& Cluster Configuratie}{65}{chapter.10}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {11}Conclusie}{67}{chapter.11}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{69}{appendix.A}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Introductie}{69}{section.A.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Stand Van Zaken}{70}{section.A.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Methodologie}{70}{section.A.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{71}{section.A.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{71}{section.A.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Verklarende woordenlijst}{73}{appendix.B}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{77}{appendix*.40}% 
 \contentsfinish 

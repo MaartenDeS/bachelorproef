@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.26)  2 MAY 2019 18:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.5)  3 MAY 2019 12:40
 entering extended mode
 **./bachproef-tin.tex
 (bachproef-tin.tex
@@ -164,16 +164,16 @@ s.sty"
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc
 .sty"
-File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 \c@lstnumber=\count106
 \lst@skipnumbers=\count107
 \lst@framebox=\box30
 )
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listing
 s.cfg"
-File: listings.cfg 2018/09/02 1.7 listings configuration
+File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
-Package: listings 2018/09/02 1.7 (Carsten Heinz)
+Package: listings 2019/02/27 1.8b (Carsten Heinz)
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlaye
 r\tikz.sty"
@@ -633,27 +633,27 @@ LaTeX Info: Redefining \hbar on input line 50.
 )
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
 ype.sty"
-Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
+Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
 \MT@toks=\toks39
 \MT@count=\count140
-LaTeX Info: Redefining \textls on input line 793.
+LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen188
-LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
+LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
 \MT@listname@count=\count141
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
 ype-pdftex.def"
-File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
+File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
 
-LaTeX Info: Redefining \lsstyle on input line 913.
-LaTeX Info: Redefining \lslig on input line 913.
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
 \MT@outer@space=\skip51
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
 ype.cfg"
-File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
+File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
 ))
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.st
 y"
@@ -1851,12 +1851,12 @@ Hoofdstuk 2.
 [17
 
 ]
-<img/playbookex.png, id=316, 733.99219pt x 321.45094pt>
+<img/playbookex.png, id=364, 733.99219pt x 321.45094pt>
 File: img/playbookex.png Graphic file (type png)
 <use img/playbookex.png>
 Package pdftex.def Info: img/playbookex.png  used on input line 22.
 (pdftex.def)             Requested size: 384.1096pt x 168.22472pt.
-<img/agalaxy.png, id=317, 1096.84781pt x 508.14844pt>
+<img/agalaxy.png, id=365, 1096.84781pt x 508.14844pt>
 File: img/agalaxy.png Graphic file (type png)
 <use img/agalaxy.png>
 Package pdftex.def Info: img/agalaxy.png  used on input line 31.
@@ -1869,12 +1869,12 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
  [20]
-<img/userdatascript.png, id=343, 393.72093pt x 170.13562pt>
+<img/userdatascript.png, id=391, 393.72093pt x 170.13562pt>
 File: img/userdatascript.png Graphic file (type png)
 <use img/userdatascript.png>
 Package pdftex.def Info: img/userdatascript.png  used on input line 84.
 (pdftex.def)             Requested size: 384.1096pt x 165.98149pt.
-<img/cloudconfig.png, id=344, 452.4403pt x 217.5628pt>
+<img/cloudconfig.png, id=392, 452.4403pt x 217.5628pt>
 File: img/cloudconfig.png Graphic file (type png)
 <use img/cloudconfig.png>
 Package pdftex.def Info: img/cloudconfig.png  used on input line 92.
@@ -2067,13 +2067,13 @@ Overfull \hbox (26.81326pt too wide) in paragraph at lines 502--503
 ]
 Hoofdstuk 4.
 [39]
-<img/vagrantexamp.png, id=814, 648.4225pt x 466.74374pt>
+<img/vagrantexamp.png, id=862, 648.4225pt x 466.74374pt>
 File: img/vagrantexamp.png Graphic file (type png)
 <use img/vagrantexamp.png>
 Package pdftex.def Info: img/vagrantexamp.png  used on input line 36.
 (pdftex.def)             Requested size: 384.1096pt x 276.48744pt.
  [40 <./img/vagrantexamp.png>]
-<img/testpcasus.jpg, id=821, 168.63pt x 134.904pt>
+<img/testpcasus.jpg, id=869, 168.63pt x 134.904pt>
 File: img/testpcasus.jpg Graphic file (type jpg)
 <use img/testpcasus.jpg>
 Package pdftex.def Info: img/testpcasus.jpg  used on input line 71.
@@ -2092,7 +2092,10 @@ Overfull \hbox (350.81656pt too wide) in paragraph at lines 98--99
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<img/base64.png, id=911, 698.61pt x 563.10374pt>
+
+LaTeX Warning: Citation 'toolbas64' on page 46 undefined on input line 115.
+
+<img/base64.png, id=959, 698.61pt x 563.10374pt>
 File: img/base64.png Graphic file (type png)
 <use img/base64.png>
 Package pdftex.def Info: img/base64.png  used on input line 117.
@@ -2105,7 +2108,7 @@ Hoofdstuk 6.
 
 ]
 Hoofdstuk 7.
-<img/mappenstructuur.png, id=972, 168.63pt x 96.36pt>
+<img/mappenstructuur.png, id=1020, 168.63pt x 96.36pt>
 File: img/mappenstructuur.png Graphic file (type png)
 <use img/mappenstructuur.png>
 Package pdftex.def Info: img/mappenstructuur.png  used on input line 16.
@@ -2114,68 +2117,110 @@ Package pdftex.def Info: img/mappenstructuur.png  used on input line 16.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [53]
+
+LaTeX Warning: Citation 'toolmkpass' on page 54 undefined on input line 43.
+
 [54 <./img/mappenstructuur.png>]
-Overfull \hbox (62.81363pt too wide) in paragraph at lines 49--50
+Overfull \hbox (62.81363pt too wide) in paragraph at lines 51--52
 [][][][][][][][][][][] 
  []
 
 [55] [56]
-Overfull \hbox (120.41422pt too wide) in paragraph at lines 130--131
+Overfull \hbox (120.41422pt too wide) in paragraph at lines 137--138
 [][][][][][][][][] 
  []
 
-[57]) (serverconf.tex [58]
-Hoofdstuk 8.
-) (naopstarten.tex [59
 
-] [60
+LaTeX Warning: Citation 'toolbas64' on page 57 undefined on input line 160.
+
+
+Underfull \vbox (badness 3713) has occurred while \output is active []
+
+ [57]
+Overfull \hbox (19.61319pt too wide) in paragraph at lines 174--175
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.01334pt too wide) in paragraph at lines 182--183
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (178.0148pt too wide) in paragraph at lines 191--192
+[][][][][][][][] 
+ []
+
+[58]
+Overfull \hbox (48.41348pt too wide) in paragraph at lines 205--206
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) (serverconf.tex [59] [60
 
 ]
+Hoofdstuk 8.
+) (naopstarten.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+[62]
 Hoofdstuk 9.
-) (container.tex [61] [62
+) (container.tex [63
+
+] [64
 
 ]
 Hoofdstuk 10.
-) (conclusie.tex [63] [64
+) (conclusie.tex [65] [66
 
 ]
 Hoofdstuk 11.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [65])
-[66]
+ [67])
+[68]
 B"ylage A.
-(../voorstel/voorstel-inhoud.tex [67
+(../voorstel/voorstel-inhoud.tex [69
 
-] [68]) (woordenlijst.tex [69] [70
+] [70]) (woordenlijst.tex [71] [72
 
 ]
 B"ylage B.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71]
+ [73]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [72])
-[73] [74
+ [74])
+[75] [76
 
-] [75] [76]
+] [77] [78]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
  (bachproef-tin.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 141.
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                bachproef-tin
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'bachproef-tin.run.xml'.
 \openout1 = `bachproef-tin.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41092 strings out of 492946
- 766726 string characters out of 3125378
- 1375157 words of memory out of 3000000
- 43426 multiletter control sequences out of 15000+200000
+ 41185 strings out of 492946
+ 767866 string characters out of 3125379
+ 1375270 words of memory out of 3000000
+ 43442 multiletter control sequences out of 15000+200000
  595424 words of font info for 236 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,67p,847b,3844s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2187,9 +2232,9 @@ fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Maarten/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Maarten/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Maarten/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachproef-tin.pdf (78 pages, 767148 bytes).
+Output written on bachproef-tin.pdf (80 pages, 791593 bytes).
 PDF statistics:
- 1535 PDF objects out of 1728 (max. 8388607)
- 678 named destinations out of 1000 (max. 500000)
- 33290 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1720 PDF objects out of 1728 (max. 8388607)
+ 755 named destinations out of 1000 (max. 500000)
+ 33434 words of extra memory for PDF output out of 35830 (max. 10000000)
 
