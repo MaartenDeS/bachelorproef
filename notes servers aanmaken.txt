@@ -1,0 +1,10 @@
+moet anible aanwezig zijn op server
+
+playbook wat aanpassen
+
+user moet niet sudo zijn
+
+met keyscan toch
+
+
+add package ansible aan combo
