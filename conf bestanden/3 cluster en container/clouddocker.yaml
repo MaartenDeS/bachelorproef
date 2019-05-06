@@ -1,0 +1,36 @@
+#cloud-config
+
+package_upgrade: true
+
+users:
+  - default
+  - name: maarten
+    passwd: $6$Y5N.ote2cyDmb0l0$EizY59wJIt4hMQwyFXIRpJtk.nqldtp5b4VpABWUGwXU.g2XNAHEnE/EIXE8PDZusRNn6m1rCjiY79k3NWioy1
+    lock_passwd: false
+
+packages:
+ - docker.io
+ - docker-compose
+
+#docker compose file aangemaakt
+write_files:
+  - path: "home/docker-compose.yml"
+    content: |
+      version: '3.3'
+      services:
+        db:
+          image: mysql:5.7
+          restart: always
+          environment:
+            MYSQL_ROOT_PASSWORD: somewordpress
+            MYSQL_DATABASE: wordpress
+            MYSQL_USER: wordpress
+            MYSQL_PASSWORD: wordpress
+
+#run docker met zekfgemaakt docker-compose file
+runcmd:
+  - sudo docker-compose -f home/vagrant/docker-compose.yml up
+
+
+
+final_message: "The system is finally up, after $UPTIME seconds"
