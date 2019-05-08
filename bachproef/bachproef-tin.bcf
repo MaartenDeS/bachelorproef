@@ -2201,13 +2201,15 @@
     <bcf:citekey order="53">clouddocs</bcf:citekey>
     <bcf:citekey order="54">toolmkpass</bcf:citekey>
     <bcf:citekey order="55">toolbas64</bcf:citekey>
-    <bcf:citekey order="56">Cloudsigma</bcf:citekey>
-    <bcf:citekey order="57">scottharney</bcf:citekey>
-    <bcf:citekey order="58">vmware</bcf:citekey>
-    <bcf:citekey order="59">Cloudsigma</bcf:citekey>
-    <bcf:citekey order="60">infoblox</bcf:citekey>
-    <bcf:citekey order="61">deven</bcf:citekey>
-    <bcf:citekey order="62">deven</bcf:citekey>
+    <bcf:citekey order="56">lamp</bcf:citekey>
+    <bcf:citekey order="57">docker</bcf:citekey>
+    <bcf:citekey order="58">Cloudsigma</bcf:citekey>
+    <bcf:citekey order="59">scottharney</bcf:citekey>
+    <bcf:citekey order="60">vmware</bcf:citekey>
+    <bcf:citekey order="61">Cloudsigma</bcf:citekey>
+    <bcf:citekey order="62">infoblox</bcf:citekey>
+    <bcf:citekey order="63">deven</bcf:citekey>
+    <bcf:citekey order="64">deven</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

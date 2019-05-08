@@ -1,38 +1,46 @@
 \chapter{\IfLanguageName{dutch}{Server installatie en configuratie}{Introduction}}
 \label{ch:serverconf}
-Dit hoofdstuk voert een tweede onderzoek.
+Dit hoofdstuk voert een tweede onderzoek. Er wordt gekeken hoe makkelijk een volledig type server wordt geïnstalleerd en geïmplementeerd. 
 
-Er worden 2 type servers gemaakt: MySQL server en LAMP server.
+De twee type servers die worden geïnstalleerd zijn: MySQL en LAMP.
 
-https://www.digitalocean.com/community/questions/how-to-setup-mysql-with-cloud-init
-
-
-FTP wel heel heel simpel...
-
-voor cloud-init waarschijnlijk packages installeren en commando's uitvoeren in runcmd.
 \section{LAMP server}
+Een LAMP server is een van de populairste variaties van een webserver op linux. Via de documentatie van \autocite{lamp} wordt een kleine uitleg gegeven.
+ 
+De 'L' staat voor Linux het besturingssysteem dat op de server draait. 
+
+De 'A' staat voor apache dit is de web server software. 
+
+De 'M' kan voor 2 dingen staan: MariaDB of MySQL. Dit zijn de database server softwares die worden gebruikt. In deze setup wordt gekozen voor MariaDB aangezien er al een aparte MySQL server wordt aangemaakt.
+
+De 'P' staat voor PHP. Dit is de programmeer taal die de websites zullen gebruiken.
+
+Een variatie op LAMP is LEMP. Dit is bijna hetzelfde alleen gebruikt het nginx als web server software in plaats van apache.
+
 
 \subsection{Cloud-init}
+Eerste Testen
 
 \subsection{Ansible}
+Eerste Testen
 
 \subsection{Cloud-init \& Ansible}
+\label{ch:cloudansiserverconf}
+Hier worden eerst de cloud-init en Ansible configuraties besproken. Voor de gemakkelijkheid wordt het lokaal en cloud script hierin besproken. Het enige andere voor beide is de aanroeping van Ansible. Aangezien dit al voldoende besproken is in hoofdstuk \ref*{ch:testhetzner} en \ref*{ch:basisconf}, wordt dit niet meer herhaald. 
 
 \section{MySQL server}
+De tweede server die werd gekozen is een MySQL server. MySQL is een database management systeem (DBMS). Een MySQL server is dus simpel weg een database server.
 
 \subsection{Cloud-init}
+Eerste Testen
 
 \subsection{Ansible}
+Eerste Testen
 
 \subsection{Cloud-init \& Ansible}
+De introductie van \ref*{ch:cloudansiserverconf} is ook hier van toepassing en ook op volgende implementatie met Ansible en cloud-init.
 
-\section{Mailserver}
-
-\subsection{Cloud-init}
-
-\subsection{Ansible}
-
-\subsection{Cloud-init \& Ansible}
+\section{Maybe Other Server}
 
 \section{Resultaten}
 

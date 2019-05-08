@@ -10,7 +10,7 @@ In dit hoofdstuk zal uitglegd worden hoe de playbooks en cloudconfig bestanden w
 
 Eerst wordt uitgelegd hoe de cloud-init configuraties worden gedaan, erna het Ansible playbook. Ten laatste zullen de set-ups worden gemaakt waar een combinatie wordt gebruikt.
 
-De gebruiker die zal worden aangemaakt is \textit{bachelor} met wachtwoord \textit{proef}. De gebruiker zal admin zijn en behoren tot de groep \textit{test} die ook zal worden aangemaakt. De packages die zullen worden geïnstalleerd zijn: \textit{pwgen}, \textit{tree} en \textit{git}. De mappenstructuur die zal worden aangemaakt ziet er uit zoals die foto hieronder. En ten laatste zal er op de server een publieke ssh sleutel worden toegevoegd zodat er toegang is vanaf een test server.
+De gebruiker die zal worden aangemaakt is \textit{bachelor} met wachtwoord \textit{proef}. De gebruiker zal behoren tot de groep \textit{test} die ook zal worden aangemaakt. De packages die zullen worden geïnstalleerd zijn: \textit{pwgen}, \textit{tree} en \textit{git}. De mappenstructuur die zal worden aangemaakt ziet er uit zoals die foto hieronder. En ten laatste zal er op de server een publieke ssh sleutel worden toegevoegd zodat er toegang is vanaf een test server.
 
 \begin{figure}[!htb]
 	\center{\includegraphics[width=0.45\textwidth]{img/mappenstructuur.png}}
@@ -40,7 +40,7 @@ package_upgrade: true
 \subsubsection{Users \& Groups}
 Bij \textit{groups} moest niet veel gedaan worden. Er werd gewoon de groepsnaam van de groep gezet.
 
-Bij \textit{users} werden verschillende dingen ingevuld. Eerst en vooral de name, \textit{bachelor}. Sudo werd op \textit{true} gezet zodat de gebruiker sudo rechten heeft. Bij groups de naam van de aangemaakte groep. Het wachtwoord onder passwd, proef, werd geëncrypteerd met de tool: \autocite{toolmkpass}. Als shell werd ook voor \textit{/bin/bash} gekozen.
+Bij \textit{users} werden verschillende dingen ingevuld. Eerst en vooral de name, \textit{bachelor}. Bij groups de naam van de aangemaakte groep. Het wachtwoord onder passwd, proef, werd geëncrypteerd met de tool: \autocite{toolmkpass}. Als shell werd ook voor \textit{/bin/bash} gekozen.
 \begin{lstlisting}
 groups:
 - test
@@ -49,21 +49,20 @@ users:
 - default
 - name: bachelor
 - passwd: 985b56433efe9898290b88d4dab853a2f09d7eb7a7b1b8d2cdd431
-- sudo: true
 - groups: test
 - shell: /bin/bash
 \end{lstlisting}
 
 
 \subsubsection{Runcdm}
-Bij de module \textit{runcmd} werden alle commando's gezet voor het aanmaken van de mappen structuur. Dit zijn gewoon 5 \textit{mdkir} commando's. Dit is het commando voor het aanmaken van mappen.
+Bij de module \textit{runcmd} werden alle commando's gezet voor het aanmaken van de mappen structuur. Dit zijn gewoon 5 \textit{mdkir} commando's. Dit is het commando voor het aanmaken van mappen. Met de paramater \textit{-f} wordt heel de mappen structuur meegegeven aangemaakt als die er nog niet is.
 \begin{lstlisting}
 runcmd:
-- mkdir /home/bachelorproef/onderzoek/fotos
-- mkdir /home/bachelorproef/onderzoek/teksten
-- mkdir /home/bachelorproef/presentatiebestanden
-- mkdir /home/stage/presentatiebestanden
-- mkdir /home/stage/veslagbestanden
+- mkdir /home/bachelorproef/onderzoek/fotos -f
+- mkdir /home/bachelorproef/onderzoek/teksten -f
+- mkdir /home/bachelorproef/presentatiebestanden -f
+- mkdir /home/stage/presentatiebestanden -f
+- mkdir /home/stage/veslagbestanden -f
 \end{lstlisting}
 
 \subsubsection{Ssh}
@@ -123,7 +122,7 @@ path: /home/stage/verslagbestanden
 state: directory
 \end{lstlisting}
 \subsubsection{Users \& groups}
-Bij het aanmaken van de gebruikers en groepen werden de tasks \textit{group} en \textit{user} gebruikt. Bij de \textit{user} werden het shell en password meegeven. Ook de groups werden meegegeven waaronder de admin group zodat de user sudo rechten heeft.
+Bij het aanmaken van de gebruikers en groepen werden de tasks \textit{group} en \textit{user} gebruikt. Bij de \textit{user} werden het shell en password meegeven. Ook de groups werden meegegeven.
 \begin{lstlisting}
 - name:  add group test
 group:
@@ -132,25 +131,20 @@ state: present
 - name:  add user bachelor
 user:
 name: bachelor
-groups: test,admin
+groups: test
 shell: /bin/bash
 password: 985b56433efe9898290b88d4dab853a2f09d7eb7a7b1b8d2cdd431e2920c35
 \end{lstlisting}
 
 \subsubsection{Ssh}
-Voor het toevoegen van de ssh sleutel aan de server, zodat er een extra connectie kan worden gelegd, wordt de task \textit{authorized\_key} gebruikt. Voor de lokale setup wordt dit via een bestand gedaan in de gedeelde map vagrant. Voor de cloud setup wordt dit opgehaald via git.
+Voor het toevoegen van de ssh sleutel aan de server, zodat er een extra connectie kan worden gelegd, wordt de task \textit{authorized\_key} gebruikt. De user die wordt meegegeven is de bachelor user.
 \begin{lstlisting}
 - name: Set authorized key taken from file
 authorized_key:
-user: charlie
+user: bachelor
 state: present
-key: "{{ lookup('file', '/vagrant/key') }}"
+key: ssh-rsa <INSERT KEY VALUE>
 
-- name: Set authorized key taken from file
-authorized_key:
-user: charlie
-state: present
-key: http://www.github.com/path-to-key
 \end{lstlisting}
 
 \subsection{Ansible \& cloud-init omgevingen}

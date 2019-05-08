@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.5)  3 MAY 2019 12:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.5)  8 MAY 2019 14:15
 entering extended mode
 **./bachproef-tin.tex
 (bachproef-tin.tex
@@ -1811,29 +1811,34 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-[8] [9])
+[8] [9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10])
 \tf@toc=\write6
 \openout6 = `bachproef-tin.toc'.
 
- [10] (bachproef-tin.lof)
+
+[11] [12
+
+] (bachproef-tin.lof)
 \tf@lof=\write7
 \openout7 = `bachproef-tin.lof'.
 
- [11
+ [13
 
-
-] [12
+] [14
 
 ] (bachproef-tin.lot)
 \tf@lot=\write8
 \openout8 = `bachproef-tin.lot'.
 
  (inleiding.tex
-[13] [14
+[15] [16
 
 ]
 Hoofdstuk 1.
-[15]
+[17]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 46.
 
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\omsptm.fd
@@ -1842,35 +1847,35 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
-) (inleidingtotansibleencloudinit.tex [16]
+) (inleidingtotansibleencloudinit.tex [18]
 Hoofdstuk 2.
-[17
+[19
 
 ]
-<img/playbookex.png, id=370, 733.99219pt x 321.45094pt>
+<img/playbookex.png, id=402, 733.99219pt x 321.45094pt>
 File: img/playbookex.png Graphic file (type png)
 <use img/playbookex.png>
 Package pdftex.def Info: img/playbookex.png  used on input line 22.
 (pdftex.def)             Requested size: 384.1096pt x 168.22472pt.
-<img/agalaxy.png, id=371, 1096.84781pt x 508.14844pt>
+<img/agalaxy.png, id=403, 1096.84781pt x 508.14844pt>
 File: img/agalaxy.png Graphic file (type png)
 <use img/agalaxy.png>
 Package pdftex.def Info: img/agalaxy.png  used on input line 31.
 (pdftex.def)             Requested size: 384.1096pt x 177.94765pt.
- [18 <./img/playbookex.png>] [19 <./img/agalaxy.png>]
+ [20 <./img/playbookex.png>] [21 <./img/agalaxy.png>]
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
- [20]
-<img/userdatascript.png, id=397, 393.72093pt x 170.13562pt>
+ [22]
+<img/userdatascript.png, id=429, 393.72093pt x 170.13562pt>
 File: img/userdatascript.png Graphic file (type png)
 <use img/userdatascript.png>
 Package pdftex.def Info: img/userdatascript.png  used on input line 84.
 (pdftex.def)             Requested size: 384.1096pt x 165.98149pt.
-<img/cloudconfig.png, id=398, 452.4403pt x 217.5628pt>
+<img/cloudconfig.png, id=430, 452.4403pt x 217.5628pt>
 File: img/cloudconfig.png Graphic file (type png)
 <use img/cloudconfig.png>
 Package pdftex.def Info: img/cloudconfig.png  used on input line 92.
@@ -1878,10 +1883,10 @@ Package pdftex.def Info: img/cloudconfig.png  used on input line 92.
 
 Underfull \vbox (badness 5637) has occurred while \output is active []
 
- [21 <./img/userdatascript.png>]) (standvanzaken.tex [22 <./img/cloudconfig.png
+ [23 <./img/userdatascript.png>]) (standvanzaken.tex [24 <./img/cloudconfig.png
 >]
 Hoofdstuk 3.
-[23
+[25
 
 ]
 Overfull \hbox (6.15985pt too wide) in paragraph at lines 41--42
@@ -1942,7 +1947,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
- [24] [25] [26] [27] [28]
+ [26] [27] [28] [29] [30]
 Overfull \hbox (26.81326pt too wide) in paragraph at lines 188--190
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1957,7 +1962,7 @@ Overfull \hbox (12.41312pt too wide) in paragraph at lines 207--208
 [][][][][][][][][][][][][][][][] 
  []
 
-[29]
+[31]
 Overfull \hbox (12.41312pt too wide) in paragraph at lines 236--237
 [][][][][][][][][][][][][][][][][][] 
  []
@@ -1977,7 +1982,7 @@ Overfull \hbox (84.41385pt too wide) in paragraph at lines 246--247
 [][][][][][][][][][][][] 
  []
 
-[30]
+[32]
 Overfull \hbox (34.01334pt too wide) in paragraph at lines 275--276
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1992,7 +1997,7 @@ Overfull \hbox (48.41348pt too wide) in paragraph at lines 281--282
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[31]
+[33]
 Overfull \hbox (55.61356pt too wide) in paragraph at lines 292--294
 [][][][][][][][][][][][][][][][][][][][][][]
  []
@@ -2002,7 +2007,7 @@ Overfull \hbox (77.21378pt too wide) in paragraph at lines 306--307
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[32]
+[34]
 Overfull \hbox (34.01334pt too wide) in paragraph at lines 328--329
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2012,7 +2017,7 @@ Overfull \hbox (41.21341pt too wide) in paragraph at lines 333--334
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[33]
+[35]
 Overfull \hbox (55.61356pt too wide) in paragraph at lines 385--386
 [][][][][][][][][][][][][] 
  []
@@ -2033,7 +2038,7 @@ Overfull \hbox (91.61392pt too wide) in paragraph at lines 415--416
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[34]
+[36]
 Overfull \hbox (5.21304pt too wide) in paragraph at lines 434--435
 [][][][][][][][][][][][][][][][][][][] 
  []
@@ -2043,7 +2048,7 @@ Overfull \hbox (19.61319pt too wide) in paragraph at lines 455--456
 [][][][][][][][][][][][][][][][][][][][][]
  []
 
-[35]
+[37]
 Overfull \hbox (84.41385pt too wide) in paragraph at lines 484--485
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2058,53 +2063,50 @@ Overfull \hbox (26.81326pt too wide) in paragraph at lines 502--503
 [][][][][][][][][][][][][][][][][][][] 
  []
 
-[36]) (methodologie.tex [37] [38
+[38]) (methodologie.tex [39] [40
 
 ]
 Hoofdstuk 4.
-[39]
-<img/vagrantexamp.png, id=868, 648.4225pt x 466.74374pt>
+[41]
+<img/vagrantexamp.png, id=901, 648.4225pt x 466.74374pt>
 File: img/vagrantexamp.png Graphic file (type png)
 <use img/vagrantexamp.png>
 Package pdftex.def Info: img/vagrantexamp.png  used on input line 36.
 (pdftex.def)             Requested size: 384.1096pt x 276.48744pt.
- [40 <./img/vagrantexamp.png>]
-<img/testpcasus.jpg, id=875, 168.63pt x 134.904pt>
+ [42 <./img/vagrantexamp.png>]
+<img/testpcasus.jpg, id=908, 168.63pt x 134.904pt>
 File: img/testpcasus.jpg Graphic file (type jpg)
 <use img/testpcasus.jpg>
 Package pdftex.def Info: img/testpcasus.jpg  used on input line 71.
 (pdftex.def)             Requested size: 170.71393pt x 136.57307pt.
- [41 <./img/testpcasus.jpg>]) (testlokaal.tex [42]
+ [43 <./img/testpcasus.jpg>]) (testlokaal.tex [44]
 Hoofdstuk 5.
-[43
+[45
 
 ]
 Overfull \hbox (19.61319pt too wide) in paragraph at lines 37--39
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[44] [45]
+[46] [47]
 Overfull \hbox (350.81656pt too wide) in paragraph at lines 98--99
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-LaTeX Warning: Citation 'toolbas64' on page 46 undefined on input line 115.
-
-<img/base64.png, id=965, 698.61pt x 563.10374pt>
+<img/base64.png, id=999, 698.61pt x 563.10374pt>
 File: img/base64.png Graphic file (type png)
 <use img/base64.png>
 Package pdftex.def Info: img/base64.png  used on input line 117.
 (pdftex.def)             Requested size: 384.1096pt x 309.6049pt.
-[46]) (testhetzner.tex [47 <./img/base64.png>] [48
+[48]) (testhetzner.tex [49 <./img/base64.png>] [50
 
 ]
 Hoofdstuk 6.
-[49] [50]) (basisconf.tex [51] [52
+[51] [52]) (basisconf.tex [53] [54
 
 ]
 Hoofdstuk 7.
-<img/mappenstructuur.png, id=1026, 168.63pt x 96.36pt>
+<img/mappenstructuur.png, id=1061, 168.63pt x 96.36pt>
 File: img/mappenstructuur.png Graphic file (type png)
 <use img/mappenstructuur.png>
 Package pdftex.def Info: img/mappenstructuur.png  used on input line 16.
@@ -2112,97 +2114,83 @@ Package pdftex.def Info: img/mappenstructuur.png  used on input line 16.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53]
-
-LaTeX Warning: Citation 'toolmkpass' on page 54 undefined on input line 43.
-
-[54 <./img/mappenstructuur.png>]
+ [55]
+[56 <./img/mappenstructuur.png>]
 Overfull \hbox (34.01334pt too wide) in paragraph at lines 51--52
 [][][][][][][][][][] 
  []
 
-[55] [56]
-Overfull \hbox (91.61392pt too wide) in paragraph at lines 137--138
+[57] [58]
+Overfull \hbox (91.61392pt too wide) in paragraph at lines 136--137
 [][][][][][][][] 
  []
 
-
-LaTeX Warning: Citation 'toolbas64' on page 57 undefined on input line 160.
-
-
-Underfull \vbox (badness 3713) has occurred while \output is active []
-
- [57]
-Overfull \hbox (120.41422pt too wide) in paragraph at lines 191--192
+[59]
+Overfull \hbox (120.41422pt too wide) in paragraph at lines 185--186
 [][][][][][][] 
  []
 
-[58]) (serverconf.tex [59] [60
+[60]) (serverconf.tex [61] [62
 
 ]
 Hoofdstuk 8.
-) (naopstarten.tex
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [61]
-[62]
-Hoofdstuk 9.
-) (container.tex [63
+ [63])
+(naopstarten.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [64
+ [64]
+[65] [66
+
+]
+Hoofdstuk 9.
+) (container.tex [67] [68
 
 ]
 Hoofdstuk 10.
-) (conclusie.tex [65] [66
-
-]
+[69]) (conclusie.tex [70]
 Hoofdstuk 11.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67])
-[68]
-B"ylage A.
-(../voorstel/voorstel-inhoud.tex [69
+ [71
 
-] [70]) (woordenlijst.tex [71] [72
+])
+[72]
+B"ylage A.
+(../voorstel/voorstel-inhoud.tex [73
+
+] [74]) (woordenlijst.tex [75] [76
 
 ]
 B"ylage B.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [73]
+ [77]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [74])
-[75] [76
+ [78])
+[79] [80
 
-] [77] [78]
+] [81] [82]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
  (bachproef-tin.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 141.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                bachproef-tin
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'bachproef-tin.run.xml'.
 \openout1 = `bachproef-tin.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41188 strings out of 492946
- 767893 string characters out of 3125379
- 1375271 words of memory out of 3000000
- 43442 multiletter control sequences out of 15000+200000
- 595649 words of font info for 238 fonts, out of 3000000 for 9000
+ 41225 strings out of 492946
+ 768544 string characters out of 3125379
+ 1375539 words of memory out of 3000000
+ 43473 multiletter control sequences out of 15000+200000
+ 595424 words of font info for 236 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,67p,847b,3844s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.e
@@ -2213,9 +2201,9 @@ fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Maarten/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Maarten/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Maarten/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachproef-tin.pdf (80 pages, 792042 bytes).
+Output written on bachproef-tin.pdf (84 pages, 804192 bytes).
 PDF statistics:
- 1724 PDF objects out of 1728 (max. 8388607)
- 755 named destinations out of 1000 (max. 500000)
- 33434 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1798 PDF objects out of 2073 (max. 8388607)
+ 764 named destinations out of 1000 (max. 500000)
+ 33498 words of extra memory for PDF output out of 35830 (max. 10000000)
 

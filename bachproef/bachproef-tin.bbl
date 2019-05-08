@@ -265,10 +265,8 @@
       \strng{authorbibnamehash}{77f63742ead3b9c76908ede3f185e67b}
       \strng{authornamehash}{77f63742ead3b9c76908ede3f185e67b}
       \strng{authorfullhash}{77f63742ead3b9c76908ede3f185e67b}
-      \field{extraname}{1}
       \field{sortinit}{H}
       \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
-      \field{extradate}{1}
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
@@ -283,20 +281,21 @@
     \endentry
     \entry{hetznerWiki}{report}{}
       \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=77f63742ead3b9c76908ede3f185e67b}{%
+        {{uniquename=1,uniquepart=given,hash=63a1727cd9ac5a9dd7faaa0c1d57fc14}{%
            family={Hetzner},
-           familyi={H\bibinitperiod}}}%
+           familyi={H\bibinitperiod},
+           given={Wiki},
+           giveni={W\bibinitperiod},
+           givenun=1}}%
       }
-      \strng{namehash}{77f63742ead3b9c76908ede3f185e67b}
-      \strng{fullhash}{77f63742ead3b9c76908ede3f185e67b}
-      \strng{bibnamehash}{77f63742ead3b9c76908ede3f185e67b}
-      \strng{authorbibnamehash}{77f63742ead3b9c76908ede3f185e67b}
-      \strng{authornamehash}{77f63742ead3b9c76908ede3f185e67b}
-      \strng{authorfullhash}{77f63742ead3b9c76908ede3f185e67b}
-      \field{extraname}{2}
+      \strng{namehash}{63a1727cd9ac5a9dd7faaa0c1d57fc14}
+      \strng{fullhash}{63a1727cd9ac5a9dd7faaa0c1d57fc14}
+      \strng{bibnamehash}{63a1727cd9ac5a9dd7faaa0c1d57fc14}
+      \strng{authorbibnamehash}{63a1727cd9ac5a9dd7faaa0c1d57fc14}
+      \strng{authornamehash}{63a1727cd9ac5a9dd7faaa0c1d57fc14}
+      \strng{authorfullhash}{63a1727cd9ac5a9dd7faaa0c1d57fc14}
       \field{sortinit}{H}
       \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
-      \field{extradate}{2}
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
@@ -356,6 +355,34 @@
       \endverb
       \verb{url}
       \verb https://cloud-init.io/
+      \endverb
+    \endentry
+    \entry{docker}{online}{}
+      \name{editor}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=180ec05e663112a32a2b5c679a3ae0bf}{%
+           family={opensource},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{180ec05e663112a32a2b5c679a3ae0bf}
+      \strng{fullhash}{180ec05e663112a32a2b5c679a3ae0bf}
+      \strng{bibnamehash}{180ec05e663112a32a2b5c679a3ae0bf}
+      \strng{editorbibnamehash}{180ec05e663112a32a2b5c679a3ae0bf}
+      \strng{editornamehash}{180ec05e663112a32a2b5c679a3ae0bf}
+      \strng{editorfullhash}{180ec05e663112a32a2b5c679a3ae0bf}
+      \field{sortinit}{o}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{title}{What is Docker?}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://opensource.com/resources/what-docker
+      \endverb
+      \verb{url}
+      \verb https://opensource.com/resources/what-docker
       \endverb
     \endentry
     \entry{Cloudsigma}{article}{}
@@ -426,6 +453,45 @@
       \endverb
       \verb{url}
       \verb https://www.cloudsigma.com/an-introduction-to-server-provisioning-with-cloudinit/
+      \endverb
+    \endentry
+    \entry{lamp}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=d49f27f50fade96df3d6ec8689c626c7}{%
+           family={Potter},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=7fa20f708dbb280d91637d600305a95c}{%
+           family={liquidweb},
+           familyi={l\bibinitperiod}}}%
+      }
+      \strng{namehash}{d49f27f50fade96df3d6ec8689c626c7}
+      \strng{fullhash}{d49f27f50fade96df3d6ec8689c626c7}
+      \strng{bibnamehash}{d49f27f50fade96df3d6ec8689c626c7}
+      \strng{authorbibnamehash}{d49f27f50fade96df3d6ec8689c626c7}
+      \strng{authornamehash}{d49f27f50fade96df3d6ec8689c626c7}
+      \strng{authorfullhash}{d49f27f50fade96df3d6ec8689c626c7}
+      \strng{editorbibnamehash}{7fa20f708dbb280d91637d600305a95c}
+      \strng{editornamehash}{7fa20f708dbb280d91637d600305a95c}
+      \strng{editorfullhash}{7fa20f708dbb280d91637d600305a95c}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is a LAMP stack?}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.liquidweb.com/kb/what-is-a-lamp-stack/
+      \endverb
+      \verb{url}
+      \verb https://www.liquidweb.com/kb/what-is-a-lamp-stack/
       \endverb
     \endentry
     \entry{ansibleid}{report}{}
@@ -531,6 +597,32 @@
       \endverb
       \verb{url}
       \verb https://www.alextomkins.com/2016/09/testing-cloud-init-with-vagrant/
+      \endverb
+    \endentry
+    \entry{toolbas64}{misc}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{title}{Tool Base 64 encoding}
+      \verb{urlraw}
+      \verb https://codebeautify.org/base64-encode
+      \endverb
+      \verb{url}
+      \verb https://codebeautify.org/base64-encode
+      \endverb
+    \endentry
+    \entry{toolmkpass}{misc}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{title}{Tool makepasswd}
+      \verb{urlraw}
+      \verb https://www.mkpasswd.net/index.php
+      \endverb
+      \verb{url}
+      \verb https://www.mkpasswd.net/index.php
       \endverb
     \endentry
     \entry{ansibleVagrant}{online}{}
