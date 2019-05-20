@@ -308,6 +308,37 @@
       \verb https://wiki.hetzner.de/index.php/CloudServer/en#Can_I_use_Cloud-Init_when_creating_servers.3F
       \endverb
     \endentry
+    \entry{ansibleplaybook}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=bb72d7fe8c818efa0935712117296508}{%
+           family={Irvin},
+           familyi={I\bibinitperiod},
+           given={Denise},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bb72d7fe8c818efa0935712117296508}
+      \strng{fullhash}{bb72d7fe8c818efa0935712117296508}
+      \strng{bibnamehash}{bb72d7fe8c818efa0935712117296508}
+      \strng{authorbibnamehash}{bb72d7fe8c818efa0935712117296508}
+      \strng{authornamehash}{bb72d7fe8c818efa0935712117296508}
+      \strng{authorfullhash}{bb72d7fe8c818efa0935712117296508}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Example Ansible Playbook}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://blog.rackspace.com/how-to-deploy-ansible-accessible-explanation
+      \endverb
+      \verb{url}
+      \verb https://blog.rackspace.com/how-to-deploy-ansible-accessible-explanation
+      \endverb
+    \endentry
     \entry{cloudsite}{online}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=85829a4c4aaf594c11d08b96eb4d36d8}{%
@@ -524,6 +555,37 @@
       \endverb
       \verb{url}
       \verb https://www.ansible.com/hubfs/pdfs/Ansible-InDepth-WhitePaper.pdf
+      \endverb
+    \endentry
+    \entry{vagrantfile}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=6ddf1f51bae4443e11e8ff2c9eaff590}{%
+           family={Salerno},
+           familyi={S\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6ddf1f51bae4443e11e8ff2c9eaff590}
+      \strng{fullhash}{6ddf1f51bae4443e11e8ff2c9eaff590}
+      \strng{bibnamehash}{6ddf1f51bae4443e11e8ff2c9eaff590}
+      \strng{authorbibnamehash}{6ddf1f51bae4443e11e8ff2c9eaff590}
+      \strng{authornamehash}{6ddf1f51bae4443e11e8ff2c9eaff590}
+      \strng{authorfullhash}{6ddf1f51bae4443e11e8ff2c9eaff590}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Example Vagrantfile}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://dzone.com/articles/the-great-feature-of-vagrant-multi-machine
+      \endverb
+      \verb{url}
+      \verb https://dzone.com/articles/the-great-feature-of-vagrant-multi-machine
       \endverb
     \endentry
     \entry{cloudred}{report}{}
