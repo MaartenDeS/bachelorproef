@@ -1,0 +1,25 @@
+- hosts: localhost
+  sudo: true
+  tasks:
+    - name: Start the MySQL service
+      action: service name=mysql state=started
+
+    - name: Remove the test database
+      mysql_db: name=test state=absent
+
+    - name: Create deploy user for mysql
+      mysql_user: user="deploy" host="%" password=maarten priv=*.*:ALL,GRANT
+
+    - name: Ensure anonymous users are not in the database
+      mysql_user: user='' host=$item state=absent
+      with_items:
+        - 127.0.0.1
+        - ::1
+        - localhost
+
+    - name: Update mysql root password for all root accounts
+      mysql_user: name=deploy host=localhost password=maarten
+      with_items:
+        - 127.0.0.1
+        - ::1
+        - localhost

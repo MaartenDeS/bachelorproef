@@ -1,18 +1,7 @@
 - hosts: localhost
   become: yes
   become_method: sudo
-  tasks:
-    - name: install docker
-      become: yes
-      become_user: root
-      apt:
-        pkg:
-          - docker.io=18.06.*
-        state: present
-        update_cache: yes
-    - name: install pip
-      apt: name=python-pip state=present
-    
+  tasks:    
     - name: pip install setuptools
       pip: name=setuptools
 

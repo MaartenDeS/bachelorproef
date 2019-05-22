@@ -1,0 +1,22 @@
+- hosts: localhost
+  tasks:
+    - name: Creates direcory fotos
+      file:
+        path: /home/bachelorproef/onderzoek/fotos
+        state: directory
+    - name: Creates direcory teksten
+      file:
+        path: /home/bachelorproef/onderzoek/teksten
+        state: directory
+    - name: Creates direcory stage presentatie
+      file:
+        path: /home/bachelorproef/presentatiebestanden
+        state: directory
+    - name: Creates direcory bachelor presentatie
+      file:
+        path: /home/stage/presentatiebestanden
+        state: directory
+    - name: Creates direcory stage verslag
+      file:
+        path: /home/bachelorproef/stage/verslagbestanden
+        state: directory

@@ -1,0 +1,45 @@
+#cloud-config
+
+packages:
+ - ansible
+ - docker.io
+ - python-pip
+
+ssh_keys:
+  rsa_private: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIIEowIBAAKCAQEAvurojqRG43vTOuuZPWSmvWAS3LXOPSt/8oTDkG2w55z1atxA
+    X1h+Q+lX4FN3A4P3fXaPUXRK091IfVWoPjafL22Q5KWPaIVe0J7A7+UBQCRNKsZP
+    mkul0/x9bqIQwrueUnHQtl+kE9dF9wHbSi0cSkAQxcbeE6UBqEJyp6piil6LzSGE
+    LGNSsM/fcJUDp+aXFOJD5rvmMPIL5rbHBEX7qL+0uzpI0qH0ZwsItXdptvWJUMkG
+    tYBWA4K3/6cEiHt5bsi+IxBOG8qXVPd9E8JOp9qFuHQdnCFxYLkniHCANBVQvbre
+    g1d/IC562LoL5gT7vhEmUKhEg6JyPw3mqNQetQIDAQABAoIBAEGK3cnShe+k2/B3
+    X4VfH4sWB4Oz+pivbV5xy72ymq/5B5vm/0Z8V+SyoBOIM+yGCpoM8MjS9rljV3aH
+    yJmLIP0kTUDhwajtWI6gYbY51UMS81cC++MJo2VyYhFwG/bueDzvi+qATRDur7tL
+    7N+7OuIWumtbiXQPCtGb9kavTOMZV67NBovd0o1YLaY9/hxU+loVeoqJB4UXVfXY
+    D9tTB23bUOHdzSMCvrI99gMi2FtbxTKjBPxY0THSoP03YM16bBF1dZA7tn/ryH/3
+    co3zVFIwBfUnCmXCJwEkajINQ18BsHaf3n1yeTpQjPTpKXKXSa79n8A2i/4KR1x9
+    dvI1A0UCgYEA9H6A86jwYjaRC5bn7qfwgz0Wrh/fCtRQfZ5y1V0IykIgGKRuNxc3
+    y2rxOnzrxDvG682rAoBnlwW14A/d0lo85Oik8yQNtmlJULMeZp4vT7NMWP5p1UNp
+    QRSoaOGYGY4EJmtcAWLkZ14s8aJGunnqdEaod2gyfuedVD4TpRrIm98CgYEAx+bz
+    nFNKuUeR0iCcxd8fXIyql6Gdd8QvvPzzyZAtMqpIGjFHK763OoHpzx5gh0rSrCPY
+    K2DwfrJjDOSYzdB/CCyZHTsBMjIe3yk0ZHys8lqI9jkFlqd5RPrAXVyy/ujp7Xp/
+    e+g38Ni1TGP5P2y1rikrGHRxlRX1PWwA8QjUF+sCgYEAyeTky1CIIDH7GFzm7TaU
+    72q0ndkHr8OfK/x5yyLmLU7pfi/aK3fqxPlsdeXOMt9B5lqRiqFJ6XX3uCyh+iA2
+    BLjv7S+qeyT6O7+NrSOW4fOnah28ezUNZ4aNgv43QXL6jlc9RI/LGGi2KFremQIv
+    zxDB8MiEWjMcwgH46u/xFHUCgYARIIF4wE4jp7Ufqrmj3mUCee7XxPoH2+A3Mfj1
+    KQwmTh6VV+mAHvv14FGW9ERS8x8vrnaD6O9R+5iu7xsEbzujCKcpsPd+RHsOpaoe
+    fewXa5hWeDY5XSnvtggrN5kCbBQ2y4sGo7O/R+HopJwjSf4a6N4PX1Kn8lSrqYg/
+    HoGFdwKBgDE+IJvXBtwe/8KhVGygNXuYrVoGjX696/mYgZVXDH6WlSgfeAmwdehj
+    g5TlNaNIdychZqWyn7Q/vDMMBDwDML5q0Cjn6W8RvfqtiZfCc+zRlYVYvDmUEzyk
+    yfatQbkQbYs5PJCnXTaZFr0UbCgDNGWZcZFcPCc3myhZjBNA91xP
+    -----END RSA PRIVATE KEY-----
+
+runcmd:
+  - ssh-keyscan github.com >> /etc/ssh/ssh_known_hosts
+  - ssh-agent bash -c 'ssh-add /etc/ssh/ssh_host_rsa_key; git clone git@github.com:MaartenDeS/bachelorproefplaybooks.git /home/ansible'
+  - env ANSIBLE_LOCAL_TEMP=$HOME/.ansible/tmp ANSIBLE_REMOTE_TEMP=$HOME/.ansible/tmp ansible-playbook -i, /home/ansible/playbook.yaml
+
+#docker compose file aangemaakt
+
+final_message: "The system is finally up, after $UPTIME seconds"

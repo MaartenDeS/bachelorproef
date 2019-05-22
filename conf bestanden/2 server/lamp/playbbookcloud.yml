@@ -1,0 +1,22 @@
+# Setup LAMP Stack
+- hosts: localhost
+  tasks:
+    - name: start apache service
+      become: yes
+      become_user: root
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+
+    - name: start mysql service
+      become: yes
+      become_user: root
+      service:
+        name: mysql
+        state: started
+        enabled: yes
+
+    - name: create target directory
+      file: path=/var/www/html state=directory mode=0755
+

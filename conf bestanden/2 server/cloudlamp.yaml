@@ -10,5 +10,5 @@ packages:
   - php5-mysql
 
 runcmd:
-  - echo '<?php phpinfo();' > /var/www/index.php
+  - echo '<?php phpinfo();' > /var/www/html/index.php
   - rm /var/www/html/index.html
