@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.5)  16 MAY 2019 16:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.5)  22 MAY 2019 14:43
 entering extended mode
 **./bachproef-tin.tex
 (bachproef-tin.tex
@@ -1811,14 +1811,14 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-[8] [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10])
+[8] [9])
 \tf@toc=\write6
 \openout6 = `bachproef-tin.toc'.
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
 [11] [12
 
 ] (bachproef-tin.lof)
@@ -1852,12 +1852,12 @@ Hoofdstuk 2.
 [19
 
 ]
-<img/playbookex.png, id=408, 733.99219pt x 321.45094pt>
+<img/playbookex.png, id=396, 733.99219pt x 321.45094pt>
 File: img/playbookex.png Graphic file (type png)
 <use img/playbookex.png>
 Package pdftex.def Info: img/playbookex.png  used on input line 22.
 (pdftex.def)             Requested size: 384.1096pt x 168.22472pt.
-<img/agalaxy.png, id=410, 1096.84781pt x 508.14844pt>
+<img/agalaxy.png, id=398, 1096.84781pt x 508.14844pt>
 File: img/agalaxy.png Graphic file (type png)
 <use img/agalaxy.png>
 Package pdftex.def Info: img/agalaxy.png  used on input line 31.
@@ -1870,12 +1870,12 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
  [22]
-<img/userdatascript.png, id=436, 393.72093pt x 170.13562pt>
+<img/userdatascript.png, id=424, 393.72093pt x 170.13562pt>
 File: img/userdatascript.png Graphic file (type png)
 <use img/userdatascript.png>
 Package pdftex.def Info: img/userdatascript.png  used on input line 84.
 (pdftex.def)             Requested size: 384.1096pt x 165.98149pt.
-<img/cloudconfig.png, id=437, 452.4403pt x 217.5628pt>
+<img/cloudconfig.png, id=425, 452.4403pt x 217.5628pt>
 File: img/cloudconfig.png Graphic file (type png)
 <use img/cloudconfig.png>
 Package pdftex.def Info: img/cloudconfig.png  used on input line 92.
@@ -2068,13 +2068,13 @@ Overfull \hbox (26.81326pt too wide) in paragraph at lines 502--503
 ]
 Hoofdstuk 4.
 [41]
-<img/vagrantexamp.png, id=908, 648.4225pt x 466.74374pt>
+<img/vagrantexamp.png, id=896, 648.4225pt x 466.74374pt>
 File: img/vagrantexamp.png Graphic file (type png)
 <use img/vagrantexamp.png>
 Package pdftex.def Info: img/vagrantexamp.png  used on input line 36.
 (pdftex.def)             Requested size: 384.1096pt x 276.48744pt.
  [42 <./img/vagrantexamp.png>]
-<img/testpcasus.jpg, id=916, 168.63pt x 134.904pt>
+<img/testpcasus.jpg, id=904, 168.63pt x 134.904pt>
 File: img/testpcasus.jpg Graphic file (type jpg)
 <use img/testpcasus.jpg>
 Package pdftex.def Info: img/testpcasus.jpg  used on input line 71.
@@ -2093,7 +2093,7 @@ Overfull \hbox (350.81656pt too wide) in paragraph at lines 98--99
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<img/base64.png, id=1007, 698.61pt x 563.10374pt>
+<img/base64.png, id=995, 698.61pt x 563.10374pt>
 File: img/base64.png Graphic file (type png)
 <use img/base64.png>
 Package pdftex.def Info: img/base64.png  used on input line 117.
@@ -2106,7 +2106,7 @@ Hoofdstuk 6.
 
 ]
 Hoofdstuk 7.
-<img/mappenstructuur.png, id=1069, 168.63pt x 96.36pt>
+<img/mappenstructuur.png, id=1057, 168.63pt x 96.36pt>
 File: img/mappenstructuur.png Graphic file (type png)
 <use img/mappenstructuur.png>
 Package pdftex.def Info: img/mappenstructuur.png  used on input line 16.
@@ -2150,7 +2150,11 @@ Hoofdstuk 9.
 
 ]
 Hoofdstuk 10.
-[69]) (conclusie.tex [70]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69])
+(conclusie.tex [70]
 Hoofdstuk 11.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2181,34 +2185,38 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
  (bachproef-tin.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 141.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
 Package logreq Info: Writing requests to 'bachproef-tin.run.xml'.
 \openout1 = `bachproef-tin.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41233 strings out of 492946
- 768801 string characters out of 3125379
- 1375671 words of memory out of 3000000
- 43479 multiletter control sequences out of 15000+200000
+ 41228 strings out of 492946
+ 768780 string characters out of 3125379
+ 1375711 words of memory out of 3000000
+ 43476 multiletter control sequences out of 15000+200000
  595424 words of font info for 236 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,72p,847b,3844s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.e
-nc}<C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/urw/avantgar/uagd8a.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Maarten/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Maarten/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Maarten/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachproef-tin.pdf (84 pages, 806854 bytes).
+pdfTeX warning (dest): name{subsection.8.4.2} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.8.4.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.8.4} has been referenced but does not exist
+, replaced by a fixed one
+
+{C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
+}<C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/urw/avantgar/uagd8a.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Maarten/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Maarten/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bachproef-tin.pdf (84 pages, 803864 bytes).
 PDF statistics:
- 1810 PDF objects out of 2073 (max. 8388607)
- 766 named destinations out of 1000 (max. 500000)
- 33498 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1785 PDF objects out of 2073 (max. 8388607)
+ 764 named destinations out of 1000 (max. 500000)
+ 33458 words of extra memory for PDF output out of 35830 (max. 10000000)
 

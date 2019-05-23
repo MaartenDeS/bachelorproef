@@ -185,13 +185,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.2.3}Cloud-init \& Ansible}{64}{subsection.8.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Maybe Other Server}{65}{section.8.3}% 
+\contentsline {section}{\numberline {8.3}Resultaten}{65}{section.8.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.4}Resultaten}{65}{section.8.4}% 
+\contentsline {subsection}{\numberline {8.3.1}Lokaal}{65}{subsection.8.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.1}Lokaal}{65}{subsection.8.4.1}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.2}Cloud}{65}{subsection.8.4.2}% 
+\contentsline {subsection}{\numberline {8.3.2}Cloud}{65}{subsection.8.3.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {9}Instellingen aanpassen na het opstarten}{67}{chapter.9}% 
 \defcounter {refsection}{0}\relax 
@@ -205,19 +203,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {10.1.3}Ansible \& cloud-init}{70}{subsection.10.1.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.2}Kubernetes}{70}{section.10.2}% 
+\contentsline {section}{\numberline {10.2}Resultaten}{70}{section.10.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.1}Cloud-init}{70}{subsection.10.2.1}% 
+\contentsline {subsection}{\numberline {10.2.1}Lokaal}{70}{subsection.10.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.2}Ansible}{70}{subsection.10.2.2}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.3}Ansible \& cloud-init}{70}{subsection.10.2.3}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.3}Resultaten}{70}{section.10.3}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.1}Lokaal}{70}{subsection.10.3.1}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.2}Cloud}{70}{subsection.10.3.2}% 
+\contentsline {subsection}{\numberline {10.2.2}Cloud}{70}{subsection.10.2.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {11}Conclusie}{71}{chapter.11}% 
 \defcounter {refsection}{0}\relax 
