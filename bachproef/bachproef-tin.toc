@@ -185,13 +185,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.2.3}Cloud-init \& Ansible}{64}{subsection.8.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Resultaten}{65}{section.8.3}% 
+\contentsline {section}{\numberline {8.3}Uitvoering \& resultaten}{65}{section.8.3}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.3.1}Lokaal}{65}{subsection.8.3.1}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.3.2}Cloud}{65}{subsection.8.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Instellingen aanpassen na het opstarten}{67}{chapter.9}% 
+\contentsline {chapter}{\numberline {9}Script aanpassen en 2de keer uitvoeren}{67}{chapter.9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.1}Cloud-init}{67}{section.9.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1.1}Cloud-init aanroepen}{67}{subsection.9.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.2}Ansible}{68}{section.9.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {10}Container \& Cluster Configuratie}{69}{chapter.10}% 
 \defcounter {refsection}{0}\relax 
@@ -203,7 +209,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {10.1.3}Ansible \& cloud-init}{70}{subsection.10.1.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.2}Resultaten}{70}{section.10.2}% 
+\contentsline {section}{\numberline {10.2}Uitvoering \& resultaten}{70}{section.10.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {10.2.1}Lokaal}{70}{subsection.10.2.1}% 
 \defcounter {refsection}{0}\relax 

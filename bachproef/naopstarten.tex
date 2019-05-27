@@ -1,4 +1,20 @@
-\chapter{\IfLanguageName{dutch}{Instellingen aanpassen na het opstarten}{Introduction}}
+\chapter{\IfLanguageName{dutch}{Script aanpassen en 2de keer uitvoeren}{Introduction}}
 \label{ch:naopstarten}
-In dit hoofdstuk wordt bekeken hoe makkelijk of moeilijk configuraties kunnen worden aangepast na het opstarten. Deze aanpassingen moeten dan wel gebeuren via Ansible en/of cloud-init.
+In dit hoofdstuk wordt bekeken hoe makkelijk of moeilijk een script kan worden aangepast en dan nog eens uitgevoerd. Zodat er via het script nog aanpassingen kunnen worden gedaan als er een configuratie niet juist was. De eventuele testen worden uitgevoerd op de hetzner cloud servers.
 
+\section{Cloud-init}
+Eerst gaat er worden bekeken of een cloud-init makkelijk nog eens kan worden uitgevoerd, met een andere configuratie. 
+
+In de setup voor cloud-init die hier wordt gebruikt. Wordt cloud-init niet uitgevoerd via een commando. We geven het script mee als een variabele als de server wordt aangemaakt. 
+
+Nadat de server is aangemaakt en geconfigureerd kan het script wel worden gevonden. Het script staat in het bestand \textit{/var/lib/cloud/instances/<instance-naam>/user-data.txt}.
+
+\subsection{Cloud-init aanroepen}
+Nu het script gevonden is, wordt gekeken hoe er met een commando cloud-init kan worden geladen. Op een server die opgezet is met cloud-init staat automatisch ook meteen het cloud-init.
+
+Via documentatie van \autocite{scaleaway}.....
+
+
+
+\section{Ansible}
+Na cloud-init te bekijken, wordt er nu gekeken of Ansible dit goed ondersteunt. 

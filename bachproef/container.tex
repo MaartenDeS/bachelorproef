@@ -19,8 +19,39 @@ Eerste test
 \subsection{Ansible \& cloud-init}
 Eerst test
 
-\section{Resultaten}
+\section{Uitvoering \& resultaten}
 
 \subsection{Lokaal}
 
+\begin{table}[!htb]
+	\centering
+	\begin{tabular}{| l | l | l |}
+		\hline
+		& \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
+		cloud-init & 0 sec & 24 \\ \hline
+		Anisble & 0 sec & 53 \\ \hline
+		cloud-init \& Ansible & 0 sec & 0 \\
+		\hline
+	\end{tabular}
+	\caption{Resultaten tabel van container configuraties op de lokale servers.}
+	\label{tab:tabel lokale resultaten container}
+\end{table}
+
+
+
 \subsection{Cloud}
+
+\begin{table}[!htb]
+	\centering
+	\begin{tabular}{| l | l | l |}
+		\hline
+		& \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
+		cloud-init & 0 sec & 0 \\ \hline
+		Anisble & 0 sec & 53 \\ \hline
+		cloud-init \& Ansible & 0 sec & 0 \\
+		\hline
+	\end{tabular}
+	\caption{Resulaten tabel van container configuraties op de cloud servers.}
+	\label{tab:tabel cloud resultaten container}
+\end{table}
+

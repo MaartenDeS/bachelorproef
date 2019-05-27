@@ -588,6 +588,32 @@
       \verb https://dzone.com/articles/the-great-feature-of-vagrant-multi-machine
       \endverb
     \endentry
+    \entry{scaleaway}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=73c733efb004028ab32181f48d8dbe79}{%
+           family={Scaleway},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{73c733efb004028ab32181f48d8dbe79}
+      \strng{fullhash}{73c733efb004028ab32181f48d8dbe79}
+      \strng{bibnamehash}{73c733efb004028ab32181f48d8dbe79}
+      \strng{authorbibnamehash}{73c733efb004028ab32181f48d8dbe79}
+      \strng{authornamehash}{73c733efb004028ab32181f48d8dbe79}
+      \strng{authorfullhash}{73c733efb004028ab32181f48d8dbe79}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to use Cloud-Init to configure your server at first boot}
+      \verb{urlraw}
+      \verb https://www.scaleway.com/en/docs/how-to-use-cloud-init-to-configure-your-server-at-first-boot/
+      \endverb
+      \verb{url}
+      \verb https://www.scaleway.com/en/docs/how-to-use-cloud-init-to-configure-your-server-at-first-boot/
+      \endverb
+    \endentry
     \entry{cloudred}{report}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=d8f4a35d739162636b1c67f70b266bc2}{%

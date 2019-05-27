@@ -44,8 +44,39 @@ verwijderen vars veranderen password
 \subsection{Cloud-init \& Ansible}
 De introductie van \ref*{ch:cloudansiserverconf} is ook hier van toepassing en ook op volgende implementatie met Ansible en cloud-init.
 
-\section{Resultaten}
+\section{Uitvoering \& resultaten}
 
 \subsection{Lokaal}
 
+\begin{table}[!htb]
+	\centering
+	\begin{tabular}{| l | l | l |}
+		\hline
+		& \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
+		cloud-init & 0 sec & 24 \\ \hline
+		Anisble & 0 sec & 53 \\ \hline
+		cloud-init \& Ansible & 0 sec & 0 \\
+		\hline
+	\end{tabular}
+	\caption{Resultaten tabel van server configuraties op de lokale servers.}
+	\label{tab:tabel lokale resultaten server}
+\end{table}
+
+
+
 \subsection{Cloud}
+
+\begin{table}[!htb]
+	\centering
+	\begin{tabular}{| l | l | l |}
+		\hline
+		& \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
+		cloud-init & 0 sec & 0 \\ \hline
+		Anisble & 0 sec & 53 \\ \hline
+		cloud-init \& Ansible & 0 sec & 0 \\
+		\hline
+	\end{tabular}
+	\caption{Resulaten tabel van server configuraties op de cloud servers.}
+	\label{tab:tabel cloud resultaten server}
+\end{table}
+
