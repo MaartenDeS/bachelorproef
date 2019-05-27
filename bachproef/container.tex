@@ -25,33 +25,19 @@ Eerst test
 
 \begin{table}[!htb]
 	\centering
-	\begin{tabular}{| l | l | l |}
-		\hline
-		& \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
-		cloud-init & 0 sec & 24 \\ \hline
-		Anisble & 0 sec & 53 \\ \hline
-		cloud-init \& Ansible & 0 sec & 0 \\
-		\hline
-	\end{tabular}
-	\caption{Resultaten tabel van container configuraties op de lokale servers.}
-	\label{tab:tabel lokale resultaten container}
+	\begin{tabular}{| l | l | l |l |}
+        \hline
+        \textbf{Uitvoeringstijd} & Resultaat 1 & Resultaat 2 & Resultaat 3   \\ \hline
+        cloud-init & 101 sec & 138 sec & 116 sec  \\ \hline
+        Anisble & 63.91 sec & 30.16 sec & 33.76 sec \\ \hline
+        cloud-init \& Ansible & 116.22 sec & 105.49 sec & 110.47 sec \\
+        \hline
+    \end{tabular}
+	\caption{Resultaten tabel van container configuraties op de servers.}
+	\label{tab:tabel resultaten container}
 \end{table}
 
 
 
-\subsection{Cloud}
 
-\begin{table}[!htb]
-	\centering
-	\begin{tabular}{| l | l | l |}
-		\hline
-		& \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
-		cloud-init & 0 sec & 0 \\ \hline
-		Anisble & 0 sec & 53 \\ \hline
-		cloud-init \& Ansible & 0 sec & 0 \\
-		\hline
-	\end{tabular}
-	\caption{Resulaten tabel van container configuraties op de cloud servers.}
-	\label{tab:tabel cloud resultaten container}
-\end{table}
 

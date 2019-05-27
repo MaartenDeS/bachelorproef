@@ -203,34 +203,15 @@ git clone <repo>'
 
 \section{Uitvoering \& resultaten}
 
-\subsection{Lokaal}
 
 \begin{table}[!htb]
 	\centering
-	\begin{tabular}{| l | l | l |}
+	\begin{tabular}{| l | l | l |l |}
 		\hline
-		& \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
-		cloud-init & 0 sec & 24 \\ \hline
-		Anisble & 0 sec & 53 \\ \hline
-		cloud-init \& Ansible & 0 sec & 0 \\
-		\hline
-	\end{tabular}
-	\caption{Resultaten tabel van Basisconfiguraties op de lokale servers.}
-	\label{tab:tabel lokale resultaten basis}
-\end{table}
-
-
-
-\subsection{Cloud}
-
-\begin{table}[!htb]
-	\centering
-	\begin{tabular}{| l | l | l |}
-		\hline
-		& \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
-		cloud-init & 0 sec & 0 \\ \hline
-		Anisble & 0 sec & 53 \\ \hline
-		cloud-init \& Ansible & 0 sec & 0 \\
+		\textbf{Uitvoeringstijd} & Resultaat 1 & Resultaat 2 & Resultaat 3   \\ \hline
+		cloud-init & 179.75 sec & 187.74 sec & 165.51 sec  \\ \hline
+		Anisble & 168.69 sec & 132.59 sec & 111.31 sec \\ \hline
+		cloud-init \& Ansible & 149.10 sec & 190.13 sec & 193.59 sec \\
 		\hline
 	\end{tabular}
 	\caption{Resulaten tabel van Basisconfiguraties op de cloud servers.}

@@ -12,85 +12,34 @@
 %% onderzoeksvraag.
 In dit hoofdstuk wordt besproken welke methodes er gehanteerd zijn om de resultaten te bekomen. Dit hoofdstuk is onderverdeeld in 2 delen. 
 
-Ten eerste wordt er info gegeven over de 2 testomgevingen. 
+Ten eerste wordt er info gegeven over de  testomgeving. 
 
 Ten tweede wordt er besproken welke testcriteria er gekozen zijn en waarom. In deze bachelorproef wordt er vooral focus gelegd op de praktijk, vermits het een praktische onderzoek is.
 
 \section{Testomgevingen}
-Voor het onderzoek moeten er verschillende testomgevingen worden opgesteld, om alles te kunnen testen. Er is een lokale virtuele  omgeving en een omgeving op cloud servers. Er is gekozen voor deze twee omgevingen omdat dit in de praktijk de twee meest voorkomende omgevingen zijn bij server management tools. 
-
-Ansible is een tool die gebruikt wordt voor virtuele omgevingen door gebruikers thuis, maar ook in grote cloud omgevingen door bedrijven. Het zou dus niet correct zijn om het alleen lokaal te testen of alleen op de cloud. 
-
-Voor het onderzoek is het eveneens interessant omdat er veel meer kans is op verschillende resultaten. Die kunnen dan met elkaar worden vergeleken en kan er worden bekeken wat de oorzaak ervan is. Dit geeft ook de mogelijkheid om het onderzoek in de toekomst verder uit te breiden. Waarom bijvoorbeeld Ansible beter is lokaal zonder cloud-init dan met (dit is een hypothetische stelling).
-
-\newpage
-Per omgeving is er hieronder wat meer informatie te vinden. Over het opzetten van de omgevingen zijn voor beide aparte hoofdstukken aan toegewijd, namelijk: Hoofdstuk \ref*{ch:testlokaal} en Hoofdstuk \ref*{ch:testhetzner}.
-
-\subsection{Lokaal}
-Voor de lokale omgeving zal er worden gewerkt met 2 technologieën, namelijk: VirtualBox en vagrant. 
-
-VirtualBox is een programma waarmee je virtuele machines kunt aanmaken en beheren. Hiermee worden de servers lokaal aangemaakt. 
-
-Het tweede programma dat wordt gebruikt is vagrant. Vagrant is een command tool die die servers configureerd. In de actieve directory wordt het commando \textit{vagrant init} gedaan, dan staat er een \textit{vagrantfile}. Dit is het bestand dat kan worden geconfigureerd naargelang de wens van de gebruiker. Daarna wordt het commando \textit{vagrant up} gedaan. Dit start de server op. De server wordt opgestart met behulp van een tool die virtuele machines beheert en aanmaakt. In dit geval dus VirtualBox.
-\begin{figure}[!htb]
-	\center{\includegraphics[width=0.9\textwidth]{img/vagrantexamp.png}}
-	\caption{Voorbeeld van een vagrantfile. \autocite{vagrantfile}}
-	\label{fig:vagrantexamp}
-\end{figure}
-
-\newpage
-\subsubsection{Laptop}
-Deze testomgeving wordt opgezet op de laptop: \textbf{Asus X750L}. Asus bracht deze laptop eind 2013 op de markt. De laptop is aangekocht in augustus 2014, en is bij het uitvoeren van het onderzoek bijna 5 jaar oud. Bijna alle specificaties zijn hetzelfde toen hij werd aangekocht. Alleen is de harde schijf vervangen van een HDD van 500 gigabyte naar een SSD van 500 gigabyte. Deze vervanging werd begin 2019 gedaan en bij het uit voeren van het onderzoek is dat 2-3 maand geleden. Hieronder is een  uitgebreide tabel met specificaties van de laptop. De data is verkregen door: \autocite{asuslaptop}.
-
-\begin{table}[!htb]
-	\centering
-	\begin{tabular}{c l}
-		\hline
-		\multicolumn{2}{c}{\textbf{Specificaties}} \\
-		\hline
-		Fabrikant & Asus \\
-		\hline
-		Model & ASUS x750L \\
-		\hline		
-        Besturingssysteem & Windows 10\\
-        \hline
-		CPU & Intel Core i7 4500U @ 2.4 GHz  \\
-		\hline
-		Geheugen & 8GB DDR3 @ 1600MHz \\
-		\hline
-		GPU & Nvidia GeForce GT 740M \\
-		\hline
-		Interne schijven & Crucial MX500 (500 GB) \\
-		\hline
-	\end{tabular}
-	\caption{Specificaties van de laptop.}
-	\label{tab:specs_desktop }
-\end{table}
-
-\begin{figure}[!htb]
-	\center{\includegraphics[width=0.4\textwidth]{img/testpcasus.jpg}}
-	\caption{Foto van de laptop.}
-	\label{fig:asustest}
-\end{figure}
-
-\subsection{Cloud}
-Voor de cloud omgeving wordt er Hetzner Cloud gebruikt. In de inleiding werd het bedrijf Be-Mobile al vernoemd en werd ook al vermeld dat zij één van de drijfveren van het onderzoek zijn. Via hen is toegang verkregen op een Hetzner Cloud omgeving om in te testen. 
+Voor het onderzoek moeten er verschillende testomgevingen worden opgesteld, om alles te kunnen testen. Er is een omgeving op cloud servers. Voor deze omgeving wordt er Hetzner Cloud gebruikt. In de inleiding werd het bedrijf Be-Mobile al vernoemd en werd ook al vermeld dat zij één van de drijfveren van het onderzoek zijn. Via hen is toegang verkregen op een Hetzner Cloud omgeving om in te testen. 
 
 Hetzner is een Duits bedrijf dat gespecialiseerd is in het hosten van servers. Hun datacenters liggen in Nuremberg (Duitsland), Falksenstein (Duitsland) en Helsinki (Finland). 
 
 Via de commandline tool werd de server aangemaakt. Ook wordt er een SSH sleutel voorzien zodat er toegang is tot de aangemaakte servers. Info van hetzner werd gevonden dankzij de site van \autocite{hetzner}.
 
-
 \section{Testcriteria}
 Het volgende dat wordt besproken is de keuze van de testcriteria die worden gekozen in hoofdstukken~\ref{ch:basisconf},~\ref{ch:serverconf},~\ref{ch:naopstarten} en~\ref{ch:container}. 
 
-In Hoofdstuk \ref*{ch:basisconf} worden basis configuraties op de servers uitgevoerd. Dit om na te gaan wat de beste optie is als er gewoon wat kleine basis configuraties worden veranderd. Dit kan bijvoorbeeld gebruikers aanmaken zijn, maar ook: commando's uitvoeren, mappen aanmaken. 
+\subsection{Hoofdstukken}
+In Hoofdstuk \ref*{ch:basisconf} worden basis configuraties op de servers uitgevoerd. Dit om na te gaan wat de beste optie is als er gewoon wat kleine basis configuraties worden veranderd. Dit zal het aanmaken van gebruikers en groepen, aanmaken van mappenstructuur, installeren van packages en het toevoegen van een SSH sleutel zijn. Hier wordt gekeken naar de complexititeit van de configuratie bestanden en snelheid van uitvoeren.
 
-In Hoofdstuk \ref*{ch:serverconf} worden verschillende servers geïnstalleerd. Zo wordt bestudeerd of het installeren en configureren van servers een ander resultaat heeft dan basis configuraties. Ook om na te gaan of er verschillen zijn per server.
+In Hoofdstuk \ref*{ch:serverconf} worden verschillende servers, LAMP en MySQL, geïnstalleerd. Zo wordt bestudeerd of het installeren en configureren van servers een ander resultaat heeft dan basis configuraties. Ook om na te gaan of er verschillen zijn per server. Hier wordt ook gekeken naar de complexititeit van de configuratie bestanden en snelheid van uitvoeren.
 
-In Hoofdstuk \ref*{ch:naopstarten} wordt gekeken met welke optie je de server best aanpast na het opstarten. Eens de server is opgestart maar er wordt een kleinigheid gewijzigd in het script. Welke optie is dan het best om snel deze verandering door te voeren.
+In Hoofdstuk \ref*{ch:naopstarten} wordt gekeken met welke optie je de server best aanpast na het opstarten. Eens is de server is opgestart kan er iets moeten worden aangepast via het script. Welke optie is dan het best om snel deze verandering door te voeren. Hier wordt gekeken naar de complexiteit van het opnieuw uitvoeren van het script. Kan dit zeer makkelijk of moet dit via en grote omweg?
 
-Ten laatste wordt in Hoofdstuk \ref*{ch:container} de configuratie van containers en clusters onderzocht. Bijna elk bedrijf gebruikt containers en clusters voor hun netwerk. Het is dus logisch om te bekijken wat hier voor de resultaten zijn. Misschien zijn deze wel helemaal anders dan de resultaten van hiervoor?
+Ten laatste wordt in Hoofdstuk \ref*{ch:container} de configuratie van containers onderzocht. Bijna elk bedrijf gebruikt containers voor hun netwerk. Het is dus logisch om te bekijken wat hier voor de resultaten zijn. Misschien zijn deze wel helemaal anders dan de resultaten van hiervoor? Ook hier wordt wel weer gekeken naar de complexititeit van de configuratie bestanden en snelheid van uitvoeren.
+
+\subsection{Complexiteit}
+Met de complexiteit van bestanden wordt bedoelt, hoe verzichtelijk een bestand juist is na het invullen van alle configuraties. Dit kan misschien ervaren worden als iets subjectiever maar via screenshots zullen de conclusies hier worden bewezen.
+
+\subsection{Snelheid van uitvoeren}
+De snelheid van uitvoer, moet wel met een korreltje zou worden bekeken. Doordat cloud-init standaard bepaalde installatie uitvoert bij het opstarten van een server. Heeft dit altijd al een langere uitvoeringssnelheid dan Ansible. Het is wel nog steeds interessant om te bekijken. Bij sommige kan het verschil misschien kleiner zijn dan verwacht
 
 %% Basis Configuratie, sever inst en conf, instellingen aanpassen na opstarten en container/cluster.
 

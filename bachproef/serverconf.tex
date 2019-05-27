@@ -46,37 +46,31 @@ De introductie van \ref*{ch:cloudansiserverconf} is ook hier van toepassing en o
 
 \section{Uitvoering \& resultaten}
 
-\subsection{Lokaal}
-
 \begin{table}[!htb]
 	\centering
-	\begin{tabular}{| l | l | l |}
-		\hline
-		& \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
-		cloud-init & 0 sec & 24 \\ \hline
-		Anisble & 0 sec & 53 \\ \hline
-		cloud-init \& Ansible & 0 sec & 0 \\
-		\hline
-	\end{tabular}
-	\caption{Resultaten tabel van server configuraties op de lokale servers.}
-	\label{tab:tabel lokale resultaten server}
+    \begin{tabular}{| l | l | l |l |}
+    \hline
+    \textbf{Uitvoeringstijd} & Resultaat 1 & Resultaat 2 & Resultaat 3   \\ \hline
+    cloud-init & 230.57 sec & 229.85 sec & 234.71 sec  \\ \hline
+    Anisble & 62.71 sec & 76.10 sec & 65.48 sec \\ \hline
+    cloud-init \& Ansible & 150.97 sec & 127.93 sec & 129.80 sec \\
+    \hline
+    \end{tabular}
+	\caption{Resulaten tabel van LAMP configuraties op de servers.}
+	\label{tab:tabel lamp resultaten server}
 \end{table}
 
-
-
-\subsection{Cloud}
-
 \begin{table}[!htb]
-	\centering
-	\begin{tabular}{| l | l | l |}
-		\hline
-		& \textbf{Uitvoeringstijd} & \textbf{Aantal lijnen code}  \\ \hline
-		cloud-init & 0 sec & 0 \\ \hline
-		Anisble & 0 sec & 53 \\ \hline
-		cloud-init \& Ansible & 0 sec & 0 \\
-		\hline
-	\end{tabular}
-	\caption{Resulaten tabel van server configuraties op de cloud servers.}
-	\label{tab:tabel cloud resultaten server}
+    \centering
+    \begin{tabular}{| l | l | l |l |}
+        \hline
+        \textbf{Uitvoeringstijd} & Resultaat 1 & Resultaat 2 & Resultaat 3   \\ \hline
+        cloud-init & 204.03 sec & 214.15 sec & 281.82 sec  \\ \hline
+        Anisble & 29.26 sec & 35.86 sec & 111.31 sec \\ \hline
+        cloud-init \& Ansible & 127.71 sec & 85.43 sec & 66.81 sec \\
+        \hline
+    \end{tabular}
+    \caption{Resulaten tabel van MySQL configuraties op de servers.}
+    \label{tab:tabel mysql resultaten server}
 \end{table}
 
