@@ -94,6 +94,79 @@
       \verb https://www.devendortech.com/articles/AWX_Tower.html
       \endverb
     \endentry
+    \entry{bekker}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=0fbeafb04601e571471019d3a9260b4d}{%
+           family={Bekker},
+           familyi={B\bibinitperiod},
+           given={Ruan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0fbeafb04601e571471019d3a9260b4d}
+      \strng{fullhash}{0fbeafb04601e571471019d3a9260b4d}
+      \strng{bibnamehash}{0fbeafb04601e571471019d3a9260b4d}
+      \strng{authorbibnamehash}{0fbeafb04601e571471019d3a9260b4d}
+      \strng{authornamehash}{0fbeafb04601e571471019d3a9260b4d}
+      \strng{authorfullhash}{0fbeafb04601e571471019d3a9260b4d}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Blog}
+      \field{title}{Setup a LAMP Stack With Ansible Using Ubuntu}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://blog.ruanbekker.com/blog/2018/07/08/setup-a-lamp-stack-with-ansible-using-ubuntu/
+      \endverb
+      \verb{url}
+      \verb https://blog.ruanbekker.com/blog/2018/07/08/setup-a-lamp-stack-with-ansible-using-ubuntu/
+      \endverb
+    \endentry
+    \entry{butcher}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=ebd703d05dc8ad5fc32501b347fa1de4}{%
+           family={Butcher},
+           familyi={B\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=36d3c2386133bc84997322da873bc126}{%
+           family={Sophos},
+           familyi={S\bibinitperiod},
+           given={Techno},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ebd703d05dc8ad5fc32501b347fa1de4}
+      \strng{fullhash}{ebd703d05dc8ad5fc32501b347fa1de4}
+      \strng{bibnamehash}{ebd703d05dc8ad5fc32501b347fa1de4}
+      \strng{authorbibnamehash}{ebd703d05dc8ad5fc32501b347fa1de4}
+      \strng{authornamehash}{ebd703d05dc8ad5fc32501b347fa1de4}
+      \strng{authorfullhash}{ebd703d05dc8ad5fc32501b347fa1de4}
+      \strng{editorbibnamehash}{36d3c2386133bc84997322da873bc126}
+      \strng{editornamehash}{36d3c2386133bc84997322da873bc126}
+      \strng{editorfullhash}{36d3c2386133bc84997322da873bc126}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Instant LAMP Server: Using Cloud-Init to Pre-configure Cloud Compute Instances}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb http://technosophos.com/2013/04/25/instant-lamp-server-using-cloud-init-pre-configure-cloud-compute-instances.html
+      \endverb
+      \verb{url}
+      \verb http://technosophos.com/2013/04/25/instant-lamp-server-using-cloud-init-pre-configure-cloud-compute-instances.html
+      \endverb
+    \endentry
     \entry{clouddocs}{report}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=6bba450c256d490f70904e56c56dd0d7}{%
@@ -156,35 +229,6 @@
       \endverb
       \verb{url}
       \verb https://www.digitalocean.com/community/tutorials/how-to-use-git-to-manage-your-user-configuration-files-on-a-linux-vps
-      \endverb
-    \endentry
-    \entry{asuslaptop}{report}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=81541e5080aa1fd14a68d5f138bf87bf}{%
-           family={Hardware.info},
-           familyi={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{81541e5080aa1fd14a68d5f138bf87bf}
-      \strng{fullhash}{81541e5080aa1fd14a68d5f138bf87bf}
-      \strng{bibnamehash}{81541e5080aa1fd14a68d5f138bf87bf}
-      \strng{authorbibnamehash}{81541e5080aa1fd14a68d5f138bf87bf}
-      \strng{authornamehash}{81541e5080aa1fd14a68d5f138bf87bf}
-      \strng{authorfullhash}{81541e5080aa1fd14a68d5f138bf87bf}
-      \field{sortinit}{H}
-      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Specificaties Asus X750L}
-      \field{type}{techreport}
-      \field{year}{2013}
-      \verb{urlraw}
-      \verb https://be.hardware.info/product/204862/asus-x750l/specificaties
-      \endverb
-      \verb{url}
-      \verb https://be.hardware.info/product/204862/asus-x750l/specificaties
       \endverb
     \endentry
     \entry{commonscottharney}{online}{}
@@ -251,6 +295,37 @@
       \endverb
       \verb{url}
       \verb https://www.scottharney.com/using-ansible-to-bootstap-my-work-environment-part-4/
+      \endverb
+    \endentry
+    \entry{hassin}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=9935b6cd92b70836f58da79b8e916ef3}{%
+           family={Hassin},
+           familyi={H\bibinitperiod},
+           given={Itamar},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9935b6cd92b70836f58da79b8e916ef3}
+      \strng{fullhash}{9935b6cd92b70836f58da79b8e916ef3}
+      \strng{bibnamehash}{9935b6cd92b70836f58da79b8e916ef3}
+      \strng{authorbibnamehash}{9935b6cd92b70836f58da79b8e916ef3}
+      \strng{authornamehash}{9935b6cd92b70836f58da79b8e916ef3}
+      \strng{authorfullhash}{9935b6cd92b70836f58da79b8e916ef3}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ansible MySQL}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://gist.github.com/ihassin/8106956
+      \endverb
+      \verb{url}
+      \verb https://gist.github.com/ihassin/8106956
       \endverb
     \endentry
     \entry{hetzner}{report}{}
@@ -386,6 +461,42 @@
       \endverb
       \verb{url}
       \verb https://cloud-init.io/
+      \endverb
+    \endentry
+    \entry{dias}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=85a25567f3e42b61cac81aeabeca9307}{%
+           family={NMDias},
+           familyi={N\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=73a76fbbbd72a5aebae27785fa05c794}{%
+           family={DigitalOcean},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{85a25567f3e42b61cac81aeabeca9307}
+      \strng{fullhash}{85a25567f3e42b61cac81aeabeca9307}
+      \strng{bibnamehash}{85a25567f3e42b61cac81aeabeca9307}
+      \strng{authorbibnamehash}{85a25567f3e42b61cac81aeabeca9307}
+      \strng{authornamehash}{85a25567f3e42b61cac81aeabeca9307}
+      \strng{authorfullhash}{85a25567f3e42b61cac81aeabeca9307}
+      \strng{editorbibnamehash}{73a76fbbbd72a5aebae27785fa05c794}
+      \strng{editornamehash}{73a76fbbbd72a5aebae27785fa05c794}
+      \strng{editorfullhash}{73a76fbbbd72a5aebae27785fa05c794}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to setup MySQL with cloud-init?}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.digitalocean.com/community/questions/how-to-setup-mysql-with-cloud-init
+      \endverb
+      \verb{url}
+      \verb https://www.digitalocean.com/community/questions/how-to-setup-mysql-with-cloud-init
       \endverb
     \endentry
     \entry{docker}{online}{}
@@ -555,37 +666,6 @@
       \endverb
       \verb{url}
       \verb https://www.ansible.com/hubfs/pdfs/Ansible-InDepth-WhitePaper.pdf
-      \endverb
-    \endentry
-    \entry{vagrantfile}{misc}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=6ddf1f51bae4443e11e8ff2c9eaff590}{%
-           family={Salerno},
-           familyi={S\bibinitperiod},
-           given={Rafael},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{6ddf1f51bae4443e11e8ff2c9eaff590}
-      \strng{fullhash}{6ddf1f51bae4443e11e8ff2c9eaff590}
-      \strng{bibnamehash}{6ddf1f51bae4443e11e8ff2c9eaff590}
-      \strng{authorbibnamehash}{6ddf1f51bae4443e11e8ff2c9eaff590}
-      \strng{authornamehash}{6ddf1f51bae4443e11e8ff2c9eaff590}
-      \strng{authorfullhash}{6ddf1f51bae4443e11e8ff2c9eaff590}
-      \field{sortinit}{S}
-      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Example Vagrantfile}
-      \field{year}{2016}
-      \verb{urlraw}
-      \verb https://dzone.com/articles/the-great-feature-of-vagrant-multi-machine
-      \endverb
-      \verb{url}
-      \verb https://dzone.com/articles/the-great-feature-of-vagrant-multi-machine
       \endverb
     \endentry
     \entry{scaleaway}{online}{}

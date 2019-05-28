@@ -95,119 +95,135 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Methodologie}{41}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Testomgevingen}{41}{section.4.1}% 
+\contentsline {section}{\numberline {4.1}Testomgeving}{41}{section.4.1}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Testcriteria}{42}{section.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Hoofdstukken}{42}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.1}Segmenten}{42}{subsection.4.2.1}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.2}Complexiteit}{42}{subsection.4.2.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.3}Snelheid van uitvoeren}{42}{subsection.4.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Opzetten lokale testomgeving}{43}{chapter.5}% 
+\contentsline {chapter}{\numberline {5}Opzetten Hetzner Cloud testomgeving}{43}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Cloud-init}{43}{section.5.1}% 
+\contentsline {section}{\numberline {5.1}Aanmaken server met Hetzner}{43}{section.5.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Maken van ISO met cloud-init configuraties}{43}{subsection.5.1.1}% 
+\contentsline {section}{\numberline {5.2}Cloud-init}{44}{section.5.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Opzetten van testomgeving met cloud-init configuraties}{44}{subsection.5.1.2}% 
+\contentsline {section}{\numberline {5.3}Ansible}{44}{section.5.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Ansible}{45}{section.5.2}% 
+\contentsline {section}{\numberline {5.4}Ansible \& cloud-init}{45}{section.5.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Cloud-init \& Ansible }{46}{section.5.3}% 
+\contentsline {chapter}{\numberline {6}Basisconfiguraties op de servers}{47}{chapter.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Ansible playbook koppelen aan cloud-init}{46}{subsection.5.3.1}% 
+\contentsline {section}{\numberline {6.1}Aanmaken configuratie bestanden}{47}{section.6.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Uitvoeren playbook}{47}{subsection.5.3.2}% 
+\contentsline {subsection}{\numberline {6.1.1}Opstellen cloud-init config bestand}{48}{subsection.6.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Opzetten Hetzner Cloud testomgeving}{49}{chapter.6}% 
+\contentsline {subsubsection}{Packages}{48}{section*.29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Aanmaken server met Hetzner}{49}{section.6.1}% 
+\contentsline {subsubsection}{Users \& Groups}{48}{section*.30}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Cloud-init}{50}{section.6.2}% 
+\contentsline {subsubsection}{Runcdm}{49}{section*.31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Ansible}{50}{section.6.3}% 
+\contentsline {subsubsection}{Ssh}{49}{section*.32}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Ansible \& cloud-init}{51}{section.6.4}% 
+\contentsline {subsection}{\numberline {6.1.2}Opstellen Ansible playbook}{49}{subsection.6.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Basisconfiguraties op de servers}{53}{chapter.7}% 
+\contentsline {subsubsection}{Packages}{50}{section*.33}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Aanmaken configuratie bestanden}{53}{section.7.1}% 
+\contentsline {subsubsection}{Mappen structuur}{50}{section*.34}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.1}Opstellen cloud-init config bestand}{54}{subsection.7.1.1}% 
+\contentsline {subsubsection}{Users \& groups}{51}{section*.35}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Packages}{54}{section*.29}% 
+\contentsline {subsubsection}{Ssh}{51}{section*.36}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Users \& Groups}{54}{section*.30}% 
+\contentsline {subsection}{\numberline {6.1.3}Ansible \& cloud-init omgevingen}{51}{subsection.6.1.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Runcdm}{55}{section*.31}% 
+\contentsline {subsubsection}{Verwijzing Ansible}{51}{section*.37}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Ssh}{55}{section*.32}% 
+\contentsline {section}{\numberline {6.2}Uitvoering \& resultaten}{52}{section.6.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.2}Opstellen Ansible playbook}{55}{subsection.7.1.2}% 
+\contentsline {subsection}{\numberline {6.2.1}Complexiteit}{52}{subsection.6.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Packages}{56}{section*.33}% 
+\contentsline {subsubsection}{Overzichtelijkheid}{52}{section*.38}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Mappen structuur}{56}{section*.34}% 
+\contentsline {subsubsection}{Aanroepen uitvoeringen}{53}{section*.39}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Users \& groups}{57}{section*.35}% 
+\contentsline {subsection}{\numberline {6.2.2}Snelheid}{53}{subsection.6.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Ssh}{57}{section*.36}% 
+\contentsline {subsection}{\numberline {6.2.3}Resultaat}{53}{subsection.6.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.3}Ansible \& cloud-init omgevingen}{57}{subsection.7.1.3}% 
+\contentsline {chapter}{\numberline {7}Server installatie en configuratie}{55}{chapter.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Verwijzig Anisble lokaal}{57}{section*.37}% 
+\contentsline {section}{\numberline {7.1}LAMP server}{55}{section.7.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Verwijzing Ansible cloud}{58}{section*.38}% 
+\contentsline {subsection}{\numberline {7.1.1}Cloud-init}{56}{subsection.7.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Uitvoering \& resultaten}{59}{section.7.2}% 
+\contentsline {subsubsection}{Opmaken bestand}{56}{section*.40}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Server installatie en configuratie}{61}{chapter.8}% 
+\contentsline {subsection}{\numberline {7.1.2}Ansible}{56}{subsection.7.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}LAMP server}{61}{section.8.1}% 
+\contentsline {subsubsection}{Installeren packages}{56}{section*.41}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.1}Cloud-init}{62}{subsection.8.1.1}% 
+\contentsline {subsubsection}{Starten services}{57}{section*.42}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.2}Ansible}{62}{subsection.8.1.2}% 
+\contentsline {subsubsection}{Php bestand}{57}{section*.43}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.3}Cloud-init \& Ansible}{62}{subsection.8.1.3}% 
+\contentsline {subsection}{\numberline {7.1.3}Cloud-init \& Ansible}{57}{subsection.7.1.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}MySQL server}{62}{section.8.2}% 
+\contentsline {section}{\numberline {7.2}MySQL server}{58}{section.7.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2.1}Cloud-init}{62}{subsection.8.2.1}% 
+\contentsline {subsection}{\numberline {7.2.1}Cloud-init}{58}{subsection.7.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2.2}Ansible}{62}{subsection.8.2.2}% 
+\contentsline {subsubsection}{Packages}{58}{section*.44}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2.3}Cloud-init \& Ansible}{62}{subsection.8.2.3}% 
+\contentsline {subsubsection}{User}{58}{section*.45}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Uitvoering \& resultaten}{62}{section.8.3}% 
+\contentsline {subsubsection}{Commando's}{58}{section*.46}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Script aanpassen en 2de keer uitvoeren}{65}{chapter.9}% 
+\contentsline {subsection}{\numberline {7.2.2}Ansible}{59}{subsection.7.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}Cloud-init aanroepen}{65}{section.9.1}% 
+\contentsline {subsection}{\numberline {7.2.3}Cloud-init \& Ansible}{60}{subsection.7.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.2}Ansible aanroepen}{66}{section.9.2}% 
+\contentsline {section}{\numberline {7.3}Uitvoering \& resultaten}{60}{section.7.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2.1}Praktisch}{66}{subsection.9.2.1}% 
+\contentsline {subsection}{\numberline {7.3.1}Complexiteit}{60}{subsection.7.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.3}Resultaat}{66}{section.9.3}% 
+\contentsline {subsection}{\numberline {7.3.2}Snelheid}{60}{subsection.7.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Container \& Cluster Configuratie}{67}{chapter.10}% 
+\contentsline {subsection}{\numberline {7.3.3}Resultaat}{61}{subsection.7.3.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.1}Docker}{67}{section.10.1}% 
+\contentsline {chapter}{\numberline {8}Script aanpassen en 2de keer uitvoeren}{63}{chapter.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1.1}Cloud-init}{67}{subsection.10.1.1}% 
+\contentsline {section}{\numberline {8.1}Cloud-init aanroepen}{63}{section.8.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1.2}Ansible}{67}{subsection.10.1.2}% 
+\contentsline {section}{\numberline {8.2}Ansible aanroepen}{64}{section.8.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1.3}Ansible \& cloud-init}{68}{subsection.10.1.3}% 
+\contentsline {subsection}{\numberline {8.2.1}Praktisch}{64}{subsection.8.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.2}Uitvoering \& resultaten}{68}{section.10.2}% 
+\contentsline {section}{\numberline {8.3}Resultaat}{64}{section.8.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.1}Lokaal}{68}{subsection.10.2.1}% 
+\contentsline {chapter}{\numberline {9}Container \& Cluster Configuratie}{65}{chapter.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Conclusie}{69}{chapter.11}% 
+\contentsline {section}{\numberline {9.1}Docker}{65}{section.9.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1.1}Cloud-init}{65}{subsection.9.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1.2}Ansible}{66}{subsection.9.1.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1.3}Ansible \& cloud-init}{67}{subsection.9.1.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.2}Uitvoering \& resultaten}{67}{section.9.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2.1}Complexiteit}{67}{subsection.9.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2.2}Snelheid}{68}{subsection.9.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2.3}Resultaat}{68}{subsection.9.2.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {10}Conclusie}{69}{chapter.10}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{71}{appendix.A}% 
 \defcounter {refsection}{0}\relax 
@@ -223,5 +239,5 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {B}Verklarende woordenlijst}{75}{appendix.B}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{79}{appendix*.39}% 
+\contentsline {chapter}{Bibliografie}{79}{appendix*.47}% 
 \contentsfinish 

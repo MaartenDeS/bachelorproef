@@ -39,7 +39,7 @@ Het eerste onderdeel van het cloud config bestand van \autocite{viktorpet} zijn 
 \autocite{viktorpet} gebruikt 2 fictieve gebruikers en SSH Keys in zijn voorbeeld. Deze publieke SSH sleutels worden geïnstalleerd op de server voor de gekozen gebruiker. In het fictieve voorbeeld dus een een publieke sleutel voor user1 en user2 op de server host. Op Ubuntu Cloud Images als de gebruikers niet aanwezig zijn, zullen deze worden geïnstalleerd op de standaard gebruiker ubuntu. 
 
 \autocite{viktorpet} maakt verbinding met de server via het commando \textit{ssh ubuntu@IPADRESS}. Via de toegevoegde public keys gaat dit zonder problemen.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 #cloud-config
 ssh_authorized_keys:
  - ssh-rsa AAA...user1@host
@@ -53,7 +53,7 @@ Het volgende voordeel van cloud-init volgens \autocite{viktorpet} is het uitvoer
 In zijn voorbeeld gebruikt \autocite{viktorpet} \textit{apt\_updgrade}. Terwijl er in Hoofstuk \ref*{ch:cloudmodules} werd gezien dat updates worden gedaan met \textit{package\_upgrade}. \textit{apt\_upgrade} is gewoon een alias voor \textit{package\_upgrade}.
 
 Ook is \textit{apt\_update} zijn standaard waarde al true, als er packages worden geïnstalleerd op de server. 
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 #cloud-config
 apt_update: true
 apt_upgrade: true
@@ -61,7 +61,7 @@ apt_upgrade: true
 
 \subsubsection{Installeren packages}
 Het volgende dat wordt bespreken is het installeren van packages. Ook dit werd al besproken in Hoofdstuk \ref*{ch:cloudmodules}. Extra informatie die nog niet gekend was geeft \autocite{viktorpet} niet. Zijn voorbeeld wordt hieronder vermeld.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 #cloud-config
 packages:
  - python-pip
@@ -71,7 +71,7 @@ packages:
 
 \subsubsection{Hostname}
 Wat \autocite{viktorpet} ook handig vindt aan cloud-init is het aanpassen van de hostname. Deze kan ook makkelijk worden aangepast.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 #cloud-config
 hostname: mynode
 fqdn: mynode.example.com
@@ -80,7 +80,7 @@ manage_etc_hosts: true
 
 \subsubsection{Commando's}
 Als er sprake is van een meer geavanceerde gebruiker moeten er ook commando's worden uitgevoerd. Er zijn 2 opties om commando's uit te voeren \textit{runcmd} en \textit{bootcmd}. Hierover kan er ook meer informatie worden gevonden in Hoofdstuk \ref*{ch:cloudmodules}.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 #cloud-config
 runcmd:
  - ls -l /root
@@ -91,7 +91,7 @@ Een laatste voordeel volgens \autocite{viktorpet} is dat als meer geavanceerde g
 Cloud-init ondersteunt samenwerking met onder andere Chef, Puppet en Salt.
 \subsubsection{Alles samenbinden}
 Ten laatste toont \autocite{viktorpet} hoe dit allemaal kan worden samengevoegd in een bestand. Dit wordt allemaal samengevoegd in een YAMl bestand en bovenaan wordt er \textit{\#cloud-config} gezet. Dit werd ook vermeld in Hoofdstuk \ref*{ch:cloud-init}
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 #cloud-config
 ssh_authorized_keys:
 - ssh-rsa AAA...user1@host
@@ -143,7 +143,7 @@ Dit playbook zorgt voor het aanmaken en opstarten van de instance. Dit wordt ged
 \newpage
 \subsubsection{Begin}
 Allereerst werd de normale gebruiker van \autocite{scottharney} aangemaakt met de nodige configuraties.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 #cloud-config
 users:
 - name: {{ ansible_user }}
@@ -157,7 +157,7 @@ sudo: ["ALL=(ALL) NOPASSWD:ALL"]
 
 \subsubsection{Server en host update}
 In het 2de deel van het bestand nam \autocite{scottharney} zijn Hostname en fqdn en werden de packages geüpdatet. Ook update hij de instances \textit{/etc/host} en tijdzone.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 hostname: "{{ item.hostname }}"
 fqdn: "{{ item.fqdn }}"
 manage_etc_hosts: true
@@ -168,7 +168,7 @@ package_upgrade: true
 
 \subsubsection{Packages}
 Om het laatste van zijn script uit te voeren had \autocite{scottharney} 2 packages nodig, namelijk: \textit{python} en \textit{awscli}. 
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 packages:
 - awscli
 - python
@@ -177,7 +177,7 @@ packages:
 \newpage
 \subsubsection{DNS zone bestand}
 Het laatste deel was het belangrijkste deel van het cloud config bestand. \autocite{scottharney} moest zijn DNS zone bestand updaten, zodat zijn EC2 instance correct werkte. Dit deed hij door met de optie \textit{write\_files} een script aan te maken om deze te updaten. Hij prefereerde deze methode boven het pushen via \textit{systemd}.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 write_files:
 - content: |
 #!/bin/sh
@@ -214,7 +214,7 @@ permissions: 0755e
 Nadat de instance is opgestart en de eerste configuraties zijn uitgevoerd, iss het tijd voor het tweede playbook. 
 
 Het eerste deel van het playbook ziet er zo uit.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 - hosts: tag_Name_candyapplegrey
   gather_facts: True
   roles:
@@ -240,7 +240,7 @@ Het eerste deel van het playbook ziet er zo uit.
 
 \subsubsection{EC2 rol}
 Dit deel van het playbook voegt de nieuwe publieke sleutel van de opgestarte host toe aan het \textit{known hosts} bestand. Maar Ansible zal ook vragen de sleutel te accepteren bij de eerste ssh. Als deze nog niet in het \textit{known hosts} bestand zit. Dit is het enige dat de EC2 role doet. Het wordt ook alleen aangeroepen als het IP adress gedefinieerd is.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 name: Add the instance to known hosts
 local_action: command sh -c 'ssh-keyscan -t rsa {{ ec2_ip_address }}
                                              >> $HOME/.ssh/known_hosts'
@@ -255,7 +255,7 @@ Voor de common rol wordt verwezen naar een andere artikel namelijk: \autocite{co
 \textbf{Sectie 1 common rol}
 
 Git is zeer belangrijk in deze rol dus koos de auteur om dit als allereerste te installeren met de rol. De ssh sleutels worden ook gekopieerd vanuit een private git repository. Erna wordt \textit{with\_items} gebruikt. Het is een looping optie in Ansible die de hier gekozen git bestanden kopieerde. Het laatste deel zorgt ervoor dat de auteur zijn private bitbucket repo's beschikbaar zijn ,met zijn vorige sleutels, vanop de instance.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 - name: install git
 become: yes
 apt:
@@ -286,7 +286,7 @@ known_hosts:
 \textbf{Sectie 2 common rol}
 
 Dit deel van \autocite{commonscottharney} zijn script, maakte hij om zijn private configuraties te doen. Dit werd ergens online gevonden, meerbepaald dankzij: \autocite{justinellin}.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 - name: do configfiles repo
 become: no
 script: /home/sharney/source/ansible-mystuff/configfiles_setup.sh  creates=/home/sharney/configfiles/.configfiles_done
@@ -296,7 +296,7 @@ become: no
 file: path=/home/sharney/.ssh/id_rsa mode=0600
 \end{lstlisting}
 
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 #!/bin/sh
 
 # do the bits to setup configflies repo
@@ -322,7 +322,7 @@ touch $HOME/configfiles/.configfiles_done
 \textbf{Sectie 3 common rol}
 
 Het volgende deel van de rol voegt een ssh github sleutel toe. Voor het clonen van publieke repos later in het in de rol. Ook worden de andere noodzakelijke packages geïnstalleerd. Sommige packages zijn evenwel niet nodig als er geen GUI aanwezig is op de instance.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 - name: github key to known_hosts
 known_hosts:
     key: "{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}"
@@ -355,7 +355,7 @@ with_items:
 \textbf{Sectie 4 common rol}
 
 Dit waren gewoon python, pip en ruby onderdelen die helpen bij het beheren van AWS.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 - name: python pip install items
 become: yes
 pip: name={{ item }} state=present
@@ -371,7 +371,7 @@ gem: name=aws-sdk-v1 state=present
 \textbf{Sectie 5 common rol}
 
 Dit deel zorgt voor de installatie van \textit{spacemacs}. \textit{spacemacs} is een linux tekst editor met de power en uitbreidbaarheid van \textit{Emacs} en de werking van \textit{vi/vim}.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
  name: check for spacemacs already imported
 stat: path=/home/sharney/.emacs.d/spacemacs.mk
 register: spacemacs_import
@@ -398,7 +398,7 @@ when: spacemacs_import.stat.exists == False
 \textbf{Sectie 6 common rol}
 
 Hier installeert \autocite{commonscottharney} zijn tijdzone. Ook worden hier bestanden gesynchroniseerd die in zijn Dropbox staan.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 - name: gen en_US.UTF-8 locale
 become: yes
 locale_gen: name=en_US.UTF-8 state=present
@@ -420,7 +420,7 @@ file: src=/home/sharney/Dropbox/.tmux.conf path=/home/sharney/.tmux.conf
 \textbf{Sectie 7 common rol}
 
 Het laaste deel conifureert de vpn. Ook worden de files van zijn website gepulled. Ten laatste is de customisatie van \textit{zsh}.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 - name: copy vpnc config
 become: yes
 copy:
@@ -444,7 +444,7 @@ copy: src=/home/sharney/.zshrc dest=/home/sharney/.zshrc
 
 \subsubsection{Ansible bestanden rol}
 Deze rol pulled alle playbooks van \autocite{scottharney} zijn git repo \textit{ansible\_mystuff} en zet het op de server. Zo kan hij vanop deze instance aan zijn playbooks werken.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 - name: install ansible 
 become: yes
 apt:
@@ -463,7 +463,7 @@ Via de OpenVPN rol kan \autocite{scottharney} zijn instance gebruiken op plaatse
 \textbf{Sectie 1 OpenVPN rol}
 
 Dit installeerde de openvpn package en kopieerde de al aanwezige configuraties naar de instance.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 - name: install openvpn
 become: yes
 apt:
@@ -478,7 +478,7 @@ copy: src=openvpn dest=/etc
 \textbf{Sectie 2 OpenVPN rol}
 
 Hier wordt ip forwarding aangezet en een \textit{iptables} is nu aanwezig voor het VPN verkeer.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 - name: set up ip forwarding
 become: yes
 sysctl: name="net.ipv4.ip_forward" value=1 sysctl_set=yes state=present 
@@ -497,7 +497,7 @@ iptables: state=present table=nat chain=POSTROUTING
 \textbf{Sectie 3 OpenVPN rol}
 
 Volgens \autocite{scottharney} was dit het moeilijste deel van zijn playbook. Voor dit deel heeft hij lang moeten troubleshooten. Het grootste probleem was een bug die openvpn reports niet goed bij hield in Xenial. \autocite{scottharney} heeft zo zijn bug opgelost.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 - name: fix debian bug in openvpn service
 https://bugs.launchpad.net/ubuntu/+source/openvpn/+bug/1580356?
 become: yes
@@ -507,7 +507,7 @@ copy: src=openvpn@.service dest=/lib/systemd/system/
 \textbf{Sectie 4 OpenVPN rol}
 
 Er is een \textit{systemd} module in Ansible 2.2 maar \autocite{scottharney} koos er voor om dit toch via de command line te doen. Dit is iets dat hij later zou kunnen aanpassen naar de module van Ansible. Maar momenteel werkt dit al.
-\begin{lstlisting}
+\begin{lstlisting}[basicstyle=\small]
 - name: restart systemd daemon after updating unit config
 become: yes
 command: systemctl daemon-reload

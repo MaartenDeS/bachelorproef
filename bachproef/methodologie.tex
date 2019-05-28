@@ -12,11 +12,11 @@
 %% onderzoeksvraag.
 In dit hoofdstuk wordt besproken welke methodes er gehanteerd zijn om de resultaten te bekomen. Dit hoofdstuk is onderverdeeld in 2 delen. 
 
-Ten eerste wordt er info gegeven over de  testomgeving. 
+Ten eerste wordt er info gegeven over de testomgeving. 
 
 Ten tweede wordt er besproken welke testcriteria er gekozen zijn en waarom. In deze bachelorproef wordt er vooral focus gelegd op de praktijk, vermits het een praktische onderzoek is.
 
-\section{Testomgevingen}
+\section{Testomgeving}
 Voor het onderzoek moeten er verschillende testomgevingen worden opgesteld, om alles te kunnen testen. Er is een omgeving op cloud servers. Voor deze omgeving wordt er Hetzner Cloud gebruikt. In de inleiding werd het bedrijf Be-Mobile al vernoemd en werd ook al vermeld dat zij één van de drijfveren van het onderzoek zijn. Via hen is toegang verkregen op een Hetzner Cloud omgeving om in te testen. 
 
 Hetzner is een Duits bedrijf dat gespecialiseerd is in het hosten van servers. Hun datacenters liggen in Nuremberg (Duitsland), Falksenstein (Duitsland) en Helsinki (Finland). 
@@ -26,7 +26,7 @@ Via de commandline tool werd de server aangemaakt. Ook wordt er een SSH sleutel 
 \section{Testcriteria}
 Het volgende dat wordt besproken is de keuze van de testcriteria die worden gekozen in hoofdstukken~\ref{ch:basisconf},~\ref{ch:serverconf},~\ref{ch:naopstarten} en~\ref{ch:container}. 
 
-\subsection{Hoofdstukken}
+\subsection{Segmenten}
 In Hoofdstuk \ref*{ch:basisconf} worden basis configuraties op de servers uitgevoerd. Dit om na te gaan wat de beste optie is als er gewoon wat kleine basis configuraties worden veranderd. Dit zal het aanmaken van gebruikers en groepen, aanmaken van mappenstructuur, installeren van packages en het toevoegen van een SSH sleutel zijn. Hier wordt gekeken naar de complexititeit van de configuratie bestanden en snelheid van uitvoeren.
 
 In Hoofdstuk \ref*{ch:serverconf} worden verschillende servers, LAMP en MySQL, geïnstalleerd. Zo wordt bestudeerd of het installeren en configureren van servers een ander resultaat heeft dan basis configuraties. Ook om na te gaan of er verschillen zijn per server. Hier wordt ook gekeken naar de complexititeit van de configuratie bestanden en snelheid van uitvoeren.
@@ -36,10 +36,10 @@ In Hoofdstuk \ref*{ch:naopstarten} wordt gekeken met welke optie je de server be
 Ten laatste wordt in Hoofdstuk \ref*{ch:container} de configuratie van containers onderzocht. Bijna elk bedrijf gebruikt containers voor hun netwerk. Het is dus logisch om te bekijken wat hier voor de resultaten zijn. Misschien zijn deze wel helemaal anders dan de resultaten van hiervoor? Ook hier wordt wel weer gekeken naar de complexititeit van de configuratie bestanden en snelheid van uitvoeren.
 
 \subsection{Complexiteit}
-Met de complexiteit van bestanden wordt bedoelt, hoe verzichtelijk een bestand juist is na het invullen van alle configuraties. Dit kan misschien ervaren worden als iets subjectiever maar via screenshots zullen de conclusies hier worden bewezen.
+Met de complexiteit van bestanden wordt bedoelt, hoe overzichtelijk een bestand juist is na het invullen van alle configuraties. Dit kan misschien ervaren worden als iets subjectiever maar doordat de bestanden worden weergegeven zullen de resultaten worden bewezen.
 
 \subsection{Snelheid van uitvoeren}
-De snelheid van uitvoer, moet wel met een korreltje zou worden bekeken. Doordat cloud-init standaard bepaalde installatie uitvoert bij het opstarten van een server. Heeft dit altijd al een langere uitvoeringssnelheid dan Ansible. Het is wel nog steeds interessant om te bekijken. Bij sommige kan het verschil misschien kleiner zijn dan verwacht
+De snelheid van uitvoer, moet wel met een korreltje zou worden bekeken. Doordat cloud-init standaard bepaalde installatie uitvoert bij het opstarten van een server. Deze duren in deze setup tussen de 20 en 45 seconden. Heeft dit altijd al een langere uitvoeringssnelheid dan Ansible. Het is wel nog steeds interessant om te bekijken. Bij sommige kan het verschil misschien kleiner zijn dan verwacht
 
 %% Basis Configuratie, sever inst en conf, instellingen aanpassen na opstarten en container/cluster.
 
