@@ -98,9 +98,7 @@ De complexiteit van beide bestanden is wat hetzelfde. Bij cloud-init is het miss
 Ansible kan wel makkelijker worden uitgebreid en aangepast. Er moet gewoon een extra taak worden toegevoegd en er kan een extra docker container worden aangemaakt. Bij cloud-init kan dit ook worden gedaan via het docker-compose bestand. Maar als er meerdere containers blijven toegevoegd worden, gaat dit niet meer overzichtelijk zijn. Bij Ansible kunnen alle aparte containers nog goed onderscheiden worden. Ook is de ouput bij Ansible hiervoor veel handiger. Er kan perfect worden meegevolg welke container al aangemaakt is, en welke nog niet.
 
 \subsection{Snelheid}
-Als we naar snelheden kijken is Ansible toch weer de beste. Zelfs met de aftrekking van de initïele startconfiguraties komen de andere 2 niet in de buurt.
-
-Wat ook wel interessant is dat cloud-init en ``Ansible en cloud-init'' praktisch dezelfde tijden halen. Terwijl
+Als we naar snelheden (Tabel \ref{tab:tabel resultaten container}) kijken is Ansible  weer de beste. Zelfs met de aftrekking van de initïele startconfiguraties komen de andere 2 niet in de buurt. Dit is weer een duidelijk pluspunt voor Ansible.
 \begin{table}[!htb]
 	\centering
 	\begin{tabular}{| l | l | l |l |}

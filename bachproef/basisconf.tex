@@ -10,7 +10,7 @@ In dit hoofdstuk zal uitglegd worden hoe de playbooks en cloudconfig bestanden w
 
 Eerst wordt uitgelegd hoe de cloud-init configuraties worden gedaan, erna het Ansible playbook. Ten laatste zullen de set-ups worden gemaakt waar een combinatie wordt gebruikt.
 
-De gebruiker die zal worden aangemaakt is \textit{bachelor} met wachtwoord \textit{proef}. De gebruiker zal behoren tot de groep \textit{test} die ook zal worden aangemaakt. De packages die zullen worden geïnstalleerd zijn: \textit{pwgen}, \textit{tree} en \textit{git}. De mappenstructuur die zal worden aangemaakt ziet er uit zoals die foto hieronder. En ten laatste zal er op de server een publieke ssh sleutel worden toegevoegd zodat er toegang is vanaf een test server.
+De gebruiker die zal worden aangemaakt is \textit{bachelor} met wachtwoord \textit{proef}. De gebruiker zal behoren tot de groep \textit{test} die ook zal worden aangemaakt. De packages die zullen worden geïnstalleerd zijn: \textit{pwgen}, \textit{tree} en \textit{git}. De mappenstructuur die zal worden aangemaakt ziet er uit zoals die foto hieronder. En ten laatste zal er op de server een publieke ssh sleutel worden toegevoegd zodat er toegang is vanaf een test server. Figuur \ref{fig:mappen} is een visueel voorbeeld van de mappenstructuur.
 
 \begin{figure}[!htb]
 	\center{\includegraphics[width=0.45\textwidth]{img/mappenstructuur.png}}
@@ -168,7 +168,7 @@ git clone <repo>'
 \section{Uitvoering \& resultaten}
 \subsection{Complexiteit}
 \subsubsection{Overzichtelijkheid}
-Eerst en vooral wordt er gekeken naar het de overzichtelijkheid van het playbook bestand en het cloudconfig bestand. Terwijl beide bestanden yaml bestanden zijn, zien ze er toch compleet anders uit. In het cloudconfig bestand is alles mooi onderverdeeld in verschillende modules, die de taken uitvoert. Terwijl bij het Ansible playbook alles opgesomd bij de tasks staat. Cloud-init is hierdoor veel overzichtelijker. Het is hierdoor ook makkelijker om het bestand te wijzigen. Bij het gebruik van de combinatie het playbook wel overzichtelijker doordat dit maar een paar taken heeft.
+Eerst en vooral wordt er gekeken naar het de overzichtelijkheid van het playbook bestand en het cloudconfig bestand. Terwijl beide bestanden yaml bestanden zijn, zien ze er toch compleet anders uit. In het cloudconfig bestand is alles mooi onderverdeeld in verschillende modules, die de taken uitvoert. Terwijl bij het Ansible playbook alles opgesomd bij de tasks staat. Cloud-init is hierdoor veel overzichtelijker. Het is hierdoor ook makkelijker om het bestand te wijzigen. Bij het gebruik van de combinatie het playbook wel overzichtelijker doordat dit maar een paar taken heeft. In figuur \ref{fig:basisconf_layout} staan de layouts van het cloud-init en Ansibles bestand.
 \begin{figure}[!htb]
     \centering
     {{\includegraphics[width=0.45\textwidth]{img/basiscloud.png} }}%

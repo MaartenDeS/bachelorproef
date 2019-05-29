@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.26)  29 MAY 2019 23:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.26)  30 MAY 2019 00:03
 entering extended mode
 **./bachproef-tin.tex
 (bachproef-tin.tex
@@ -1857,13 +1857,13 @@ Hoofdstuk 2.
 [19
 
 ]
-<img/playbookex.png, id=401, 733.99219pt x 321.45094pt>
+<img/playbookex.png, id=402, 733.99219pt x 321.45094pt>
 File: img/playbookex.png Graphic file (type png)
 <use img/playbookex.png>
 Package pdftex.def Info: img/playbookex.png  used on input line 23.
 (pdftex.def)             Requested size: 384.1096pt x 168.22472pt.
  [20 <./img/playbookex.png>]
-<img/agalaxy.png, id=408, 1096.84781pt x 508.14844pt>
+<img/agalaxy.png, id=410, 1096.84781pt x 508.14844pt>
 File: img/agalaxy.png Graphic file (type png)
 <use img/agalaxy.png>
 Package pdftex.def Info: img/agalaxy.png  used on input line 33.
@@ -1876,13 +1876,13 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 55.
  [22]
-<img/userdatascript.png, id=428, 393.72093pt x 170.13562pt>
+<img/userdatascript.png, id=431, 393.72093pt x 170.13562pt>
 File: img/userdatascript.png Graphic file (type png)
 <use img/userdatascript.png>
 Package pdftex.def Info: img/userdatascript.png  used on input line 87.
 (pdftex.def)             Requested size: 384.1096pt x 165.98149pt.
  [23]
-<img/cloudconfig.png, id=438, 452.4403pt x 217.5628pt>
+<img/cloudconfig.png, id=442, 452.4403pt x 217.5628pt>
 File: img/cloudconfig.png Graphic file (type png)
 <use img/cloudconfig.png>
 Package pdftex.def Info: img/cloudconfig.png  used on input line 95.
@@ -2038,7 +2038,7 @@ Hoofdstuk 5.
 
 ]
 Hoofdstuk 6.
-<img/mappenstructuur.png, id=958, 168.63pt x 96.36pt>
+<img/mappenstructuur.png, id=963, 168.63pt x 96.36pt>
 File: img/mappenstructuur.png Graphic file (type png)
 <use img/mappenstructuur.png>
 Package pdftex.def Info: img/mappenstructuur.png  used on input line 16.
@@ -2059,12 +2059,12 @@ Overfull \hbox (46.25247pt too wide) in paragraph at lines 136--137
  []
 
 [53]
-<img/basiscloud.png, id=1075, 391.4625pt x 359.09157pt>
+<img/basiscloud.png, id=1081, 391.4625pt x 359.09157pt>
 File: img/basiscloud.png Graphic file (type png)
 <use img/basiscloud.png>
 Package pdftex.def Info: img/basiscloud.png  used on input line 174.
 (pdftex.def)             Requested size: 192.0548pt x 176.17557pt.
-<img/basisansible.png, id=1076, 469.755pt x 660.96938pt>
+<img/basisansible.png, id=1082, 469.755pt x 660.96938pt>
 File: img/basisansible.png Graphic file (type png)
 <use img/basisansible.png>
 Package pdftex.def Info: img/basisansible.png  used on input line 176.
@@ -2100,7 +2100,7 @@ Overfull \hbox (33.11237pt too wide) in paragraph at lines 183--185
  []
 
 [61] [62]
-<img/ansibleoutput.png, id=1259, 554.82281pt x 418.56375pt>
+<img/ansibleoutput.png, id=1267, 554.82281pt x 418.56375pt>
 File: img/ansibleoutput.png Graphic file (type png)
 <use img/ansibleoutput.png>
 Package pdftex.def Info: img/ansibleoutput.png  used on input line 255.
@@ -2123,7 +2123,7 @@ Hoofdstuk 10.
 [71
 
 ]
-<img/cloudoutput.png, id=1369, 880.03781pt x 588.69937pt>
+<img/cloudoutput.png, id=1379, 880.03781pt x 588.69937pt>
 File: img/cloudoutput.png Graphic file (type png)
 <use img/cloudoutput.png>
 Package pdftex.def Info: img/cloudoutput.png  used on input line 34.
@@ -2162,7 +2162,7 @@ Package logreq Info: Writing requests to 'bachproef-tin.run.xml'.
 Here is how much of TeX's memory you used:
  41409 strings out of 492946
  771728 string characters out of 3125378
- 1375611 words of memory out of 3000000
+ 1375608 words of memory out of 3000000
  43541 multiletter control sequences out of 15000+200000
  607810 words of font info for 276 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2175,9 +2175,9 @@ fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Maarten/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Maarten/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Maarten/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachproef-tin.pdf (86 pages, 852415 bytes).
+Output written on bachproef-tin.pdf (86 pages, 854581 bytes).
 PDF statistics:
- 1930 PDF objects out of 2073 (max. 8388607)
+ 1940 PDF objects out of 2073 (max. 8388607)
  859 named destinations out of 1000 (max. 500000)
  41679 words of extra memory for PDF output out of 42996 (max. 10000000)
 

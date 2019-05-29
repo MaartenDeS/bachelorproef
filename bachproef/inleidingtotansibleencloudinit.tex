@@ -18,7 +18,7 @@ Dit zorgt ervoor dat Ansible veiliger wordt. Alleen de informatie die de gebruik
 \subsection{Playbook - Roles}
 Ansible voert de automatisatie en deployment uit via playbooks. Dit zijn yaml bestanden die beschrijven hoe de automatisatie moet verlopen. 
 
-Deze playbooks bevatten verschillende ``plays'' die de automatisatie definiëren over verschillende hosts. Deze hosts staan bekend als de inventory. Elke ``play'' bevat verschillende taken die één, enkele of alle hosts moeten uitvoeren. Elke taak roept een Ansible module aan, een klein stukje code dat een specifieke taak uitvoert. Deze kunnen zeer simpel zijn, een bestand op een machine zetten of een specifieke package installeren. Maar ze kunnen ook complex zijn zoals een gehele CloudFormation opstarten in Amazon EC2.
+Deze playbooks bevatten verschillende ``plays'' die de automatisatie definiëren over verschillende hosts. Deze hosts staan bekend als de inventory. Elke ``play'' bevat verschillende taken die één, enkele of alle hosts moeten uitvoeren. Elke taak roept een Ansible module aan, een klein stukje code dat een specifieke taak uitvoert. Deze kunnen zeer simpel zijn, een bestand op een machine zetten of een specifieke package installeren. Maar ze kunnen ook complex zijn zoals een gehele CloudFormation opstarten in Amazon EC2. Figuur \ref{fig:playbook} is een voorbeeld van een playbook. 
 \begin{figure}[!htb]
 	\center{\includegraphics[width=0.9\textwidth]{img/playbookex.png}}
 	\caption{Voorbeeld van een Ansible playbook. \autocite{ansibleplaybook}}
@@ -28,7 +28,7 @@ Deze playbooks bevatten verschillende ``plays'' die de automatisatie definiëren
 Ansible is geschreven zodat als ze de playbook uitvoeren ook checken of deze task nog moet gedaan worden. Bijvoorbeeld als een Ansible taak is om een webserver op te starten, zal Ansible deze alleen uitvoeren als de webserver nog niet is opgestart. Dit staat bekend als idempotentie. Het zorgt ervoor dat de configuratie altijd snel en efficiënt wordt uitgevoerd.
 
 \newpage
-Met Ansible kunnen taken ook ingekapseld worden in een role. Dit wordt gebruikt als er een specifieke configuratie meerdere keren wordt uitgevoerd, bijvoorbeeld het opzetten van een webserver. De Ansible Galaxy site bevat veel roles die kunnen gebruikt en aangepast worden voor het gebruik in een playbook.
+Met Ansible kunnen taken ook ingekapseld worden in een role. Dit wordt gebruikt als er een specifieke configuratie meerdere keren wordt uitgevoerd, bijvoorbeeld het opzetten van een webserver. De Ansible Galaxy site bevat veel roles die kunnen gebruikt en aangepast worden voor het gebruik in een playbook. Figuur \ref{fig:agalaxy} is een screenshot van de Ansible Galaxy site.
 \begin{figure}[!htb]
 	\center{\includegraphics[width=0.9\textwidth]{img/agalaxy.png}}
 	\caption{Ansible Galaxy site met lijst van roles.}
@@ -82,7 +82,7 @@ Ook zijn er 2 modules die Chef en Puppet installeren, configureren en starten. D
 Net zoals Ansible zijn playbook heeft, heeft cloud-init zijn user data. Ook heeft cloud-init de meta-data, maar deze wordt meegegeven door het cloud platform zelf. Dit zijn bijvoorbeeld de server naam en het server id. De 2 bekendste methodes om user data mee te geven zijn User-Data Script en Cloud Config Data. 
 
 \subsubsection{User-Data Script}
-Het User-Data script een Linux script dat de server overloopt voor dat hij opstart. Het moet altijd beginnen met \textit{!\#} of \textit{Content-Type: text/x-shellscript}. Als er echt wordt gebruikt gemaakt van cloud-init wordt deze methode niet gebruikt. De modules kun je via zo een script bijvoorbeeld niet aanroepen. Dit is eerder voor gebruikers die al een script hebben. In plaats van dit om te zetten naar Cloud Config Data, kunnen ze dat dan script gebruiken.
+Het User-Data script een Linux script dat de server overloopt voor dat hij opstart. Het moet altijd beginnen met \textit{!\#} of \textit{Content-Type: text/x-shellscript}. Als er echt wordt gebruikt gemaakt van cloud-init wordt deze methode niet gebruikt. De modules kun je via zo een script bijvoorbeeld niet aanroepen. Dit is eerder voor gebruikers die al een script hebben. In plaats van dit om te zetten naar Cloud Config Data, kunnen ze dat dan script gebruiken. Figuur \ref{fig:udatascript} is een voorbeeld van een user-data script.
 \begin{figure}[!htb]
 	\center{\includegraphics[width=0.9\textwidth]{img/userdatascript.png}}
 	\caption{Voorbeeld User-Data Script.}
@@ -90,7 +90,7 @@ Het User-Data script een Linux script dat de server overloopt voor dat hij opsta
 \end{figure}
 \newpage
 \subsubsection{Cloud Config Data}
-De populairste methode is Cloud Config Data. Dit is een yaml bestand met de configuratie van de server in. Een Cloud Config bestand begint altijd met \textit{\#cloud-config}. In het bestand worden de modules opgelijst die worden gebruikt en daaronder dan hun configuraties. Dit bestand is veel overzichtelijker dan een script om later aan te passen of om te beheren. Ook heeft het wat gelijkenissen met het playbook van Ansible, doordat dit beide yaml bestanden zijn.
+De populairste methode is Cloud Config Data. Dit is een yaml bestand met de configuratie van de server in. Een Cloud Config bestand begint altijd met \textit{\#cloud-config}. In het bestand worden de modules opgelijst die worden gebruikt en daaronder dan hun configuraties. Dit bestand is veel overzichtelijker dan een script om later aan te passen of om te beheren. Ook heeft het wat gelijkenissen met het playbook van Ansible, doordat dit beide yaml bestanden zijn. Figuur \ref{fig:cloudconfig} is een voorbeeld een cloudconfig bestand.
 \begin{figure}[!htb]
 	\center{\includegraphics[width=0.9\textwidth]{img/cloudconfig.png}}
 	\caption{Voorbeeld Cloud Config Data.}
