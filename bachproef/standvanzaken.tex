@@ -46,7 +46,7 @@ ssh_authorized_keys:
  - ssh-rsa AAA...user2@host
 \end{lstlisting} 
 
-\newpage
+
 \subsubsection{Systeem updates}
 Het volgende voordeel van cloud-init volgens \autocite{viktorpet} is het uitvoeren van systeem updates tijdens de eerste boot. Dit is een van de functies die al werd besproken in Hoofdstuk \ref*{ch:cloudmodules}.
 
@@ -85,6 +85,7 @@ Als er sprake is van een meer geavanceerde gebruiker moeten er ook commando's wo
 runcmd:
  - ls -l /root
 \end{lstlisting} 
+\newpage
 \subsubsection{Server coniguration manager}
 Een laatste voordeel volgens \autocite{viktorpet} is dat als meer geavanceerde gebruiker er ook de mogelijkheid is om een extra Server Configuaration Manager te gebruiken. 
 
@@ -117,8 +118,6 @@ runcmd:
 
 \section{Using Ansible to Bootstrap My Work Environment Part 4}
 Het tweede artikel is: \textbf{Using Ansible to Bootstrap My Work Environment Part 4}. Het is een Blogpost geschreven door Scott Harney. \autocite{scottharney} beschrijft in zijn blogpost hoe hij zijn werk omgeving opstart via Ansible met behulp van cloud-init. 
-
-% tot hier was spellcheck en woorden bekeken.
 
 Het is het beste artikel dat werd gevonden waar Ansible en cloud-init beide expliciet werden gebruikt. Voor het eerst werd een omgeving weergegeven die opgezet is door een samenwerking van beide. In \autocite{scottharney} wordt beschreven hoe Scott Harney een EC2 instance op zet op AWS. AWS is één van de cloud providers die cloud-init ondersteunt. Het artikel is opgedeeld in 4 onderdelen. 
 
@@ -368,6 +367,7 @@ become: yes
 gem: name=aws-sdk-v1 state=present
 \end{lstlisting}
 
+\newpage
 \textbf{Sectie 5 common rol}
 
 Dit deel zorgt voor de installatie van \textit{spacemacs}. \textit{spacemacs} is een linux tekst editor met de power en uitbreidbaarheid van \textit{Emacs} en de werking van \textit{vi/vim}.

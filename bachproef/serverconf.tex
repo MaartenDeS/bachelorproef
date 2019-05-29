@@ -96,6 +96,7 @@ src: /repo/index.hphp
 dest: /var/www/html/index.php
 \end{lstlisting}
 
+\newpage
 \subsection{Cloud-init \& Ansible}
 \label{ch:cloudansiserverconf}
 Voor de configuratie van Ansible en cloud-init worden de taken in 2 verdeeld. 
@@ -210,7 +211,7 @@ Bij Ansible daarentegen zijn er door de verschillende modules allemaal verschill
 
 Ook kunnen er met Ansible meer geavanceerde configuraties worden uitgevoerd bij beide servers. Cloud-init is beperkt tot de configuraties die via een commando kunnen worden gedaan. Ansible kan veel meer uitvoeren. 
 
-
+\newpage
 \subsection{Snelheid}
 Qua snelheden is het vrij duidelijk. Ansible is veel efficiënter en sneller in het uitvoeren van de taken dan ``Ansible en cloud-init'' en cloud-init. Het verschil zonder de initiële configuraties doet er zelf niet toe. 
 
@@ -251,7 +252,7 @@ Voor server configuratie is het duidelijk dat Ansible de beste optie is. Ansible
 
 Ook door de output die Ansible geeft (Figuur \ref{fig:Ansibleoutput}) is het veel makkelijker om fouten uit een server configuratie te halen. Door de vele configuratie die deze scripts soms hebben, is het overzichtelijk dat in de output alles is opgelijst als 1 taak.
 \begin{figure}[!htb]
-    \center{\includegraphics[width=0.9\textwidth]{img/ansibleoutput.png}}
+    \center{\includegraphics[width=1\textwidth]{img/ansibleoutput.png}}
     \caption{Ansible output voorbeeld.}
     \label{fig:Ansibleoutput}
 \end{figure}

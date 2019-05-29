@@ -25,21 +25,30 @@
 % Wie zijn bachelorproef in het Nederlands schrijft, kan dit negeren, de inhoud
 % wordt niet in het document ingevoegd.
 
-\IfLanguageName{english}{%
-\selectlanguage{dutch}
-\chapter*{Samenvatting}
-\lipsum[1-4]
-\selectlanguage{english}
-}{}
+%\IfLanguageName{english}{%
+%\selectlanguage{dutch}
+%\chapter*{Samenvatting}
+%\lipsum[1-4]
+%\selectlanguage{english}
+%}{}
 
 %%---------- Samenvatting -----------------------------------------------------
 % De samenvatting in de hoofdtaal van het document
 
 \chapter*{\IfLanguageName{dutch}{Samenvatting}{Abstract}}
 
-Maken als bachelorproef klaar is.
+Cloud-init en Ansible zijn beide server management configuration tools. Dit zijn tools die servers kunnen configureren. Terwijl Ansible toch een grote speler en bekende naam is in dit terrein, is cloud-init dit toch niet. Hier wordt een onderzoek gevoerd om te bekijken of cloud-init Ansible overbodig kan maken of is het mogelijk dat deze kunnen samenwerken?
+
+Dit werk is gemaakt in samenspraak en in opdracht van het bedrijf Be-Mobile. Zij werkten al een tijd met Ansible om servers te configureren maar botste op een nieuwe technologie: cloud-init. Hun vraag was of de technologie nuttig was in hun setup. Na hier onderzoek over te doen, was er nog geen expliciet antwoord over te vinden. Hierdoor werd dit onderzoek gestart.
+
+Het onderzoek is opgedeeld in 2 delen. Allereest het theoretische gedeelte. Hierin worden Ansible en cloud-init apart bekeken en besproken. Erna werden 2 artikels, \textit{An introduction to server provisioning with CloudInit} en \textit{Using Ansible to Bootstrap My Work Environment Part 4}, besproken. Deze artikels gingen over Ansible en cloud-init. Het tweede deel is het praktisch gedeelte, hier worden verschillende testen uitgevoerd. Bij alle testen worden er servers opgezet met bepaalde configuraties in Hetzner Cloud, een cloud provider. Er wordt op 3 manieren configuraties uitgevoerd: met cloud-init, met Ansible en met Ansible en cloud-init.  Er worden 4 soorten configuraties gedaan: de basis configuraties (installeren packages, aanmaken users,...), server configuraties (een LAMP en MySQL server), configuratie na start-up (bekijken hoe er via het script een extra aanpassing kan worden gedaan) en containerization (docker containers op de server). Per hoofdstuk worden de configuratie bestanden opgesteld en de resultaten besproken. Er wordt vooral gekeken naar de complexiteit van de bestanden en de doorlooptijd van de tools.
+
+\newpage
+Het resultaat is niet het geen dat initieel werd verwacht. Het verwachtte resultaat was dat elke server zijn eigen verhaal ging hebben, en dit was toch niet. Uiteindelijk was cloud-init in basisconfiguraties globaal gezien beter. Maar vanaf de iets geavanceerde configuraties was Ansible of ``cloud-init en Ansible'' beter aangewezen. Voor configuraties na de start-up was Ansible beter. Cloud-init ondersteunde deze functie niet in de manier dat er hier mee gewerkt werd. 
+
+De conclusie was dus duidelijk cloud-init kan alleen gebruikt worden voor basis configuraties. Maar vanaf meer geavanceerde configuraties, is het best om over te schakelen naar Ansible of Ansible bij cloud-init te betrekken. Er zijn twee vragen die na dit onderzoek kunnen worden gesteld, waar er in de toekomst onderzoek naar kan worden gedaan. Heeft een andere cloud-provider hetzelfde resultaat als Hetzner Cloud? En heeft een andere aanroeping van de scripts een effect op het resultaat?
 
 
-DIE AFBEELDING bibliografie van die mail van school check up voor huidige afbeeldingen
 
-TEST criteria method op einde aanpassen
+
+

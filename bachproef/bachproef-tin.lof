@@ -9,7 +9,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Ansible Galaxy site met lijst van roles.}}{21}{figure.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Voorbeeld User-Data Script.}}{23}{figure.2.3}% 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Voorbeeld User-Data Script.}}{24}{figure.2.3}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Voorbeeld Cloud Config Data.}}{24}{figure.2.4}% 
 \defcounter {refsection}{0}\relax 
@@ -21,19 +21,21 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Mappen structuur basis configuraties.}}{48}{figure.6.1}% 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Mappen structuur basis configuraties.}}{50}{figure.6.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Cloud-init en Ansible basis configuraties layout.}}{52}{figure.6.2}% 
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Ansible output voorbeeld.}}{62}{figure.7.1}% 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Cloud-init en Ansible basis configuraties layout.}}{54}{figure.6.2}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Ansible output voorbeeld.}}{64}{figure.7.1}% 
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Cloud-init en Ansible outputs.}}{72}{figure.10.1}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

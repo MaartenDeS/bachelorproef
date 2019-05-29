@@ -9,6 +9,7 @@ Ansible is een open source IT configuration management en deployment tool. Ansib
 
 Ansible staat bekend als een systeem dat makkelijk te leren is als IT administrator, ontwikkelaar of manager. Het probeert er voor te zorgen dat het makkelijk te verstaan is en makkelijk om zelf op te bouwen. Zo kunnen nieuwe gebruikers dit eenvoudig en snel oppikken.Ze proberen uniek te zijn in toegankelijkheid voor gebruikers. Ze willen dat er veel aanpassingsmogelijkheid is voor de expertgebruikers. Maar ook zeer toegankelijk en eenvoudig voor nieuwe gebruikers.
 
+\newpage
 \subsection{Architectuur}
 Eén van de belangrijkste verschillen tussen Ansible en andere configuratie management tools, is zijn architectuur. Ansible gaat uit van het ``push'' model. Ook is er geen additionele software nodig om machines bruikbaar te maken voor Ansible. Het heeft geen extra gebruikers of referenties nodig om te draaien. Het gebruikt gewoon de informatie die de user meegeeft. Daarbij hoort ook dat Ansible geen administrator of sudo toegang nodig heeft. Ansible wordt standaard bestuurt door een remote computer.
 
@@ -26,6 +27,7 @@ Deze playbooks bevatten verschillende ``plays'' die de automatisatie definiëren
 
 Ansible is geschreven zodat als ze de playbook uitvoeren ook checken of deze task nog moet gedaan worden. Bijvoorbeeld als een Ansible taak is om een webserver op te starten, zal Ansible deze alleen uitvoeren als de webserver nog niet is opgestart. Dit staat bekend als idempotentie. Het zorgt ervoor dat de configuratie altijd snel en efficiënt wordt uitgevoerd.
 
+\newpage
 Met Ansible kunnen taken ook ingekapseld worden in een role. Dit wordt gebruikt als er een specifieke configuratie meerdere keren wordt uitgevoerd, bijvoorbeeld het opzetten van een webserver. De Ansible Galaxy site bevat veel roles die kunnen gebruikt en aangepast worden voor het gebruik in een playbook.
 \begin{figure}[!htb]
 	\center{\includegraphics[width=0.9\textwidth]{img/agalaxy.png}}
@@ -66,6 +68,7 @@ Groepen kunnen worden toegevoegd door deze aan de richtlijn \textit{groups} toe 
 
 Gebruikers kunnen dan weer toegevoegd worden door deze aan de richtlijn \textit{users} toe te voegen. Ook bij de gebruikers kan er nog extra configuratie gedaan worden per gebruiker.
 
+\newpage
 \subsubsection{Packages}
 Voor het beheren en configureren van packages zijn er verschillende modules: \textbf{Apt Configure}, \textbf{Apt Pipelining}, \textbf{Package Update Upgrade Install}, \textbf{Snap}, \textbf{Snappy} en \textbf{Yum Add Repo}. Er kunnen packages geïnstalleerd en geconfigureerd worden via Yum en Apt. Meestal ondersteunt een besturingssysteem Yum of Apt. Voor de installatie van een package moeten deze geplaatst worden bij de richtlijn \textit{packages}. Cloud-init weet zelf of het met yum of apt wordt gedaan. De configuratie en het toevoegen van package repo's gebeurt via Apt Configure, Apt Pipelinig en Yum Add Repo. Ook ondersteunt cloud-init de installatie van snap packages. Dit zijn gecontaineriseerde packages. Via Snappy kan deze geconfigureerd worden.
 
@@ -85,7 +88,7 @@ Het User-Data script een Linux script dat de server overloopt voor dat hij opsta
 	\caption{Voorbeeld User-Data Script.}
 	\label{fig:udatascript}
 \end{figure}
-
+\newpage
 \subsubsection{Cloud Config Data}
 De populairste methode is Cloud Config Data. Dit is een yaml bestand met de configuratie van de server in. Een Cloud Config bestand begint altijd met \textit{\#cloud-config}. In het bestand worden de modules opgelijst die worden gebruikt en daaronder dan hun configuraties. Dit bestand is veel overzichtelijker dan een script om later aan te passen of om te beheren. Ook heeft het wat gelijkenissen met het playbook van Ansible, doordat dit beide yaml bestanden zijn.
 \begin{figure}[!htb]
@@ -94,6 +97,7 @@ De populairste methode is Cloud Config Data. Dit is een yaml bestand met de conf
 	\label{fig:cloudconfig}
 \end{figure}
 
+\newpage
 \subsection{Omgevingen}
 De naam van het programma zegt al genoeg. Cloud-init is een service gemaakt voor cloud instanties en cloud platformen. Bij cloud platformen heb je de optie om user data toe te voegen aan de server(s) die je opstart. Meestal is dat een tekst vak waar je data kan invoeren. Dit kan een User-Data script zijn of een Cloud Config bestand. Voorbeelden van cloud platformen zijn: RackSpace, Amazon Web Services, Hetzner en IBM. 
 
