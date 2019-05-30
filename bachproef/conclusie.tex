@@ -43,13 +43,13 @@ De verwachtingen zijn toch gedeeltelijke anders met de uiteindelijke resultaten/
 
 Dit is niet helemaal lijn met het effectieve resultaat. Er werd verwacht dat elke omgeving zijn eigen verhaal ging hebben en dat is toch niet gebeurt. Er kwam altijd één constante boven water. Cloud-init is goed voor de basis maar als er geavanceerder wilt gegaan worden is Ansible duidelijk beter. 
 
-Uiteindelijk werd er verwacht dat cloud-init meer functionaliteiten ging hebben dat dat het uiteindelijk heeft. Er werd wel verwacht da Ansible ruimer ging zijn van mogelijkheden, aangezien dit veel populairder is. Maar er werd niet verwacht dat cloud-init er zoveel minder ging hebben.
+Uiteindelijk werd er verwacht dat cloud-init meer functionaliteiten ging hebben dan dat het uiteindelijk heeft. Er werd wel verwacht da Ansible ruimer ging zijn van mogelijkheden, aangezien dit veel populairder is. Maar er werd niet verwacht dat cloud-init er zoveel minder ging hebben.
 
 
 \section{Verdere uitbreiding?}
-Het onderzoek kan worden uitgebreid. Een restrictie die dit onderzoek had, is dat er maar één cloud omgeving kon worden gewerkt. Het zou interessant om te bekijken of er in andere omgevingen hetzelfde resultaat zou zijn of misschien iets helemaal anders. Ook de aanroeping van het cloud-init script en Ansible playbook kan op een andere manier. Door dit aan te aanroepen via een andere server, en deze scripts daardoor dus niet uit te voeren op de localhost. 
+Het onderzoek kan worden uitgebreid. Een restrictie die dit onderzoek had, is dat er maar met één cloud-provider kon worden gewerkt. Het zou interessant om te bekijken of er met andere providers hetzelfde resultaat zou hebben of niet. Ook de aanroeping van het cloud-init script en Ansible playbook kan op een andere manier. Door dit aan te aanroepen via een remote server. De servers worden dan opgesteld vanop een andere server en niet op de huidige server zoals hier. Weer zou het interessant zijn om te bekijken of een verandering invloed heeft op het resultaat.
 
-De uiteindelijke vragen die na dit onderzoek kunnen worden gesteld zijn.:
+De uiteindelijke vragen die na dit onderzoek kunnen worden gesteld zijn:
 \begin{itemize}
     \item Hebben andere cloud-providers hetzelfde resultaat? 
     \item Heeft een andere aanroeping van de scripts een effect op het resultaat?

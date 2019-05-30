@@ -55,7 +55,7 @@ users:
 
 
 \subsubsection{Runcdm}
-Bij de module \textit{runcmd} werden alle commando's gezet voor het aanmaken van de mappen structuur. Dit zijn gewoon 5 \textit{mdkir} commando's. Dit is het commando voor het aanmaken van mappen. Met de paramater \textit{-f} wordt heel de mappen structuur meegegeven aangemaakt als die er nog niet is.
+Bij de module \textit{runcmd} werden alle commando's gezet voor het aanmaken van de mappen structuur. Dit zijn gewoon 5 \textit{mdkir} commando's. Dit is het commando voor het aanmaken van mappen. Met de paramater \textit{-f} wordt heel de mappen structuur die meegegeven is, aangemaakt als die er nog niet is.
 \begin{lstlisting}[basicstyle=\small]
 runcmd:
 - mkdir /home/bachelorproef/onderzoek/fotos -f
@@ -75,7 +75,7 @@ ssh_authorized_keys:
 Helemaal onderaan werd ook iets gezet onder de module \textit{final\_message}, namelijk: \textit{"The system is finally up, after \$UPTIME seconds"}. Door de waarde \textit{\$UPTIME} kan er gekeken worden hoelang de server nodig had om alles uit te voeren.
 
 \subsection{Opstellen Ansible playbook}
-Als tweede werd het Ansible playbook opgesteld. Als host wordt gekozen voor localhost. Aan het \textit{ansible.cfg} bestand werd ook nog de regel \textit{callback\_whitelist = profile\_tasks}. Zo kan er bekeken worden hoelang het draaien van het playbook duurde. Alle configuraties die worden gedaan werden in verschillende \textit{tasks} gezet. 
+Als tweede werd het Ansible playbook opgesteld. Als host wordt gekozen voor localhost. Aan het \textit{ansible.cfg} bestand werd ook nog de regel \textit{callback\_whitelist = profile\_tasks}. Zo kan er bekeken worden hoelang het draaien van het playbook duurde. Alle configuraties die worden gedaan worden in verschillende \textit{tasks} gezet. 
 
 \subsubsection{Packages}
 Voor het upgraden van de packages en installeren van de nodige packages werd de task \textit{apt} gebruikt.
@@ -180,12 +180,12 @@ Eerst en vooral wordt er gekeken naar het de overzichtelijkheid van het playbook
 \subsubsection{Aanroepen uitvoeringen}
 Ten tweede wordt er gekeken hoe alles werd aangeroepen. Voor het toevoegen van users, groepen en packages en het aanmaken van een nieuwe ssh sleutel zijn er voor Ansible en cloud-init aparte modules om dit te doen. Hier is weinig verschil. Maar voor het aanmaken van de mappen was er een verschil. Bij het toevoegen van de mappen is er bij Ansible een aparte module hiervoor. Terwijl bij cloud-init dit moest worden gedaan via runcmd en het \textit{mkdir} commando. 
 
-Het aanroepen van de Ansible configuraties via cloud-init gebeurde via de commando module (\textit{runcmd}) in cloud-init. Dit gebeurde op een vrij efficiënte manier. Al moet er wel elke keer ene private sleutel van de repo worden meegegeven.
+Het aanroepen van de Ansible configuraties via cloud-init gebeurde via de commando module (\textit{runcmd}) in cloud-init. Dit gebeurde op een vrij efficiënte manier. Al moet er wel elke keer een private sleutel van de repo worden meegegeven.
 
 \subsection{Snelheid}
 Als er puur naar de snelheid wordt gekeken is Ansible duidelijk sneller. Maar cloud-init heeft configuraties die het altijd uitvoert. Hierdoor kan deze statistiek soms misleidend. De gemiddelde uitvoersnelheid voor Ansible is 137.53 seconden en voor cloud-init is dit 177.77 seconden. Als er bij cloud-init het verschil van de startup configuraties wordt afgetrokken, komt dit eerder op 140-145 seconden. Dit ligt veel dichter bij Ansible, dit verschil is eigenlijk verwerpbaar. Al is Ansible een beetje sneller is dit niet zo een groot verschil dat dit een voordeel is voor Ansible. Er kan worden vastgesteld dat ze min of meer dezelfde uitvoeringssnelheid hebben.
 
-De cloud-init en Ansible configuraties hebben bijna dezelfde uitvoeringssnelheid als cloud-init, namelijk 177.60 seconden. Net zoals bij cloud-init kan er hier worden afgerond naar 140-145 seconden door de eerste basisconfiguraties van cloud-init. Ook hier is dus weer geen groot verschil merkbaar.
+De cloud-init en Ansible configuraties hebben bijna dezelfde gemiddelde uitvoersnelheid als cloud-init, namelijk 177.60 seconden. Net zoals bij cloud-init kan er hier worden afgerond naar 140-145 seconden door de eerste basisconfiguraties van cloud-init. Ook hier is dus weer geen groot verschil merkbaar.
 
 In tabel \ref{tab:tabel resultaten basis} staan de resultaten van de snelheden.
 
@@ -206,6 +206,6 @@ In tabel \ref{tab:tabel resultaten basis} staan de resultaten van de snelheden.
 \subsection{Resultaat}
 Voor basisconfiguraties lijkt het meteen wel beter om dit niet met Ansible en cloud-init te doen. Dit lijkt iets te omslachtig voor het maar basis werk dat moet gebeuren. 
 
-Voor Ansible en cloud-init apart is er niet zoveel verschil. Al is het cloudconfig bestand wel veel overzichtelijker, heeft Ansible iets meer variatie qua modules. Toch lijkt cloud-init in deze setup de beste optie. Het meegeven van het script gebeurt op een veer makkelijker manier. En doordat het maar basisconfiguraties zijn die hier worden getest, is het voordeel van de meer variatie van modules in Ansible nog niet zo doorslaggevend. De overzichtelijkheid van cloud-init is dat dan wel. Het bestand is veel compacter en veel duidelijker. Ook doordat het bestand op een makkelijkere manier kan worden uitgevoerd lijkt cloud-init hier de betere optie. Ansible geeft wel een betere output weer. Maar dit is hier nog niet doorslaggevend doordat er nog geen geavanceerde acties gebeuren.
+Voor Ansible en cloud-init apart is er niet zoveel verschil. Terwijl het cloudconfig bestand wel veel overzichtelijker is, heeft Ansible iets meer variatie qua modules. Toch lijkt cloud-init in deze setup de beste optie. Het meegeven van het script gebeurt op een veel makkelijker manier. En doordat het maar basisconfiguraties zijn die hier worden getest, is het voordeel van de meer variatie van modules in Ansible nog niet zo doorslaggevend. De overzichtelijkheid van cloud-init is dat dan wel. Het bestand is veel compacter en veel duidelijker. Ook doordat het bestand op een makkelijkere manier kan worden uitgevoerd lijkt cloud-init hier de betere optie. Ansible geeft wel een betere output weer. Maar dit is hier nog niet doorslaggevend doordat er nog geen geavanceerde acties gebeuren.
 
 Cloud-init lijkt, zeker als het in een gelijkaardige setup als deze gebeurt, de beste optie om eerste basisconfiguraties aan de server toe te voegen.

@@ -5,15 +5,13 @@ In dit hoofdstuk wordt bekeken hoe makkelijk of moeilijk een script kan worden a
 \section{Cloud-init aanroepen}
 Eerst gaat er worden bekeken of een cloud-init makkelijk nog eens kan worden uitgevoerd, met een andere configuratie. 
 
-In de setup voor cloud-init die hier wordt gebruikt. Wordt cloud-init niet uitgevoerd via een commando. Het script wordt meegegeven als een variabele als de server wordt aangemaakt. 
+In de setup voor cloud-init, die hier wordt gebruikt, wordt cloud-init niet uitgevoerd via een commando. Het script wordt meegegeven als een variabele als de server wordt aangemaakt. 
 
 Nadat de server is aangemaakt en geconfigureerd kan het script wel worden gevonden. Het script staat in het bestand \textit{/var/lib/cloud/instances/<instance-naam>/user-data.txt}.
 
 Nu het script gevonden is, wordt gekeken hoe er met een commando cloud-init kan worden geladen. Op een server die opgezet is met cloud-init staat automatisch ook meteen het cloud-init.
 
-Via documentatie van \autocite{scaleaway} werd gekeken hoe dit config bestand weer kan worden doorlopen (na het ook aan te passen). Dit wordt gedaan door via een andere instance deze instance weer op te zetten. Alleen is dit niet hoe de setup in deze bachelorproef werkt. Voor deze setup en deze situatie blijkt het dus onmogelijk om een cloudconfig script aan te passen en een tweede keer uit te voeren.
-
-
+Via documentatie van \autocite{scaleaway} werd gekeken hoe dit config bestand weer kan worden doorlopen (na het ook aan te passen). Dit wordt gedaan door via een andere instance deze instance weer op te zetten. Alleen is dit niet hoe de setup in deze bachelorproef werkt. Na verder onderzoek blijkt het oor deze setup en deze situatie  onmogelijk om een cloudconfig script aan te passen en een tweede keer uit te voeren.
 
 \section{Ansible aanroepen}
 Na cloud-init te bekijken, wordt er nu gekeken of Ansible dit wel goed ondersteunt. 
@@ -34,11 +32,11 @@ Eerst wordt er een server aangemaakt en wordt het playbook doorlopen. Hierna wor
     password: 985b56433efe9898290b88d4dab853a2f09d7eb7a7b1b8d2cdd431e
 \end{lstlisting}
 
-Na de aanpassing door te voeren in het playbook. Wordt het playbook nog is doorlopen. Bij de output van het playbook wordt de message changed weergegeven bij het toevoegen van de user. Als er nu wordt geprobeerd te veranderen naar deze user gaat dit.
+Na de aanpassing door te voeren in het playbook. Wordt het playbook nog is doorlopen. Bij de output van het playbook wordt de message changed weergegeven bij het toevoegen van de user. Als er nu wordt geprobeerd te veranderen naar de user \textit{tweederun} gaat dit.
 
 Via Ansible is het dus mogelijk om een verandering door te voeren aan het script en dit dan een tweede keer uit te voeren.
 
 \section{Resultaat}
-Het resultaat is vrij duidelijk. Als er een script wordt gemaakt, met variabele die kunnen veranderen, is het beter dat Ansible hier wordt voor gebruikt. Ansible ondersteunt veel beter de mogelijkheid om een script een tweede keer te doorlopen en hierbij te checken of er dingen moeten worden aangepast. Cloud-init ondersteunt, toch in deze setup, de functie niet.
+Het resultaat is vrij duidelijk. Als er een script wordt gemaakt, met variabele die kunnen veranderen, is het beter dat Ansible hier wordt voor gebruikt. Ansible ondersteunt veel beter de mogelijkheid om een script een tweede keer te doorlopen en hierbij te checken of er dingen moeten worden aangepast. Cloud-init ondersteunt, toch in deze setup, deze functie niet.
 
 

@@ -10,7 +10,7 @@ Docker is een tool dat gemaakt is om het maken, deployen en uitvoeren van applic
 Containers zijn een package van een applicatie met al zijn dependencies en libraries. Heel de applicatie is nu één enkele package. \autocite{docker}
 
 \subsection{Cloud-init}
-De configuratie van docker met cloud-init gebeurt via docker-compose. Docker-compose is een manier om docker containers aan te maken te configureren. Er wordt een yaml bestand aangemaakt met de docker-compose modules en verwijzingen. Hierna wordt dit bestand via een commando uitgevoerd.
+De configuratie van docker met cloud-init gebeurt via docker-compose. Docker-compose is een manier om docker containers aan te maken en te configureren. Er wordt een yaml bestand aangemaakt met de docker-compose modules en verwijzingen. Hierna wordt dit bestand via een commando uitgevoerd.
 
 Het eerste dat wordt gedaan in het cloud-init bestand is installeren van de packages. De package \textit{docker-compose} wordt ook geïnstalleerd. Via deze technologie worden de containers aangemaakt.
 \newpage
@@ -25,7 +25,6 @@ Als tweede wordt het docker-compose bestand aangemaakt. Dit wordt gedaan via de 
 write_files:
 - path: "home/docker-compose.yml"
 content: |
-
     version: '3.3'
     services:
     db:
@@ -45,7 +44,7 @@ runcmd:
 \end{lstlisting}
 
 \subsection{Ansible}
-Via Ansible kan de docker-container worden aangemaakt met een module in Ansible. Hier wordt niet gewerkt met docker-compose.
+Via Ansible kan de docker\_container worden aangemaakt met een module in Ansible. Hier wordt niet gewerkt met docker-compose.
 
 Eerst wordt gewoon docker geïnstalleerd.
 \begin{lstlisting}[basicstyle=\small]
@@ -59,7 +58,7 @@ state: present
 update_cache: yes
 \end{lstlisting}
 
-Er zijn wel 3 pip packages die moeten worden geïnstalleerd. De eerste is \textit{docker-py} als deze niet werd geïnstalleerd werkte de module \textit{docker\_container} niet. De andere zijn \textit{setuptools} en \textit{wheel}. Dit zijn 2 pip packages die \textit{docker-py} nodig had om te functioneren.
+De module \textit{docker\_container} heeft wel 3 pip packages nodig. De eerste is \textit{docker-py} als deze niet werd geïnstalleerd werkte de module \textit{docker\_container} niet. De andere zijn \textit{setuptools} en \textit{wheel}. Dit zijn 2 pip packages die \textit{docker-py} nodig heeft om te functioneren.
 \begin{lstlisting}[basicstyle=\small]
 - name: install pip
 apt: name=python-pip state=present
@@ -85,7 +84,7 @@ docker_container:
     MYSQL_ROOT_PASSWORD: somewordpress
     MYSQL_DATABASE: wordpress
     MYSQL_USER: wordpress
-MYSQL_PASSWORD: wordpress
+    MYSQL_PASSWORD: wordpress
 \end{lstlisting}
 
 \subsection{Ansible \& cloud-init}
@@ -95,7 +94,7 @@ In de omgeving met Ansible en cloud-init werden de packages \textit{docker.io} e
 \subsection{Complexiteit}
 De complexiteit van beide bestanden is wat hetzelfde. Bij cloud-init is het misschien wat omslachtig om te werken via de docker-compose package, en dit bestand gewoon aan te maken. Al moeten er met Ansible meer taken worden uitgevoerd om een container aan te maken. Alle pip packages moeten worden geïnstalleerd en de python-pip package zelf. 
 
-Ansible kan wel makkelijker worden uitgebreid en aangepast. Er moet gewoon een extra taak worden toegevoegd en er kan een extra docker container worden aangemaakt. Bij cloud-init kan dit ook worden gedaan via het docker-compose bestand. Maar als er meerdere containers blijven toegevoegd worden, gaat dit niet meer overzichtelijk zijn. Bij Ansible kunnen alle aparte containers nog goed onderscheiden worden. Ook is de ouput bij Ansible hiervoor veel handiger. Er kan perfect worden meegevolg welke container al aangemaakt is, en welke nog niet.
+Ansible kan wel makkelijker worden uitgebreid en aangepast. Er moet gewoon een extra taak worden toegevoegd en er kan een extra docker container worden aangemaakt. Bij cloud-init kan dit ook worden gedaan via het docker-compose bestand. Maar als er meerdere containers blijven worden toegevoegd, gaat dit niet meer overzichtelijk zijn. Bij Ansible kunnen alle aparte containers nog goed onderscheiden worden. Ook is de ouput bij Ansible hiervoor veel handiger. Er kan perfect worden meegevolgd welke container al aangemaakt is, en welke nog niet.
 
 \subsection{Snelheid}
 Als we naar snelheden (Tabel \ref{tab:tabel resultaten container}) kijken is Ansible  weer de beste. Zelfs met de aftrekking van de initïele startconfiguraties komen de andere 2 niet in de buurt. Dit is weer een duidelijk pluspunt voor Ansible.
@@ -114,7 +113,7 @@ Als we naar snelheden (Tabel \ref{tab:tabel resultaten container}) kijken is Ans
 \end{table}
 
 \subsection{Resultaat}
-Voor containerization lijkt het in eerste instantie beter om voor Ansible te gaan. Het uitbreiden naar meerdere containers is het makkelijkst met Ansible, wat toch de doorslag geeft. De snelheid is ook een pluspunt.
+Voor containerization lijkt het in eerste instantie beter om voor Ansible te gaan. Het uitbreiden naar meerdere containers is het makkelijkst met Ansible, wat toch de doorslag geeft. De snelheid is ook een pluspunt en onderstreept deze keuze nog meer.
 
 Als er een docker server wordt opgezet met maar 1 container (of een klein aantal) kan er wel overwogen worden om voor cloud-init te gaan. Zeker als dit moeten worden opgezet bij de startup van de server. Want het meegeven van een cloud-init script, is nog steeds veel makkelijker dan het meegeven van een Ansible script. 
 

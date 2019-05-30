@@ -1,8 +1,8 @@
 \chapter{\IfLanguageName{dutch}{Server installatie en configuratie}{Introduction}}
 \label{ch:serverconf}
-Dit hoofdstuk voert een tweede onderzoek. Er wordt gekeken hoe makkelijk een volledig type server wordt geïnstalleerd en geïmplementeerd. 
+Dit hoofdstuk voert een tweede onderzoek. Er wordt gekeken hoe makkelijk een volledig server wordt geïnstalleerd en geïmplementeerd. 
 
-De twee type servers die worden geïnstalleerd zijn: MySQL en LAMP.
+De twee servers die worden geïnstalleerd zijn: MySQL en LAMP.
 
 \section{LAMP server}
 Een LAMP server is een van de populairste variaties van een webserver op linux. Via de documentatie van \autocite{lamp} wordt een kleine uitleg gegeven.
@@ -63,7 +63,7 @@ update_cache: yes
 \end{lstlisting}
 
 \subsubsection{Starten services}
-Als tweede werden de \textit{apache2} en \textit{mysql} server gestart. 
+Als tweede werden de \textit{apache2} en \textit{mysql} services gestart. 
 \begin{lstlisting}[basicstyle=\small]
 - name: start apache service
 become: yes
@@ -257,4 +257,4 @@ Ook door de output die Ansible geeft (Figuur \ref{fig:Ansibleoutput}) is het vee
     \label{fig:Ansibleoutput}
 \end{figure}
 
-Al is cloud-init niet helemaal nutteloos hier. Als er bij de opstart van de server deze configuraties moeten worden gedaan. Is het de beste optie om cloud-init en Ansible te gebruiken. Doordat het cloud-init veel makkelijker kan worden meegegeven als een variabele. In dit script wordt er dan verwezen naar het Ansible playbook.
+Al is cloud-init niet helemaal nutteloos hier. Als er bij de opstart van de server deze configuraties moeten worden gedaan, is het de beste optie om cloud-init en Ansible te gebruiken. Doordat het cloud-init veel makkelijker kan worden meegegeven als een variabele. In dit script wordt er dan verwezen naar het Ansible playbook.

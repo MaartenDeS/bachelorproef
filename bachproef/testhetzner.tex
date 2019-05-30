@@ -1,11 +1,11 @@
 \chapter{\IfLanguageName{dutch}{Opzetten Hetzner Cloud testomgeving}{Introduction}}
 \label{ch:testhetzner}
-In dit hoofdstuk wordt besproken hoe de testomgevingen op Hetzner zijn opgezet. Er zijn 3 omgevingen: één met cloud-init, één met Ansible en één met cloud-init en Ansible.
+In dit hoofdstuk wordt besproken hoe de testomgevingen met Hetzner zijn opgezet. Er zijn 3 omgevingen: één met cloud-init, één met Ansible en één met cloud-init en Ansible.
 
 \section{Aanmaken server met Hetzner}
-Het aanmaken van servers kan op verschillende manieren. Hier wordt er gekozen om dit te doen via de command line. Via de site van Hetzner kan je hun command tool downloaden. Via het commando \textbf{hcloud} kunnen er nu server worden aangemaakt en beheert. Voor toegang te krijgen tot Hetzner Cloud moet je een bepaald bedrag betalen. Hierna kan je netwerken opzetten en via een Hetzner Token kan je op dit netwerk servers toevoegen. Via het bedrijf Be-Mobile is er Hetzner Token vekregen.
+Het aanmaken van servers kan op verschillende manieren. Hier wordt er gekozen om dit te doen via de command line. Via de site van Hetzner kan je hun command tool downloaden. Via het commando \textbf{hcloud} kunnen er nu server worden aangemaakt en beheert. Voor toegang te krijgen tot Hetzner Cloud moet je een bepaald bedrag betalen. Hierna kan je netwerken opzetten en via een Hetzner Token kan je op dit netwerk servers toevoegen. Via het bedrijf Be-Mobile is er toegang tot een Hetzner Cloud netwerk, met daarvoor een Hetzner Token.
 
-Voor het aanmaken van de server zijn er 2 variabelen die worden toegevoegd. \textbf{Name}, zo kan de naam van de server worden meegegeven. Zo kunnen de servers uit elkaar houden. \textbf{Ssh-key}, via Hetzner kan je een ssh sleutel toevoegen om toegang te verkrijgen op de server. Via het bedrijf Be-Mobile is er een ssh sleutel verkegen. Het commando  voor het aanmaken van een server is dan:
+Voor het aanmaken van de server zijn er 2 variabelen die worden toegevoegd. \textbf{Name}, de naam van de server, zo kunnen de servers uit elkaar houden. \textbf{Ssh-key}, via Hetzner kan je een ssh sleutel toevoegen om toegang te verkrijgen op de server. Via het bedrijf Be-Mobile is er een ssh sleutel verkegen. Het commando  voor het aanmaken van een server is dan:
 \begin{lstlisting}[basicstyle=\small]
 hcloud server create --name <naam van de server> 
     --ssh-key <naam van de sleutel in hetzner>
@@ -22,7 +22,7 @@ hcloud server delete <naam of id van de server>
 
 
 \section{Cloud-init}
-Het opzetten van een omgeving met cloud-init in Hetzner Cloud is eigenlijk zeer simpel. Op \autocite{hetznerWiki} staat er dat bij het maken van de server er \textit{user data} kan worden toegevoegd. Zoals werd gezien in hoofdstuk ~\ref{ch:cloud-init} is dit de data die cloud-init gebruikt voor zijn configuraties.
+Het opzetten van een omgeving met cloud-init in Hetzner Cloud is eigenlijk zeer simpel. Op \autocite{hetznerWiki} staat  dat bij het maken van de server \textit{user data} kan worden toegevoegd. Zoals werd gezien in hoofdstuk ~\ref{ch:cloud-init} is dit de data die cloud-init gebruikt voor zijn configuraties.
 
 De user data is een vairbale die moet worden toegevoegd zoals de naam een ssh sleutel. Via \textbf{user-data-from-file} kan er een bestand worden toegevoegd tijdens het aanmaken van de server met de user data. Het commando dat wordt gebruikt om een server aan te maken ziet er dan zo uit:
 \begin{lstlisting}[basicstyle=\small]
@@ -40,10 +40,7 @@ ansible-playbook -i, <playbook bestand>
 \end{lstlisting}
 Via dit commando wordt het playbook op de localhost uitgevoerd. 
 
-Als het op meerdere hosts moet worden uitgevoerd zal er een inventory bestand worden toegevoegd. Het commando ziet er dan zo uit:
-\begin{lstlisting}[basicstyle=\small]
-ansible-playbook -i <inventory bestand> <playbook bestand>
-\end{lstlisting}
+
 
 \newpage
 \section{Ansible \& cloud-init}
