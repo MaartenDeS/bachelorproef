@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.5)  18 MAR 2019 10:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.26)  3 JUN 2019 21:18
 entering extended mode
 **./conference_poster.tex
 (conference_poster.tex
@@ -53,7 +53,7 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 ))
 ("C:\Users\Maarten\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol.s
 ty"
-Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
+Package: multicol 2018/11/09 v1.8u multicolumn formatting (FMi)
 \c@tracingmulticols=\count92
 \mult@box=\box27
 \multicol@leftmargin=\dimen105
@@ -487,32 +487,53 @@ Package xcolor Warning: Incompatible color definition on input line 76.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
 
-Package xcolor Warning: Incompatible color definition on input line 87.
+Package xcolor Warning: Incompatible color definition on input line 91.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <35.83> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 92.
 
-Package xcolor Warning: Incompatible color definition on input line 105.
-
-
-Package xcolor Warning: Incompatible color definition on input line 118.
-
-<figures/grail.jpg, id=2, 855.195pt x 481.8pt>
-File: figures/grail.jpg Graphic file (type jpg)
-<use figures/grail.jpg>
-Package pdftex.def Info: figures/grail.jpg  used on input line 124.
-(pdftex.def)             Requested size: 1002.183pt x 564.60797pt.
-
-Package xcolor Warning: Incompatible color definition on input line 125.
+Package xcolor Warning: Incompatible color definition on input line 106.
 
 
-Package xcolor Warning: Incompatible color definition on input line 125.
+Package xcolor Warning: Incompatible color definition on input line 113.
+
+<figures/cloudconfig.png, id=2, 452.4403pt x 217.5628pt>
+File: figures/cloudconfig.png Graphic file (type png)
+<use figures/cloudconfig.png>
+Package pdftex.def Info: figures/cloudconfig.png  used on input line 119.
+(pdftex.def)             Requested size: 491.07516pt x 236.13951pt.
+<figures/playbookex.png, id=4, 733.99219pt x 321.45094pt>
+File: figures/playbookex.png Graphic file (type png)
+<use figures/playbookex.png>
+Package pdftex.def Info: figures/playbookex.png  used on input line 120.
+(pdftex.def)             Requested size: 491.07516pt x 215.07181pt.
+
+Package xcolor Warning: Incompatible color definition on input line 121.
 
 
-Package xcolor Warning: Incompatible color definition on input line 132.
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+<figures/cloudoutput.png, id=5, 880.03781pt x 588.69937pt>
+File: figures/cloudoutput.png Graphic file (type png)
+<use figures/cloudoutput.png>
+Package pdftex.def Info: figures/cloudoutput.png  used on input line 125.
+(pdftex.def)             Requested size: 491.07516pt x 328.50162pt.
+<figures/ansibleoutput.png, id=6, 554.82281pt x 418.56375pt>
+File: figures/ansibleoutput.png Graphic file (type png)
+<use figures/ansibleoutput.png>
+Package pdftex.def Info: figures/ansibleoutput.png  used on input line 126.
+(pdftex.def)             Requested size: 491.07516pt x 370.47679pt.
+
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 139.
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 134.
+
+
+Package xcolor Warning: Incompatible color definition on input line 144.
 
 [1
 
@@ -520,24 +541,26 @@ Package xcolor Warning: Incompatible color definition on input line 139.
 Non-PDF special ignored!
 <special> papersize=83.96cm,118.82cm
 {C:/Users/Maarten/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures
-/HG-woordmerk.jpg> <./figures/grail.jpg>] (conference_poster.aux) ) 
+/HG-woordmerk.jpg> <./figures/cloudconfig.png> <./figures/playbookex.png> <./fi
+gures/cloudoutput.png> <./figures/ansibleoutput.png>] (conference_poster.aux) )
+ 
 Here is how much of TeX's memory you used:
- 5513 strings out of 492946
- 86555 string characters out of 3125379
- 175768 words of memory out of 3000000
- 9307 multiletter control sequences out of 15000+200000
- 17782 words of font info for 35 fonts, out of 3000000 for 9000
+ 5533 strings out of 492946
+ 87037 string characters out of 3125378
+ 190773 words of memory out of 3000000
+ 9323 multiletter control sequences out of 15000+200000
+ 19466 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,77p,395b,422s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Ma
-arten/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/M
-aarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:
-/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.p
-fb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/ut
-mr8a.pfb>
-Output written on conference_poster.pdf (1 page, 229441 bytes).
+ 41i,8n,77p,870b,427s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
+}<C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/uc
+rr8a.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/ti
+mes/utmb8a.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+urw/times/utmr8a.pfb><C:/Users/Maarten/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/urw/times/utmri8a.pfb>
+Output written on conference_poster.pdf (1 page, 392608 bytes).
 PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
+ 33 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

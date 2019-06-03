@@ -54,7 +54,7 @@
 \VeryHuge \color{HoGentAccent1} \textbf{Onderzoek naar samenwerking Ansible en cloud-init} \color{Black}\\ % Title
 \Huge\textit{}\\[2.4cm] % Subtitle
 \huge \textbf{Maarten De Smedt, Simon Lepla, Lotte Van Steenberghe}\\[0.5cm] % Author(s)
-\huge Hogeschool Gent, Valentin Vaerwyckweg 1, 9000 Gent\\[0.4cm] % University/organization
+\huge Hogeschool Gent,  Arbeidsstraat 14, 9300 Aalst\\[0.4cm] % University/organization
 \Large \texttt{maarten.desmedt.v5415@student.hogent.be} \\
 \end{minipage}
 %
@@ -76,9 +76,13 @@
 \color{HoGentAccent1} % Navy color for the abstract
 
 \begin{abstract}
-It's only a model.
-You don't vote for kings. Who's that then? We found them. Ni! Ni! Ni! Ni!
-The nose? On second thoughts, let's not go there. It is a silly place. Bloody Peasant! And the hat. She's a witch! Where'd you get the coconuts?
+Cloud-init en Ansible zijn beide server management configuration tools. Dit zijn tools die servers kunnen configureren. Terwijl Ansible toch een grote speler en bekende naam is in dit terrein, is cloud-init dit toch niet. Hier wordt een onderzoek gevoerd om te bekijken of cloud-init Ansible overbodig kan maken of is het mogelijk dat deze kunnen samenwerken?
+
+Dit werk is gemaakt in samenspraak en in opdracht van het bedrijf Be-Mobile. Zij werkten al een tijd met Ansible om servers te configureren maar botste op een nieuwe technologie: cloud-init. Hun vraag was of deze technologie nuttig was in hun setup. Nadat ze hier onderzoek over deden, was er nog geen expliciet antwoord over te vinden. Hierdoor werd dit onderzoek gestart.
+
+Het onderzoek is opgedeeld in 2 delen. Allereest het theoretische gedeelte. Hierin worden Ansible en cloud-init apart bekeken en besproken. Het tweede deel is het praktisch gedeelte, hier worden verschillende testen uitgevoerd. Bij alle testen worden er servers opgezet met bepaalde configuraties in Hetzner Cloud, een cloud provider. Er wordt op 3 manieren configuraties uitgevoerd: met cloud-init, met Ansible en met Ansible en cloud-init en er worden 4 soorten configuraties gedaan. Per hoofdstuk worden de configuratie bestanden opgesteld en de resultaten besproken. Er wordt vooral gekeken naar de complexiteit van de bestanden en de doorlooptijd van de tools.
+
+Uiteindelijk was het antwoord duidelijk. Cloud-init is een handige tool maar kan Ansible nog niet overbodig maken. Een samenwerking is wel een optie. 
 \end{abstract}
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
@@ -88,15 +92,12 @@ The nose? On second thoughts, let's not go there. It is a silly place. Bloody Pe
 \section*{Introductie}
 \color{black}
 \color{black}
-Be quiet! Found them? In Mercia?! The coconut's tropical! But you are dressed as one… Well, what do you want? Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.
+Installatie en modificatie van servers moet altijd gemakkelijker voor de gebruiker. Hierdoor zijn CMT in het leven geroepen. Dit zijn tools die servers makkelijk kunnen configureren, door een bijgeleverd script, bekende tools zijn: Ansible, Puppet en Chef. Het bedrijf Be-Mobile gebruikt Ansible voor de configuraties. Maar ze botsten op een nieuwe tool: cloud-init. Hun vraag was of deze tool Ansible misschien kon vervangen? Een tweede vraag was of er misschien een samenwerking mogelijk was tussen de twee en hoe?
 
-Well, what do you want? It's only a model. Camelot! We found them. We shall say 'Ni' again to you, if you do not appease us.
+Allereest wordt de basis van Ansible uitgelegd. Een eerste belangrijke eigenschap van Ansible is dat zij uitgaan van het ``push'' model. Het verandert meteen alle wijzigingen die er gedaan zijn. Een tweede eigenschap van Anisble is dat het geen extra functies nodig heeft. Het heeft geen extra software nodig en ook geen specifieke sudo of admin rechten. De scripts die Ansible uitvoert worden playbooks genoemd. Dit zijn yaml bestanden met de functies die een server moet doorlopen. In het playbook wordt de server gedefinieerd via zijn ip of de naam die naar de server verwijst (kunnen ook meerdere servers zijn). Hieronder komen dan alle taken die de server moet uitvoeren. Het handige aan Ansible is, dat deze kunnen worden ingekapseld in een rol. Dan moet er gewoon verwezen worden naar de rol en moeten alle taken niet worden opgelijst. 
 
-The nose? Shut up! Burn her! I am your king. You don't vote for kings.
+Cloud-init is een CMT speciaal gemaakt voor cloud servers. Cloud-init zorgt voor de customisatie van de server bij het opstarten. Het cloud-init heeft 2 vormen die het kan aannemen. De eerste is een bash script. De tweede vorm is de populairdere vorm, een yaml bestand met de modules opgelijst. Dit bestand kan worden herkend aan de \textit{\#cloud-config} tag bovenaan het bestand. Daarin worden dan alle modules opgelijst me de bijbehorende data. Een voorbeeld van een module is \textit{packages} hieronder worden dan alle packages gelijst die de server moet bevatten.
 
-You can't expect to wield supreme power just 'cause some watery tart threw a sword at you! Well, we did do the nose. I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
-
-Why do you think that she is a witch? We want a shrubbery!! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
 %----------------------------------------------------------------------------------------
 %	GEOLOGY
 %----------------------------------------------------------------------------------------
@@ -105,15 +106,9 @@ Why do you think that she is a witch? We want a shrubbery!! I don't want to talk
 \color{HoGentAccent1} 
 \section*{Experimenten}
 \color{black}
-A newt? Camelot! Why? No, no, no! Yes, yes. A bit. But she's got a wart.
+Er worden op 3 manieren experimenten uitgevoerd: server met cloud-init, server met Ansible en server met Ansible en cloud-init. Op deze servers worden 4 sorten configuraties gedaan. De server werden aangemaakt via de cloudprovider Hetzner Cloud gedaan. Er was hier toegang tot via het bedrijf Be-Mobile.
 
-Shut up! I dunno. Must be a king. Who's that then? Look, my liege! On second thoughts, let's not go there. It is a silly place.
-
-Shut up! Will you shut up?! No, no, no! Yes, yes. A bit. But she's got a wart. He hasn't got shit all over him. It's only a model. It's only a model.
-
-Bring her forward! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave 
-
-
+Allereerst basis configuraties, hier worden pacakges geïnstalleerd en geüpdatet, gebruikers en groepen aangemaakt, ssh-key toegevoegd en een mappenstructuur aangemaakt. De tweede configuratie is server configuratie. Er wordt LAMP en MySQL server geïnstalleerd. Ten derde wordt bekeken hoe makkelijk een script een tweede aanpassing kan doen na de startup. En ten laatste wordt bekeken dockerization bekeken, er wordt een docker server met container geïnstalleerd.
 
 \color{HoGentAccent1} 
 \section*{Sectie met figuur}
@@ -121,8 +116,15 @@ Bring her forward! I don't want to talk to you no more, you empty-headed animal 
 
 
 \begin{center}\vspace{1cm}
-\includegraphics[width=1.0\linewidth]{grail}
-\captionof{figure}{\color{HoGentAccent5} He hasn't got shit all over him. The nose? Where'd you get the coconuts? What do you mean? We shall say 'Ni' again to you, if you do not appease us}
+    \includegraphics[width=0.49\linewidth]{cloudconfig}
+    \includegraphics[width=0.49\linewidth]{playbookex}
+    \captionof{figure}{\color{HoGentAccent5} Cloud-init script en Ansible playbook.}
+\end{center}\vspace{1cm}
+
+\begin{center}\vspace{1cm}
+    \includegraphics[width=0.49\linewidth]{cloudoutput}
+    \includegraphics[width=0.49\linewidth]{ansibleoutput}
+    \captionof{figure}{\color{HoGentAccent5} De output van cloud-init en Ansible.}
 \end{center}\vspace{1cm}
 
 %------------------------------------------------
@@ -132,17 +134,19 @@ Bring her forward! I don't want to talk to you no more, you empty-headed animal 
 \color{HoGentAccent1} 
 \section*{Conclusies}
 \color{black}
-on't underestimate the Force. Oh God, my uncle. How am I ever gonna explain this? I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force.
+De conclusie is heel duidelijk. Op de eerste vraag kan cloud-init Ansible vervangen is het antwoord nee. Cloud-init is te beperkt qua modules en functies. Als er meer geavanceerde configuraties moeten worden gedaan zoals bij de server configuraties, moet cloud-init zijn meerdere bekennen. De enige module waar er configuraties kunnen worden doorgevoerd is de \textit{runcmd} module. Hier kunnen commando's worden uitgevoerd. Als er juist basis configuraties moeten gedaan worden kan cloud-init Ansible wel vervangen.
+
+Kunnen cloud-init en Ansible samenwerken? Ja, dit kan zeker. In de setup waarin hier werd gewerkt was dit zelf de ultieme oplossing. Doordat een cloud-init script makkelijker kon worden meegegeven bij de startup. Daarin werd dan naar het playbook verwezen via GitHub.
+
 %----------------------------------------------------------------------------------------
 %	FORTHCOMING RESEARCH
 %----------------------------------------------------------------------------------------
 \color{HoGentAccent1} 
 \section*{Toekomstig onderzoek}
 \color{black}
+Er kunnen een paar bijkomende vragen worden gesteld na dit onderzoek. Doordat er alleen toegang was tot Hetzner Cloud. Kan er worden afgevraagde of een andere provider hetzelfde resultaat had. Was de cloud-provider bepalend in het resultaat? 
 
-I care. So, what do you think of her, Han? No! Alderaan is peaceful. We have no weapons. You can't possibly… I have traced the Rebel spies to her. Now she is my only link to finding their secret base.
-
-Kid, I've flown from one side of this galaxy to the other. I've seen a lot of strange stuff, but I've never seen anything to make me believe there's one all-powerful Force controlling everything. There's no mystical energy field that controls my destiny. It's all a lot of simple tricks and nonsense. You are a part of the Rebel Alliance and a traitor! Take her away! 
+Ook kunnen Cloud-init en Ansible op verschillende manieren worden aangeroepen. In dit onderzoek werd er maar via 1 manier gewerkt voor elk. Er kan weer worden afgevraagd of dit bepalend was voor het resultaat. Heeft een andere aanroeping van de script een ander resultaat?
 
 
 %----------------------------------------------------------------------------------------
